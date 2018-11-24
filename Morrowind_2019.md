@@ -35,10 +35,13 @@ Mods with archives (.BSA files) need to be added into the Morrowind.ini file. Ho
 (Download down due to Fliggery site being broken)
  
 An example for handling it manually, using my_test_mod, which has a file called neat.BSA:
+
+```INI
 [Archives]
 Archive 0=Tribunal.bsa
 Archive 1=Bloodmoon.bsa
 Archive 2=neat.bsa
+```
 
 NOTE: You must edit the Morrowind.ini inside your Mod Organizer profile that you're playing on for it to have any effect. Assuming you didn't rename it, it's under Morrowind/Mod Organizer 2/Profiles/Default/Morrowind.ini
 
@@ -400,7 +403,7 @@ Grab this file (https://mega.nz/#!zsADQbQQ!d5uOr1R8SM468G7DwA0a3cchDuFHbTJrKaAFt
 
 6. If you ONLY want the cloud speed .ini adjustments required for Skies and not the weather color changes, change these lines in your .ini:
 
-```
+```ini
 [Weather Clear]
 Cloud Speed=0.25
     

@@ -126,7 +126,7 @@ Extract it so that the "Mod Organizer 2 (Archive)" folder is inside your Morrowi
 
 Then, go ahead and run Mod Organizer.exe. It should pop up asking you about a couple things. You'll want to choose a "PORTABLE" install (unless you're much more familiar with MO2 and know what you're doing) and when it asks you about which game you want to manage, navigate to the Steam/steamapps/common/Morrowind folder.
 
-It should look like this: https://imgur.com/a/VtvWiLD
+It should look like [this](https://i.imgur.com/WWbBKJZ.png)
 
 Under the dropdown for "Morrowind" is where other executables can be put. You won't need to do this much for Morrowind. However, you'll notice that in that dropdown MGE XE has already been placed! Hurrah!
 

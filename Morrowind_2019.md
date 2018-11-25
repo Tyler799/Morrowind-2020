@@ -6,7 +6,7 @@ This is an updated, revised and semi re-written version of Cynderal's guide (Mor
 
 Several developments of new mods or replacements for existing ones have come over the last couple years. Some of these are vast improvements for performance, visuals, gameplay or otherwise. Also, the previous guide had some information that was no longer relevant or true in it.
 
-The 2017 guide can be found [here](https://pastebin.com/B8SqRJtH 
+The 2017 guide can be found [here](https://pastebin.com/B8SqRJtH)
 (I retain a copy on HDD of that as well as this version, should you need either. Both earlier versions appear to have been removed from pastebin completely.)
 
 The Reddit post accompanying this release can be found [here](https://old.reddit.com/r/Morrowind/comments/9z641w/morrowind_2019_pastebin_guide_beta_release/)
@@ -149,7 +149,7 @@ As you begin installing mods, I recommend that you right click them and hit "Ign
 * [Script Improvements](http://www.nexusmods.com/morrowind/mods/43828/) - Edits over 200 scripts, with a focus on reducing the chances of encountering quest-breaking errors.
 * [Texture Fix 2.0](http://mw.modhistory.com/download-90-10353) - Repairs landscape seams
 * [Texture Fix Extended](https://www.nexusmods.com/morrowind/mods/46018)
-* [Texture Fix - Bloodmoon 1.1](http://mw.modhistory.com/download-90-10388) - Repairs landscape seams on Solstheim. However, you might be interested in Wollibeebee's Solstheim overhaul mod: http://www.nexusmods.com/morrowind/mods/42979/?. Wolli's Tomb of the Snow Prince includes a landscape overhaul that negates this mod. If it's your first time playing, I would use this instead of TOTSP.
+* [Texture Fix - Bloodmoon 1.1](http://mw.modhistory.com/download-90-10388) - Repairs landscape seams on Solstheim. However, you might be interested in Wollibeebee's [Solstheim overhaul mod](http://www.nexusmods.com/morrowind/mods/42979/?). Wolli's Tomb of the Snow Prince includes a landscape overhaul that negates this mod. If it's your first time playing, I would use this instead of TOTSP.
 * [Delayed Dark Brotherhood Attack Add-On 2.0](http://mw.modhistory.com/download-90-7300)- Delays the Tribunal main quest from staring until a reasonable time.
 * [Bloated Caves](http://www.nexusmods.com/morrowind/mods/43141/) - Adds bloatspores (a plant) to Morrowind. Bloatspores were included in the game files but not placed in the world.
  
@@ -183,7 +183,7 @@ Download the LGNPC bundle. You should install all of the mods. A few notes:
 2. Get the Less Generic modules. These give the main quests of Morrowind, Tribunal and Bloodmoon the LGNPC treatment and are fantastic. It does tend to make some of the quests a little trickier, though.
 
 * [Less Generic Nerevarine](http://www.nexusmods.com/morrowind/mods/23335/)
-* [Less Generic Tribunal Restored]https://www.nexusmods.com/morrowind/mods/44819 (This is a fixed version of Less Generic Tribunal that doesn't need several patches)
+* [Less Generic Tribunal Restored](https://www.nexusmods.com/morrowind/mods/44819) (This is a fixed version of Less Generic Tribunal that doesn't need several patches)
 * [Less Generic Bloodmoon](http://www.nexusmods.com/morrowind/mods/23346/) - Comes with a patch for Thirsk Expanded and Children of Morrowind. Make sure to disable these ESPs unless you are using these mods. (This guide does not include those two)
  
 3. A few extra mods to add even more to the dialogue of the game:
@@ -457,7 +457,7 @@ That's it, you're done. Now you have nicer (and bigger) rocks.
  
 >Q: Why didn't you include Caverns Bump mapped by Lougian?
 >
->A: I originally planned to, but the textures included in it are a pretty vast departure from vanilla, which is important to me. The only real alternative was Connary's, which come pretty close to vanilla. But the deciding factor was actually the comments section on Nexus, which pointed out a lot of issues with the meshes, and Lougian himself commenting that he really needed to update the mod. It hasn't been updated in over two years. If you want to use it despite the problems with it, feel free. You can get it [here]http://www.nexusmods.com/morrowind/mods/42412/?).
+>A: I originally planned to, but the textures included in it are a pretty vast departure from vanilla, which is important to me. The only real alternative was Connary's, which come pretty close to vanilla. But the deciding factor was actually the comments section on Nexus, which pointed out a lot of issues with the meshes, and Lougian himself commenting that he really needed to update the mod. It hasn't been updated in over two years. If you want to use it despite the problems with it, feel free. You can get it [here](http://www.nexusmods.com/morrowind/mods/42412/?).
  
 >Q: What if I don't want to use Vurt's trees?
 >
@@ -589,8 +589,8 @@ textures\q_wood_plate
 * [Dunmer Lanterns Replacer](http://www.nexusmods.com/morrowind/mods/43219/?) - Make sure to look at the images and choose the textures you want.
 * [EKM Vanilla-Based Paper Lanterns](http://www.nexusmods.com/morrowind/mods/43837/?)
 * [AST beds texture replacer](http://www.nexusmods.com/morrowind/mods/21970/?) - We only want the chair mesh, the rest will be overwritten with the next mod.
-* [Illy's Bedspreads](http://www.nexusmods.com/morrowind/mods/43565/?) Wayback link: https://web.archive.org/web/*/http://download.fliggerty.com/file.php?id=1108
-* [Illy's Hot Pots](http://www.nexusmods.com/morrowind/mods/43206/?) - Make sure to activate the .esp. Wayback link: https://web.archive.org/web/*/http://download.fliggerty.com/file.php?id=1054
+* [Illy's Bedspreads](http://www.nexusmods.com/morrowind/mods/43565/?) [Wayback link](https://web.archive.org/web/*/http://download.fliggerty.com/file.php?id=1108)
+* [Illy's Hot Pots](http://www.nexusmods.com/morrowind/mods/43206/?) - Make sure to activate the .esp. [Wayback link](https://web.archive.org/web/*/http://download.fliggerty.com/file.php?id=1054)
 * [AST redware texture replacer](http://www.nexusmods.com/morrowind/mods/21981/?)
 * [Better Skulls](http://www.nexusmods.com/morrowind/mods/28729/?) - Activate the .esp if you want. I don't.
 * [Dunmeri Urns Aestetika](http://www.nexusmods.com/morrowind/mods/43541/?) - Get either the simple retexture or the bump map file, you don't need both.
@@ -667,10 +667,10 @@ We'll get a replacer for Dagoth Ur and dremora in the next step.
 ## Bodies
 
 1. Heads
-* [Westly's Pluginless Head and Hair Replacer: http://download.fliggerty.com/download-127-874
-* [Various tweaks and fixes: http://www.nexusmods.com/morrowind/mods/43795/? - Specifically, Fixed Westly's Female Orc Heads and Fixed Westly's Barenziah Head.
-* [Pluginless Khajiit Head Pack: http://www.nexusmods.com/morrowind/mods/43110/?
-* [Pluginless Khajiit Head Pack Talk-Blink Fix: http://abitoftaste.altervista.org/morrowind/index.php?option=downloads&task=info&id=68&Itemid=50&-Pluginless-Khajiit-Head-Pack-Talk-Blink-Fix)
+* [Westly's Pluginless Head and Hair Replacer](http://download.fliggerty.com/download-127-874)
+* [Various tweaks and fixes](http://www.nexusmods.com/morrowind/mods/43795/?) - Specifically, Fixed Westly's Female Orc Heads and Fixed Westly's Barenziah Head.
+* [Pluginless Khajiit Head Pack](http://www.nexusmods.com/morrowind/mods/43110/?)
+* [Pluginless Khajiit Head Pack Talk-Blink Fix](http://abitoftaste.altervista.org/morrowind/index.php?option=downloads&task=info&id=68&Itemid=50&-Pluginless-Khajiit-Head-Pack-Talk-Blink-Fix)
  
 Argonians will be in the next step, don't worry.
  
@@ -746,7 +746,7 @@ There are likely a ton of unique/artifact weapon replacers I've missed. I was ne
 
 Native HiRez fixes 
 >http://forums.bethsoft.com/topic/1441431-relz-hirez-armors-native-styles-v2/page-2#entry22297270
->http://forums.bethsoft.com/topic/1441431-relz-hirez-armors-native-styles-v2/page-2#entry23936622)
+>http://forums.bethsoft.com/topic/1441431-relz-hirez-armors-native-styles-v2/page-2#entry23936622
 >http://www.mediafire.com/file/sj9kg66x5cdq45l/tx_armor_EXC.dds/file (Fixes missing tx_armor_exc.dds, just put it into the "textures" folder of whichever of these fixes mods has a textures folder)
 
 * [Armor Retexture - Outlander Styles](http://www.nexusmods.com/morrowind/mods/44210/?) - Get the HQ version. You don't need to get the dragonscale armor textures. You should disable tx_a_templar_helmet before installing; we have better from Improved Armor Parts.
@@ -866,14 +866,13 @@ If you've followed this guide to the letter, your (almost!) final load order of 
 ## Other mods
 Not satisfied with just a graphics overhaul? Here are some other mods you might want to try. Please, PLEASE read the mod pages for the following mods. Simply downloading and installing everything here could very well make your game laggy and/or unstable, especially if you don't use a proper load order. I do not play with all of the below mods myself anymore, but have played most of them in the past. Some I've never played at all, but they do come highly recommended and endorsed by the community.
 
-0) I (Thastus) personally very much enjoy Races Are More Fun and Birthsigns are More Fun: 
-https://www.nexusmods.com/morrowind/mods/21875
-https://www.nexusmods.com/morrowind/mods/17888
+0) I (Thastus) personally very much enjoy [Races Are More Fun](https://www.nexusmods.com/morrowind/mods/21875) and [Birthsigns are More Fun](https://www.nexusmods.com/morrowind/mods/17888) 
+
 
 If you enjoy H2H characters, the MGE XE version of the Opponent Fatigue Indicator can be found [here](https://www.nexusmods.com/morrowind/mods/44363)
 (However, it does not scale with MGE XE gui size options. Not sure if possible to modify it to do that.)
 
-As well, I find MCC leveler (inspired by GCC and MADD) to be the best leveling system for my personal tastes: https://www.nexusmods.com/morrowind/mods/44294 (Others certainly exist though)
+As well, I find [MCC leveler](https://www.nexusmods.com/morrowind/mods/44294) (inspired by GCC and MADD) to be the best leveling system for my personal tastes (Others certainly exist though).
 
 (Includes optional state-based HP, optional state-based magicka regen, as well as just a better overall leveling system inspired by MADD and GCD, but far better than either. No micro-management required! No min-maxing needed!)
  
@@ -889,10 +888,10 @@ As well, I find MCC leveler (inspired by GCC and MADD) to be the best leveling s
 * [Spell Cast Reduction](http://mw.modhistory.com/download-37-1406) - Another feature already included in Mastering Magicka.
 * [Melian's Teleport Mod](http://mw.modhistory.com/download-21-6360) - Not only for wizards, this mod makes travelling around Vvardenfell a breeze by allowing you to have unlimited Mark locations.
  
-4) Do you want to travel with a companion (or two)? Then here is, hands down, the best Morrowind companion mod: Julan, Ashlander Companion. (http://lovkullen.net/Emma/Kateri.htm) You might also be interested in this (http://www.nexusmods.com/morrowind/mods/42780/?) to give Julan plus some other characters the fully red Dunmer eyes. There are some other companion mods for Morrowind, but none with the sheer amount of dialogue (or a quest directly tied to the main plot) as Julan.
+4) Do you want to travel with a companion (or two)? Then here is, hands down, the best Morrowind companion mod: [Julan, Ashlander Companion](http://lovkullen.net/Emma/Kateri.htm) You might also be interested in [this](http://www.nexusmods.com/morrowind/mods/42780/?) to give Julan plus some other characters the fully red Dunmer eyes. There are some other companion mods for Morrowind, but none with the sheer amount of dialogue (or a quest directly tied to the main plot) as Julan.
  
 5) Want harder dungeons?
-* [Darknut's Greater Dwemer Ruins versions 1.1](http://www.nexusmods.com/morrowind/mods/43544/?) - A widely used and recommended overhaul of the Red Mountain citadels. It was mentioned in Knots' guide. It's incompatible with most anything that changes any of the final dunmer strongholds. Unfortunately, most of the compatibility patches for it only work with 1.0, which can be found [here]http://mw.modhistory.com/download-98-11646).
+* [Darknut's Greater Dwemer Ruins versions 1.1](http://www.nexusmods.com/morrowind/mods/43544/?) - A widely used and recommended overhaul of the Red Mountain citadels. It was mentioned in Knots' guide. It's incompatible with most anything that changes any of the final dunmer strongholds. Unfortunately, most of the compatibility patches for it only work with 1.0, which can be found [here](http://mw.modhistory.com/download-98-11646).
 * [Sotha Sil Expanded](http://www.nexusmods.com/morrowind/mods/42347/?) - Trainwiz's epic mod that completely overhauls the final dungeon of the Tribunal expansion. Conflicts with anything changing Tribunal's final dungeon. Less Generic Tribunal MIGHT be fine, as I can't find anything saying otherwise, but I haven't made it far enough in the Tribunal story to test it with the newest version of LG Tribunal.
  
 6) Want a mod that gives your character needs?
@@ -903,8 +902,8 @@ As well, I find MCC leveler (inspired by GCC and MADD) to be the best leveling s
  
 8) Want mods to add atmosphere or to give you a more immersive experience?
 * [Mountainous Red Mountain](http://www.nexusmods.com/morrowind/mods/42125/?) - Makes Red Mountain much bigger, at the cost of breaking compatibility with any mod centered in and around Red Mountain. It's popular enough that there are compatibility patches for most popular mods. I believe there's a patch for Julan and another patch for Greater Dwemer Ruins 1.0.
-* [Gondoliers](http://www.nexusmods.com/morrowind/mods/43291/?), Boats (http://www.nexusmods.com/morrowind/mods/42270/?), Silt Striders (http://www.nexusmods.com/morrowind/mods/42267/?). All by abot. Travel in real time instead of instantaneously!
-* [Where are all birds going](http://www.nexusmods.com/morrowind/mods/43128/?) and Water Life (http://www.nexusmods.com/morrowind/mods/42417/?), by the same wonderful guy who made the above mods, adds birds and aquatic creatures to Morrowind.
+* [Gondoliers](http://www.nexusmods.com/morrowind/mods/43291/?), [Boat](http://www.nexusmods.com/morrowind/mods/42270/?), [Silt Striders](http://www.nexusmods.com/morrowind/mods/42267/?). All by abot. Travel in real time instead of instantaneously!
+* [Where are all birds going](http://www.nexusmods.com/morrowind/mods/43128/?) and [Water Life](http://www.nexusmods.com/morrowind/mods/42417/?), by the same wonderful guy who made the above mods, adds birds and aquatic creatures to Morrowind.
 * [Animated Morrowind](http://abitoftaste.altervista.org/morrowind/index.php?option=downloads&task=info&id=39&Itemid=50) - Adds NPCs to the game with new and unique animations to make the world feel more alive.
 * [Starfire's NPC Additions](http://mw.modhistory.com/download-90-13583) - Adds a ton more generic NPCs to the world to make it feel more lively, with a lot less 'getting destroyed by a high level vampire on the road to Pelagiad in the fucking DAYLIGHT' than Morrowind Comes Alive had. (I'm not bitter or anything.)
  

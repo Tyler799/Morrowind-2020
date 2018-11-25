@@ -378,7 +378,7 @@ tx_rockyscrub_01
     
 Note that some of these may not exist in the files to disable. This isn't a problem, jut disable all of the ones that are listed and can be found. And no, simply loading this mod and STOSP before Lush isn't quite good enough, there are other files that lush would take priority for that we don't want)
  
-## Skies. 
+## Skies
 
 A little more advanced due to the required .ini edits. 
 
@@ -469,7 +469,7 @@ That's it, you're done. Now you have nicer (and bigger) rocks.
 >
 >A: Unfortunately you don't have a lot of options... You can get correct UV Trees (http://mw.modhistory.com/download-35-5808) to make the textures look better. You can use the billboard trees from Better flora (http://www.nexusmods.com/morrowind/mods/43288/?), but keep in mind you'll need to replace the meshes for distant land generation, and then switch them back afterwards. SWG has a similar, though older replacer for the Grazelands (http://www.nexusmods.com/morrowind/mods/24537/?) but it doesn't have a distant land compatibility patch, so you'll have no leaves.
  
-## Architecture replacers
+## Architecture Replacers
 
 Hopefully this will be slightly less complicated than the nature section. Something to keep in mind: if a section mentions bump mapping, you CAN safely ignore/skip the bump map mod and use only the textures listed if you want to. Bump mapping doesn't always look great in Morrowind. If, as you're going along, you actually prefer the look of one of the bump-mapped mods instead of my suggestion (meaning Lougian's textures instead of Tyddy's, most of the time), feel free to use the bump map textures instead and skip my recommendation. The ones I picked are closer to vanilla Morrowind, but that doesn't mean it's to everyone's taste.
  

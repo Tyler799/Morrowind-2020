@@ -263,8 +263,7 @@ Feel free to start the game and check out Seyda Neen if you'd like, but we're no
  
 3. While we're at it, lets get a few more Connary packs. Some of this stuff will end up overwritten later; that's fine.
 
-* [Trexck368
-s](http://www.fullrest.ru/files/connarysgrazelands)
+* [Connary's Grazelands](http://www.fullrest.ru/files/connarysgrazelands)
 * [West Gash](http://www.fullrest.ru/files/connaryswestgash)
 * [Webs](http://www.fullrest.ru/files/connaryswebs)
 * [Caves](http://www.fullrest.ru/files/connaryscaves)

@@ -149,7 +149,7 @@ As you begin installing mods, I recommend that you right click them and hit "Ign
 * [Script Improvements](http://www.nexusmods.com/morrowind/mods/43828/) - Edits over 200 scripts, with a focus on reducing the chances of encountering quest-breaking errors.
 * [Texture Fix 2.0](http://mw.modhistory.com/download-90-10353) - Repairs landscape seams
 * [Texture Fix Extended](https://www.nexusmods.com/morrowind/mods/46018)
-* [Texture Fix - Bloodmoon 1.1](http://mw.modhistory.com/download-90-10388) - Repairs landscape seams on Solstheim. However, you might be interested in Wollibeebee's [Solstheim overhaul mod](http://www.nexusmods.com/morrowind/mods/42979/?). Wolli's Tomb of the Snow Prince includes a landscape overhaul that negates this mod. If it's your first time playing, I would use this instead of TOTSP.
+* [Texture Fix - Bloodmoon 1.1](http://mw.modhistory.com/download-90-10388) - Repairs landscape seams on Solstheim. (You'll need to disable this mod if you choose to install Solstheim - Tomb of the Snow Prince later in this guide)
 * [Delayed Dark Brotherhood Attack Add-On 2.0](http://mw.modhistory.com/download-90-7300)- Delays the Tribunal main quest from staring until a reasonable time.
 * [Bloated Caves](http://www.nexusmods.com/morrowind/mods/43141/) - Adds bloatspores (a plant) to Morrowind. Bloatspores were included in the game files but not placed in the world.
  
@@ -179,12 +179,13 @@ Download the LGNPC bundle. You should install all of the mods. A few notes:
 * If you want to avoid wereguars, skip LGNPC Pelagiad. It's one of their earliest mods and it really shows.
 * Make sure to read LGNPC Soul Sickness Patch's readme. It's optional, so decide on your own if you want it or not.
 * The plugin "LGNPC_SecretMasters_MCA5.esp" is only relevant if you have Morrowind Comes Alive. If you do not, make sure to right click the "Secret masters" mod and turn this ESP from "Available ESPs" to "Optional ESPs", or just make it hidden.
+* The "Soul Sickness" plugin is only compatible with Pax Redoran versions 1.12 and earlier. Thus, you will need to skip this plugin unless you are using that older copy. 
 
 2. Get the Less Generic modules. These give the main quests of Morrowind, Tribunal and Bloodmoon the LGNPC treatment and are fantastic. It does tend to make some of the quests a little trickier, though.
 
 * [Less Generic Nerevarine](http://www.nexusmods.com/morrowind/mods/23335/)
 * [Less Generic Tribunal Restored](https://www.nexusmods.com/morrowind/mods/44819) (This is a fixed version of Less Generic Tribunal that doesn't need several patches)
-* [Less Generic Bloodmoon](http://www.nexusmods.com/morrowind/mods/23346/) - Comes with a patch for Thirsk Expanded and Children of Morrowind. Make sure to disable these ESPs unless you are using these mods. (This guide does not include those two)
+* [Less Generic Bloodmoon](http://www.nexusmods.com/morrowind/mods/23346/) - Comes with one patch for users of Thirsk Expanded, and one patch for users of **both** Thirsk Expanded and Children of Morrowind, and finally the main plugin. Make sure to enable the main plugin, and one of the two patches if appropriate. (For reference, this guide installs neither TE nor CoM)
  
 3. A few extra mods to add even more to the dialogue of the game:
 * [Django's Dialogu](http://www.nexusmods.com/morrowind/mods/37328/)
@@ -243,7 +244,7 @@ However: If you want to use it you *must* have MWSE alpha 2.1. It will not work 
 * [Morrowind Optimization Patch](https://www.nexusmods.com/morrowind/mods/45384) - Improves performance by optimizing meshes. 
 * [Project Atlas](https://www.nexusmods.com/morrowind/mods/45399) - Improves performance by merging meshes into a single shape, reducing drawcalls significantly for the same visual quality. Download all files.
  
-## Nature texture & mesh replacers
+## Nature Texture & Mesh Replacers
 
 This is by far going to be the most complicated part of the guide so hold on to your butts.
  
@@ -258,7 +259,8 @@ Feel free to start the game and check out Seyda Neen if you'd like, but we're no
  
 3. While we're at it, lets get a few more Connary packs. Some of this stuff will end up overwritten later; that's fine.
 
-* [Grazelands](http://www.fullrest.ru/files/connarysgrazelands)
+* [Trexck368
+s](http://www.fullrest.ru/files/connarysgrazelands)
 * [West Gash](http://www.fullrest.ru/files/connaryswestgash)
 * [Webs](http://www.fullrest.ru/files/connaryswebs)
 * [Caves](http://www.fullrest.ru/files/connaryscaves)
@@ -290,7 +292,7 @@ If you're using Graphic Herbalism and it's Extra Mining module, get this [patch]
 * [Vurt's Bitter Coast Trees II](http://www.nexusmods.com/morrowind/mods/37489/?)
 * [Vurt's Ascadian Isles Trees Replacer II](http://www.nexusmods.com/morrowind/mods/37249/?) - Make sure to get the newer file (10a)
 * [Dahrk Mods by Melchior](http://www.nexusmods.com/morrowind/mods/43528/?) - Specifically, Vurt's Ashtrees - Shorter. But you should also grab the BC Trees Collision Fix right below it.
-* [Vurt's Grazelands Trees I](http://www.nexusmods.com/morrowind/mods/35368/?) OR [Vurt's Grazeland Trees II](http://www.nexusmods.com/morrowind/mods/37038/?) - Pick the one you like best. I prefer 1, and I use the palms free version.
+* [Vurt's Grazelands Trees I](http://www.nexusmods.com/morrowind/mods/35368/?) OR [Vurt's Grazeland Trees II](http://www.nexusmods.com/morrowind/mods/37038/?) - Pick the one you like best. I prefer 1, and I use the palms free version. Make sure to move **one** of the ESPs out of the Optional section using MO2, depending on which you want.
 
 * [Vurt's Trees Fix by Greatness7](https://www.dropbox.com/s/rwtjc7stx1gbeje/VurtsTreesFix.7z?dl=0) - Install the meshes from the Ascadian Isles and Bitter Coast folders. Leafy West Gash can be disabled if you're following this guide as we used different trees. Only use the Grazelands folder if you're using Grazelands II.
 

@@ -675,13 +675,13 @@ We'll get a replacer for Dagoth Ur and dremora in the next step.
 Argonians will be in the next step, don't worry.
  
 2. Body replacers
-* [Robert's bodies http](/www.nexusmods.com/morrowind/mods/43138/?) - Get the main file. Optionally, get Dagoth Ur OR Dagoth Ur (vanilla shaders), and RB Altmer Females, RB Bosmer Females, RB Orcish females. For the last three, you should look at the images section to see what they do; Westly's version is on the top, RB version is in the middle, and vanilla is at the bottom. The Orcish heads in particular are a drastic departure from Westly's heads, but they look more like the vanilla heads.
+* [Robert's bodies](http://www.nexusmods.com/morrowind/mods/43138/?) - Get the main file. Optionally, get Dagoth Ur OR Dagoth Ur (vanilla shaders), and RB Altmer Females, RB Bosmer Females, RB Orcish females. For the last three, you should look at the images section to see what they do; Westly's version is on the top, RB version is in the middle, and vanilla is at the bottom. The Orcish heads in particular are a drastic departure from Westly's heads, but they look more like the vanilla heads.
 * OR [Install Better Bodies](https://www.nexusmods.com/morrowind/mods/3880)
 
 Note that at the time this guide is being written, Khajiit meshes are nude. If seeing girl Khajiit nipples bother you, you should consider activating New Beast Bodies Khajit - Clean below, and make sure it overrides Robert's bodies. Also, it seems the nude meshes have been removed.
 
-* [Unique Shadow Pack](http://mw.modhistory.com/download-10-6029)) - This is a requirement for...
-* [New Beast Bodies - Clean Version](http://mw.modhistory.com/download-10-10928)) - You only need the argonian .esp and files. If you want to disable the khajiit meshes and textures, you can, but as long as you don't activate the Khajit bodies .esp, you'll be fine leaving them alone.
+* [Unique Shadow Pack](http://mw.modhistory.com/download-10-6029) - This is a requirement for...
+* [New Beast Bodies - Clean Version](http://mw.modhistory.com/download-10-10928) - You only need the argonian .esp and files. If you want to disable the khajiit meshes and textures, you can, but as long as you don't activate the Khajit bodies .esp, you'll be fine leaving them alone.
 * [Want 'mature' Argonians?](http://mw.modhistory.com/download-10-11364)
 * [Wey's Argonians](http://www.nexusmods.com/morrowind/mods/43766/?) - Get the optional darker mouths file if you wish. I use it.
 An newer alternative to Wey's Argonians for those who feel it may stray too far from the vanilla style:

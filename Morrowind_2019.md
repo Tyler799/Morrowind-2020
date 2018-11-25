@@ -133,7 +133,11 @@ Under the dropdown for "Morrowind" is where other executables can be put. You wo
 However, you'll also want to add Mlox and Wyre Bash to that list, so that they can actually see what mods you have installed. (I'm not doing to delve too far into how to use MO2 in this guide, there's a million resources on that already)
 
 Now when you need to run MGE XE, Mlox and Wyre, do it through MO2. MGE XE may ask for elevation, that's perfectly normal. If you want to avoid that error message, you can set it to run as administrator on your own.
-Congratulations, you've completed the baseline installation for Morrowind!  ## Patches, Fixes and Otherwise 
+
+Congratulations, you've completed the baseline installation for Morrowind!  
+
+## Patches, Fixes and Otherwise 
+
 A note before we start installing mods:
 
 MO2 allows you to use the "Download with Manager" option on the nexus pages that have it. Feel free to use this to save time. However, MO2 of course can install archives too using the second to leftmost top button with a CD on it. 

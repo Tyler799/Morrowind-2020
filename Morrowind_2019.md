@@ -192,7 +192,7 @@ Download the LGNPC bundle. You should install all of the mods. A few notes:
 * [Less Generic Bloodmoon](http://www.nexusmods.com/morrowind/mods/23346/) - Comes with one patch for users of Thirsk Expanded, and one patch for users of **both** Thirsk Expanded and Children of Morrowind, and finally the main plugin. Make sure to enable the main plugin, and one of the two patches if appropriate. (For reference, this guide installs neither TE nor CoM)
  
 3. A few extra mods to add even more to the dialogue of the game:
-* [Django's Dialogu](http://www.nexusmods.com/morrowind/mods/37328/)
+* [Django's Dialogue](http://www.nexusmods.com/morrowind/mods/37328/)
 * [Nastier Camonna Tong](http://www.nexusmods.com/morrowind/mods/22601/)
 * [What Thieves Guild?](http://mw.modhistory.com/download-87-13858)
  

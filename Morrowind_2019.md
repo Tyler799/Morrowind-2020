@@ -359,8 +359,15 @@ REMINDER: IF YOU ARE USING THIS OVERHAUL (TOTSP) YOU MUST REMOVE :TEXTURE FIX - 
  
 11. Landscape textures
 
-* [Tyddy's Landscape Textures](http://www.fullrest.ru/files/tyd_landscape-texture_compilation_1/files). Disable the following after installing, we have better from Lush Ascadian Isles:
+* [Tyddy's Landscape Textures](http://www.fullrest.ru/files/tyd_landscape-texture_compilation_1/files). 
+OR
+* [Vanilla Land](https://www.nexusmods.com/morrowind/mods/45953)
+OP
+* Choose both, and put Vanilla Land after. (Personal choice)
 
+There's a lot of overlap between these two mods, but 50 textures or so from Tyddy's aren't covered by Vanilla Land. Thus, by loading both and putting Vanilla Land After after, we get the vanilla land textures while still keeping anything from Tyddy's that VL doesn't cover.
+
+Disable the following after installing, we have better from Lush Ascadian Isles:
 ```
 tx_ai_clover_02
 tx_ai_dirtpatch_01

@@ -355,7 +355,8 @@ Textures\WL
 Some players report that this mod is an FPS killer, has broken quests and might otherwise be a slight pain. However, it is being redone. Should that happen, I'll replace it in this list. Remember, it's not mandatory.
 
 For Graphic Herbalism users, you'll need the relevantly-named patch from [here](https://www.nexusmods.com/morrowind/mods/43829)
-REMINDER: IF YOU ARE USING THIS OVERHAUL (TOTSP) YOU MUST REMOVE :TEXTURE FIX - BLOODMOON" (As it is made for a vanilla landscape)
+
+REMINDER: IF YOU ARE USING THIS OVERHAUL (TOTSP) YOU MUST REMOVE "Texture Fix: Bloodmoon" (As it is made for a vanilla landscape)
  
 11. Landscape textures
 

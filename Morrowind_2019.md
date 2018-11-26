@@ -183,7 +183,7 @@ Download the LGNPC bundle. You should install all of the mods. A few notes:
 * If you want to avoid wereguars, skip LGNPC Pelagiad. It's one of their earliest mods and it really shows.
 * Make sure to read LGNPC Soul Sickness Patch's readme. It's optional, so decide on your own if you want it or not.
 * The plugin "LGNPC_SecretMasters_MCA5.esp" is only relevant if you have Morrowind Comes Alive. If you do not, make sure to right click the "Secret masters" mod and turn this ESP from "Available ESPs" to "Optional ESPs", or just make it hidden.
-* The "Soul Sickness" plugin is only compatible with Pax Redoran versions 1.12 and earlier. Thus, you will need to skip this plugin unless you are using that older copy. 
+* The Soul Sickness patch comes bundled with Pax Redoran, and does not need to be installed seperately. 
 
 2. Get the Less Generic modules. These give the main quests of Morrowind, Tribunal and Bloodmoon the LGNPC treatment and are fantastic. It does tend to make some of the quests a little trickier, though.
 

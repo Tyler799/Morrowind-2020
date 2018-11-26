@@ -620,7 +620,8 @@ textures\q_wood_plate
 * [Illy's Bedspreads](http://www.nexusmods.com/morrowind/mods/43565/?) [Wayback link](https://web.archive.org/web/*/http://download.fliggerty.com/file.php?id=1108)
 * [Illy's Hot Pots](http://www.nexusmods.com/morrowind/mods/43206/?) - Make sure to activate the .esp. [Wayback link](https://web.archive.org/web/*/http://download.fliggerty.com/file.php?id=1054)
 * [AST redware texture replacer](http://www.nexusmods.com/morrowind/mods/21981/?)
-* [Better Skulls](http://www.nexusmods.com/morrowind/mods/28729/?) - Activate the .esp if you want. I don't.
+* [Better Skulls](http://www.nexusmods.com/morrowind/mods/28729/?) - Activate the .esp if you want. I do.
+* [Improved Better Skulls](https://www.nexusmods.com/morrowind/mods/46012)
 * [Dunmeri Urns Aestetika](http://www.nexusmods.com/morrowind/mods/43541/?) - Get either the simple retexture or the bump map file, you don't need both.
 * [Cart Cloth Retexture CCR](http://www.nexusmods.com/morrowind/mods/21837/?) - I prefer the normal version.
 * [Propylon Pillar Retexture PPR](http://www.nexusmods.com/morrowind/mods/19600/?) - Get either PPR_Glow or PPR_Normal, then get the PPR_Index Addon.

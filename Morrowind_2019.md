@@ -376,6 +376,20 @@ tx_rockyscrub_01
 ```
     
 Note that some of these may not exist in the files to disable. This isn't a problem, jut disable all of the ones that are listed and can be found. And no, simply loading this mod and STOSP before Lush isn't quite good enough, there are other files that lush would take priority for that we don't want)
+
+### Want plants to not "bend" or "grow" towards you?
+
+I hate this effect. It's in Ozzy's grass, and much more minor in Vurt's grass. Turns out, it's very easy to fix. 
+
+In XE Common.fx replace 
+
+    return saturate(0.02 * h) * (harmonics * displace + stomp); 
+
+with 
+
+    return saturate(0.02 * h) * (harmonics * displace);
+    
+Ta-da! Effect removed!
  
 ## Skies
 

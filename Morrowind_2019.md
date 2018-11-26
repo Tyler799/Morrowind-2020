@@ -362,6 +362,8 @@ REMINDER: IF YOU ARE USING THIS OVERHAUL (TOTSP) YOU MUST REMOVE "Texture Fix: B
 
 * [Tyddy's Landscape Textures](http://www.fullrest.ru/files/tyd_landscape-texture_compilation_1/files) OR [Vanilla Land](https://www.nexusmods.com/morrowind/mods/45953)
 
+Vanilla land is generally thought of as better looking and more compatible visually with vanilla style textures.
+
 Alternatively, choose both, and put Vanilla Land after. (My personal choice, but it is more downloading for you to do)
 
 There's a lot of overlap between these two mods, but 50 textures or so from Tyddy's aren't covered by Vanilla Land. Thus, by loading both and putting Vanilla Land After after, we get the vanilla land textures while still keeping anything from Tyddy's that VL doesn't cover.

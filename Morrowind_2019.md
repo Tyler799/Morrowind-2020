@@ -561,19 +561,16 @@ This mod handles what Hlaalu - Retexture and Hlaalu - Arkitektora of Vvardenfell
 Feel free to choose between Lougian and Tyddy's packs, if you prefer Lougian's then by all means don't get Tyddy's. Tyddy's is closer to vanilla, as usual.
  
 8. Miscellaneous Architecture Pieces
-* [Stronghold Retexture](http://www.nexusmods.com/morrowind/mods/43948/?) - Get the vanilla friendly floor tiles if you want it.
+* [Stronghold Retexture](http://www.nexusmods.com/morrowind/mods/43948/?) - Get the vanilla friendly floor tiles if you want it. However, if you do, it will need to be un-packed, all textures moved into a "textures" folder and then re-packed to install properly with MO2.
 * [Connary's 6th House](http://www.fullrest.ru/files/connarys6thhouse/files)
 * [Road Marker retextured](http://www.nexusmods.com/morrowind/mods/28311/?) - Incorrectly archived. You'll need to unzip it and move the textures into a "Textures" folder, then re-zip it and install as normal. 
-* [Banners retextured](http://www.nexusmods.com/morrowind/mods/21405/?) - We really only want a few of these. Others will be trumped by the next mod.
+* [Banners retextured](http://www.nexusmods.com/morrowind/mods/21405/?) - Some of these will be overridden by Django's Tapestries
 * [Arukinn's Better Banner Signs and Signposts](http://www.nexusmods.com/morrowind/mods/41658/?)
 * [Signposts Retextured](http://www.nexusmods.com/morrowind/mods/42126/?) Optional, as they are lower res than Arukinn's, but if you want signposts readable in English this is what I would recommend. Download the Tamriel Rebuilt patch if using TR.
 
 ```
 Q: What about Bloodmoon?
 A: Bloodmoon textures were actually covered in nature when we downloaded STOTSP. Remember, STOTSP is a massive overhaul of Solstheim's entire landscape. You do NOT need to activate the .esm if you only wanted to use it as a texture/mesh replacer.
- 
-Q: Why disable metal_iron_rusty so often?
-A: Because the rusty iron texture is used in a ton of places, not only in architecture but in weapons and clutter. Tyddy's (from Shacks and Docks) is very close to vanilla so should (in theory) match the closest with everything we're installing.
 ```
  
 ## Miscellaneous replacers
@@ -583,7 +580,7 @@ For things that don't really fit in any other section. If some of this seems too
 1. Book mods
 * [Arukinn's Better Books and Scrolls](http://www.nexusmods.com/morrowind/mods/43100/?)
 Illy's Dirty Books was an alternative to this, but was removed along with all of Illy's other mods, so you won't find it anymore except through hand-me-downs. 
-* [Melchior's Magnificent Manuscripts](https://www.nexusmods.com/morrowind/mods/45626)
+* [Melchior's Magnificent Manuscripts](https://www.nexusmods.com/morrowind/mods/45626) - Has an extra folder ("patches") that offers compatibility with the mod [Book Jackets](https://www.gamewatcher.com/mods/the-elder-scrolls-iii-morrowind-mod/book-jackets). Un-pack the mod, merge the patches folder contents in, and re-pack if you'd like that.
  
 2. [Papill6n's various graphic things.](http://www.nexusmods.com/morrowind/mods/39122/?) Grab the following in the BAIN installer:
 
@@ -615,12 +612,12 @@ textures\q_wood_plate
 ```
  
 4. Other, less complicated to install mods
-* [Connary's Fine Vials](http://www.fullrest.ru/files/connarysfinevials) - disable tx_rustedmetal0.
-* [Connary's Mixed Pottery](http://www.fullrest.ru/files/connarysmixedpottery) - disable the mottled texture and pewter 1 texture.
+* [Connary's Fine Vials](http://www.fullrest.ru/files/connarysfinevials/files) - disable tx_rustedmetal0.
+* [Connary's Mixed Pottery](http://www.fullrest.ru/files/connarysmixedpottery/files) - disable the mottled texture and pewter 1 texture.
 * [AOF Containers](http://www.nexusmods.com/morrowind/mods/32427/?) - disable meshes\m\misc_com_bucket_01.
 * [Small Mods by Wolli](http://www.nexusmods.com/morrowind/mods/42453/?) - Just get Darker Crates to match AOF's barrels.
 * [Better Kegstands](http://www.nexusmods.com/morrowind/mods/37708/?)
-* [Apel's Various Things - Sacks](http://www.nexusmods.com/morrowind/mods/42558/?) - Bump mapped or not, it's your choice.
+* [Apel's Various Things - Sacks](http://www.nexusmods.com/morrowind/mods/42558/?) - Bump mapped or not, it's your choice. Has an optional patch on the Nexus page for Animated Containers, if you use it. 
 * [Dahrk Mods by Melchior](http://www.nexusmods.com/morrowind/mods/43528/?) - Get Detailed Brooms.
 * [Dunmer Lanterns Replacer](http://www.nexusmods.com/morrowind/mods/43219/?) - Make sure to look at the images and choose the textures you want.
 * [EKM Vanilla-Based Paper Lanterns](http://www.nexusmods.com/morrowind/mods/43837/?)
@@ -628,7 +625,7 @@ textures\q_wood_plate
 * [Illy's Bedspreads](http://www.nexusmods.com/morrowind/mods/43565/?) [Wayback link](https://web.archive.org/web/*/http://download.fliggerty.com/file.php?id=1108)
 * [Illy's Hot Pots](http://www.nexusmods.com/morrowind/mods/43206/?) - Make sure to activate the .esp. [Wayback link](https://web.archive.org/web/*/http://download.fliggerty.com/file.php?id=1054)
 * [AST redware texture replacer](http://www.nexusmods.com/morrowind/mods/21981/?)
-* [Improved Better Skulls](https://www.nexusmods.com/morrowind/mods/46012) - Activate the .esp if you want. I do.
+* [Improved Better Skulls](https://www.nexusmods.com/morrowind/mods/46012) - In the BAIN installer, do *not* check the "Vanilla Textures" option.
 * [Dunmeri Urns Aestetika](http://www.nexusmods.com/morrowind/mods/43541/?) - Get either the simple retexture or the bump map file, you don't need both.
 * [Cart Cloth Retexture CCR](http://www.nexusmods.com/morrowind/mods/21837/?) - I prefer the normal version.
 * [Propylon Pillar Retexture PPR](http://www.nexusmods.com/morrowind/mods/19600/?) - Get either PPR_Glow or PPR_Normal, then get the PPR_Index Addon.
@@ -667,21 +664,21 @@ textures\q_wood_plate
 * [Daedroth](http://www.fullrest.ru/files/connarysbaddaedroth/files)
  
 3. And now for other replacers
-* [Correct UV Mudcrabs](http://www.nexusmods.com/morrowind/mods/42130/?) - Not a retexture, but it'll make them look better.
+* [Correct UV Mudcrabs](http://www.nexusmods.com/morrowind/mods/42130/?) - Not strictly a retexture, but does improve visuals. I chose the "regular" option rather than smoothed. No screenshots exist to compare the two, but you can test this easily yourself by installing it twice (once for each option) and test enabling/disabling them in-game to see what looks better. [TODO]
 * [Guars Aendemika](http://www.nexusmods.com/morrowind/mods/42521/?)
 * [Kagouti Aendemika](http://www.nexusmods.com/morrowind/mods/42523/?)
 * [Alit Aendemika](http://www.nexusmods.com/morrowind/mods/42520/?)
 * [Ash Vampire Reworked](http://www.nexusmods.com/morrowind/mods/43633/?)
 * [Cliffracer Replacer](http://www.nexusmods.com/morrowind/mods/43925/?)
 * [Nix-Hound Replacer](http://www.nexusmods.com/morrowind/mods/43620/?)
-* [Scamp Replacer](http://www.nexusmods.com/morrowind/mods/44314/?) - You (probably) don't need the PBR files, it's still a bleeding edge new feature in MGE XE. Get the Creeper replacer if you want.
+* [Scamp Replacer](http://www.nexusmods.com/morrowind/mods/44314/?) - You (probably) don't need the PBR files, it's still a bleeding edge new feature in MGE XE. Get the Creeper replacer if you want. If you do, make sure to mark the german version of the ESP as "optional" instead of "available" in MO2, since it'll be automatically activated.
 * [Luminous Atronachs](http://www.nexusmods.com/morrowind/mods/42613/?)
 * [Vurt's Silt Strider Retexture](http://www.nexusmods.com/morrowind/mods/30696/?) - Don't use skin_01 and skin_03, we have fixed versions of those.
 * [Netch Bump mapped](http://www.nexusmods.com/morrowind/mods/42851/?) - Get the main file and the optional file.
 * [HiRes Scrib](http://www.nexusmods.com/morrowind/mods/43352/?) - I use the bright version.
 * [Unique Winged Twilights](http://download.fliggerty.com/download--743) - The .esp is unnecessary if you just want a replacer.
 * [BB Dwarven Spectre](http://www.nexusmods.com/morrowind/mods/29671/?)
-* [Better Almalexia](http://www.nexusmods.com/morrowind/mods/23388/?) - Either disable mask_glow after installing.
+* [Better Almalexia](http://www.nexusmods.com/morrowind/mods/23388/?) - Comes with alternate pupil textures if you want. (You'll need to unpack/repack to add them). Also comes with a splash screen (Splash_almalexia.tga) you may want to disable if you feel it clashes with the existing splash screen replacers. 
 * [Azura Replacer](http://mw.modhistory.com/download-45-6053)
 * [Vivec God Replacement Creature Edition](http://mw.modhistory.com/download-26-10946) - Feel free to look through the extras folder at your options.
 * [Voiced Vivec and Yakety Yagrum](http://www.nexusmods.com/morrowind/mods/40994/?) - Not really a replacer, but it does involve 'creatures'.

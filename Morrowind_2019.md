@@ -1,4 +1,4 @@
-THIS IS AN BETA RELEASE OF THIS GUIDE. EXPECT CHANGES. FEEDBACK APPRECIATED.
+This is a changing guide. While currently considered a release canidate, it is still very open to changes and new sections. 
 
 # Morrowind 2019: Thastus Edition
 

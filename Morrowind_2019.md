@@ -268,7 +268,15 @@ Feel free to start the game and check out Seyda Neen if you'd like, but we're no
 * [Webs](http://www.fullrest.ru/files/connaryswebs)
 * [Caves](http://www.fullrest.ru/files/connaryscaves)
  
-4. Get [Apel's Asura Coast retexture](http://www.nexusmods.com/morrowind/mods/42573/) - get the main file and the "Fix V2"
+4. Get [Apel's Asura Coast and Sheogorath Region Retexture](http://www.nexusmods.com/morrowind/mods/42573/) - get the main file and the "Fix V2"
+
+Note, disable the following:
+
+    meshes\f\Terrain_rock_AC_*.nif 
+    
+(Where * is 01 to 12)
+
+This must be done because of some meshes on rocks blocking enterances and otherwise in the overworld. 
 
 If you are using Graphic Herbalism, you'll need [this patch](https://mega.nz/#!f8AW2bTK!LaQ0WoYtU59iwVHF_fAvieOfwx0tJB4buQM3urBCDNY). However, it is structured incorrectly. Place all the .NIF files into: Meshes/GHerb folder. Then re-pack the archive and install as normally. It should take priority over some Graphic Herbalism files if you look at the left hand pane. 
  

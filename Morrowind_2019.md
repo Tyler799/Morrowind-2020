@@ -580,7 +580,7 @@ For things that don't really fit in any other section. If some of this seems too
 1. Book mods
 * [Arukinn's Better Books and Scrolls](http://www.nexusmods.com/morrowind/mods/43100/?)
 Illy's Dirty Books was an alternative to this, but was removed along with all of Illy's other mods, so you won't find it anymore except through hand-me-downs. 
-* [Melchior's Magnificent Manuscripts](https://www.nexusmods.com/morrowind/mods/45626) - Has an extra folder ("patches") that offers compatibility with the mod [Book Jackets](https://www.gamewatcher.com/mods/the-elder-scrolls-iii-morrowind-mod/book-jackets). Un-pack the mod, merge the patches folder contents in, and re-pack if you'd like that.
+* [Melchior's Magnificent Manuscripts](https://www.nexusmods.com/morrowind/mods/45626) - Has an extra folder ("patches") that offers compatibility with the mod [Book Jackets](http://mw.modhistory.com/download-56-10464). Un-pack the mod, merge the patches folder contents in, and re-pack if you'd like that.
  
 2. [Papill6n's various graphic things.](http://www.nexusmods.com/morrowind/mods/39122/?) Grab the following in the BAIN installer:
 
@@ -637,6 +637,7 @@ textures\q_wood_plate
 * [Shiny Septims](http://www.nexusmods.com/morrowind/mods/42113/?) - I get the dulled version.
 * [Ghostnull's Silverware Enhancer](http://mw.modhistory.com/download-44-10088)
 * [Better Blood Morrowind](http://www.nexusmods.com/morrowind/mods/33426/?)
+* [Flash's Minor Retextures](http://www.nexusmods.com/morrowind/mods/44322/?) - Contains 2 files. 1 is an alternate Blood texture if you dislike BBM's. It also has a Mist retexture, which you should definitely get.
 * [Skeleton and Metal Sparks blood retexture](http://www.nexusmods.com/morrowind/mods/43359/?)
 * [Improved Cavern Clutter](https://www.dropbox.com/sh/l1660o8fg664bii/AABLfGQtcBsb0jfTsftnBZ-ca/Improved%20Cavern%20Clutter?dl=0) - Download as zip. You'll want to disable the three wood_weathered and rope_heavy textures after installing.
 * [Insanity's Potion Replacer](http://tesalliance.org/forums/index.php?/files/file/1402-insanitys-potion-replacer/) - You'll need an account to download these.
@@ -734,6 +735,7 @@ Note: When opening Mlox, it will warn you that Better Clothes depends upon Bette
 * [BC Shoes Fix](https://www.dropbox.com/s/usgjr6hwi53c6ma/BC%20Shoes%20Fix.zip)
 * [Expensive Female Shirt Fix](http://mw.modhistory.com/download--14998) - Put this in your meshes\BC folder.
 * [More Better Clothes](http://mw.modhistory.com/download-53-6647) - Get both the main file at the bottom of the page and the MBC_ArmsFix.
+For the Arms fix, make sure to un-pack it and create a Meshes/BC folder, then drop those .nif files into it and re-pack it to install. 
 * [Better Clothes for Tribunal](http://mw.modhistory.com/download-87-11804)
 * [Better Clothes Bloodmoon Plus](http://download.fliggerty.com/download-21-804) - Make sure to get the 1.5 version.
 * [BCBM Pants Fix](https://www.dropbox.com/s/lkxditr9gl3a92c/BCBM_Pants_Fix.zip)
@@ -749,25 +751,25 @@ Alternative: [Unique Jewelry Redone](https://www.nexusmods.com/morrowind/mods/46
  
 3. Robes
 * [Better Robes](http://www.nexusmods.com/morrowind/mods/42773/?) - Make sure to also install the patches for Tamriel Rebuilt if you're using it (TR folder) and UFR. If you plan to use Animated Morrowind, download the separate patch for that as well.
+If using the Tamriel Rebuilt patch, you'll need [this patch]([https://www.nexusmods.com/morrowind/mods/44875]) for that patch, since it crashes due to a Master reformat in 2015 that TR did. (However, note that this doesn't fix the issue with the TR-BR-Animated Morrowind combined patch, so you're kind of out of luck if using that)
 * [Robe Overhaul](http://www.nexusmods.com/morrowind/mods/43748/?)
 * [Various tweaks and fixes](http://www.nexusmods.com/morrowind/mods/43795/?) - Optionally, if you hate the glow effect that Robe Overhaul adds to some robes, you can download Blank Glow Maps for Robe Overhaul. You might also be interested in Pluginless NoGlow Lite, which removes the plastic-y looking 'enchantment' effect from all items in game.
  
 ## Weapons
 
 There are likely a ton of unique/artifact weapon replacers I've missed. I was never very good at keeping track of weapon mods...
-* [Darknut's Little Weapons Mod Complete](http://www.nexusmods.com/morrowind/mods/43418/?) - Our base. Unless you're on a toaster, use the 1024 folder. disable the following 9 files before installing:
+* [Darknut's Little Weapons Mod Complete](http://www.nexusmods.com/morrowind/mods/43418/?) - Has a Textures/512 and a Textures/1024 folder. You should be able to handle the 1K textures. In either case, you'll need to un-pack the mod and move all of whichever you choose (in my case 1K) out of the 1024 folder, and into the root "Textures" folder, and then re-pack.
 * [Oriental Mesh Improvements](http://www.nexusmods.com/morrowind/mods/29906/?)
-* [Crossbows](http://download.fliggerty.com/download-98-1010) - If you don't want the new crossbows, don't activate the .esps. You'll still get new meshes for the base game's crossbows.
+* [Crossbows](http://download.fliggerty.com/download-98-1010) - If you don't want the new crossbows, don't activate the .esps. You'll still get new meshes for the base game's crossbows. For TR users, note that this ESP is also set up requiring the old TR's ESP as a master, so it'll crash if you try to use it on modern TR installs. 
 * [Real Reflective Weapons - Iron](http://www.nexusmods.com/morrowind/mods/43077/?) - Install the base (Data Files) folder and the bonus folder.
 * [Improved Weapon Meshes - Steel](http://www.nexusmods.com/morrowind/mods/43120/?) - Install 00 and 01. You do not need the .esps.
-* [Improved Weapon Mehses - Ebony](http://www.nexusmods.com/morrowind/mods/43484/?) - Install 00. Install 01 if you want an Ebony Claymore in your game, you'll need the .esp.
+* [Improved Weapon Mehses - Ebony](http://www.nexusmods.com/morrowind/mods/43484/?) - Install 00. Install 01 if you want an Ebony Claymore in your game, you'll need the .esp. If you do so, note that it'll install two ESPs, one being german. Make sure to move it to the "Optional" section after installing. 
 * [Dwemer Armoury](http://www.nexusmods.com/morrowind/mods/43335/?) - Unfortunately, this isn't totally compatible with our armor mods, but the weapon meshes and a few of the armor meshes will show up in game.
 * [Mehrunes Razor Replacer - Oblivion](http://www.nexusmods.com/morrowind/mods/23825/?)
 * [True Trueflame](http://www.nexusmods.com/morrowind/mods/33432/?)
-* [HopesFire Replacer Morrowind Edition](http://mw.modhistory.com/download-98-12378)
+* [HopesFire Replacer Morrowind Edition](http://mw.modhistory.com/download-98-12378) - Has an "AltTextures" folder with an alternate texture for Hopesfire. You'll need to move the folder's contents into the Textures folder and over-write after installing if you wish to use it. (Or un-pack/repack)
 * [Various little mods](http://www.nexusmods.com/morrowind/mods/43330/?) - Volendrung.
 * [Improved Weapon Meshes & Textures WIP](https://www.dropbox.com/sh/l1660o8fg664bii/AAAO3m96a4O4J4JOUOUBmFnFa/Improved%20Weapon%20Meshes%20%26%20Textures%20WIP?dl=0) - Download as .zip.
-* [Flash's Minor Retextures](http://www.nexusmods.com/morrowind/mods/44322/?) - Download both files.
 * [Spear-Staff Fix](http://www.nexusmods.com/morrowind/mods/43353/?) - An optional fix for the position where spears and staves are held. Use it if you want. If you do, you'll need the Real Reflective Weapons Iron, Improved Weapon Meshes Steel, and Improved Weapon Meshes Ebony files from the Compatibility folder, then drag them out and over-write their normal versions from the mod, and then re-pack and install as normal.
  
 ## Armor
@@ -793,7 +795,7 @@ There are likely a ton of unique/artifact weapon replacers I've missed. I was ne
 
 * [Daedric Lord Armor Morrowind Edition](https://www.nexusmods.com/morrowind/mods/44081) - Not only does this replace Daedric armor and gives bound armor a unique look, it acts as a replacer for Dremora as well. It's newer than Better Morrowind Armor and should load after it, so you'll get this nicer looking Daedric Armor in game.
 
-* [Less Bulky Pauldrons](http://www.nexusmods.com/morrowind/mods/42566/?) - Optionally, you might like this. If you do decide to use it, make sure to use the the BAM & Native HiRez 2 files in the optional folder. (You know the deal: Unpack, add compatibility files, re-pack, install via MO2)
+* [Less Bulky Pauldrons](http://www.nexusmods.com/morrowind/mods/42566/?) - Optionally, you might like this. If you do decide to use it, make sure to use the the BAM & Native HiRez 2 files in the optional folder. To use them, create the folder Data Files\Meshes\bam inside the un-packed mod. Then, move the files from the "BAM & Native HiRez 2" into that \bam folder, not the \a folder like the rest of the mod's contents. 
  
 ## Animations
 

@@ -324,7 +324,7 @@ If you're using Graphic Herbalism and it's Extra Mining module, get this [patch]
 (You will need to disable Graphic Herbalism - EXTRA mod in your left pane completely, or if you merged it, just disable it's ESP)
 
 6. Water
-* [Dongle's Waterpack Bumpmapped](http://www.nexusmods.com/morrowind/mods/42317/?) - Personally, I don't use this. I don't like the way the water looks. Try it out in your own game (to do it quickly, start the game, press \` to go into the console, type `COC "Vivec, Puzzle Canal, Level 1"`, hit enter, and leave through the grate ahead of you).
+* [Dongle's Waterpack Bumpmapped](http://www.nexusmods.com/morrowind/mods/42317/?) - Personally, I don't use this. I don't like the way the water looks. Try it out in your own game (to do it quickly, start the game, press `\`` to go into the console, type `COC "Vivec, Puzzle Canal, Level 1"`, hit enter, and leave through the grate ahead of you).
 * [Waterfalls Bump mapped](http://www.nexusmods.com/morrowind/mods/42405/?) - These I do play with.
  
 7. Fire and smoke

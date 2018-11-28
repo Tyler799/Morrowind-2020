@@ -15,6 +15,39 @@ Finally: YOU ARE ALSO WELCOME TO SEND SUGGESTIONS TO ME AT ANY TIME! I am *not* 
 
 If you need to reach me regarding this guide or otherwise, PM me at /u/Night_Thastus on Reddit. Or respond to my Reddit post. Or find me on Discord, Night Thastus #6641.
 
+## Table of Content
+
+* [Before we begin](#before-we-begin)
+  * [Regarding mods with archives:](#regarding-mods-with-archives)
+  * [Bump mapped mods:](#bump-mapped-mods)
+  * [Great House Fliggerty](#great-house-fliggerty)
+* [Baseline Installation and Boilerplate](#baseline-installation-and-boilerplate)
+* [Patches, Fixes and Otherwise](#patches-fixes-and-otherwise)
+* [Official Bethesda Plugins](#official-bethesda-plugins)
+* [Dialogue Mods](#dialogue-mods)
+* [User Interface](#user-interface)
+* [Major mods to be aware of](#major-mods-to-be-aware-of)
+* [Mesh fixes and improvements](#mesh-fixes-and-improvements)
+* [Nature Texture &amp; Mesh Replacers](#nature-texture--mesh-replacers)
+  * [Want plants to not "bend" or "grow" towards you?](#want-plants-to-not-bend-or-grow-towards-you)
+* [Skies](#skies)
+* [Architecture Replacers](#architecture-replacers)
+* [Miscellaneous replacers](#miscellaneous-replacers)
+* [Creature replacers](#creature-replacers)
+* [Bodies](#bodies)
+* [Clothes replacers](#clothes-replacers)
+* [Weapons](#weapons)
+* [Armor](#armor)
+* [Animations](#animations)
+* [MGE XE Setup](#mge-xe-setup)
+* [Cleaning mods](#cleaning-mods)
+* [Creating a multipatch](#creating-a-multipatch)
+* [Updating Masters, Syncing and Reparing your Saves](#updating-masters-syncing-and-reparing-your-saves)
+* [Load Order](#load-order)
+* [Other mods](#other-mods)
+* [Contributors](#contributors)
+* [License](#license)
+
 ## Before we begin
 
 **You should always read the mod page or glance through the readme of any mod we're downloading**, so you'll at least be aware of what you're getting and what your options are. Mod are, above all else, personal preference. Knowledge is power!

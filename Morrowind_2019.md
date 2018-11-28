@@ -951,3 +951,9 @@ If you're going to join House Hlaalu... well, unfortunately, at this time, there
 11) Annoyed with how quickly vanilla torches go out? While you're at it, want them to put out more light? What about lanterns and candles? Try out [True Skyrimized Torches](http://www.nexusmods.com/morrowind/mods/43192/?).
  
 12) Do you feel like you don't get enough benefits from being in a guild? Do you want more perks from joining the Temple or the Cult? Want to boss around your underlings after you become the Head of a House? You might like [Antares' Big Mod](http://mw.modhistory.com/download-26-15472).
+
+## Notable guides
+
+This is of course not the only Morrowind modding guide. Other notable guides include the following (note that this by any means isn't a complete list):
+
+ - [modding-openmw.com](https://modding-openmw.com/) - *A guide to modding and modernizing Morrowind with OpenMW!*

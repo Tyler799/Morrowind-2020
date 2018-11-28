@@ -64,10 +64,10 @@ However: [Wyre Bash (Polemo's Fork)](https://www.nexusmods.com/morrowind/mods/45
 
 ### Regarding mods with archives:
 
-Mods with archives (.BSA files) need to be added into the Morrowind.ini file. However, we have a tool to automate the process that can be found [here](http://download.fliggerty.com/download-58-633)
+Mods with archives (.BSA files) need to be added into the `Morrowind.ini` file. However, we have a tool to automate the process that can be found [here](http://download.fliggerty.com/download-58-633)
 (Download down due to Fliggery site being broken)
  
-An example for handling it manually, using my_test_mod, which has a file called neat.BSA:
+An example for handling it manually, using my_test_mod, which has a file called `neat.BSA`:
 
 ```INI
 [Archives]
@@ -76,7 +76,7 @@ Archive 1=Bloodmoon.bsa
 Archive 2=neat.bsa
 ```
 
-NOTE: You must edit the Morrowind.ini inside your Mod Organizer profile that you're playing on for it to have any effect. Assuming you didn't rename it, it's under `Morrowind/Mod Organizer 2/Profiles/Default/Morrowind.ini`.
+NOTE: You must edit the `Morrowind.ini` inside your Mod Organizer profile that you're playing on for it to have any effect. Assuming you didn't rename it, it's under `Morrowind/Mod Organizer 2/Profiles/Default/Morrowind.ini`.
 
 (MO2 has a button to edit this INI directly as well)
  
@@ -276,7 +276,7 @@ However: If you want to use it you *must* have MWSE alpha 2.1. It will not work 
 * [Dwemer Mesh Improvement](http://www.nexusmods.com/morrowind/mods/43101/?)
 * [Various tweaks and fixes](http://www.nexusmods.com/morrowind/mods/43795/?) - Just get BoatFixes. 
 * [Mesh Improvements Optimized](http://download.fliggerty.com/download-56-1088)
-* [RR Mod Series - Better Meshes](http://www.nexusmods.com/morrowind/mods/43266/?) - Get the RR - Better Meshes V1.2 file and the Bittercup fix. Before installing, disable meshes/m/misc_com_pillow_01.
+* [RR Mod Series - Better Meshes](http://www.nexusmods.com/morrowind/mods/43266/?) - Get the RR - Better Meshes V1.2 file and the Bittercup fix. Before installing, disable `meshes/m/misc_com_pillow_01`.
 * [MOAR Mesh Replacers](http://www.nexusmods.com/morrowind/mods/44057/?)
 * [Morrowind Optimization Patch](https://www.nexusmods.com/morrowind/mods/45384) - Improves performance by optimizing meshes. 
 * [Project Atlas](https://www.nexusmods.com/morrowind/mods/45399) - Improves performance by merging meshes into a single shape, reducing drawcalls significantly for the same visual quality. Download all files.
@@ -828,7 +828,7 @@ There are likely a ton of unique/artifact weapon replacers I've missed. I was ne
 
 * [Daedric Lord Armor Morrowind Edition](https://www.nexusmods.com/morrowind/mods/44081) - Not only does this replace Daedric armor and gives bound armor a unique look, it acts as a replacer for Dremora as well. It's newer than Better Morrowind Armor and should load after it, so you'll get this nicer looking Daedric Armor in game.
 
-* [Less Bulky Pauldrons](http://www.nexusmods.com/morrowind/mods/42566/?) - Optionally, you might like this. If you do decide to use it, make sure to use the the BAM & Native HiRez 2 files in the optional folder. To use them, create the folder `Data Files\Meshes\bam` inside the un-packed mod. Then, move the files from the `BAM & Native HiRez 2` into that `\bam` folder, not the `\a` folder like the rest of the mod's contents. 
+* [Less Bulky Pauldrons](http://www.nexusmods.com/morrowind/mods/42566/?) - Optionally, you might like this. If you do decide to use it, make sure to use the the BAM & Native HiRez 2 files in the optional folder. To use them, create the folder `Data Files\Meshes\bam` inside the un-packed mod. Then, move the files from the `BAM & Native HiRez 2` into that `bam` folder, not the `a` folder like the rest of the mod's contents.
  
 ## Animations
 

@@ -15,11 +15,11 @@ Finally: YOU ARE ALSO WELCOME TO SEND SUGGESTIONS TO ME AT ANY TIME! I am *not* 
 
 If you need to reach me regarding this guide or otherwise, PM me at /u/Night_Thastus on Reddit. Or respond to my Reddit post. Or find me on Discord, Night Thastus #6641.
 
-## Table of Content
+## Table of Contents
 
 * [Before we begin](#before-we-begin)
-  * [Regarding mods with archives:](#regarding-mods-with-archives)
-  * [Bump mapped mods:](#bump-mapped-mods)
+  * [Regarding mods with archives](#regarding-mods-with-archives)
+  * [Bump mapped mods](#bump-mapped-mods)
   * [Great House Fliggerty](#great-house-fliggerty)
 * [Baseline Installation and Boilerplate](#baseline-installation-and-boilerplate)
 * [Patches, Fixes and Otherwise](#patches-fixes-and-otherwise)

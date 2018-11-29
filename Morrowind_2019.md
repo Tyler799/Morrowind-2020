@@ -64,10 +64,10 @@ However: [Wyre Bash (Polemo's Fork)](https://www.nexusmods.com/morrowind/mods/45
 
 ### Regarding mods with archives:
 
-Mods with archives (.BSA files) need to be added into the Morrowind.ini file. However, we have a tool to automate the process that can be found [here](http://download.fliggerty.com/download-58-633)
+Mods with archives (.BSA files) need to be added into the `Morrowind.ini` file. However, we have a tool to automate the process that can be found [here](http://download.fliggerty.com/download-58-633)
 (Download down due to Fliggery site being broken)
  
-An example for handling it manually, using my_test_mod, which has a file called neat.BSA:
+An example for handling it manually, using my_test_mod, which has a file called `neat.BSA`:
 
 ```INI
 [Archives]
@@ -76,12 +76,12 @@ Archive 1=Bloodmoon.bsa
 Archive 2=neat.bsa
 ```
 
-NOTE: You must edit the Morrowind.ini inside your Mod Organizer profile that you're playing on for it to have any effect. Assuming you didn't rename it, it's under Morrowind/Mod Organizer 2/Profiles/Default/Morrowind.ini
+NOTE: You must edit the `Morrowind.ini` inside your Mod Organizer profile that you're playing on for it to have any effect. Assuming you didn't rename it, it's under `Morrowind/Mod Organizer 2/Profiles/Default/Morrowind.ini`.
 
 (MO2 has a button to edit this INI directly as well)
  
 ### Bump mapped mods: 
-A lot of links in this guide will have bump map versions available, especially once we hit the architecture section. I don't know all the technical details of it, but bump mapping in Morrowind isn't quite like what you'd expect it to be. It's often very shiny looking, sometimes plastic-y, and it can make things look very bright depending on the reflection texture used. This is fine for metals and wet looking plants (it looks great on mushrooms, in my opinion), but can sometimes look a little weird on architecture. That means, if you ever have a choice between getting a bump map or no bump map version, the choice is 100% yours. If you do download a bump map version and decide you don't like it, you can get rid of the bumps by deleting the meshes that were included in the mod, and you can also disable the normal maps (usually they have _nm or _n at the end of their filename) if you want to save space.
+A lot of links in this guide will have bump map versions available, especially once we hit the architecture section. I don't know all the technical details of it, but bump mapping in Morrowind isn't quite like what you'd expect it to be. It's often very shiny looking, sometimes plastic-y, and it can make things look very bright depending on the reflection texture used. This is fine for metals and wet looking plants (it looks great on mushrooms, in my opinion), but can sometimes look a little weird on architecture. That means, if you ever have a choice between getting a bump map or no bump map version, the choice is 100% yours. If you do download a bump map version and decide you don't like it, you can get rid of the bumps by deleting the meshes that were included in the mod, and you can also disable the normal maps (usually they have `_nm` or `_n` at the end of their filename) if you want to save space.
 
 ### Great House Fliggerty
 This site hosts a few of the mods for this list. However, due to server migration problems, downloads are broken. You can solve this by using the Wayback Machine (internet archive) for any of the given downloads. I already have links to a few of the mods, but you should be able to get the others as well.
@@ -128,7 +128,7 @@ Constant 0.382
  
 7. Download mlox. While its mod page can be found [here](https://www.nexusmods.com/morrowind/mods/43001) You should actually get the latest version of it from [here](https://github.com/mlox/mlox/releases/) (They migrated away from Sourceforge some time ago)
 
-mlox is the Morrowind equivalent of LOOT or BOSS, and it needs to go into its own folder in your Morrowind install. Mine is in Morrowind\mlox. Run the application and hit "update load order". You should get into the habit of doing this after you install mods that require an .esp to be activated. 
+mlox is the Morrowind equivalent of LOOT or BOSS, and it needs to go into its own folder in your Morrowind install. Mine is in `Morrowind\mlox`. Run the application and hit "update load order". You should get into the habit of doing this after you install mods that require an .esp to be activated.
 
 mlox is, currently, highly out of date, even using version 0.62. It suggests the Morrowind Patch Project (despite those links no longer working) and has other outdated information. However, it does form a good baseline and has some information still relevant you can at least look into if it warns you.
 
@@ -138,7 +138,7 @@ This is a powerful tool that will allow us to handle conflict resolution, cleani
 
 To do this, first download the "Manual Installation Archive"
 
-Then, extract it. The contents ("Data Files" and "Mopy") should be put into your Morrowind directory, so that the Data files merges with the vanilla Data Files folder.
+Then, extract it. The contents (`Data Files` and `Mopy`) should be put into your `Morrowind` directory, so that the Data files merges with the vanilla `Data Files` folder.
 
 NOTE: YOU MUST RUN WRYE ONCE MANUALLY BEFORE RUNNING IT INSIDE MO2. 
 
@@ -150,14 +150,14 @@ This is a powerful command-line tool that allows you to determine which mods nee
 
 HOWEVER: DO NOT ATTEMPT TO JUST CLEAN YOUR ENTIRE LOAD ORDER! Some mods *will* break upon being cleaned. I personally, carefully went through the mods and determined (mainly through their readme's) which plugins could not be safely cleaned. I will instruct you on which plugins to clean later in this guide.
 
-Install it by putting it in the Data Files folder. 
+Install it by putting it in the `Data Files` folder.
 
 8. Download [Mod Organizer 2](https://www.nexusmods.com/skyrimspecialedition/mods/6194)
 (The latest dev versions can be found on the MO2 Discord, but as of writing this, 2.1.5 is perfectly fine for Morrowind use)
 
-Extract it so that the "Mod Organizer 2 (Archive)" folder is inside your Morrowind installation folder. 
+Extract it so that the `Mod Organizer 2 (Archive)` folder is inside your Morrowind installation folder.
 
-Then, go ahead and run Mod Organizer.exe. It should pop up asking you about a couple things. You'll want to choose a "PORTABLE" install (unless you're much more familiar with MO2 and know what you're doing) and when it asks you about which game you want to manage, navigate to the Steam/steamapps/common/Morrowind folder.
+Then, go ahead and run Mod Organizer.exe. It should pop up asking you about a couple things. You'll want to choose a "PORTABLE" install (unless you're much more familiar with MO2 and know what you're doing) and when it asks you about which game you want to manage, navigate to the `Steam/steamapps/common/Morrowind` folder.
 
 It should look like [this](https://i.imgur.com/WWbBKJZ.png)
 
@@ -200,7 +200,7 @@ There are two main options for fixed version of these addons:
 
 Some of the folders have optional components, usually with higher res textures, glow maps, or normal maps. Feel free to install all of the optional folders. To install, you'll need to download the archive, merge any optional folders into their parent mod folder, and then pack them into .7Zip or .zip files, which you then can install via MO2 as normal)
 
-2. The [alternative](https://www.nexusmods.com/morrowind/mods/43931) by PikachunoTM. Has a broken installer which can be "fixed", but for both the manual copy and the installer the archive is laid out completely wrong. You'll need to organize it properly to install it. As well, it's missing a file called "photodragons.nif", a texture file. No fix currently found, though it does not crash the game.
+2. The [alternative](https://www.nexusmods.com/morrowind/mods/43931) by PikachunoTM. Has a broken installer which can be "fixed", but for both the manual copy and the installer the archive is laid out completely wrong. You'll need to organize it properly to install it. As well, it's missing a file called `photodragons.nif`, a texture file. No fix currently found, though it does not crash the game.
 
 This one is more recent, but apparently may take some more liberties with the quests than the first option. Opinions are apparently varied on which to take, so ask around or try them to see what you like.
 
@@ -241,8 +241,8 @@ Download the LGNPC bundle. You should install all of the mods. A few notes:
  
 3. HD video/splash screen replacers. You can get all of these.
 
-* [HD Intro Cinematic - English](http://www.nexusmods.com/morrowind/mods/39329/) - Make sure to pick the right one for your resolution, and only get this if you picked the proper option in MCP. To install, you need to rename the movie file to mw_intro.bik after installing it via MO2.
-* [Morrowind Bethesda Logo HD Makeover](http://www.nexusmods.com/morrowind/mods/42352/) - If you have 'skip intro movie' turned on in MGE XE, there's no point to downloading this. In order to install, you'll need to make a folder called "Video" and drop the "bethesda logo.bik" file into it.
+* [HD Intro Cinematic - English](http://www.nexusmods.com/morrowind/mods/39329/) - Make sure to pick the right one for your resolution, and only get this if you picked the proper option in MCP. To install, you need to rename the movie file to `mw_intro.bik` after installing it via MO2.
+* [Morrowind Bethesda Logo HD Makeover](http://www.nexusmods.com/morrowind/mods/42352/) - If you have 'skip intro movie' turned on in MGE XE, there's no point to downloading this. In order to install, you'll need to make a folder called `Video` and drop the `bethesda logo.bik` file into it.
 * [HD Concept-art Splash Screen and Main Menu](http://www.nexusmods.com/morrowind/mods/43081/) - Skip this if you absolutely can't stand the Russian writing on the splash screens, but the screens look amazing enough that you should overlook it. To install, you'll just need to set the "Data Files" section as the Data directory when installing via MO2, then it works fine.
 
 If you aren't a fan of the suggested main menu/splash screen replacer, you have several other options to choose from.
@@ -276,7 +276,7 @@ However: If you want to use it you *must* have MWSE alpha 2.1. It will not work 
 * [Dwemer Mesh Improvement](http://www.nexusmods.com/morrowind/mods/43101/?)
 * [Various tweaks and fixes](http://www.nexusmods.com/morrowind/mods/43795/?) - Just get BoatFixes. 
 * [Mesh Improvements Optimized](http://download.fliggerty.com/download-56-1088)
-* [RR Mod Series - Better Meshes](http://www.nexusmods.com/morrowind/mods/43266/?) - Get the RR - Better Meshes V1.2 file and the Bittercup fix. Before installing, disable meshes/m/misc_com_pillow_01.
+* [RR Mod Series - Better Meshes](http://www.nexusmods.com/morrowind/mods/43266/?) - Get the RR - Better Meshes V1.2 file and the Bittercup fix. Before installing, disable `meshes/m/misc_com_pillow_01`.
 * [MOAR Mesh Replacers](http://www.nexusmods.com/morrowind/mods/44057/?)
 * [Morrowind Optimization Patch](https://www.nexusmods.com/morrowind/mods/45384) - Improves performance by optimizing meshes. 
 * [Project Atlas](https://www.nexusmods.com/morrowind/mods/45399) - Improves performance by merging meshes into a single shape, reducing drawcalls significantly for the same visual quality. Download all files.
@@ -311,7 +311,7 @@ Note, disable the following:
 
 This must be done because of some meshes on rocks blocking enterances and otherwise in the overworld. 
 
-If you are using Graphic Herbalism, you'll need [this patch](https://mega.nz/#!f8AW2bTK!LaQ0WoYtU59iwVHF_fAvieOfwx0tJB4buQM3urBCDNY). However, it is structured incorrectly. Place all the .NIF files into: Meshes/GHerb folder. Then re-pack the archive and install as normally. It should take priority over some Graphic Herbalism files if you look at the left hand pane. 
+If you are using Graphic Herbalism, you'll need [this patch](https://mega.nz/#!f8AW2bTK!LaQ0WoYtU59iwVHF_fAvieOfwx0tJB4buQM3urBCDNY). However, it is structured incorrectly. Place all the .NIF files into: `Meshes/GHerb` folder. Then re-pack the archive and install as normally. It should take priority over some Graphic Herbalism files if you look at the left hand pane.
  
 5. Time for rocks. Download the following:
 
@@ -324,7 +324,7 @@ If you're using Graphic Herbalism and it's Extra Mining module, get this [patch]
 (You will need to disable Graphic Herbalism - EXTRA mod in your left pane completely, or if you merged it, just disable it's ESP)
 
 6. Water
-* [Dongle's Waterpack Bumpmapped](http://www.nexusmods.com/morrowind/mods/42317/?) - Personally, I don't use this. I don't like the way the water looks. Try it out in your own game (to do it quickly, start the game, press \` to go into the console, type COC "Vivec, Puzzle Canal, Level 1", hit enter, and leave through the grate ahead of you). 
+* [Dongle's Waterpack Bumpmapped](http://www.nexusmods.com/morrowind/mods/42317/?) - Personally, I don't use this. I don't like the way the water looks. Try it out in your own game (to do it quickly, start the game, press `\`` to go into the console, type `COC "Vivec, Puzzle Canal, Level 1"`, hit enter, and leave through the grate ahead of you).
 * [Waterfalls Bump mapped](http://www.nexusmods.com/morrowind/mods/42405/?) - These I do play with.
  
 7. Fire and smoke
@@ -338,18 +338,18 @@ If you're using Graphic Herbalism and it's Extra Mining module, get this [patch]
 * [Dahrk Mods by Melchior](http://www.nexusmods.com/morrowind/mods/43528/?) - Specifically, Vurt's Ashtrees - Shorter. But you should also grab the BC Trees Collision Fix right below it.
 * [Vurt's Grazelands Trees I](http://www.nexusmods.com/morrowind/mods/35368/?) OR [Vurt's Grazeland Trees II](http://www.nexusmods.com/morrowind/mods/37038/?) - Pick the one you like best. I prefer 1, and I use the palms free version. Make sure to move **one** of the ESPs out of the Optional section using MO2, depending on which you want.
 
-* [Vurt's Trees Fix by Greatness7](https://www.dropbox.com/s/rwtjc7stx1gbeje/VurtsTreesFix.7z?dl=0) - Install the meshes from the Ascadian Isles and Bitter Coast folders. Leafy West Gash can be disabled if you're following this guide as we used different trees. Only use the Grazelands folder if you're using Grazelands II.
+* [Vurt's Trees Fix by Greatness7](https://www.dropbox.com/s/rwtjc7stx1gbeje/VurtsTreesFix.7z?dl=0) - Install the meshes from the `Ascadian Isles` and `Bitter Coast` folders. Leafy West Gash can be disabled if you're following this guide as we used different trees. Only use the Grazelands folder if you're using Grazelands II.
 
-You'll need to re-pack these, as they aren't correctly archived. In each folder, all the .NIF files should be in a Meshes/f folder. Make sure to set them up that way and re-pack them, then install as normal.
+You'll need to re-pack these, as they aren't correctly archived. In each folder, all the .NIF files should be in a `Meshes/f` folder. Make sure to set them up that way and re-pack them, then install as normal.
 
 * [Vurt's Mournhold Trees II](http://www.nexusmods.com/morrowind/mods/35400/?)
 * [Vurt's Solstheim Tree Replacer II](http://www.nexusmods.com/morrowind/mods/37856/?)
-(Also comes with a "Fixed Collision" patch. Will also need to be re-packed so all .NIF files are in a /Meshes/f folder)
+(Also comes with a "Fixed Collision" patch. Will also need to be re-packed so all .NIF files are in a `/Meshes/f` folder)
 
 For the West Gash trees, you have two options. Vurt's look nicer, in my opinion, but Vanilla-friendly West Gash is MUCH more... well, vanilla friendly. Only use ONE of the below mods.
 
 * [Vurts Leafy West Gash II](http://www.nexusmods.com/morrowind/mods/37400/?) - Make sure to get the newer file. Do NOT download the bridge rope textures.
-* [Vanilla-friendly West Gash Tree Replacer](http://www.nexusmods.com/morrowind/mods/44173/?) - The only non-Vurt tree mod in the list. I recommend using the darker leaf texture found in the extras folder.
+* [Vanilla-friendly West Gash Tree Replacer](http://www.nexusmods.com/morrowind/mods/44173/?) - The only non-Vurt tree mod in the list. I recommend using the darker leaf texture found in the `extras` folder.
  
 9. Plants
 
@@ -362,10 +362,10 @@ For the West Gash trees, you have two options. Vurt's look nicer, in my opinion,
 * [Trama Bump mapped](http://www.nexusmods.com/morrowind/mods/43015/?) - Make sure to get the Graphic Herbalism compatibility patch if you need it.
 * [Hackle-lo Fixed](http://www.nexusmods.com/morrowind/mods/42784/?) - The "EXTRAS" option in the BAIN installer is the Graphic Herbalism patch.
 * [Comberry Bush and Ingredient Replacer](http://www.nexusmods.com/morrowind/mods/42586/?) - The EXTRAS option contains a patch for Graphic Herbalism. Additionally, there's another option which includes vanilla style textures. I recommend it.
-* [Improved Kwama Eggs and Egg Sacs](http://www.nexusmods.com/morrowind/mods/43555/?) - Technically not a plant, but they work the same way plants do. The install is a little complicated if you're doing it manually. If you want the full package (bump maps + animation) get 00 + 01 + 03 (and 05 if you use Graphic Herbalism). If you don't want bump maps but do want the animation, get 00 + 02 (and 04 for GH). For a no frills retexture, just get folder 00 (and 04 for GH).
+* [Improved Kwama Eggs and Egg Sacs](http://www.nexusmods.com/morrowind/mods/43555/?) - Technically not a plant, but they work the same way plants do. The install is a little complicated if you're doing it manually. If you want the full package (bump maps + animation) get `00` + `01` + `03` (and `05` if you use Graphic Herbalism). If you don't want bump maps but do want the animation, get `00` + `02` (and `04` for GH). For a no frills retexture, just get folder `00` (and `04` for GH).
 * [Fire Fern Plant and Ingredient Retexture](http://www.nexusmods.com/morrowind/mods/43568/?) - Get the GH patch if you need it.
 
-* [Better flora](https://mega.nz/#!HwpRRRZQ!IKYOhTxBrfEATUXGltYNsESBZs_Y-CZRQ4zq2bM8duo)  - We're just after the meshes from this mod, but the original had collisions for all the flower meshes. I've fixed that in this version. You do need to disable four files from meshes\o ), and those are the three kreshweed .nifs and the marshmerrow .nif. If you don't like spinning flowers, you might want to disable the gold kanet meshes as well, as the flowers will rotate when you move your camera. Included in the extras folder are Graphic Herbalism meshes. If you want to use them, you'll either need to make them a seperate mod, or just pull them into the "meshes" folder with the rest of the mod and re-pack it.
+* [Better flora](https://mega.nz/#!HwpRRRZQ!IKYOhTxBrfEATUXGltYNsESBZs_Y-CZRQ4zq2bM8duo)  - We're just after the meshes from this mod, but the original had collisions for all the flower meshes. I've fixed that in this version. You do need to disable four files from `meshes\o`), and those are the three kreshweed .nifs and the marshmerrow .nif. If you don't like spinning flowers, you might want to disable the gold kanet meshes as well, as the flowers will rotate when you move your camera. Included in the extras folder are Graphic Herbalism meshes. If you want to use them, you'll either need to make them a seperate mod, or just pull them into the `meshes` folder with the rest of the mod and re-pack it.
 Original mod this was based on can be found [here](http://www.nexusmods.com/morrowind/mods/43288/) (Do not download this)
 
 * [Ascadian Isles Plants](http://www.nexusmods.com/morrowind/mods/36810/?) - If you'd like, install these. I personally don't like the way they look in-game, I think they stick out too much. You might want to skip the comberry bush meshes and textures if you prefer Pherim's (which we already installed). Your choice. If you'd like to use the flowers but want to skip the bush, simply disable the following files before copying into your installation:
@@ -376,7 +376,7 @@ Meshes\Gherb\Comberry_01_P
 Meshes\n\ingred_comberry_01
 ```
     
-If you aren't using Graphic Herbalism, it's actually safe to disable the entire Meshes\Gherb folder.
+If you aren't using Graphic Herbalism, it's actually safe to disable the entire `Meshes\Gherb` folder.
 
 * [EKM Corkbulb Retexture](http://www.nexusmods.com/morrowind/mods/43809/?)
 * [EKM Vanilla-Based Ash Grasses](http://www.nexusmods.com/morrowind/mods/43836/?)
@@ -431,7 +431,7 @@ Note that some of these may not exist in the files to disable. This isn't a prob
 
 I hate this effect. It's in Ozzy's grass, and much more minor in Vurt's grass. Turns out, it's very easy to fix. 
 
-In XE Common.fx replace 
+In `XE Common.fx` replace
 
     return saturate(0.02 * h) * (harmonics * displace + stomp); 
 
@@ -453,14 +453,14 @@ Okay, now that you have all the files...
 You can personally pick-and-choose which textures you like. Personal suggestion:
 
 1. From the Skies IV BAIN insaller, choose the following options: SkiesIV, Moons and Particles.
-2. Disable Tx_Sky_Foggy and Tx_Sky_Ashstorm
-3. The Moon option has textures in the wrong spot. Open the file in MO, and drag-and-drop them into the "textures" folder.'
-4. Only enable Tx_Sky_Foggy and Tx_Sky_Ashstorm from Alternate Skies, hide all the remaining files.
+2. Disable `Tx_Sky_Foggy` and `Tx_Sky_Ashstorm`
+3. The Moon option has textures in the wrong spot. Open the file in MO, and drag-and-drop them into the `textures` folder.'
+4. Only enable `Tx_Sky_Foggy` and `Tx_Sky_Ashstorm` from Alternate Skies, hide all the remaining files.
 
 If you want moons that more closely resemble their appearances in the later games, download Skies v3 from the Skies .IV mod page and install the moon textures from there instead.
 If you want moons that look like they once contained life, try [Dying Worlds](http://www.nexusmods.com/morrowind/mods/43023/?)
 
-5. You might notice your clouds moving by far too quickly. Let's fix that. First, make a backup of your Morrowind.ini. (This can be found under Morrowind/Mod Organizer 2/Profiles/Default, or whatever you named your profile if you renamed it)
+5. You might notice your clouds moving by far too quickly. Let's fix that. First, make a backup of your `Morrowind.ini`. (This can be found under `Morrowind/Mod Organizer 2/Profiles/Default`, or whatever you named your profile if you renamed it)
 
 Grab [this file](https://mega.nz/#!zsADQbQQ!d5uOr1R8SM468G7DwA0a3cchDuFHbTJrKaAFtFTgURQ), then copy/paste the weather sections over your own weather settings in your .ini. This includes fixes to cloud speed required by Skies IV but also changes the weather settings to correspond to those provided by Alternate Skies. Try them out and see if you like them. Among other color changes, they make the nights darker, but not so dark as to blind you. If you don't like them, just restore your backup and keep reading.
 
@@ -510,7 +510,7 @@ And with that, we're done with the nature section of the guide. If you'd like, g
 >
 >A: Despite the fact that On the Rocks has much more detailed rock meshes, they unfortunately change the shape/size from vanilla so drastically that they sometimes block entrances to caves and tombs. This is especially prevalent in landmass mods (like Tamriel Rebuilt) or quest mods that use rocks. The same can be said for Apel's Asura Coast rock meshes, which is why we overwrote them. This CAN be fixed by going into the console (\` key), clicking on the rock in question and typing disable, then hitting enter, but a workaround like that shouldn't be required to play the game. If you want to use OtR anyway, do the following:
 
-1. Skip out on downloading Correct UV Rocks and WIP Smooth Correct UV Rocks. [If you've already installed everything, that's fine, but you should go back and reinstall the Meshes folder from Apel's Asura's Coast mod before continuing.]
+1. Skip out on downloading Correct UV Rocks and WIP Smooth Correct UV Rocks. [If you've already installed everything, that's fine, but you should go back and reinstall the `Meshes` folder from Apel's Asura's Coast mod before continuing.]
 2. Download ONLY the Ashlands, Molag Amur and Red Mountain modules from [here](http://mw.modhistory.com/download-44-14107). 
 3. Download everything except Azura's Coast and Shores from [here](http://www.nexusmods.com/morrowind/mods/43075/?) and install it.
 
@@ -545,7 +545,7 @@ Hopefully this will be slightly less complicated than the nature section. Someth
 * [Dragon Statue Replacer](http://www.nexusmods.com/morrowind/mods/43218/?) - I used Option 3. Also incorrectly archived, you'll need to download it manually and extract it, then you can use MO2 to install one of the .rar files from there.
 * [Apel's Lighthouse Retexture](http://www.nexusmods.com/morrowind/mods/42532/?) - Get the version you want, bumps or no bumps.
 * [Shacks, Docks and Ships](http://www.nexusmods.com/morrowind/mods/43520/?)
-* [Tydz Small Mods](http://www.nexusmods.com/morrowind/mods/44028/?) - Specifically, the Gnisis Fort Roof file. It's a very small change, so feel free to skip it if you want. Also incorrectly packaged. You'll need to extact it, drop the x folder into a "Meshes" folder and then re-pack it. 
+* [Tydz Small Mods](http://www.nexusmods.com/morrowind/mods/44028/?) - Specifically, the Gnisis Fort Roof file. It's a very small change, so feel free to skip it if you want. Also incorrectly packaged. You'll need to extact it, drop the `x` folder into a `Meshes` folder and then re-pack it.
  
 3. Hlaalu.
 * [Aesthesia - Hlaalu textures](https://www.nexusmods.com/morrowind/mods/46009)
@@ -564,24 +564,24 @@ This mod handles what Hlaalu - Retexture and Hlaalu - Arkitektora of Vvardenfell
 
 ```
 1) disable textures\tx_metal_silver.
-2) If you're only using the textures, you'll need to download the Bump Maps file anyway and get the bark_01_nm texture and put it in your textures folder.
+2) If you're only using the textures, you'll need to download the Bump Maps file anyway and get the bark_01_nm texture and put it in your `textures` folder.
 3) If you're using bump mapping, disable meshes\x\ex_t_manor_01 and meshes\x\ex_t_manor_02, use the ones from Telvanni Bump Maps instead.
 ```
 
 * [Telvanni Fireplace Replacer](http://www.nexusmods.com/morrowind/mods/43232/?)
-(Has an alternate look you can choose instead in the "Alternate" folder=, if you like)
+(Has an alternate look you can choose instead in the `Alternate` folder=, if you like)
  
 6. Velothi
 * [Velothi Arikitektora](http://www.nexusmods.com/morrowind/mods/43511/?)
 * [Set in Stone](http://www.nexusmods.com/morrowind/mods/21377/?)
 * [One True Faith](http://www.nexusmods.com/morrowind/mods/43810/?)
-* [Ministry of truth Bump mapped](http://www.nexusmods.com/morrowind/mods/42921/?) - If you don't want bump maps, the only file you need is textures\tx_moon_base_01.
+* [Ministry of truth Bump mapped](http://www.nexusmods.com/morrowind/mods/42921/?) - If you don't want bump maps, the only file you need is `textures\tx_moon_base_01`.
 * [Sewers Arkitektora](http://www.nexusmods.com/morrowind/mods/43144/?) - There are pictures showing the difference between the versions in the user uploaded images area.
 * [Concept Art Ghostfence Replacer](http://www.nexusmods.com/morrowind/mods/43316/?) - Optional, because it IS a departure from the vanilla game. However, it looks great and it's based on concept art. Your choice.
  
 7. Dwemer & Mournhold
 * [Connary's Old Mournhold](http://www.fullrest.ru/files/connarysoldmournhold/files)
-* [The Mourning of Bamz-Amschend](http://mw.modhistory.com/download-56-11888) - Only three of these textures are better than what we have: tx_coilcopper00, tx_coilcopper01 and tx_coilcopper02. Grab only those three files and disable the rest. This is optional, because the textures in question are just 4x magnified vanilla textures.
+* [The Mourning of Bamz-Amschend](http://mw.modhistory.com/download-56-11888) - Only three of these textures are better than what we have: `tx_coilcopper00`, `tx_coilcopper01` and `tx_coilcopper02`. Grab only those three files and disable the rest. This is optional, because the textures in question are just 4x magnified vanilla textures.
 * [The Clockwork City](http://mw.modhistory.com/download-56-12886)
 * [Clockwork City Reborn](http://www.nexusmods.com/morrowind/mods/38369/?) - These textures are less vanilla friendly than the ones above, but in my opinion look much nicer. Use either this OR the previous mod, not both.
 * [Green Marble Mournhold](http://mw.modhistory.com/download-64-11859) - Use the alternate walls but not the alternate roof.
@@ -594,9 +594,9 @@ This mod handles what Hlaalu - Retexture and Hlaalu - Arkitektora of Vvardenfell
 Feel free to choose between Lougian and Tyddy's packs, if you prefer Lougian's then by all means don't get Tyddy's. Tyddy's is closer to vanilla, as usual.
  
 8. Miscellaneous Architecture Pieces
-* [Stronghold Retexture](http://www.nexusmods.com/morrowind/mods/43948/?) - Get the vanilla friendly floor tiles if you want it. However, if you do, it will need to be un-packed, all textures moved into a "textures" folder and then re-packed to install properly with MO2.
+* [Stronghold Retexture](http://www.nexusmods.com/morrowind/mods/43948/?) - Get the vanilla friendly floor tiles if you want it. However, if you do, it will need to be un-packed, all textures moved into a `textures` folder and then re-packed to install properly with MO2.
 * [Connary's 6th House](http://www.fullrest.ru/files/connarys6thhouse/files)
-* [Road Marker retextured](http://www.nexusmods.com/morrowind/mods/28311/?) - Incorrectly archived. You'll need to unzip it and move the textures into a "Textures" folder, then re-zip it and install as normal. 
+* [Road Marker retextured](http://www.nexusmods.com/morrowind/mods/28311/?) - Incorrectly archived. You'll need to unzip it and move the textures into a `Textures` folder, then re-zip it and install as normal. 
 * [Banners retextured](http://www.nexusmods.com/morrowind/mods/21405/?) - Some of these will be overridden by Django's Tapestries
 * [Arukinn's Better Banner Signs and Signposts](http://www.nexusmods.com/morrowind/mods/41658/?)
 * [Signposts Retextured](http://www.nexusmods.com/morrowind/mods/42126/?) Optional, as they are lower res than Arukinn's, but if you want signposts readable in English this is what I would recommend. Download the Tamriel Rebuilt patch if using TR.
@@ -613,7 +613,7 @@ For things that don't really fit in any other section. If some of this seems too
 1. Book mods
 * [Arukinn's Better Books and Scrolls](http://www.nexusmods.com/morrowind/mods/43100/?)
 Illy's Dirty Books was an alternative to this, but was removed along with all of Illy's other mods, so you won't find it anymore except through hand-me-downs. 
-* [Melchior's Magnificent Manuscripts](https://www.nexusmods.com/morrowind/mods/45626) - Has an extra folder ("patches") that offers compatibility with the mod [Book Jackets](http://mw.modhistory.com/download-56-10464). Un-pack the mod, merge the patches folder contents in, and re-pack if you'd like that.
+* [Melchior's Magnificent Manuscripts](https://www.nexusmods.com/morrowind/mods/45626) - Has an extra folder (`patches`) that offers compatibility with the mod [Book Jackets](http://mw.modhistory.com/download-56-10464). Un-pack the mod, merge the `patches` folder contents in, and re-pack if you'd like that.
  
 2. [Papill6n's various graphic things.](http://www.nexusmods.com/morrowind/mods/39122/?) Grab the following in the BAIN installer:
 
@@ -634,7 +634,7 @@ Spinningwheel + spool
 Tribunal required
 ```
 
-Note that "tribunal required" actually has 3 sub-packages. You'll need to open the mods in your MODS folder in MO2, then take the contents of each of those 3 folders and drag them into the main mod. It should be obvious which 3. You can delete the .jpg files, don't need them anymore. 
+Note that "tribunal required" actually has 3 sub-packages. You'll need to open the mods in your `MODS` folder in MO2, then take the contents of each of those 3 folders and drag them into the main mod. It should be obvious which 3. You can delete the .jpg files, don't need them anymore.
  
 3. Qarl's mods. The following mods were made by Qarl but uploaded by someone else on fullrest.
 * [Plates](http://www.fullrest.ru/files/Plate_Items/files)
@@ -645,9 +645,9 @@ textures\q_wood_plate
 ```
  
 4. Other, less complicated to install mods
-* [Connary's Fine Vials](http://www.fullrest.ru/files/connarysfinevials/files) - disable tx_rustedmetal0.
+* [Connary's Fine Vials](http://www.fullrest.ru/files/connarysfinevials/files) - disable `tx_rustedmetal0`.
 * [Connary's Mixed Pottery](http://www.fullrest.ru/files/connarysmixedpottery/files) - disable the mottled texture and pewter 1 texture.
-* [AOF Containers](http://www.nexusmods.com/morrowind/mods/32427/?) - disable meshes\m\misc_com_bucket_01.
+* [AOF Containers](http://www.nexusmods.com/morrowind/mods/32427/?) - disable `meshes\m\misc_com_bucket_01`.
 * [Small Mods by Wolli](http://www.nexusmods.com/morrowind/mods/42453/?) - Just get Darker Crates to match AOF's barrels.
 * [Better Kegstands](http://www.nexusmods.com/morrowind/mods/37708/?)
 * [Apel's Various Things - Sacks](http://www.nexusmods.com/morrowind/mods/42558/?) - Bump mapped or not, it's your choice. Has an optional patch on the Nexus page for Animated Containers, if you use it. 
@@ -663,7 +663,7 @@ textures\q_wood_plate
 * [Cart Cloth Retexture CCR](http://www.nexusmods.com/morrowind/mods/21837/?) - I prefer the normal version.
 * [Propylon Pillar Retexture PPR](http://www.nexusmods.com/morrowind/mods/19600/?) - Get either PPR_Glow or PPR_Normal, then get the PPR_Index Addon.
 * [Soulgem Ingredient Retexture SIR](http://www.nexusmods.com/morrowind/mods/19467/?) - If you have both expansions (you should!) then pick SIR_TBandBM_v3 to download. Disable the Stahlrim texture or load this mod just prior to Tyd Landscape Texture Compilation, so that its Stahlrim texture takes precedence. 
-* [Ingredients Mesh Replacer](http://www.nexusmods.com/morrowind/mods/44067/?) - You'll need to extract the archive, copy the "compatibility" mesh folder over and over-write the files from the main mod, then re-pack and install as normal.
+* [Ingredients Mesh Replacer](http://www.nexusmods.com/morrowind/mods/44067/?) - You'll need to extract the archive, copy the compatibility mesh folder over and over-write the files from the main mod, then re-pack and install as normal.
 * [Crabmeat Ingredient Replacer](http://www.nexusmods.com/morrowind/mods/43387/?)
 * [Django's Rugs and Tapestries](http://www.nexusmods.com/morrowind/mods/36872/?)
 * [Detailed Tapestries](http://www.nexusmods.com/morrowind/mods/22551/?)
@@ -674,9 +674,9 @@ textures\q_wood_plate
 * [Skeleton and Metal Sparks blood retexture](http://www.nexusmods.com/morrowind/mods/43359/?)
 * [Improved Cavern Clutter](https://www.dropbox.com/sh/l1660o8fg664bii/AABLfGQtcBsb0jfTsftnBZ-ca/Improved%20Cavern%20Clutter?dl=0) - Download as zip. You'll want to disable the three wood_weathered and rope_heavy textures after installing.
 * [Insanity's Potion Replacer](http://tesalliance.org/forums/index.php?/files/file/1402-insanitys-potion-replacer/) - You'll need an account to download these.
-* [Insanity's Soul Gem Replacer](http://tesalliance.org/forums/index.php?/files/file/1397-insanitys-soul-gem-replacer/) - Again, you'll need an account. If you like the look of these soul gems better than Papill6n's, go ahead and get them, overwriting your existing meshes. If you like the ones you already have, you might want to download it anyway, as Papill6n's didn't include a retexture of grand soul gems. If you just want the grand soul gems from this mod, get only the following files: meshes\m\misc_soulgem_grand and textures\tx_soulgem_grand.
-* [Insanity's lowres](https://mega.nz/#!T4pB3TCY!wQ3okENYSVv8T2PpHW5jxPiPkbOGrlXBP7ODVglGsDA) - Insanity's replacers are really high resolution for such small objects, especially in an old game like Morrowind. If you'd like, you can get these resized textures instead. You'll still need the original mods for the meshes! Also, if you're only using the grand soul gem, make sure to disable the other textures in the soulgems folder, as you don't need them.
-* [Long Live The Glassware](http://www.nexusmods.com/morrowind/mods/44016/?) - disable tx_metal_strip_02.
+* [Insanity's Soul Gem Replacer](http://tesalliance.org/forums/index.php?/files/file/1397-insanitys-soul-gem-replacer/) - Again, you'll need an account. If you like the look of these soul gems better than Papill6n's, go ahead and get them, overwriting your existing meshes. If you like the ones you already have, you might want to download it anyway, as Papill6n's didn't include a retexture of grand soul gems. If you just want the grand soul gems from this mod, get only the following files: `meshes\m\misc_soulgem_grand` and `textures\tx_soulgem_grand`.
+* [Insanity's lowres](https://mega.nz/#!T4pB3TCY!wQ3okENYSVv8T2PpHW5jxPiPkbOGrlXBP7ODVglGsDA) - Insanity's replacers are really high resolution for such small objects, especially in an old game like Morrowind. If you'd like, you can get these resized textures instead. You'll still need the original mods for the meshes! Also, if you're only using the grand soul gem, make sure to disable the other textures in the `soulgems` folder, as you don't need them.
+* [Long Live The Glassware](http://www.nexusmods.com/morrowind/mods/44016/?) - disable `tx_metal_strip_02`.
 * [Long Live The Limeware](http://www.nexusmods.com/morrowind/mods/44045/?)
 * [R-Zero's Random Retextures](http://www.nexusmods.com/morrowind/mods/44025/?) - The original guide (2017) existed when only the Coin and Quill (the oldest mods) were available. Now that more exist, I recommend installing all of them. The servent's skull replaces one from Better Skulls (but is based upon BS), so compare them before deciding. The Chimney smoke and Towershield overwrite patch-for-purists, so consider that as well.
  
@@ -712,9 +712,9 @@ textures\q_wood_plate
 * [HiRes Scrib](http://www.nexusmods.com/morrowind/mods/43352/?) - I use the bright version.
 * [Unique Winged Twilights](http://download.fliggerty.com/download--743) - The .esp is unnecessary if you just want a replacer.
 * [BB Dwarven Spectre](http://www.nexusmods.com/morrowind/mods/29671/?)
-* [Better Almalexia](http://www.nexusmods.com/morrowind/mods/23388/?) - Comes with alternate pupil textures if you want. (You'll need to unpack/repack to add them). Also comes with a splash screen (Splash_almalexia.tga) you may want to disable if you feel it clashes with the existing splash screen replacers. 
+* [Better Almalexia](http://www.nexusmods.com/morrowind/mods/23388/?) - Comes with alternate pupil textures if you want. (You'll need to unpack/repack to add them). Also comes with a splash screen (`Splash_almalexia.tga`) you may want to disable if you feel it clashes with the existing splash screen replacers.
 * [Azura Replacer](http://mw.modhistory.com/download-45-6053)
-* [Vivec God Replacement Creature Edition](http://mw.modhistory.com/download-26-10946) - Feel free to look through the extras folder at your options.
+* [Vivec God Replacement Creature Edition](http://mw.modhistory.com/download-26-10946) - Feel free to look through the `extras` folder at your options.
 * [Voiced Vivec and Yakety Yagrum](http://www.nexusmods.com/morrowind/mods/40994/?) - Not really a replacer, but it does involve 'creatures'.
  
 We'll get a replacer for Dagoth Ur and dremora in the next step.
@@ -766,9 +766,9 @@ Note: When opening Mlox, it will warn you that Better Clothes depends upon Bette
 
 * [Common Shirt Fix](https://www.dropbox.com/s/3kwi2ha2anpu7kw/BCFix.zip)
 * [BC Shoes Fix](https://www.dropbox.com/s/usgjr6hwi53c6ma/BC%20Shoes%20Fix.zip)
-* [Expensive Female Shirt Fix](http://mw.modhistory.com/download--14998) - Put this in your meshes\BC folder.
-* [More Better Clothes](http://mw.modhistory.com/download-53-6647) - Get both the main file at the bottom of the page and the MBC_ArmsFix.
-For the Arms fix, make sure to un-pack it and create a Meshes/BC folder, then drop those .nif files into it and re-pack it to install. 
+* [Expensive Female Shirt Fix](http://mw.modhistory.com/download--14998) - Put this in your `meshes\BC` folder.
+* [More Better Clothes](http://mw.modhistory.com/download-53-6647) - Get both the main file at the bottom of the page and the `MBC_ArmsFix`.
+For the Arms fix, make sure to un-pack it and create a `Meshes/BC` folder, then drop those .nif files into it and re-pack it to install. 
 * [Better Clothes for Tribunal](http://mw.modhistory.com/download-87-11804)
 * [Better Clothes Bloodmoon Plus](http://download.fliggerty.com/download-21-804) - Make sure to get the 1.5 version.
 * [BCBM Pants Fix](https://www.dropbox.com/s/lkxditr9gl3a92c/BCBM_Pants_Fix.zip)
@@ -783,7 +783,7 @@ Alternative: [Unique Jewelry Redone](https://www.nexusmods.com/morrowind/mods/46
 * [Unique Finery Replacer UFR](http://www.nexusmods.com/morrowind/mods/25725/?) - Activate the regular version. The robe mod we'll be using comes with a compatibility patch.
  
 3. Robes
-* [Better Robes](http://www.nexusmods.com/morrowind/mods/42773/?) - Make sure to also install the patches for Tamriel Rebuilt if you're using it (TR folder) and UFR. If you plan to use Animated Morrowind, download the separate patch for that as well.
+* [Better Robes](http://www.nexusmods.com/morrowind/mods/42773/?) - Make sure to also install the patches for Tamriel Rebuilt if you're using it (`TR` folder) and UFR. If you plan to use Animated Morrowind, download the separate patch for that as well.
 If using the Tamriel Rebuilt patch, you'll need [this patch]([https://www.nexusmods.com/morrowind/mods/44875]) for that patch, since it crashes due to a Master reformat in 2015 that TR did. (However, note that this doesn't fix the issue with the TR-BR-Animated Morrowind combined patch, so you're kind of out of luck if using that)
 * [Robe Overhaul](http://www.nexusmods.com/morrowind/mods/43748/?)
 * [Various tweaks and fixes](http://www.nexusmods.com/morrowind/mods/43795/?) - Optionally, if you hate the glow effect that Robe Overhaul adds to some robes, you can download Blank Glow Maps for Robe Overhaul. You might also be interested in Pluginless NoGlow Lite, which removes the plastic-y looking 'enchantment' effect from all items in game.
@@ -791,29 +791,29 @@ If using the Tamriel Rebuilt patch, you'll need [this patch]([https://www.nexusm
 ## Weapons
 
 There are likely a ton of unique/artifact weapon replacers I've missed. I was never very good at keeping track of weapon mods...
-* [Darknut's Little Weapons Mod Complete](http://www.nexusmods.com/morrowind/mods/43418/?) - Has a Textures/512 and a Textures/1024 folder. You should be able to handle the 1K textures. In either case, you'll need to un-pack the mod and move all of whichever you choose (in my case 1K) out of the 1024 folder, and into the root "Textures" folder, and then re-pack.
+* [Darknut's Little Weapons Mod Complete](http://www.nexusmods.com/morrowind/mods/43418/?) - Has a `Textures/512` and a `Textures/1024` folder. You should be able to handle the 1K textures. In either case, you'll need to un-pack the mod and move all of whichever you choose (in my case 1K) out of the `1024` folder, and into the root `Textures` folder, and then re-pack.
 * [Oriental Mesh Improvements](http://www.nexusmods.com/morrowind/mods/29906/?)
 * [Crossbows](http://download.fliggerty.com/download-98-1010) - If you don't want the new crossbows, don't activate the .esps. You'll still get new meshes for the base game's crossbows. For TR users, note that this ESP is also set up requiring the old TR's ESP as a master, so it'll crash if you try to use it on modern TR installs. 
-* [Real Reflective Weapons - Iron](http://www.nexusmods.com/morrowind/mods/43077/?) - Install the base (Data Files) folder and the bonus folder.
-* [Improved Weapon Meshes - Steel](http://www.nexusmods.com/morrowind/mods/43120/?) - Install 00 and 01. You do not need the .esps.
-* [Improved Weapon Mehses - Ebony](http://www.nexusmods.com/morrowind/mods/43484/?) - Install 00. Install 01 if you want an Ebony Claymore in your game, you'll need the .esp. If you do so, note that it'll install two ESPs, one being german. Make sure to move it to the "Optional" section after installing. 
+* [Real Reflective Weapons - Iron](http://www.nexusmods.com/morrowind/mods/43077/?) - Install the base (`Data Files`) folder and the `bonus` folder.
+* [Improved Weapon Meshes - Steel](http://www.nexusmods.com/morrowind/mods/43120/?) - Install `00` and `01`. You do not need the .esps.
+* [Improved Weapon Mehses - Ebony](http://www.nexusmods.com/morrowind/mods/43484/?) - Install `00`. Install `01` if you want an Ebony Claymore in your game, you'll need the .esp. If you do so, note that it'll install two ESPs, one being german. Make sure to move it to the "Optional" section after installing.
 * [Dwemer Armoury](http://www.nexusmods.com/morrowind/mods/43335/?) - Unfortunately, this isn't totally compatible with our armor mods, but the weapon meshes and a few of the armor meshes will show up in game.
 * [Mehrunes Razor Replacer - Oblivion](http://www.nexusmods.com/morrowind/mods/23825/?)
 * [True Trueflame](http://www.nexusmods.com/morrowind/mods/33432/?)
-* [HopesFire Replacer Morrowind Edition](http://mw.modhistory.com/download-98-12378) - Has an "AltTextures" folder with an alternate texture for Hopesfire. You'll need to move the folder's contents into the Textures folder and over-write after installing if you wish to use it. (Or un-pack/repack)
+* [HopesFire Replacer Morrowind Edition](http://mw.modhistory.com/download-98-12378) - Has an `AltTextures` folder with an alternate texture for Hopesfire. You'll need to move the folder's contents into the `Textures` folder and over-write after installing if you wish to use it. (Or un-pack/repack)
 * [Various little mods](http://www.nexusmods.com/morrowind/mods/43330/?) - Volendrung.
 * [Improved Weapon Meshes & Textures WIP](https://www.dropbox.com/sh/l1660o8fg664bii/AAAO3m96a4O4J4JOUOUBmFnFa/Improved%20Weapon%20Meshes%20%26%20Textures%20WIP?dl=0) - Download as .zip.
-* [Spear-Staff Fix](http://www.nexusmods.com/morrowind/mods/43353/?) - An optional fix for the position where spears and staves are held. Use it if you want. If you do, you'll need the Real Reflective Weapons Iron, Improved Weapon Meshes Steel, and Improved Weapon Meshes Ebony files from the Compatibility folder, then drag them out and over-write their normal versions from the mod, and then re-pack and install as normal.
+* [Spear-Staff Fix](http://www.nexusmods.com/morrowind/mods/43353/?) - An optional fix for the position where spears and staves are held. Use it if you want. If you do, you'll need the Real Reflective Weapons Iron, Improved Weapon Meshes Steel, and Improved Weapon Meshes Ebony files from the `Compatibility` folder, then drag them out and over-write their normal versions from the mod, and then re-pack and install as normal.
  
 ## Armor
 * [Darknut's Armor Textures](http://www.nexusmods.com/morrowind/mods/43416/?) - Make sure to get the newest version.
 * [Various little mods](http://www.nexusmods.com/morrowind/mods/43330/?) - Install Colovian helm and Dust adept helm.
-* [Improved Armor Parts](https://www.dropbox.com/sh/l1660o8fg664bii/AAB-OssUyNu03Y5aGCO1Gav0a/Improved%20Armor%20parts?dl=0) - Download as .zip. First, disable the Bloodmoon folder; you already have that mesh. If you want a less bulky chitin pauldron, put that in meshes\a. Then go ahead and install the meshes and texture folder.
+* [Improved Armor Parts](https://www.dropbox.com/sh/l1660o8fg664bii/AAB-OssUyNu03Y5aGCO1Gav0a/Improved%20Armor%20parts?dl=0) - Download as .zip. First, disable the `Bloodmoon` folder; you already have that mesh. If you want a less bulky chitin pauldron, put that in `meshes\a`. Then go ahead and install the `meshes` and `texture` folder.
 * [Various tweaks and fixes](http://www.nexusmods.com/morrowind/mods/43795/?) - Get Lougian's Colovian Helm fix.
 * [HiRez Armors - Native Styles](http://forums.bethsoft.com/topic/1441431-relz-hirez-armors-native-styles-v2)
-* Native HiRez fix [1](http://forums.bethsoft.com/topic/1441431-relz-hirez-armors-native-styles-v2/page-2#entry22297270), [2](http://forums.bethsoft.com/topic/1441431-relz-hirez-armors-native-styles-v2/page-2#entry23936622), [3](http://www.mediafire.com/file/sj9kg66x5cdq45l/tx_armor_EXC.dds/file) (Fixes missing tx_armor_exc.dds, just put it into the "textures" folder of whichever of these fixes mods has a textures folder)
+* Native HiRez fix [1](http://forums.bethsoft.com/topic/1441431-relz-hirez-armors-native-styles-v2/page-2#entry22297270), [2](http://forums.bethsoft.com/topic/1441431-relz-hirez-armors-native-styles-v2/page-2#entry23936622), [3](http://www.mediafire.com/file/sj9kg66x5cdq45l/tx_armor_EXC.dds/file) (Fixes missing `tx_armor_exc.dds`, just put it into the `textures` folder of whichever of these fixes mods has a `textures` folder)
 
-* [Armor Retexture - Outlander Styles](http://www.nexusmods.com/morrowind/mods/44210/?) - Get the HQ version. You don't need to get the dragonscale armor textures. You should disable tx_a_templar_helmet before installing; we have better from Improved Armor Parts.
+* [Armor Retexture - Outlander Styles](http://www.nexusmods.com/morrowind/mods/44210/?) - Get the HQ version. You don't need to get the dragonscale armor textures. You should disable `tx_a_templar_helmet` before installing; we have better from Improved Armor Parts.
 * [Full Dwemer Retexture](http://www.nexusmods.com/morrowind/mods/44264/?) - We already installed the architecture, now we need the 'Only armor, robots, and weapons' archive. Pick MQ (1024) or HQ (2048), your choice.
 
 * [Better Morrowind Armor](http://www.nexusmods.com/morrowind/mods/42509/?) - This needs more detailed install instructions:
@@ -822,13 +822,13 @@ There are likely a ton of unique/artifact weapon replacers I've missed. I was ne
 
 2) Install the patch for Hirez Armors - Native Styles V2. (Overwriting the main files in the mod folder)
 
-3) If you're using the LeFemm official plugin for Bethesda, install the patch for that as well. That means DEACTIVATING the [Official]LeFemm Armor.esp included with WHReaper's Morrowind Official Plugins and using the LeFemmArmor.esp included with Better Morrowind Armor.
+3) If you're using the LeFemm official plugin for Bethesda, install the patch for that as well. That means DEACTIVATING the `[Official]LeFemm Armor.esp` included with WHReaper's Morrowind Official Plugins and using the `LeFemmArmor.esp` included with Better Morrowind Armor.
 
 (Personally, I still haven't figured out how I want to handle the official addons since both options are giving me trouble, so as of writing this guide I am *personally* just ignoring all Defemm/LeFemm patches and just using the Hirez Native styles patch)
 
 * [Daedric Lord Armor Morrowind Edition](https://www.nexusmods.com/morrowind/mods/44081) - Not only does this replace Daedric armor and gives bound armor a unique look, it acts as a replacer for Dremora as well. It's newer than Better Morrowind Armor and should load after it, so you'll get this nicer looking Daedric Armor in game.
 
-* [Less Bulky Pauldrons](http://www.nexusmods.com/morrowind/mods/42566/?) - Optionally, you might like this. If you do decide to use it, make sure to use the the BAM & Native HiRez 2 files in the optional folder. To use them, create the folder Data Files\Meshes\bam inside the un-packed mod. Then, move the files from the "BAM & Native HiRez 2" into that \bam folder, not the \a folder like the rest of the mod's contents. 
+* [Less Bulky Pauldrons](http://www.nexusmods.com/morrowind/mods/42566/?) - Optionally, you might like this. If you do decide to use it, make sure to use the the BAM & Native HiRez 2 files in the optional folder. To use them, create the folder `Data Files\Meshes\bam` inside the un-packed mod. Then, move the files from the `BAM & Native HiRez 2` into that `bam` folder, not the `a` folder like the rest of the mod's contents.
  
 ## Animations
 
@@ -863,9 +863,9 @@ First, make sure all the mods you're using are activated in the launcher (again,
 
 Click the shader setup screen on the General tab. If you're using the latest MGE XE beta, the shaders screen will be pretty easy for you. Pick your quality preset, adjust it how you want (turning on/off DoF, using lower quality SSAO, etc.), and play. If, however, you're using the older, stable version of MGE XE, things are just a little more complicated. Follow the recommended install order at the bottom of the shader setup screen. For example, if you want the top of the line setup, using the best of ALL the available shaders, you'll want to double click first on SSAO HQ, then both Underwater effects, Depth of Field, Sunshafts, Bloom Soft, then finally, Eye Adaptation goes last.
  
-Optionally, you might want to take a look at [this water shader](http://forums.bethsoft.com/topic/1438303-mge-screenshot-thread-no-8/page-4#entry22311144). Screenshots of it can be found in the post. If you'd like to give greener water a try, download the XE Water.fx file, and put it in your Data Files\shaders folder, overwriting the old XE Water.fx. You might want to back up your old one in case you want to go back to the default water at some point.
+Optionally, you might want to take a look at [this water shader](http://forums.bethsoft.com/topic/1438303-mge-screenshot-thread-no-8/page-4#entry22311144). Screenshots of it can be found in the post. If you'd like to give greener water a try, download the `XE Water.fx` file, and put it in your `Data Files\shaders` folder, overwriting the old `XE Water.fx`. You might want to back up your old one in case you want to go back to the default water at some point.
  
-5. Finally, and only when you're satisfied with your distant land generation, install [Lore-Friendly Ghostfence Texture](http://www.nexusmods.com/morrowind/mods/29206/?). Why is this step last? Because if you generate distant land with these textures in your folder, it makes the ghostfence look like it has holes in it. Stick with the vanilla textures for distant land generation. If you re-run your distant land generation later, try to remove to remove the textures tx_gg_fence_01 and tx_gg_fence_02 from your textures folder first.
+5. Finally, and only when you're satisfied with your distant land generation, install [Lore-Friendly Ghostfence Texture](http://www.nexusmods.com/morrowind/mods/29206/?). Why is this step last? Because if you generate distant land with these textures in your folder, it makes the ghostfence look like it has holes in it. Stick with the vanilla textures for distant land generation. If you re-run your distant land generation later, try to remove to remove the textures `tx_gg_fence_01` and `tx_gg_fence_02` from your `textures` folder first.
 
 ## Cleaning mods
 

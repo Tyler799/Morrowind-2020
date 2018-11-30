@@ -975,6 +975,8 @@ If you're going to join House Hlaalu... well, unfortunately, at this time, there
  
 12) Do you feel like you don't get enough benefits from being in a guild? Do you want more perks from joining the Temple or the Cult? Want to boss around your underlings after you become the Head of a House? You might like [Antares' Big Mod](http://mw.modhistory.com/download-26-15472).
 
+13) Hate the limited capacity of chests and boxes? Want to get rid of that? [Ta-da](https://www.nexusmods.com/morrowind/mods/45698). Honestly, best mod addition I've added so far. So much hassle and annoyance saved. 
+
 ## Contributors
 
 This project wouldn't be possible without the help of all the amazing people I've met on the way. :)

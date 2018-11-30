@@ -770,7 +770,7 @@ Note: When opening Mlox, it will warn you that Better Clothes depends upon Bette
 * [More Better Clothes](http://mw.modhistory.com/download-53-6647) - Get both the main file at the bottom of the page and the `MBC_ArmsFix`.
 For the Arms fix, make sure to un-pack it and create a `Meshes/BC` folder, then drop those .nif files into it and re-pack it to install. 
 * [Better Clothes for Tribunal](http://mw.modhistory.com/download-87-11804)
-* [Better Clothes Bloodmoon Plus](http://download.fliggerty.com/download-21-804) - Make sure to get the 1.5 version.
+* [Better Clothes Bloodmoon Plus](http://download.fliggerty.com/download-21-804) ([Wayback Link](https://web.archive.org/web/20161103154305/http://download.fliggerty.com/file.php?id=804))
 * [BCBM Pants Fix](https://www.dropbox.com/s/lkxditr9gl3a92c/BCBM_Pants_Fix.zip)
 * [Darknut's Better Clothes Textures](http://www.nexusmods.com/morrowind/mods/43423/?)
  

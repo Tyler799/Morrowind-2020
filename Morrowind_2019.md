@@ -839,6 +839,8 @@ If you have a toaster, you might want to skip most of this section. Run distant 
 * [Azura's Coast and Sheogorath - Grassmod](http://www.nexusmods.com/morrowind/mods/30788/?)
 * [Morrowind grass mod combined v1.0](http://mw.modhistory.com/download-56-14671) - Activate the .bsa in your .ini. Alternatively, you could use...
 * [Vurt's Groundcover](http://www.nexusmods.com/morrowind/mods/31051/?) - If you want Ashlands grass, you'll need to download this as none was included in the previous download. Use EITHER the previous mod OR this one for the other regions, do NOT use both. Use Reeds and the optional Corals download if you want, they should work with Grass Mod Combined just fine.
+
+For those of your with Tamriel Rebuilt, [Tamriel Rebuilt - Old Ebonheart Groundcover](https://www.nexusmods.com/morrowind/mods/45973) will enable Vurt's groundcovers to extend to Tamriel Rebuilt.
  
 2. Some other MGE XE relevant mods.
 * [Distant Mournhold](http://www.nexusmods.com/morrowind/mods/43255/?) - DO activate this .esp in your launcher.

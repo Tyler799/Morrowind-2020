@@ -648,6 +648,15 @@ textures\q_wood_plate
 * [AST redware texture replacer](http://www.nexusmods.com/morrowind/mods/21981/?)
 * [Improved Better Skulls](https://www.nexusmods.com/morrowind/mods/46012) - In the BAIN installer, do *not* check the "Vanilla Textures" option.
 * [Dunmeri Urns Aestetika](http://www.nexusmods.com/morrowind/mods/43541/?) - Get either the simple retexture or the bump map file, you don't need both.
+
+**NOTE**: If you are using the non-bump-mapped version, it's missing `tx_urn_01_nm.dds`. You have a couple options to remedy this:
+
+1: Use the bump-mapped version instead
+
+2: Download both, and copy the missing files from the bump-mapped version over to the non-bump-mapped version
+
+3: Copy `tx_urn_01.dds`, and re-name it to `tx_urn_01_nm.dds`
+
 * [Cart Cloth Retexture CCR](http://www.nexusmods.com/morrowind/mods/21837/?) - I prefer the normal version.
 * [Propylon Pillar Retexture PPR](http://www.nexusmods.com/morrowind/mods/19600/?) - Get either PPR_Glow or PPR_Normal, then get the PPR_Index Addon.
 * [Soulgem Ingredient Retexture SIR](http://www.nexusmods.com/morrowind/mods/19467/?) - If you have both expansions (you should!) then pick SIR_TBandBM_v3 to download. Disable the Stahlrim texture or load this mod just prior to Tyd Landscape Texture Compilation, so that its Stahlrim texture takes precedence. 

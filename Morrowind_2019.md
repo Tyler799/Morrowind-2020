@@ -653,9 +653,9 @@ textures\q_wood_plate
 
 1: Use the bump-mapped version instead
 
-2: Download both, and copy the missing files from the bump-mapped version over to the non-bump-mapped version
+2: Download both, and copy the missing file from the bump-mapped version over to the non-bump-mapped version
 
-3: Copy `tx_urn_01.dds`, and re-name it to `tx_urn_01_nm.dds`
+3: Download just the non-bump-mapped version, and copy `tx_urn_01.dds`, and re-name it to `tx_urn_01_nm.dds`
 
 * [Cart Cloth Retexture CCR](http://www.nexusmods.com/morrowind/mods/21837/?) - I prefer the normal version.
 * [Propylon Pillar Retexture PPR](http://www.nexusmods.com/morrowind/mods/19600/?) - Get either PPR_Glow or PPR_Normal, then get the PPR_Index Addon.

@@ -652,7 +652,9 @@ textures\q_wood_plate
 **NOTE**: If you are using the non-bump-mapped version, it's missing `tx_urn_01_nm.dds`. You have a couple options to remedy this:
 
 1: Use the bump-mapped version instead
+
 2: Download both, and copy the missing files from the bump-mapped version over to the non-bump-mapped version
+
 3: Copy `tx_urn_01.dds`, and re-name it to `tx_urn_01_nm.dds`
 
 * [Cart Cloth Retexture CCR](http://www.nexusmods.com/morrowind/mods/21837/?) - I prefer the normal version.

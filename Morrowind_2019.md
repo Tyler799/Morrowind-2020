@@ -45,6 +45,7 @@ If you need to reach me regarding this guide or otherwise, PM me at /u/Night_Tha
 * [Updating Masters, Syncing and Reparing your Saves](#updating-masters-syncing-and-reparing-your-saves)
 * [Load Order](#load-order)
 * [Other mods](#other-mods)
+* [Screenshots](#screenshots)
 * [Contributors](#contributors)
 * [License](#license)
 
@@ -987,6 +988,10 @@ If you're going to join House Hlaalu... well, unfortunately, at this time, there
 12) Do you feel like you don't get enough benefits from being in a guild? Do you want more perks from joining the Temple or the Cult? Want to boss around your underlings after you become the Head of a House? You might like [Antares' Big Mod](http://mw.modhistory.com/download-26-15472).
 
 13) Hate the limited capacity of chests and boxes? Want to get rid of that? [Ta-da](https://www.nexusmods.com/morrowind/mods/45698). Honestly, best mod addition I've added so far. So much hassle and annoyance saved. 
+
+## Screenshots
+
+If you would like to see reference images of the finished install, or contribute your own screenshots to that public repository, head to our [Google Drive Gallery](https://drive.google.com/drive/folders/1pusVDmDBMwM1Si28W8wcvVd6aXukEIJr?usp=sharing). 
 
 ## Contributors
 

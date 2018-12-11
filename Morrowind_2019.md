@@ -57,7 +57,7 @@ As well: While many of the mods here may be compatible with OpenMW, many are not
 
 All installation of mods (with minor exception, mainly for tools like MGE/MCP/Mlox) will be done with Mod Organizer 2, which has built-in support for Morrowind. This is highly recommended, as it allows you to very easily disable files/folders or mods, re-order mods or plugins and otherwise. It makes maintenance of a large mod list effortless, hence its heavy adoption in the Skyrim modding scene. (Do not substitute with NMM, Vortex or otherwise. Seriously. It *will* break things.)
 
-However: [Wyre Bash (Polemo's Fork)](https://www.nexusmods.com/morrowind/mods/45439/) is an *excellent* alternative. While a little less friendly at face value, it offers a similar ability to revert the game and mods to their base state upon revising your list. It's a fantastically made tool, and we'll be installing it anyways for some of its feature set.
+However: [Wrye Bash (Polemo's Fork)](https://www.nexusmods.com/morrowind/mods/45439/) is an *excellent* alternative. While a little less friendly at face value, it offers a similar ability to revert the game and mods to their base state upon revising your list. It's a fantastically made tool, and we'll be installing it anyways for some of its feature set.
 
 **Note**: When I say "Disable" regarding a file, I'm referring to the "HIDE" feature MO2 gives. If the guide says to "Disable" a file or folder, that means "HIDE" it. However, the original guide had a lot of "DELETE" wording. I simply find/replaced that with "DISABLE". There are likely many instances where with using MO2 disabling like the original guide suggested is unnecessary - just let another mod take priority. However, I have no way of knowing immediately which disables would be pointless, so I'm leaving them in for now.
 
@@ -164,9 +164,9 @@ It should look like [this](https://i.imgur.com/WWbBKJZ.png)
 
 Under the dropdown for "Morrowind" is where other executables can be put. You won't need to do this much for Morrowind. However, you'll notice that in that dropdown MGE XE has already been placed! Hurrah!
 
-However, you'll also want to add Mlox and Wyre Bash to that list, so that they can actually see what mods you have installed. (I'm not doing to delve too far into how to use MO2 in this guide, there's a million resources on that already)
+However, you'll also want to add Mlox and Wrye Bash to that list, so that they can actually see what mods you have installed. (I'm not doing to delve too far into how to use MO2 in this guide, there's a million resources on that already)
 
-Now when you need to run MGE XE, Mlox and Wyre, do it through MO2. MGE XE may ask for elevation, that's perfectly normal. If you want to avoid that error message, you can set it to run as administrator on your own.
+Now when you need to run MGE XE, Mlox and Wrye, do it through MO2. MGE XE may ask for elevation, that's perfectly normal. If you want to avoid that error message, you can set it to run as administrator on your own.
 
 Congratulations, you've completed the baseline installation for Morrowind!  
 

@@ -335,6 +335,8 @@ You'll need to re-pack these, as they aren't correctly archived. In each folder,
 * [Vurt's Solstheim Tree Replacer II](http://www.nexusmods.com/morrowind/mods/37856/?)
 (Also comes with a "Fixed Collision" patch. Will also need to be re-packed so all .NIF files are in a `/Meshes/f` folder)
 
+* [Vurt's Solstheim Tree Replacer II Fix](https://www.nexusmods.com/morrowind/mods/45941) - Fixes `Meshes/f/Flora_tree_BM_snow_01.nif`
+
 For the West Gash trees, you have two options. Vurt's look nicer, in my opinion, but Vanilla-friendly West Gash is MUCH more... well, vanilla friendly. Only use ONE of the below mods.
 
 * [Vurts Leafy West Gash II](http://www.nexusmods.com/morrowind/mods/37400/?) - Make sure to get the newer file. Do NOT download the bridge rope textures.

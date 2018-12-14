@@ -976,6 +976,9 @@ As well, I find [MCC leveler](https://www.nexusmods.com/morrowind/mods/44294) (i
 9) Are you an aspiring member of House Telvanni? The following mods might interest you, and as a bonus, they can all be used together
 
 * [Uvirith's Legacy](http://download.fliggerty.com/download-35-884) - A major revamp of Tel Uvirith, your stronghold if you join and advance in House Telvanni. Make sure to use the RoHT addon from the addons folder if you plan to use Rise of House Telvanni (see below).
+
+Using TR? [Here](https://www.nexusmods.com/morrowind/mods/44656) is a patch for it.
+
 * [Building Up Uvirith's Legacy](http://mw.modhistory.com/download-47-11851) - This mod is a major revamp of Uvirith's Grave, which is the area surrounding Tel Uvirith. If you plan to use Uvirith's Legacy, this is the version of BuUG you should use.
 * [Rise of House Telvanni](http://mw.modhistory.com/download-21-10664) - Further expands the Telvanni questline in a major way. Be warned there are some... special characters included in this. Do NOT get the compatibility addon! It's very out of date, use the one from Uvirith's Legacy instead!
  
@@ -987,7 +990,7 @@ If you're going to join House Hlaalu... well, unfortunately, at this time, there
  
 11) Annoyed with how quickly vanilla torches go out? While you're at it, want them to put out more light? What about lanterns and candles? Try out [True Skyrimized Torches](http://www.nexusmods.com/morrowind/mods/43192/?).
  
-12) Do you feel like you don't get enough benefits from being in a guild? Do you want more perks from joining the Temple or the Cult? Want to boss around your underlings after you become the Head of a House? You might like [Antares' Big Mod](http://mw.modhistory.com/download-26-15472).
+12) Do you feel like you don't get enough benefits from being in a guild? Do you want more perks from joining the Temple or the Cult? Want to boss around your underlings after you become the Head of a House? You might like [Antares' Big Mod](https://arcimaestroantares.webs.com/antaresbigmod.htm).
 
 13) Hate the limited capacity of chests and boxes? Want to get rid of that? [Ta-da](https://www.nexusmods.com/morrowind/mods/45698). Honestly, best mod addition I've added so far. So much hassle and annoyance saved. 
 

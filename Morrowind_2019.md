@@ -544,7 +544,8 @@ This mod handles what Hlaalu - Retexture and Hlaalu - Arkitektora of Vvardenfell
 4. Redoran
 * [Redoran Bump mapped](http://www.nexusmods.com/morrowind/mods/42406/?) - A note on these: they use extremely high poly meshes. If you're already struggling to top 30 FPS in exteriors, you should pass on these.
 * [Redoran Bump mapped fixes](https://mega.nz/#!qkY2gRJI!VSHQoMctyzL9X2qGYXMC2qqN7kHmu2kzsF--nwBJR2Y) - You only need these if you're using bump maps, obviously.
-* [Redoran Arkitektora](http://www.nexusmods.com/morrowind/mods/43003/?) - The actual texture file, for those of you skipping the bump maps. Get the normals if you are using bump maps, as usual.
+* [Redoran - Arkitektora](http://www.nexusmods.com/morrowind/mods/43003/?) - The actual texture file, for those of you skipping the bump maps. Get the normals if you are using bump maps, as usual.
+* [Redoran - Arkitektora Vol.2](https://www.nexusmods.com/morrowind/mods/46235)
  
 5. Telvanni
 * [Telvanni Mesh Improvement](http://www.nexusmods.com/morrowind/mods/42343/?) - If you're bump mapping, nearly everything here will be overwritten. If you're only using textures, grab this.

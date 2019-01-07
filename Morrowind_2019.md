@@ -243,6 +243,7 @@ Download the LGNPC bundle. You should install all of the mods. A few notes:
 * [HD Intro Cinematic - English](http://www.nexusmods.com/morrowind/mods/39329/) - Make sure to pick the right one for your resolution, and only get this if you picked the proper option in MCP. To install, you need to rename the movie file to `mw_intro.bik` after installing it via MO2.
 * [Morrowind Bethesda Logo HD Makeover](http://www.nexusmods.com/morrowind/mods/42352/) - If you have 'skip intro movie' turned on in MGE XE, there's no point to downloading this. In order to install, you'll need to make a folder called `Video` and drop the `bethesda logo.bik` file into it.
 * [HD Concept-art Splash Screen and Main Menu](http://www.nexusmods.com/morrowind/mods/43081/) - Skip this if you absolutely can't stand the Russian writing on the splash screens, but the screens look amazing enough that you should overlook it. To install, you'll just need to set the "Data Files" section as the Data directory when installing via MO2, then it works fine.
+* [Morrowind Screens Redone](https://www.nexusmods.com/morrowind/mods/46259) - An English alternative to the above, based on the same concept art. Looks a bit different, compare their images and decide yourself. 
 
 If you aren't a fan of the suggested main menu/splash screen replacer, you have several other options to choose from.
 

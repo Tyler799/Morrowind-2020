@@ -253,6 +253,8 @@ If you aren't a fan of the suggested main menu/splash screen replacer, you have 
 * [Morrowloading](http://www.nexusmods.com/morrowind/mods/44364/) - If you want splash screens with tidbits of information, like in Oblivion and Skyrim. Note that the screenshots used by this mod differ occasionally from how your game will look following this guide.
  
 4. Finally, get [JiFFY Morrowind UI Revamped](http://www.nexusmods.com/morrowind/mods/43922/?). This UI mod was chosen in particular because of how much it revamps, and it looks nice to boot. Choose between Dark or Classic, pick your crosshair and choose any size options. I went with 50% smaller crosshair and 25% smaller cursor, but you can and should try all the sizes in game to see which you prefer. Lastly, don't forget to make the necessary changes to your .ini.
+
+5. Optionally for those avid readers: [Scroll Daedric Alphabet](https://www.nexusmods.com/morrowind/mods/42454). This mod gives you a key to convert Daedric characters. Additionally, [Spell Scroll Text Overhaul](https://www.nexusmods.com/morrowind/mods/42936) gives unique Daedric text to all spell scrolls, making them far more interesting to read if you use both mods!
  
 ## Major mods to be aware of
 

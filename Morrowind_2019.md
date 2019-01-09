@@ -254,7 +254,7 @@ If you aren't a fan of the suggested main menu/splash screen replacer, you have 
  
 4. Finally, get [JiFFY Morrowind UI Revamped](http://www.nexusmods.com/morrowind/mods/43922/?). This UI mod was chosen in particular because of how much it revamps, and it looks nice to boot. Choose between Dark or Classic, pick your crosshair and choose any size options. I went with 50% smaller crosshair and 25% smaller cursor, but you can and should try all the sizes in game to see which you prefer. Lastly, don't forget to make the necessary changes to your .ini.
 
-5. Optionally for those avid readers: [Scroll Daedric Alphabet](https://www.nexusmods.com/morrowind/mods/42454). This mod gives you a key to convert Daedric characters. Additionally, [Spell Scroll Text Overhaul](https://www.nexusmods.com/morrowind/mods/42936) gives unique Daedric text to all spell scrolls, making them far more interesting to read if you use both mods!
+5. Optionally for those avid readers: [Scroll Daedric Alphabet](https://www.nexusmods.com/morrowind/mods/42454). This mod gives you a key to convert Daedric characters. If you want to use it, you'll need to enable the relevant patch from Jiffy Morrowind UI as well. Additionally, [Spell Scroll Text Overhaul](https://www.nexusmods.com/morrowind/mods/42936) gives unique Daedric text to all spell scrolls, making them far more interesting to read if you use both mods!
  
 ## Major mods to be aware of
 

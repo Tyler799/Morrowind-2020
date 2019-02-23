@@ -170,6 +170,8 @@ Now when you need to run MGE XE, Mlox and Wrye, do it through MO2. MGE XE may as
 
 Congratulations, you've completed the baseline installation for Morrowind!  
 
+**Before you continue:** I would highly recommend launching the game for a second time. You knew it worked vanilla, now you should test and make sure it works with all this boilerplate work you've done. If it does, you can go on to installing mods. 
+
 ## Patches, Fixes and Otherwise 
 
 A note before we start installing mods:

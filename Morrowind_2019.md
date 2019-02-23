@@ -51,6 +51,8 @@ If you need to reach me regarding this guide or otherwise, PM me at /u/Night_Tha
 
 ## Before we begin
 
+**You must have an official copy of the base game! Pirated/torrented copies will *not* work!** You need an official CD or the Steam copy. This isn't just heresay, this is true of everything Bethesda game Morrowind and forward. All mod tools (LOOT/BOSS, Mod Organizer, Wyre Bash, MWSE/OBSE/SKSE, xEdit, etc) and even many mods themselves just don't work properly on unofficial copies of the game. The exact reasoning is fairly technical in explanation, but it's not an anti-piracy measure, it's just a fact of the game engine and how tools hook in. I'm not inherently anti-piracy, I actually think it has a lot of value for several reasons. However, for the sake of this guide, if you don't have an official copy you can expect everything to break. You likely won't even be able to start the game properly. 
+
 **You should always read the mod page or glance through the readme of any mod we're downloading**, so you'll at least be aware of what you're getting and what your options are. Mod are, above all else, personal preference. Knowledge is power!
 
 As well: While many of the mods here may be compatible with OpenMW, many are not. Do not attempt to follow this guide with OpenMW! It is an amazing accomplishment by the community, but this guide is not attuned to it. 

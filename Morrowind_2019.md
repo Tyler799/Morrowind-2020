@@ -109,7 +109,7 @@ Extract it in your game directory and run it. Read through the patches, but the 
  
 4. Timeslips' EXE optimizer has been removed for this guide, determined to be essentially ineffectual. (Though not harmful, from what I can tell)
  
-5. The 4GB patch is no longer required, as it has been rolled into Morrowind Code Patch as of a recent version. However, running it against MGEXEGui.exe may improve it's performance when generating distant land. The patcher can be downloaded [here](https://www.ntcore.com/4gb_patch.php)
+5. The 4GB patch is no longer required, as it has been rolled into Morrowind Code Patch as of a recent version. However, running it against MGEXEGui.exe may improve its performance when generating distant land. The patcher can be downloaded [here](https://www.ntcore.com/4gb_patch.php)
  
 6. Download the latest version of MGE XE. While its mod page can be found [here](https://www.nexusmods.com/morrowind/mods/41102) the development version (like MCP) exists [here](https://www.nexusmods.com/morrowind/mods/26348)
 (As of writing this guide, the mod page has the newest version, Skunk Works' copy is older. Check both first though, as it could change!)

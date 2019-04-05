@@ -873,11 +873,11 @@ Click the shader setup screen on the General tab. If you're using the latest MGE
 
 Optionally, you might want to take a look at [this water shader](http://forums.bethsoft.com/topic/1438303-mge-screenshot-thread-no-8/page-4#entry22311144). Screenshots of it can be found in the post. If you'd like to give greener water a try, download the `XE Water.fx` file, and put it in your `Data Files\shaders` folder, overwriting the old `XE Water.fx`. You might want to back up your old one in case you want to go back to the default water at some point.
 
-5. Finally, and only when you're satisfied with your distant land generation, install [Lore-Friendly Ghostfence Texture](http://www.nexusmods.com/morrowind/mods/29206/?). Why is this step last? Because if you generate distant land with these textures in your folder, it makes the ghostfence look like it has holes in it. Stick with the vanilla textures for distant land generation. If you re-run your distant land generation later, try to remove to remove the textures `tx_gg_fence_01` and `tx_gg_fence_02` from your `textures` folder first.
+5. Finally, and only when you're satisfied with your distant land generation, install [Lore-Friendly Ghostfence Texture](http://www.nexusmods.com/morrowind/mods/29206/?). Why is this step last? Because if you generate distant land with these textures in your folder, it makes the ghostfence look like it has holes in it. Stick with the vanilla textures for distant land generation. If you re-run your distant land generation later, try to remove the textures `tx_gg_fence_01` and `tx_gg_fence_02` from your `textures` folder first.
 
 ## Cleaning mods
 
-Several of the plugins in this list need to be cleaned. Here is the list of plugins that need to be cleaned, and do not have any warning about cleaning in their reademe:
+Several of the plugins in this list need to be cleaned. Here is the list of plugins that need to be cleaned, and do not have any warning about cleaning in their readme:
 
 ```
 wl_SolstheimOverhaul_v1.esm

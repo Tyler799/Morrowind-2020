@@ -440,26 +440,22 @@ Ta-da! Effect removed!
 
 A little more advanced due to the required .ini edits.
 
-* [Skies .IV](http://www.nexusmods.com/morrowind/mods/43311/?)
-* [Alternate Skies](http://www.nexusmods.com/morrowind/mods/42629/?)
+Here you can choose between two setups:
 
-Okay, now that you have all the files...
+1. Vanilla texture skies + moon re-texture of choice
+2. [Alternate Skies](http://www.nexusmods.com/morrowind/mods/42629/?) + [New Starfields](https://www.nexusmods.com/morrowind/mods/43246?) + [Skies .IV Resource Pack](https://www.nexusmods.com/morrowind/mods/43311/?tab=files) + moon re-texture of choice
 
-You can personally pick-and-choose which textures you like. Personal suggestion:
+- If you want moons that more closely resemble their appearances in the later games, download Skies v3 from the Skies .IV mod page and install the moon textures from there instead.
+- If you want moons that look like they once contained life, try [Dying Worlds](http://www.nexusmods.com/morrowind/mods/43023/?).
+- If you want a lore friendly moon re-texture take a look at [Lorkhan's Lunar Legacy](https://www.nexusmods.com/morrowind/mods/45718).
 
-1. From the Skies IV BAIN insaller, choose the following options: SkiesIV, Moons and Particles.
-2. Disable `Tx_Sky_Foggy` and `Tx_Sky_Ashstorm`
-3. The Moon option has textures in the wrong spot. Open the file in MO, and drag-and-drop them into the `textures` folder.'
-4. Only enable `Tx_Sky_Foggy` and `Tx_Sky_Ashstorm` from Alternate Skies, hide all the remaining files.
+You might notice your clouds moving by far too quickly. Let's fix that. First, make a backup of your `Morrowind.ini`. (This can be found under `Morrowind/Mod Organizer 2/Profiles/Default`, or whatever you named your profile if you renamed it)
 
-If you want moons that more closely resemble their appearances in the later games, download Skies v3 from the Skies .IV mod page and install the moon textures from there instead.
-If you want moons that look like they once contained life, try [Dying Worlds](http://www.nexusmods.com/morrowind/mods/43023/?)
+Now you need to edit your ini file by carefully following the instructions provided in the "Weather settings.txt" that comes with Alternate Skies.
 
-5. You might notice your clouds moving by far too quickly. Let's fix that. First, make a backup of your `Morrowind.ini`. (This can be found under `Morrowind/Mod Organizer 2/Profiles/Default`, or whatever you named your profile if you renamed it)
+- Alternatively you can grab [this file](https://mega.nz/#!zsADQbQQ!d5uOr1R8SM468G7DwA0a3cchDuFHbTJrKaAFtFTgURQ), then copy/paste the weather sections over your own weather settings in your .ini. This includes fixes to cloud speed required by Skies IV but also changes the weather settings to correspond to those provided by Alternate Skies. Try them out and see if you like them. Among other color changes, they make the nights darker, but not so dark as to blind you. If you don't like them, just restore your backup and keep reading.
 
-Grab [this file](https://mega.nz/#!zsADQbQQ!d5uOr1R8SM468G7DwA0a3cchDuFHbTJrKaAFtFTgURQ), then copy/paste the weather sections over your own weather settings in your .ini. This includes fixes to cloud speed required by Skies IV but also changes the weather settings to correspond to those provided by Alternate Skies. Try them out and see if you like them. Among other color changes, they make the nights darker, but not so dark as to blind you. If you don't like them, just restore your backup and keep reading.
-
-6. If you ONLY want the cloud speed .ini adjustments required for Skies and not the weather color changes, change these lines in your .ini:
+If you ONLY want the cloud speed .ini adjustments required for Skies and not the weather color changes, change these lines in your .ini:
 
 ```ini
 [Weather Clear]

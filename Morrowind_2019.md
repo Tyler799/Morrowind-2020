@@ -856,9 +856,10 @@ Download the "Fixes by Greatness7" version.
 ## MGE XE Setup
 If you have a toaster, you might want to skip most of this section. Run distant land as explained towards the end with default settings and see how the game runs for you first before trying out grass or any of the fancier light settings in the distant land tab. You might also try out shaders.
 
-1. Before we begin, we need to download some grass mods. Please note, DO NOT ACTIVATE THESE .esps IN YOUR LAUNCHER!
-* [Azura's Coast and Sheogorath - Grassmod](http://www.nexusmods.com/morrowind/mods/30788/?)
-* [Morrowind grass mod combined v1.0](http://mw.modhistory.com/download-56-14671) - Activate the .bsa in your .ini. Alternatively, you could use...
+1. Before we begin, we need to download mod(s) related to grass. 
+* [Aesthesia Groundcover - grass mod](https://www.nexusmods.com/morrowind/mods/46377/) - An excellent looking and performing grass mod to replace "Azura's Coast and Sheogorath - Grassmod" and "Morrowind grass mod combined v1.0"
+
+Alternatively, you could use...
 * [Vurt's Groundcover](http://www.nexusmods.com/morrowind/mods/31051/?) - If you want Ashlands grass, you'll need to download this as none was included in the previous download. Use EITHER the previous mod OR this one for the other regions, do NOT use both. Use Reeds and the optional Corals download if you want, they should work with Grass Mod Combined just fine.
 
 For those of your with Tamriel Rebuilt, [Tamriel Rebuilt - Old Ebonheart Groundcover](https://www.nexusmods.com/morrowind/mods/45973) will enable Vurt's groundcovers to extend to Tamriel Rebuilt.

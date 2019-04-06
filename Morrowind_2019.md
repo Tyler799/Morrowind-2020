@@ -329,12 +329,14 @@ Test each waterfall mod quickly by starting the game, pressing `\`` to go into t
 
 * [Vurt's Bitter Coast Trees II](http://www.nexusmods.com/morrowind/mods/37489/?)
 * [Vurt's Ascadian Isles Trees Replacer II](http://www.nexusmods.com/morrowind/mods/37249/?) - Make sure to get the newer file (10a)
-* [Dahrk Mods by Melchior](http://www.nexusmods.com/morrowind/mods/43528/?) - Specifically, Vurt's Ashtrees - Shorter. But you should also grab the BC Trees Collision Fix right below it.
+* [Dahrk Mods by Melchior](http://www.nexusmods.com/morrowind/mods/43528/?) - Specifically, Vurt's Ashtrees - Shorter. 
 * [Vurt's Grazelands Trees I](http://www.nexusmods.com/morrowind/mods/35368/?) OR [Vurt's Grazeland Trees II](http://www.nexusmods.com/morrowind/mods/37038/?) - Pick the one you like best. I prefer 1, and I use the palms free version. Make sure to move **one** of the ESPs out of the Optional section using MO2, depending on which you want.
 
-* [Vurt's Trees Fix by Greatness7](https://www.dropbox.com/s/rwtjc7stx1gbeje/VurtsTreesFix.7z?dl=0) - Install the meshes from the `Ascadian Isles` and `Bitter Coast` folders. Leafy West Gash can be disabled if you're following this guide as we used different trees. Only use the Grazelands folder if you're using Grazelands II.
+* [Vurt's Trees Fix by Greatness7](https://www.dropbox.com/s/rwtjc7stx1gbeje/VurtsTreesFix.7z?dl=0) - Install the meshes from the `Ascadian Isles` folder only. Leafy West Gash can be disabled if you're following this guide as we used different trees. Only use the Grazelands folder if you're using Grazelands II.
 
 You'll need to re-pack these, as they aren't correctly archived. In each folder, all the .NIF files should be in a `Meshes/f` folder. Make sure to set them up that way and re-pack them, then install as normal.
+
+* [Vurt's Bitter Coast Trees II - Remastered and Optimized](https://www.nexusmods.com/morrowind/mods/46418) - Fixes a good deal of Vurt's Bitter Coast Trees II and improves their performance. BC Trees Collision fix is no longer needed, nor the Bitter Coast folder of Vurt's Tree Fix by Greatness7. 
 
 * [Vurt's Mournhold Trees II](http://www.nexusmods.com/morrowind/mods/35400/?)
 * [Vurt's Solstheim Tree Replacer II](http://www.nexusmods.com/morrowind/mods/37856/?)

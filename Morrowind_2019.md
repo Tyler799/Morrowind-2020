@@ -315,9 +315,11 @@ Feel free to start the game and check out Seyda Neen if you'd like, but we're no
 If you're using Graphic Herbalism and it's Extra Mining module, get this [patch](http://www.nexusmods.com/morrowind/mods/43197/?)
 (You will need to disable Graphic Herbalism - EXTRA mod in your left pane completely, or if you merged it, just disable it's ESP)
 
-6. Water
-* [Dongle's Waterpack Bumpmapped](http://www.nexusmods.com/morrowind/mods/42317/?) - Personally, I don't use this. I don't like the way the water looks. Try it out in your own game (to do it quickly, start the game, press `\`` to go into the console, type `COC "Vivec, Puzzle Canal, Level 1"`, hit enter, and leave through the grate ahead of you).
-* [Waterfalls Bump mapped](http://www.nexusmods.com/morrowind/mods/42405/?) - These I do play with.
+6. Waterfalls
+Test each waterfall mod quickly by starting the game, pressing `\`` to go into the console, typing `COC "Vivec, Puzzle Canal, Level 1"`, hitting enter, and leaving through the grate ahead of you.
+* [Better Waterfalls](https://www.nexusmods.com/morrowind/mods/45424) - Best looking ones out there. Editors personal choice. Be sure to grab the [Waterfalls Tweaks](https://www.nexusmods.com/morrowind/mods/46271) for better compatibility.
+* [Waterfalls Bump mapped](http://www.nexusmods.com/morrowind/mods/42405/?) - Author's personal choice.
+* [Dongle's Waterpack Bumpmapped](http://www.nexusmods.com/morrowind/mods/42317/?) - Some may like how these look.
 
 7. Fire and smoke
 * [Apel's Fire Retexture](http://www.nexusmods.com/morrowind/mods/42554/?)

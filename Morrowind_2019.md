@@ -186,7 +186,6 @@ As you begin installing mods, I recommend that you right click them and hit "Ign
 
 2. Go ahead and get the following mods:
 
-* [Script Improvements](http://www.nexusmods.com/morrowind/mods/43828/) - Edits over 200 scripts, with a focus on reducing the chances of encountering quest-breaking errors.
 * [Texture Fix 2.0](http://mw.modhistory.com/download-90-10353) - Repairs landscape seams
 * [Texture Fix Extended](https://www.nexusmods.com/morrowind/mods/46018)
 * [Texture Fix - Bloodmoon 1.1](http://mw.modhistory.com/download-90-10388) - Repairs landscape seams on Solstheim. (You'll need to disable this mod if you choose to install Solstheim - Tomb of the Snow Prince later in this guide)

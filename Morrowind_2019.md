@@ -276,7 +276,6 @@ However: If you want to use it you *must* have MWSE alpha 2.1. It will not work 
 
 ## Mesh fixes and improvements
 
-* [Mesh Improvements 1.7](http://mw.modhistory.com/download-90-13384)
 * [Better Meshes plus Optimization](http://www.nexusmods.com/morrowind/mods/38170/?)
 * [Dwemer Mesh Improvement](http://www.nexusmods.com/morrowind/mods/43101/?)
 * [Various tweaks and fixes](http://www.nexusmods.com/morrowind/mods/43795/?) - Just get BoatFixes.

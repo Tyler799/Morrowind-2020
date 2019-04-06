@@ -453,7 +453,7 @@ You might notice your clouds moving by far too quickly. Let's fix that. First, m
 
 ~~Now you need to edit your ini file by carefully following the instructions provided in the "Weather settings.txt" that comes with Alternate Skies.~~
 
-Since Morrowind stores the settings related to weather and nighttime lighting levels in MORROWIND.INI which cannot be modified by simply installing a mod in the Data Files directory. You should download Vladimir Kraus' excellent MiNi *(courtesy of Half11)* to help make the necessary INI modifications:
+Since Morrowind stores the settings related to weather and nighttime lighting levels in MORROWIND.INI which cannot be modified by simply installing a mod in the Data Files directory. You should download Vladimir Kraus' excellent MiNi to help make the necessary INI modifications:
 - [Download](https://cdn.discordapp.com/attachments/533267121384325120/564203414590980097/Alternate_Skies_Settings_Automated_.7z) and run MiNi.exe
 - Ensure that the path displayed at the bottom of the screen points to your Morrowind directory (eg. 'C:\Program Files\Morrowind')
 - Select the Green down arrow to backup your current MORROWIND.INI file

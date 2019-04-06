@@ -467,34 +467,34 @@ If you ONLY want the cloud speed .ini adjustments required for Skies and not the
 
 ```ini
 [Weather Clear]
-Cloud Speed=0.25
+Cloud Speed=0.50
 
 [Weather Cloudy]
-Cloud Speed=0.4
+Cloud Speed=0.75
 
 [Weather Foggy]
-Cloud Speed=0.25
+Cloud Speed=1.25
 
 [Weather Overcast]
-Cloud Speed=0.3
+Cloud Speed=0.50
 
 [Weather Rain]
-Cloud Speed=0.4
+Cloud Speed=0.75
 
 [Weather Thunderstorm]
-Cloud Speed=0.6
+Cloud Speed=1
 
 [Weather Ashstorm]
-Cloud Speed=1.4
+Cloud Speed=3
 
 [Weather Blight]
-Cloud Speed=1.8
+Cloud Speed=5
 
 [Weather Snow]
-Cloud Speed=0.3
+Cloud Speed=1.5
 
 [Weather Blizzard]
-Cloud Speed=1.5
+Cloud Speed=3.5
 ```
 
 Keep in mind the Snow/Blizzard sections might be at the end of your .ini and not with the rest of the weather sections, as they were added by Bloodmoon.

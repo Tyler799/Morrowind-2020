@@ -436,18 +436,24 @@ with
 
 Ta-da! Effect removed!
 
-## Skies
+## Weather
+
+### Skies
 
 A little more advanced due to the required .ini edits.
 
 Here you can choose between two setups:
 
-1. Vanilla texture skies + moon re-texture of choice
-2. [Alternate Skies](http://www.nexusmods.com/morrowind/mods/42629/?) + [New Starfields](https://www.nexusmods.com/morrowind/mods/43246?) + [Skies .IV Resource Pack](https://www.nexusmods.com/morrowind/mods/43311/?tab=files) + moon re-texture of choice
+1. Keep the vanilla texture skies (arguably still the best)
+2. [Alternate Skies](http://www.nexusmods.com/morrowind/mods/42629/?) + [New Starfields](https://www.nexusmods.com/morrowind/mods/43246?) + [Skies .IV Resource Pack](https://www.nexusmods.com/morrowind/mods/43311/?tab=files) **(requirement)**
 
-- If you want moons that more closely resemble their appearances in the later games, download Skies v3 from the Skies .IV mod page and install the moon textures from there instead.
-- If you want moons that look like they once contained life, try [Dying Worlds](http://www.nexusmods.com/morrowind/mods/43023/?).
+### Moons
+
 - If you want a lore friendly moon re-texture take a look at [Lorkhan's Lunar Legacy](https://www.nexusmods.com/morrowind/mods/45718).
+- If you want moons that look like they once contained life, try [Dying Worlds](http://www.nexusmods.com/morrowind/mods/43023/?).
+- If you want moons that more closely resemble their appearances in the later games, download Skies v3 (Legacy) from the Skies .IV [mod page](https://www.nexusmods.com/morrowind/mods/43311/?tab=files) and install the moon textures from there instead (you only need to copy the content of the Moons folder).
+
+### Tweaks
 
 You might notice your clouds moving by far too quickly. Let's fix that. First, make a backup of your `Morrowind.ini`. (This can be found under `Morrowind/Mod Organizer 2/Profiles/Default`, or whatever you named your profile if you renamed it)
 
@@ -461,7 +467,7 @@ Since Morrowind stores the settings related to weather and nighttime lighting le
 - Select the APPLY icon (pencil writing on paper)
 - And exit the utility
 
-Alternatively you can grab [this file](https://mega.nz/#!zsADQbQQ!d5uOr1R8SM468G7DwA0a3cchDuFHbTJrKaAFtFTgURQ), then copy/paste the weather sections over your own weather settings in your .ini. This includes fixes to cloud speed required by Skies IV but also changes the weather settings to correspond to those provided by Alternate Skies. Try them out and see if you like them. Among other color changes, they make the nights darker, but not so dark as to blind you. If you don't like them, just restore your backup and keep reading.
+Alternatively you can grab the "Weather settings.txt" file that comes with Alternate Skies, then copy/paste the weather sections over your own weather settings in your .ini.
 
 If you ONLY want the cloud speed .ini adjustments required for Skies and not the weather color changes, change these lines in your .ini:
 

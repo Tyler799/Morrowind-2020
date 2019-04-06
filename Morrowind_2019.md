@@ -451,9 +451,17 @@ Here you can choose between two setups:
 
 You might notice your clouds moving by far too quickly. Let's fix that. First, make a backup of your `Morrowind.ini`. (This can be found under `Morrowind/Mod Organizer 2/Profiles/Default`, or whatever you named your profile if you renamed it)
 
-Now you need to edit your ini file by carefully following the instructions provided in the "Weather settings.txt" that comes with Alternate Skies.
+~~Now you need to edit your ini file by carefully following the instructions provided in the "Weather settings.txt" that comes with Alternate Skies.~~
 
-- Alternatively you can grab [this file](https://mega.nz/#!zsADQbQQ!d5uOr1R8SM468G7DwA0a3cchDuFHbTJrKaAFtFTgURQ), then copy/paste the weather sections over your own weather settings in your .ini. This includes fixes to cloud speed required by Skies IV but also changes the weather settings to correspond to those provided by Alternate Skies. Try them out and see if you like them. Among other color changes, they make the nights darker, but not so dark as to blind you. If you don't like them, just restore your backup and keep reading.
+Since Morrowind stores the settings related to weather and nighttime lighting levels in MORROWIND.INI which cannot be modified by simply installing a mod in the Data Files directory. You should download Vladimir Kraus' excellent MiNi *(courtesy of Half11)* to help make the necessary INI modifications:
+- [Download](https://cdn.discordapp.com/attachments/533267121384325120/564203414590980097/Alternate_Skies_Settings_Automated_.7z) and run MiNi.exe
+- Ensure that the path displayed at the bottom of the screen points to your Morrowind directory (eg. 'C:\Program Files\Morrowind')
+- Select the Green down arrow to backup your current MORROWIND.INI file
+- Select Alternate Skies Settings
+- Select the APPLY icon (pencil writing on paper)
+- And exit the utility
+
+Alternatively you can grab [this file](https://mega.nz/#!zsADQbQQ!d5uOr1R8SM468G7DwA0a3cchDuFHbTJrKaAFtFTgURQ), then copy/paste the weather sections over your own weather settings in your .ini. This includes fixes to cloud speed required by Skies IV but also changes the weather settings to correspond to those provided by Alternate Skies. Try them out and see if you like them. Among other color changes, they make the nights darker, but not so dark as to blind you. If you don't like them, just restore your backup and keep reading.
 
 If you ONLY want the cloud speed .ini adjustments required for Skies and not the weather color changes, change these lines in your .ini:
 

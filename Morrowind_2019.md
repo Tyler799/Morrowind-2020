@@ -882,9 +882,9 @@ First, make sure all the mods you're using are activated in the launcher (again,
 
 4. Shaders
 
-Click the shader setup screen on the General tab. If you're using the latest MGE XE beta, the shaders screen will be pretty easy for you. Pick your quality preset, adjust it how you want (turning on/off DoF, using lower quality SSAO, etc.), and play. If, however, you're using the older, stable version of MGE XE, things are just a little more complicated. Follow the recommended install order at the bottom of the shader setup screen. For example, if you want the top of the line setup, using the best of ALL the available shaders, you'll want to double click first on SSAO HQ, then both Underwater effects, Depth of Field, Sunshafts, Bloom Soft, then finally, Eye Adaptation goes last.
+Click the shader setup screen on the General tab. If you're using the latest MGE XE beta, the shaders screen will be pretty easy for you. Pick your quality preset, adjust it how you want (turning on/off DoF, using lower quality SSAO, etc.), and play. 
 
-Optionally, you might want to take a look at [this water shader](http://forums.bethsoft.com/topic/1438303-mge-screenshot-thread-no-8/page-4#entry22311144). Screenshots of it can be found in the post. If you'd like to give greener water a try, download the `XE Water.fx` file, and put it in your `Data Files\shaders` folder, overwriting the old `XE Water.fx`. You might want to back up your old one in case you want to go back to the default water at some point.
+Optionally, you might want to take a look at [this water shader](https://www.nexusmods.com/morrowind/mods/45432).
 
 5. Finally, and only when you're satisfied with your distant land generation, install [Lore-Friendly Ghostfence Texture](http://www.nexusmods.com/morrowind/mods/29206/?). Why is this step last? Because if you generate distant land with these textures in your folder, it makes the ghostfence look like it has holes in it. Stick with the vanilla textures for distant land generation. If you re-run your distant land generation later, try to remove the textures `tx_gg_fence_01` and `tx_gg_fence_02` from your `textures` folder first.
 

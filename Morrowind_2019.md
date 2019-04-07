@@ -909,6 +909,7 @@ Better Clothes_v1.1_nac.esp
 UFR_v3dot2.esp
 Better Morrowind Armor.esp
 Illy's Hot Pots.ESP
+Vurt's Grazeland Trees [Palms].esp
 ```
 
 To actually clean, first open Wrye using MO2. Then, right click on a given plugin and hit "Clean with TES3CMD"

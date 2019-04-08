@@ -874,6 +874,8 @@ First, make sure all the mods you're using are activated in the launcher (again,
 >3) On the next few screens, change the settings only if you think it's necessary. If you're running a toaster you might want to turn your settings down. Be very conservative if you try to turn the settings up higher, as it CAN make your game run very slow. That said, re-running the distant land generator isn't too difficult. On the statics screen, make sure to read the tooltips for your options and set them accordingly.
 >
 >4) When your distant land generation is finally complete, you'll have a lot more options in MGE XE to play with. Most of these are self-explanatory. If you have a toaster, you probably shouldn't mess with the default settings much; instead, launch the game and see how it runs for you with the basic settings, and with shaders, before messing with anything here. If you have a beastly machine, try out Per-pixel lighting (make sure to use Negative Lights Remover.esp in this case), high quality exponential fog, and high quality atmosphere and distance coloring. And, of course, turn up your draw distance. I play with 10 visible cells.
+>
+>You will by default recieve a warning about 2 missing files - 'tx_ma_sandstone02.tga' and 'tx_lavacrust00.tga'. This is completely normal and is a fault with the vanilla Morrowind BSA - nothing you did. However, if these messages bother you and you want to be sure from a glance whether you have real issues when generating distant land [this mod](https://www.nexusmods.com/morrowind/mods/45588) provides dummies of those two files so the distant land generator doesn't complain.
 
 4. Shaders
 

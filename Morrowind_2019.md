@@ -65,6 +65,8 @@ However: [Wrye Bash (Polemo's Fork)](https://www.nexusmods.com/morrowind/mods/45
 
 **Note**: Because we're using MO2, installation order for mods is meaningless, only their order in the left pane and plugin order in the right matter. Just remember that.
 
+**Warning**: Do *not* enable "Automatic Archive Invalidation" when using Mod Organizer 2 for Morrowind. This is needed for a bug introducted in Oblivion. However, if used in Morrowind it *will* break things like Distant Land generation. 
+
 ### Regarding mods with archives:
 
 Mods with archives (.BSA files) need to be added into the `Morrowind.ini` file. However, we have a tool to automate the process that can be found [here](http://download.fliggerty.com/download-58-633)

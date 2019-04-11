@@ -262,6 +262,8 @@ Get any or all of these if you like:
 
 Before installing any of these it might be a good idea to move all of vanilla splash screens located in ```Data Files/Splash``` in a new mod and then disable it. Just create the directory structure just mentioned, drag and drop all vanilla splash screens in there, package it with a name like "Vanilla Splash Screens" and add it through MO. This will ensure that only the custom splash screens get shown in the game, and if you ever want the vanilla ones back you can just enable the new mod.
 
+* [Fresco Splash Screens](https://www.nexusmods.com/morrowind/mods/45680) - This is a set of 14 splash screens showing off Tyddy's frescoes. They are very vanilla friendly and quite minimalistic. Editors personal choice.
+
 * [HD Concept-art Splash Screen and Main Menu](http://www.nexusmods.com/morrowind/mods/43081/) - Skip this if you absolutely can't stand the Russian writing on the splash screens, but the screens look amazing enough that you should overlook it. To install, you'll just need to set the "Data Files" section as the Data directory when installing via MO2, then it works fine.
 * [Morrowind Screens Redone](https://www.nexusmods.com/morrowind/mods/46259) - An English alternative to the above, based on the same concept art. Looks a bit different, compare their images and decide yourself.
 

@@ -395,7 +395,7 @@ Alternatively you can choose CptJoker's Flora Redux:
 
 For the West Gash trees, you have two options. Vurt's look nicer, in my opinion, but Vanilla-friendly West Gash is MUCH more... well, vanilla friendly. Only use ONE of the mods offered below.
 
-- [Vanilla-friendly West Gash Tree Replacer](http://www.nexusmods.com/morrowind/mods/44173/?) - I recommend using the darker leaf texture found in the `extras` folder.
+- [Vanilla-friendly West Gash Tree Replacer](http://www.nexusmods.com/morrowind/mods/44173/?) - As with the Ascadian Isles trees, this should be your preferred choice of trees for this region due to problems Vurt's trees tend to have. I recommend using the darker leaf texture found in the `extras` folder.
 
 * [Vurts Leafy West Gash II](http://www.nexusmods.com/morrowind/mods/37400/?) - Make sure to get the newer file. Do NOT download the bridge rope textures.
 

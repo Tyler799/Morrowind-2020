@@ -347,6 +347,14 @@ Test each waterfall mod quickly by starting the game, pressing `\`` to go into t
 * [Vurt's Bitter Coast Trees II](http://www.nexusmods.com/morrowind/mods/37489/?)
 * [Vurt's Bitter Coast Trees II - Remastered and Optimized](https://www.nexusmods.com/morrowind/mods/46418) - Fixes a good deal of Vurt's Bitter Coast Trees II and improves their performance. You no longer need the BC Trees Collision fix or the Bitter Coast folder of Vurt's Tree Fix by Greatness7. This is a patch so you will need to place it just bellow the original mod in your load order.
 
+#### Grazeland Trees
+
+* [Vurt's Grazelands Trees I](http://www.nexusmods.com/morrowind/mods/35368/?)
+
+* [Vurt's Grazeland Trees II](http://www.nexusmods.com/morrowind/mods/37038/?) 
+
+Pick the one you like best. I prefer the first option, and I use the palms free version. Make sure to move **one** of the ESPs out of the Optional section using MO2, depending on which you want.
+
 #### Ascadian Isles Trees
 
 Use only one of the following two mods:
@@ -361,10 +369,6 @@ If you've chosen to go for the Vurt option you'll need to install this fix:
 #### Ashland Trees
 
 * [Dahrk Mods by Melchior](http://www.nexusmods.com/morrowind/mods/43528/?) - Specifically, Vurt's Ashtrees - Shorter. 
-
-#### Grazeland Trees
-
-* [Vurt's Grazelands Trees I](http://www.nexusmods.com/morrowind/mods/35368/?) OR [Vurt's Grazeland Trees II](http://www.nexusmods.com/morrowind/mods/37038/?) - Pick the one you like best. I prefer 1, and I use the palms free version. Make sure to move **one** of the ESPs out of the Optional section using MO2, depending on which you want.
 
 #### Mournhold Trees
 

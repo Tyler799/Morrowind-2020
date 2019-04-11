@@ -335,29 +335,48 @@ Test each waterfall mod quickly by starting the game, pressing `\`` to go into t
 * [Apel's Fire Retexture](http://www.nexusmods.com/morrowind/mods/42554/?)
 * [Vurt's Lava and Smoke](http://www.nexusmods.com/morrowind/mods/28519/?) - Just choose the "SMOKE" option in the BAIN installer. (Though you could choose the others, they'll be lower priority than lava mods we'll be installing later and thus shouldn't come into effect)
 
-8. Trees
+## Trees
+
+### Bitter Coast Trees
 
 * [Vurt's Bitter Coast Trees II](http://www.nexusmods.com/morrowind/mods/37489/?)
-* [Vurt's Ascadian Isles Trees Replacer II](http://www.nexusmods.com/morrowind/mods/37249/?) - Make sure to get the newer file (10a)
+* [Vurt's Bitter Coast Trees II - Remastered and Optimized](https://www.nexusmods.com/morrowind/mods/46418) - Fixes a good deal of Vurt's Bitter Coast Trees II and improves their performance. You no longer need the BC Trees Collision fix or the Bitter Coast folder of Vurt's Tree Fix by Greatness7. This is a patch so you will need to place it just bellow the original mod in your load order.
+
+### Ascadian Isles Trees
+
+Use only one of the following two mods:
+
+* [Remiros' Ascadian Isles Trees 2](https://www.nexusmods.com/morrowind/mods/45779) - If you care about optimization, this should be your preferred choice of trees for this region. They are not only better for performance, but also more vanilla friendly.
+* [Vurt's Ascadian Isles Trees Replacer II](http://www.nexusmods.com/morrowind/mods/37249/?) - These are not optimized and will have a medium impact on your performance in Ascadian Isles. They also require patching to correct some mesh problems. However some might prefer them over Remiros trees. Make sure to get the newer file (10a).
+
+If you've chosen to go for the Vurt option you'll need to install this fix: 
+
+* [Vurt's Trees Fix by Greatness7](https://www.dropbox.com/s/rwtjc7stx1gbeje/VurtsTreesFix.7z?dl=0) - Install the meshes from the `Ascadian Isles` folder only. Leafy West Gash can be disabled if you're following this guide as we used different trees. Only use the Grazelands folder if you're using Grazelands II. You'll need to re-pack these, as they aren't correctly archived. In each folder, all the .NIF files should be in a `Meshes/f` folder. Make sure to set them up that way and re-pack them, then install as normal.
+
+### Ashland Trees
+
 * [Dahrk Mods by Melchior](http://www.nexusmods.com/morrowind/mods/43528/?) - Specifically, Vurt's Ashtrees - Shorter. 
+
+### Grazeland Trees
+
 * [Vurt's Grazelands Trees I](http://www.nexusmods.com/morrowind/mods/35368/?) OR [Vurt's Grazeland Trees II](http://www.nexusmods.com/morrowind/mods/37038/?) - Pick the one you like best. I prefer 1, and I use the palms free version. Make sure to move **one** of the ESPs out of the Optional section using MO2, depending on which you want.
 
-* [Vurt's Trees Fix by Greatness7](https://www.dropbox.com/s/rwtjc7stx1gbeje/VurtsTreesFix.7z?dl=0) - Install the meshes from the `Ascadian Isles` folder only. Leafy West Gash can be disabled if you're following this guide as we used different trees. Only use the Grazelands folder if you're using Grazelands II.
-
-You'll need to re-pack these, as they aren't correctly archived. In each folder, all the .NIF files should be in a `Meshes/f` folder. Make sure to set them up that way and re-pack them, then install as normal.
-
-* [Vurt's Bitter Coast Trees II - Remastered and Optimized](https://www.nexusmods.com/morrowind/mods/46418) - Fixes a good deal of Vurt's Bitter Coast Trees II and improves their performance. BC Trees Collision fix is no longer needed, nor the Bitter Coast folder of Vurt's Tree Fix by Greatness7. 
+### Mournhold Trees
 
 * [Vurt's Mournhold Trees II](http://www.nexusmods.com/morrowind/mods/35400/?)
-* [Vurt's Solstheim Tree Replacer II](http://www.nexusmods.com/morrowind/mods/37856/?)
-(Also comes with a "Fixed Collision" patch. Will also need to be re-packed so all .NIF files are in a `/Meshes/f` folder)
 
+### Solstheim Trees
+
+* [Vurt's Solstheim Tree Replacer II](http://www.nexusmods.com/morrowind/mods/37856/?) - Also comes with a "Fixed Collision" patch. Will also need to be re-packed so all .NIF files are in a `/Meshes/f` folder. Be sure to install the following fix as well.
 * [Vurt's Solstheim Tree Replacer II Fix](https://www.nexusmods.com/morrowind/mods/45941) - Fixes `Meshes/f/Flora_tree_BM_snow_01.nif`
 
-For the West Gash trees, you have two options. Vurt's look nicer, in my opinion, but Vanilla-friendly West Gash is MUCH more... well, vanilla friendly. Only use ONE of the below mods.
+### West Gash Trees
+
+For the West Gash trees, you have two options. Vurt's look nicer, in my opinion, but Vanilla-friendly West Gash is MUCH more... well, vanilla friendly. Only use ONE of the mods offered below.
+
+- [Vanilla-friendly West Gash Tree Replacer](http://www.nexusmods.com/morrowind/mods/44173/?) - I recommend using the darker leaf texture found in the `extras` folder.
 
 * [Vurts Leafy West Gash II](http://www.nexusmods.com/morrowind/mods/37400/?) - Make sure to get the newer file. Do NOT download the bridge rope textures.
-* [Vanilla-friendly West Gash Tree Replacer](http://www.nexusmods.com/morrowind/mods/44173/?) - The only non-Vurt tree mod in the list. I recommend using the darker leaf texture found in the `extras` folder.
 
 9. Plants
 

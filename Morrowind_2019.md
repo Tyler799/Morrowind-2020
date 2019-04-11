@@ -299,50 +299,55 @@ However: If you want to use it you *must* have MWSE alpha 2.1. It will not work 
 
 This is by far going to be the most complicated part of the guide so hold on to your butts.
 
-1. [Morrowind Visual Pack](http://mw.modhistory.com/download-56-6990) - This is our base mod. It replaces a lot of stuff that still isn't touched by modern mods, mostly because they're not really used often enough to think about replacing. Most of the textures will be overwritten.
+* [Morrowind Visual Pack](http://mw.modhistory.com/download-56-6990) - This is our base mod. It replaces a lot of stuff that still isn't touched by modern mods, mostly because they're not really used often enough to think about replacing. Most of the textures will be overwritten.
 
-2. Bitter Coast.
+### Bitter Coast Region
 
 * [Connary's Bitter Coast](http://www.fullrest.ru/files/connarysbittercoast)
 * [Apel's Bitter Coast Retexture](http://www.nexusmods.com/morrowind/mods/42661/?)
 
 Feel free to start the game and check out Seyda Neen if you'd like, but we're not done and the Bitter Coast landscape will be changing more later as we add tree, plant and new landscape textures.
 
-3. While we're at it, lets get a few more Connary packs. Some of this stuff will end up overwritten later; that's fine.
+### Connary Packs
+
+While we're at it, lets get a few more Connary packs. Some of this stuff will end up overwritten later; that's fine.
 
 * [Connary's Grazelands](http://www.fullrest.ru/files/connarysgrazelands)
 * [West Gash](http://www.fullrest.ru/files/connaryswestgash)
 * [Webs](http://www.fullrest.ru/files/connaryswebs)
 * [Caves](http://www.fullrest.ru/files/connaryscaves)
 
-4. Time for rocks. Download the following:
+### Rocks
+
+Time for rocks. Download the following:
 
 * [Correct UV rocks v1.0](http://mw.modhistory.com/download-56-12003)
 * [WIP Smooth Correct UV Rocks](http://forums.bethsoft.com/topic/1514660-alternatives-to-on-the-rocks/?p=23908143)
 * [Ore Rock Retexture ORR](http://mw.modhistory.com/download-56-12942)
 * [correctUV Diverse Ore veins v1.0](http://mw.modhistory.com/download-56-13484)
 
-If you're using Graphic Herbalism and it's Extra Mining module, get this [patch](http://www.nexusmods.com/morrowind/mods/43197/?)
-(You will need to disable Graphic Herbalism - EXTRA mod in your left pane completely, or if you merged it, just disable it's ESP)
+If you're using Graphic Herbalism and it's Extra Mining module, get this [patch](http://www.nexusmods.com/morrowind/mods/43197/?). You will need to disable Graphic Herbalism - EXTRA mod in your left pane completely, or if you merged it, just disable it's ESP.
 
-6. Waterfalls
+### Waterfalls
+
 Test each waterfall mod quickly by starting the game, pressing `\`` to go into the console, typing `COC "Vivec, Puzzle Canal, Level 1"`, hitting enter, and leaving through the grate ahead of you.
 * [Better Waterfalls](https://www.nexusmods.com/morrowind/mods/45424) - Best looking ones out there. Editors personal choice. Be sure to grab the [Waterfalls Tweaks](https://www.nexusmods.com/morrowind/mods/46271) for better compatibility.
 * [Waterfalls Bump mapped](http://www.nexusmods.com/morrowind/mods/42405/?) - Author's personal choice.
 * [Dongle's Waterpack Bumpmapped](http://www.nexusmods.com/morrowind/mods/42317/?) - Some may like how these look.
 
-7. Fire and smoke
+### Fire and Smoke
+
 * [Apel's Fire Retexture](http://www.nexusmods.com/morrowind/mods/42554/?)
 * [Vurt's Lava and Smoke](http://www.nexusmods.com/morrowind/mods/28519/?) - Just choose the "SMOKE" option in the BAIN installer. (Though you could choose the others, they'll be lower priority than lava mods we'll be installing later and thus shouldn't come into effect)
 
-## Trees
+### Trees
 
-### Bitter Coast Trees
+#### Bitter Coast Trees
 
 * [Vurt's Bitter Coast Trees II](http://www.nexusmods.com/morrowind/mods/37489/?)
 * [Vurt's Bitter Coast Trees II - Remastered and Optimized](https://www.nexusmods.com/morrowind/mods/46418) - Fixes a good deal of Vurt's Bitter Coast Trees II and improves their performance. You no longer need the BC Trees Collision fix or the Bitter Coast folder of Vurt's Tree Fix by Greatness7. This is a patch so you will need to place it just bellow the original mod in your load order.
 
-### Ascadian Isles Trees
+#### Ascadian Isles Trees
 
 Use only one of the following two mods:
 
@@ -353,24 +358,24 @@ If you've chosen to go for the Vurt option you'll need to install this fix:
 
 * [Vurt's Trees Fix by Greatness7](https://www.dropbox.com/s/rwtjc7stx1gbeje/VurtsTreesFix.7z?dl=0) - Install the meshes from the `Ascadian Isles` folder only. Leafy West Gash can be disabled if you're following this guide as we used different trees. Only use the Grazelands folder if you're using Grazelands II. You'll need to re-pack these, as they aren't correctly archived. In each folder, all the .NIF files should be in a `Meshes/f` folder. Make sure to set them up that way and re-pack them, then install as normal.
 
-### Ashland Trees
+#### Ashland Trees
 
 * [Dahrk Mods by Melchior](http://www.nexusmods.com/morrowind/mods/43528/?) - Specifically, Vurt's Ashtrees - Shorter. 
 
-### Grazeland Trees
+#### Grazeland Trees
 
 * [Vurt's Grazelands Trees I](http://www.nexusmods.com/morrowind/mods/35368/?) OR [Vurt's Grazeland Trees II](http://www.nexusmods.com/morrowind/mods/37038/?) - Pick the one you like best. I prefer 1, and I use the palms free version. Make sure to move **one** of the ESPs out of the Optional section using MO2, depending on which you want.
 
-### Mournhold Trees
+#### Mournhold Trees
 
 * [Vurt's Mournhold Trees II](http://www.nexusmods.com/morrowind/mods/35400/?)
 
-### Solstheim Trees
+#### Solstheim Trees
 
 * [Vurt's Solstheim Tree Replacer II](http://www.nexusmods.com/morrowind/mods/37856/?) - Also comes with a "Fixed Collision" patch. Will also need to be re-packed so all .NIF files are in a `/Meshes/f` folder. Be sure to install the following fix as well.
 * [Vurt's Solstheim Tree Replacer II Fix](https://www.nexusmods.com/morrowind/mods/45941) - Fixes `Meshes/f/Flora_tree_BM_snow_01.nif`
 
-### West Gash Trees
+#### West Gash Trees
 
 For the West Gash trees, you have two options. Vurt's look nicer, in my opinion, but Vanilla-friendly West Gash is MUCH more... well, vanilla friendly. Only use ONE of the mods offered below.
 
@@ -378,7 +383,7 @@ For the West Gash trees, you have two options. Vurt's look nicer, in my opinion,
 
 * [Vurts Leafy West Gash II](http://www.nexusmods.com/morrowind/mods/37400/?) - Make sure to get the newer file. Do NOT download the bridge rope textures.
 
-9. Plants
+### Plants
 
 * [Underwater Static Replacer](http://mw.modhistory.com/download-56-11998)
 * [Better Barnacles](http://www.nexusmods.com/morrowind/mods/43605/?)
@@ -408,7 +413,7 @@ If you aren't using Graphic Herbalism, it's actually safe to disable the entire 
 * [EKM Corkbulb Retexture](http://www.nexusmods.com/morrowind/mods/43809/?)
 * [EKM Vanilla-Based Ash Grasses](http://www.nexusmods.com/morrowind/mods/43836/?)
 
-10. Solstheim textures.
+### Solstheim Textures
 
 * [Solstheim - Tomb of the Snow Prince](http://www.nexusmods.com/morrowind/mods/42979/?)
 
@@ -426,7 +431,7 @@ For Graphic Herbalism users, you'll need the relevantly-named patch from [here](
 
 REMINDER: IF YOU ARE USING THIS OVERHAUL (TOTSP) YOU MUST REMOVE "Texture Fix: Bloodmoon" (As it is made for a vanilla landscape)
 
-11. Landscape textures
+### Landscape Textures
 
 * [Tyddy's Landscape Textures](http://www.fullrest.ru/files/tyd_landscape-texture_compilation_1/files) OR [Vanilla Land](https://www.nexusmods.com/morrowind/mods/45953)
 

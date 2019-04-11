@@ -235,31 +235,40 @@ Download the LGNPC bundle. You should install all of the mods. A few notes:
 
 ## User Interface
 
-1. Get your dialogue font mods of choice
+- [Ultimate Icon Replacer](http://mw.modhistory.com/download-56-6673). This will replaces all Morrowind object/inventory icons with better icons. Mods you install further down the line will take priority over some of these.
+
+- [JiFFY Morrowind UI Revamped](http://www.nexusmods.com/morrowind/mods/43922/?). This UI mod was chosen in particular because of how much it revamps, and it looks nice to boot. Choose between Dark or Classic, pick your crosshair and choose any size options. I went with 50% smaller crosshair and 25% smaller cursor, but you can and should try all the sizes in game to see which you prefer. Optionally for those avid readers, this mod includes the mod "Scroll Daedric Alphabet". This mod gives you a key to read the Daedric characters on spell scrolls. Lastly, don't forget to make the necessary changes to your .ini.
+
+- [Spell Scroll Text Overhaul](https://www.nexusmods.com/morrowind/mods/42936) gives unique Daedric text to all spell scrolls, making them far more interesting to read if you added Scroll Daedric Alphabet in the JiffyUI install.
+
+### Dialogue Font
+
+Get your dialogue font mods of choice:
 
 * Start with [Better Dialogue fonts](http://www.nexusmods.com/morrowind/mods/36873/), which makes the standard Morrowind font (Magic Cards) higher resolution. Consider the mods below afterwards if you wish.
+
 * [Bigger Vanilla Font](http://www.nexusmods.com/morrowind/mods/42420/) - Optional. Use if you'd like a larger font. Requires Better Dialogue Font and 'Unrestrict menu size' option from MCP.
+
 * [MORRA BUF - MORe ReadAble Bigger UI Fonts](http://www.nexusmods.com/morrowind/mods/42934/) - This is an alternative to Better Dialogue Font if you dislike the "Magic Cards" font. Take note of the .ini changes you'll need to do.
 
-2. Replace your icons with [Ultimate Icon Replacer](http://mw.modhistory.com/download-56-6673). Mods you install further down the line will take priority over some of these.
+### HD Video Screen Replacers
 
-3. HD video/splash screen replacers. You can get all of these.
+Get any or all of these if you like:
 
 * [HD Intro Cinematic - English](http://www.nexusmods.com/morrowind/mods/39329/) - Make sure to pick the right one for your resolution, and only get this if you picked the proper option in MCP. To install, you need to rename the movie file to `mw_intro.bik` after installing it via MO2.
 * [Morrowind Bethesda Logo HD Makeover](http://www.nexusmods.com/morrowind/mods/42352/) - If you have 'skip intro movie' turned on in MGE XE, there's no point to downloading this. In order to install, you'll need to make a folder called `Video` and drop the `bethesda logo.bik` file into it.
+
+### Splash Screen Replacers
+
 * [HD Concept-art Splash Screen and Main Menu](http://www.nexusmods.com/morrowind/mods/43081/) - Skip this if you absolutely can't stand the Russian writing on the splash screens, but the screens look amazing enough that you should overlook it. To install, you'll just need to set the "Data Files" section as the Data directory when installing via MO2, then it works fine.
 * [Morrowind Screens Redone](https://www.nexusmods.com/morrowind/mods/46259) - An English alternative to the above, based on the same concept art. Looks a bit different, compare their images and decide yourself.
 
-If you aren't a fan of the suggested main menu/splash screen replacer, you have several other options to choose from.
+If you aren't a fan of the suggested main menu/splash screen replacer, you have several other options to choose from:
 
 * [2015 Main Menu Background Replacers](http://www.nexusmods.com/morrowind/mods/43923/) - These look absolutely gorgeous, and in most cases would be the ones I would recommend first when it comes to the main menu. Only choose one.
 * [Animated Main Menu for Morrowind](http://www.nexusmods.com/morrowind/mods/43341/) - This is a really pretty main menu. The downside is that it's a 300 mb file. I personally don't want to waste that much space on the main menu, but if you don't care about that this may be a good option.
 * [Concept Art Based Loading Screens](http://www.nexusmods.com/morrowind/mods/43603/) - For splash screens, this would be my personal recommendation. If you like the look of the primary replacer but can't stand the Russian writing, you may enjoy this.
 * [Morrowloading](http://www.nexusmods.com/morrowind/mods/44364/) - If you want splash screens with tidbits of information, like in Oblivion and Skyrim. Note that the screenshots used by this mod differ occasionally from how your game will look following this guide.
-
-4. Finally, get [JiFFY Morrowind UI Revamped](http://www.nexusmods.com/morrowind/mods/43922/?). This UI mod was chosen in particular because of how much it revamps, and it looks nice to boot. Choose between Dark or Classic, pick your crosshair and choose any size options. I went with 50% smaller crosshair and 25% smaller cursor, but you can and should try all the sizes in game to see which you prefer. Optionally for those avid readers, this mod includes the mod "Scroll Daedric Alphabet". This mod gives you a key to read the Daedric characters on spell scrolls. Lastly, don't forget to make the necessary changes to your .ini.
-
-5. Additionally, [Spell Scroll Text Overhaul](https://www.nexusmods.com/morrowind/mods/42936) gives unique Daedric text to all spell scrolls, making them far more interesting to read if you added Scroll Daedric Alphabet in the JiffyUI install.
 
 ## Major mods to be aware of
 

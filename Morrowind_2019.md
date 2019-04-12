@@ -496,8 +496,8 @@ Ta-da! Effect removed!
 
 ### Skies
 
-* [Skies .IV Resource Pack](https://www.nexusmods.com/morrowind/mods/43311/?tab=files)
-* [Alternate Skies](http://www.nexusmods.com/morrowind/mods/42629/?)
+* [Skies .IV Resource Pack](https://www.nexusmods.com/morrowind/mods/43311/?tab=files) - Disable/Hide `ashcloud.nif` and `raindrop.nif`.
+* [Alternate Skies](http://www.nexusmods.com/morrowind/mods/42629/?) - Make sure to download the second main file 'Alternate Skies'. The first one is just a single night sky texture, not the whole mod. 
 * [New Starfields](https://www.nexusmods.com/morrowind/mods/43246?) - This mod is improperly packaged. Instead of a BAIN installer with options for each version, it requires a bit more leg work. First, download it and check through the provided screenshots, or look at them on the mod page. You'll note (confusingly) that sometimes multiple versions will have only a single screenshot. Once you've decided on one, re-name that file (for example `tx_stars_06.dds`), to `tx_stars.dds`. Then, create a `Textures` folder, place it inside, and delete everything aside from that `Textures` folder. Then, re-pack and install as you would normally. (Sorry for this, I know it's annoying)
 
 ### Moons

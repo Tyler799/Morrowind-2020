@@ -203,13 +203,9 @@ Bethesda made a number of official plug-ins for Morrowind. Unfortunately, they h
 
 There are two main options for fixed version of these addons:
 
-1. The WHReaper version on [Great House Fliggerty](http://download.fliggerty.com/download-13-1079) ([Mirror](https://web.archive.org/web/*/http://download.fliggerty.com/file.php?id=1079))
+- [Unofficial Morrowind Official Plugins Patched](https://www.nexusmods.com/morrowind/mods/43931) - This is the most up-to-date option that comes with compatibility patches for various big mods. You need the resource files from the main file and either the UMOPP Merged or UMOPP Compatibility Merged. I personally recommend the compatibility merged option as it gives you wider compatibility with other mods you might use in the future. Remember to delete or disable the main package plugins if you are using the merged version. If for some reason you don't want to use specific addons, you shouldn't use the merged version and just load the *Compatibility ESPs* after the main package.
 
-Some of the folders have optional components, usually with higher res textures, glow maps, or normal maps. Feel free to install all of the optional folders. To install, you'll need to download the archive, merge any optional folders into their parent mod folder, and then pack them into .7Zip or .zip files, which you then can install via MO2 as normal)
-
-2. The [alternative](https://www.nexusmods.com/morrowind/mods/43931) by PikachunoTM. Has a broken installer which can be "fixed", but for both the manual copy and the installer the archive is laid out completely wrong. You'll need to organize it properly to install it. As well, it's missing a file called `photodragons.nif`, a texture file. No fix currently found, though it does not crash the game.
-
-This one is more recent, but apparently may take some more liberties with the quests than the first option. Opinions are apparently varied on which to take, so ask around or try them to see what you like.
+- [WHReaper's Morrowind Official Plugins](http://download.fliggerty.com/download-13-1079) ([Mirror](https://web.archive.org/web/*/http://download.fliggerty.com/file.php?id=1079)) - Some of the folders have optional components, usually with higher res textures, glow maps, or normal maps. Feel free to install all of the optional folders. To install, you'll need to download the archive, merge any optional folders into their parent mod folder, and then pack them into .7Zip or .zip files, which you then can install via MO2 as normal)
 
 You can read about the official add-ons [here](http://www.uesp.net/wiki/Morrowind:Official_Plug-ins)
 

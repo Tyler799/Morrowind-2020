@@ -610,12 +610,12 @@ Hopefully this will be slightly less complicated than the nature section. Someth
 Choose between the following two options. Compare the screenshots from both modpages and see what looks more visually appealing to you. They are similar enough, so if in doubt just get Aesthesia for it's more 'vanilla' look.
 
 * [Aesthesia - Hlaalu textures](https://www.nexusmods.com/morrowind/mods/46009) - Slightly more vanilla friendly option, includes custom meshes and all textures are uniformed under either 1k (MQ) or 2k (HQ) standard. However the textures appear more blurry then in Arkitektora.
-* [Hlaalu - Arkitektora Vol.2](https://www.nexusmods.com/morrowind/mods/46246) - Appears more sharper and goes in a bit of a different direction then Aesthesia. Contains no custom meshes and textures resolutions are mixed.
+* [Hlaalu - Arkitektora Vol.2](https://www.nexusmods.com/morrowind/mods/46246) - Appears more sharper and goes in a bit of a different direction then Aesthesia. Contains no custom meshes and textures resolutions are mixed. Remember to grab the texture replacer for project atlas in the optional files section. Download the version that's in the same quality as the textures you downloaded.
 
 4. Redoran
 * [Redoran Bump mapped](http://www.nexusmods.com/morrowind/mods/42406/?) - A note on these: they use extremely high poly meshes. If you're already struggling to top 30 FPS in exteriors, you should pass on these.
 * [Redoran Bump mapped fixes](https://mega.nz/#!qkY2gRJI!VSHQoMctyzL9X2qGYXMC2qqN7kHmu2kzsF--nwBJR2Y) - You only need these if you're using bump maps, obviously.
-* [Redoran - Arkitektora Vol.2](https://www.nexusmods.com/morrowind/mods/46235) - An improved version of Redoran - Arkitektora. Completely over-writes all files from the original, so that mod is not needed, only this one. 
+* [Redoran - Arkitektora Vol.2](https://www.nexusmods.com/morrowind/mods/46235) - An improved version of Redoran - Arkitektora. Completely over-writes all files from the original, so that mod is not needed, only this one. Remember to grab the texture replacer for project atlas in the optional files section. Download the version that's in the same quality as the textures you downloaded.
 
 5. Telvanni
 * [Telvanni Mesh Improvement](http://www.nexusmods.com/morrowind/mods/42343/?) - If you're bump mapping, nearly everything here will be overwritten. If you're only using textures, grab this.

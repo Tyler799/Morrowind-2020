@@ -903,6 +903,10 @@ There are likely a ton of unique/artifact weapon replacers I've missed. I was ne
 
 * [Animation Compilation](http://www.nexusmods.com/morrowind/mods/43982/?) - Download the "Fixes by Greatness7" version.
 
+## Finishing Touch
+
+For our last step in adding new meshes and textures we will download a new mod called [Asset Overrides](https://www.dropbox.com/sh/cmf60boahjpdbt9/AACWM1LFtbxtN5pMRxHeClS2a?dl=0) which is a collection of miscellaneous asset files that will either patch or improve the quality of existing assets you've downloaded with this guide. This is where you can place all those asset files you want to override the ones you are currently using. Using MO2 you can just place them in the override folder if you want, but you have less control over them that way.
+
 ## MGE XE Setup
 If you have a toaster, you might want to skip most of this section. Run distant land as explained towards the end with default settings and see how the game runs for you first before trying out grass or any of the fancier light settings in the distant land tab. You might also try out shaders.
 

@@ -630,7 +630,7 @@ This mod handles what Hlaalu - Retexture and Hlaalu - Arkitektora of Vvardenfell
 (Has an alternate look you can choose instead in the `Alternate` folder=, if you like)
 
 6. Velothi
-* [Velothi Arikitektora](http://www.nexusmods.com/morrowind/mods/43511/?)
+* [Velothi Arkitektora](http://www.nexusmods.com/morrowind/mods/43511/?)
 * [Set in Stone](http://www.nexusmods.com/morrowind/mods/21377/?)
 * [One True Faith](http://www.nexusmods.com/morrowind/mods/43810/?)
 * [Ministry of truth Bump mapped](http://www.nexusmods.com/morrowind/mods/42921/?) - If you don't want bump maps, the only file you need is `textures\tx_moon_base_01`.

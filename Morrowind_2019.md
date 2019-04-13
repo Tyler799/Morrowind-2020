@@ -901,8 +901,7 @@ There are likely a ton of unique/artifact weapon replacers I've missed. I was ne
 
 ## Animations
 
-* [Animation Compilation](http://www.nexusmods.com/morrowind/mods/43982/?)
-Download the "Fixes by Greatness7" version.
+* [Animation Compilation](http://www.nexusmods.com/morrowind/mods/43982/?) - Download the "Fixes by Greatness7" version.
 
 ## MGE XE Setup
 If you have a toaster, you might want to skip most of this section. Run distant land as explained towards the end with default settings and see how the game runs for you first before trying out grass or any of the fancier light settings in the distant land tab. You might also try out shaders.

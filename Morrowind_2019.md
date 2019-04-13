@@ -631,8 +631,8 @@ Choose between the following two options. Compare the screenshots from both modp
 * [Telvanni Fireplace Replacer](http://www.nexusmods.com/morrowind/mods/43232/?)
 (Has an alternate look you can choose instead in the `Alternate` folder=, if you like)
 
-6. Velothi
-* [Velothi Arkitektora](http://www.nexusmods.com/morrowind/mods/43511/?)
+6. Vivec & Velothi
+* [Vivec and Velothi - Arkitektora Vol.2](https://www.nexusmods.com/morrowind/mods/46266) - Remember to grab the texture replacer for project atlas in the optional files section. Download the version that's in the same quality as the textures you downloaded.
 * [Set in Stone](http://www.nexusmods.com/morrowind/mods/21377/?)
 * [One True Faith](http://www.nexusmods.com/morrowind/mods/43810/?)
 * [Ministry of truth Bump mapped](http://www.nexusmods.com/morrowind/mods/42921/?) - If you don't want bump maps, the only file you need is `textures\tx_moon_base_01`.

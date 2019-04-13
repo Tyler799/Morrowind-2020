@@ -606,9 +606,11 @@ Hopefully this will be slightly less complicated than the nature section. Someth
 * [Tydz Small Mods](http://www.nexusmods.com/morrowind/mods/44028/?) - Specifically, the Gnisis Fort Roof file. It's a very small change, so feel free to skip it if you want. Also incorrectly packaged. You'll need to extact it, drop the `x` folder into a `Meshes` folder and then re-pack it.
 
 3. Hlaalu.
-* [Aesthesia - Hlaalu textures](https://www.nexusmods.com/morrowind/mods/46009)
 
-This mod handles what Hlaalu - Retexture and Hlaalu - Arkitektora of Vvardenfell, but at a higher res, without the oddly shiny bump-maps and no missing textures to deal with. Tested, approved. Tis good.
+Choose between the following two options. Compare the screenshots from both modpages and see what looks more visually appealing to you. They are similar enough, so if in doubt just get Aesthesia for it's more 'vanilla' look.
+
+* [Aesthesia - Hlaalu textures](https://www.nexusmods.com/morrowind/mods/46009) - Slightly more vanilla friendly option, includes custom meshes and all textures are uniformed under either 1k (MQ) or 2k (HQ) standard. However the textures appear more blurry then in Arkitektora.
+* [Hlaalu - Arkitektora Vol.2](https://www.nexusmods.com/morrowind/mods/46246) - Appears more sharper and goes in a bit of a different direction then Aesthesia. Contains no custom meshes and textures resolutions are mixed.
 
 4. Redoran
 * [Redoran Bump mapped](http://www.nexusmods.com/morrowind/mods/42406/?) - A note on these: they use extremely high poly meshes. If you're already struggling to top 30 FPS in exteriors, you should pass on these.

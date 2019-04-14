@@ -8,6 +8,10 @@ import java.io.PrintWriter;
 import java.net.URI;
 import java.net.URISyntaxException;
 import java.net.URL;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.nio.file.StandardCopyOption;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.ListIterator;
@@ -82,12 +86,38 @@ public class MTEUpdater {
 			 		url = "https://github.com/Tyler799/Morrowind-2019/archive/master.zip";
 			 		try {
 						downloadUsingStream(url, "Morrowind-2019.zip");
+						tempFiles.add(new File("Morrowind-2019.zip"));
 					} catch (IOException e1) {
 						System.out.println("ERROR: Unable to download repo files!");
 						e1.printStackTrace();
 					}
 			 		
+			 		// Extract the repository files to a new directory
+			 		try {
+			 			UnzipUtility unzipUtility = new UnzipUtility();
+			 			unzipUtility.unzip("Morrowind-2019.zip", "Morrowind-2019-GH");
+			 			tempFiles.add(new File("Morrowind-2019-GH"));
+					} catch (IOException e1) {
+						System.out.println("ERROR: Unable to extract the GH repo file!");
+						e1.printStackTrace();
+					}
 			 		
+			 		// Update the existing guide file
+			 		System.out.println("Updating your Morrowind guide...");
+			 		File guideGH = new File("Morrowind-2019-GH/Morrowind-2019-master/Morrowind_2019.md");
+			 		if (!guideGH.exists()) {
+			 			System.out.println("ERROR: Unable to find the extracted guide file!");
+			 		}
+			 		else {
+			 			Path from = guideGH.toPath(); //convert from File to Path
+			 			Path to = Paths.get("Morrowind_2019.md"); //convert from String to Path
+			 			try {
+							Files.copy(from, to, StandardCopyOption.REPLACE_EXISTING);
+						} catch (IOException e) {
+							System.out.println("ERROR: Unable to overwrite existing guide file!");
+							e.printStackTrace();
+						}
+			 		}
 			 		
 			 		System.out.println("Updating mte version file...");
 			 		PrintWriter writer = null;

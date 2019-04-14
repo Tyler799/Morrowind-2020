@@ -1,6 +1,5 @@
-# Ignore everything except the projet files
+# Ignore everything except project files
 *
 !.gitignore
-!Morrowind_2019.md
-!MTE-Update.bat
-!mte-version.txt
+!MTE-Updater.bat
+!/updater/MTE-Updater/src

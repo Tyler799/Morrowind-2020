@@ -1,3 +1,4 @@
+import java.awt.Desktop;
 import java.io.BufferedInputStream;
 import java.io.File;
 import java.io.FileInputStream;
@@ -24,13 +25,24 @@ public class MTEUpdater {
 
 	static List<File> tempFiles = new ArrayList<File>();
 	
-	public static void main(String[] args) {
-
+	public static void main(String[] args) 
+	{
+		try {
+			runUpdater();
+		} catch (FileNotFoundException e) {
+			System.out.println("ERROR: Unable to find " + "'" + e.getMessage() + "'" + " file!");
+		}
+		
+		//System.out.println("Cleaning up temporary files...");
+		updaterCleanup();
+	}
+	
+	private static void runUpdater() throws FileNotFoundException 
+	{	
 		// Before we do anything else check if the version file exists
 		File versionTxt = new File("mte-version.txt");
 		if (!versionTxt.exists()) {
-			System.out.println("ERROR: Unable to find mte version file!");
-			return;
+			throw new FileNotFoundException("mte-version.txt");
 		}
 		
 		// Download the guide version file from GitHub
@@ -40,7 +52,7 @@ public class MTEUpdater {
 		 	downloadUsingStream(url, "mte-version.tmp");
 		} catch (IOException e) {
 			System.out.println("ERROR: Unable to download guide version file!");
-			e.printStackTrace();
+			return;
 		}
 		 
 		// Register the temporary version file
@@ -65,6 +77,8 @@ public class MTEUpdater {
 		 		String input = reader.next();
 			 	if (input.equals("yes") || input.equals("y")) {
 			 		
+			 		//reader.close();
+			 		
 			 		// Construct the URL in string format
 			 		String urlString = "https://github.com/Tyler799/Morrowind-2019/compare/" + lastVersion + ".." + curVersion;
 			 		
@@ -74,14 +88,24 @@ public class MTEUpdater {
 						compareURL = new java.net.URI(urlString);
 					} catch (URISyntaxException e) {
 						System.out.print("ERROR: URL string violates RFC 2396!");
-						e.printStackTrace();
+						return;
 					}
 					// Open the Github website with the compare arguments in URL
 			 		try {
-						java.awt.Desktop.getDesktop().browse(compareURL);
-					} catch (IOException e) {
-						System.out.print("ERROR: Unable to open web browser!");
-						e.printStackTrace();
+			 			java.awt.Desktop.getDesktop();
+						if (Desktop.isDesktopSupported()) {
+			 				java.awt.Desktop.getDesktop().browse(compareURL);
+			 			}
+						else {
+							System.out.println("ERROR: Desktop class is not suppored on this platform.");
+							return;
+						}
+					} catch (Exception e) {
+						if (e instanceof IOException)
+							System.out.print("ERROR: Unable to open web browser, default browser is not found or it failed to launch.");
+						else if (e instanceof SecurityException)
+							System.out.print("ERROR: Security manager denied permission or the calling thread is not allowed to create a subprocess; and not invoked from within an applet or Java Web Started application");
+						return;
 					}
 			 		
 			 		// Download repository files
@@ -92,7 +116,7 @@ public class MTEUpdater {
 						tempFiles.add(new File("Morrowind-2019.zip"));
 					} catch (IOException e1) {
 						System.out.println("ERROR: Unable to download repo files!");
-						e1.printStackTrace();
+						return;
 					}
 			 		
 			 		// Extract the repository files to a new directory
@@ -103,7 +127,7 @@ public class MTEUpdater {
 			 			tempFiles.add(new File("Morrowind-2019-GH"));
 					} catch (IOException e1) {
 						System.out.println("ERROR: Unable to extract the GH repo file!");
-						e1.printStackTrace();
+						return;
 					}
 			 		
 			 		// Update the existing guide file
@@ -119,7 +143,7 @@ public class MTEUpdater {
 							Files.copy(from, to, StandardCopyOption.REPLACE_EXISTING);
 						} catch (IOException e) {
 							System.out.println("ERROR: Unable to overwrite existing guide file!");
-							e.printStackTrace();
+							return;
 						}
 			 		}
 			 		
@@ -132,6 +156,7 @@ public class MTEUpdater {
 						System.out.println("You're all set, good luck on your adventures!");
 					} catch (FileNotFoundException e) {
 						System.out.println("ERROR: Unable to find mte version file!");
+						return;
 					}
 			 		writer.close();	
 			 		inputFlag = true;
@@ -141,11 +166,8 @@ public class MTEUpdater {
 			 		inputFlag = true;
 			 	}
 		 	}
-		 	// Close the scanner here
-		 	reader.close();
 		 }
 		 else System.out.println("Your version of the guide is up-to-date!");
-		 updaterCleanup();
 	}
 	
 	/**

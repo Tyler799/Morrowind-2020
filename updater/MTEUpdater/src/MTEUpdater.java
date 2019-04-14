@@ -77,7 +77,9 @@ public class MTEUpdater {
 		 		String input = reader.next();
 			 	if (input.equals("yes") || input.equals("y")) {
 			 		
-			 		//reader.close();
+			 		// It's important we close the reader as soon as possible before any
+			 		// exceptions terminate the method
+			 		reader.close();
 			 		
 			 		// Construct the URL in string format
 			 		String urlString = "https://github.com/Tyler799/Morrowind-2019/compare/" + lastVersion + ".." + curVersion;
@@ -163,6 +165,7 @@ public class MTEUpdater {
 			 	}
 			 	else if (input.equals("no") || input.equals("n")) {
 			 		System.out.println("Not a wise decision, may the curse of Blight strike you down!");
+			 		reader.close();
 			 		inputFlag = true;
 			 	}
 		 	}

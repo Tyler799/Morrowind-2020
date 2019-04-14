@@ -66,7 +66,7 @@ public class MTEUpdater {
 		
 		// Compare version number strings to see if we need to update
 		if (!curVersion.equals(lastVersion)) {
-			System.out.println("Your version of the guide is out of date");
+			System.out.println("\nYour version of the guide is out of date");
 		 	
 			Scanner reader = new Scanner(System.in);
 			System.out.println("Would you like to see a list of recent updates?");
@@ -155,7 +155,7 @@ public class MTEUpdater {
 					try {
 						writer = new PrintWriter(versionTxt);
 						writer.print(curVersion);
-						System.out.println("You're all set, good luck on your adventures!");
+						System.out.println("\nYou're all set, good luck on your adventures!");
 					} catch (FileNotFoundException e) {
 						System.out.println("ERROR: Unable to find mte version file!");
 						return;
@@ -164,13 +164,13 @@ public class MTEUpdater {
 			 		inputFlag = true;
 			 	}
 			 	else if (input.equals("no") || input.equals("n")) {
-			 		System.out.println("Not a wise decision, may the curse of Blight strike you down!");
+			 		System.out.println("\nNot a wise decision, may the curse of blight strike you down!");
 			 		reader.close();
 			 		inputFlag = true;
 			 	}
 		 	}
 		 }
-		 else System.out.println("Your version of the guide is up-to-date!");
+		 else System.out.println("\nYour version of the guide is up-to-date!");
 	}
 	
 	/**

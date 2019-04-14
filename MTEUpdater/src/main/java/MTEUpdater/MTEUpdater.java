@@ -1,3 +1,5 @@
+package MTEUpdater;
+
 import java.awt.Desktop;
 import java.io.BufferedInputStream;
 import java.io.File;

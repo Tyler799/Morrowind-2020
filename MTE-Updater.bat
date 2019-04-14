@@ -19,5 +19,13 @@ if %jver% lss 18 ( REM Java 1.8
 	echo https://www.oracle.com/technetwork/java/javase/downloads/jre8-downloads-2133155.html| clip
 	goto eof
 )
+REM Check if the updater jar file is present in the root dir
+if exist MTE-Updater.jar (
 	java -jar MTE-Updater.jar
+) else (
+	echo.
+	echo ERROR: Unable to find "MTE-Updater.jar"
+)
+:eof
+echo.
 Pause

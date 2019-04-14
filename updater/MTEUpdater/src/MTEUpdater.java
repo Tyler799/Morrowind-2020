@@ -33,29 +33,31 @@ public class MTEUpdater {
 			return;
 		}
 		
-		System.out.println("Downloading mte version file...");
+		// Download the guide version file from GitHub
 		String url = "https://raw.githubusercontent.com/Tyler799/Morrowind-2019/updater/mte-version.txt";
-		        
-		 try {        
-			 downloadUsingStream(url, "mte-version.tmp");
-		 } catch (IOException e) {
-			 System.out.println("ERROR: Unable to download guide version file!");
-			 e.printStackTrace();
-		 }
+		try {
+			System.out.println("Downloading mte version file...");
+		 	downloadUsingStream(url, "mte-version.tmp");
+		} catch (IOException e) {
+			System.out.println("ERROR: Unable to download guide version file!");
+			e.printStackTrace();
+		}
 		 
-		 File versionTmp = new File("mte-version.tmp");
-		 tempFiles.add(versionTmp);
+		// Register the temporary version file
+		File versionTmp = new File("mte-version.tmp");
+		tempFiles.add(versionTmp);
 		 
-		 System.out.println("Comparing version numbers...");
+		System.out.println("Comparing version numbers...");
 		 
-		 String curVersion = readFile(versionTmp.getName());
-		 String lastVersion = readFile(versionTxt.getName());
-		 
-		 if (!curVersion.equals(lastVersion)) {
-		 	System.out.println("Your version of the guide is out of date");
+		String curVersion = readFile(versionTmp.getName());
+		String lastVersion = readFile(versionTxt.getName());
+		
+		// Compare version number strings to see if we need to update
+		if (!curVersion.equals(lastVersion)) {
+			System.out.println("Your version of the guide is out of date");
 		 	
-		 	Scanner reader = new Scanner(System.in);
-		 	System.out.println("Would you like to see a list of recent updates?");
+			Scanner reader = new Scanner(System.in);
+			System.out.println("Would you like to see a list of recent updates?");
 		 	
 		 	// Continue asking for input until the user says yes or no
 			boolean inputFlag = false;
@@ -85,6 +87,7 @@ public class MTEUpdater {
 			 		// Download repository files
 			 		url = "https://github.com/Tyler799/Morrowind-2019/archive/master.zip";
 			 		try {
+			 			System.out.println("\nDownloading repository files...");
 						downloadUsingStream(url, "Morrowind-2019.zip");
 						tempFiles.add(new File("Morrowind-2019.zip"));
 					} catch (IOException e1) {
@@ -94,6 +97,7 @@ public class MTEUpdater {
 			 		
 			 		// Extract the repository files to a new directory
 			 		try {
+			 			System.out.println("Extracting repository files...");
 			 			UnzipUtility unzipUtility = new UnzipUtility();
 			 			unzipUtility.unzip("Morrowind-2019.zip", "Morrowind-2019-GH");
 			 			tempFiles.add(new File("Morrowind-2019-GH"));
@@ -119,6 +123,7 @@ public class MTEUpdater {
 						}
 			 		}
 			 		
+			 		// Update the guide version file
 			 		System.out.println("Updating mte version file...");
 			 		PrintWriter writer = null;
 					try {
@@ -154,6 +159,7 @@ public class MTEUpdater {
 			ListIterator<File> tempFileItr = tempFiles.listIterator();
 			while(tempFileItr.hasNext())
 			{
+				// Make sure the file exists before we attempt to delete it
 				File fileEntry = tempFileItr.next();
 			    if (fileEntry.exists()) {
 			    	fileEntry.delete();

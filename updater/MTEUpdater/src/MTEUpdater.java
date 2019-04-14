@@ -8,6 +8,9 @@ import java.io.PrintWriter;
 import java.net.URI;
 import java.net.URISyntaxException;
 import java.net.URL;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.ListIterator;
 import java.util.Scanner;
 
 import org.apache.commons.io.IOUtils;
@@ -15,6 +18,8 @@ import org.apache.commons.io.IOUtils;
 
 public class MTEUpdater {
 
+	static List<File> tempFiles = new ArrayList<File>();
+	
 	public static void main(String[] args) {
 
 		// Before we do anything else check if the version file exists
@@ -35,6 +40,7 @@ public class MTEUpdater {
 		 }
 		 
 		 File versionTmp = new File("mte-version.tmp");
+		 tempFiles.add(versionTmp);
 		 
 		 System.out.println("Comparing version numbers...");
 		 
@@ -104,14 +110,29 @@ public class MTEUpdater {
 		 	reader.close();
 		 }
 		 else System.out.println("Your version of the guide is up-to-date!");
-		 
-		 // Delete the temporary version file we created
-		 try {
-			 versionTmp.delete();
-		 } catch (SecurityException e) {
-			 System.out.println("ERROR: Unable to delete 'mte-version.tmp'!");
-			 e.printStackTrace();
-		 }
+		 updaterCleanup();
+	}
+	
+	/**
+	 *  Clean up all temporary files created in the update process
+	 */
+	private static void updaterCleanup() {
+		
+		// Delete the temporary version file we created
+		String fileEntryName = "unknown";
+		try {
+			ListIterator<File> tempFileItr = tempFiles.listIterator();
+			while(tempFileItr.hasNext())
+			{
+				File fileEntry = tempFileItr.next();
+			    if (fileEntry.exists()) {
+			    	fileEntry.delete();
+			    }
+			}
+		} catch (SecurityException e) {
+			System.out.println("ERROR: Unable to delete temporary file '" + fileEntryName + "'!");
+			e.printStackTrace();
+		}
 	}
 	
 	/** Here we are using URL openStream method to create the input stream. 

@@ -26,27 +26,27 @@ import org.apache.commons.io.IOUtils;
 public class Main {
 
 	static List<File> tempFiles = new ArrayList<File>();
-	
-	public static void main(String[] args) 
+
+	public static void main(String[] args)
 	{
 		try {
 			runUpdater();
 		} catch (FileNotFoundException e) {
 			System.out.println("ERROR: Unable to find " + "'" + e.getMessage() + "'" + " file!");
 		}
-		
+
 		//System.out.println("Cleaning up temporary files...");
 		updaterCleanup();
 	}
-	
-	private static void runUpdater() throws FileNotFoundException 
-	{	
+
+	private static void runUpdater() throws FileNotFoundException
+	{
 		// Before we do anything else check if the version file exists
 		File versionTxt = new File("mte-version.txt");
 		if (!versionTxt.exists()) {
 			throw new FileNotFoundException("mte-version.txt");
 		}
-		
+
 		// Download the guide version file from GitHub
 		String url = "https://raw.githubusercontent.com/Tyler799/Morrowind-2019/updater/mte-version.txt";
 		try {
@@ -56,37 +56,37 @@ public class Main {
 			System.out.println("ERROR: Unable to download guide version file!");
 			return;
 		}
-		 
+
 		// Register the temporary version file
 		File versionTmp = new File("mte-version.tmp");
 		tempFiles.add(versionTmp);
-		 
+
 		System.out.println("Comparing version numbers...");
-		 
+
 		String curVersion = readFile(versionTmp.getName());
 		String lastVersion = readFile(versionTxt.getName());
-		
+
 		// Compare version number strings to see if we need to update
 		if (!curVersion.equals(lastVersion)) {
 			System.out.println("\nYour version of the guide is out of date");
-		 	
+
 			Scanner reader = new Scanner(System.in);
 			System.out.println("Would you like to see a list of recent updates?");
-		 	
+
 		 	// Continue asking for input until the user says yes or no
 			boolean inputFlag = false;
 		 	while (inputFlag == false) {
 		 		String input = reader.next();
 			 	if (input.equals("yes") || input.equals("y")) {
-			 		
+
 			 		// It's important we close the reader as soon as possible before any
 			 		// exceptions terminate the method
 			 		reader.close();
-			 		
+
 			 		// Construct the URL in string format
 			 		String urlString = "https://github.com/Tyler799/Morrowind-2019/compare/" + lastVersion + ".." + curVersion;
-			 		
-			 		// Wrap the string with an URI 
+
+			 		// Wrap the string with an URI
 			 		URI compareURL = null;
 			 		try {
 						compareURL = new java.net.URI(urlString);
@@ -111,7 +111,7 @@ public class Main {
 							System.out.print("ERROR: Security manager denied permission or the calling thread is not allowed to create a subprocess; and not invoked from within an applet or Java Web Started application");
 						return;
 					}
-			 		
+
 			 		// Download repository files
 			 		url = "https://github.com/Tyler799/Morrowind-2019/archive/master.zip";
 			 		try {
@@ -122,7 +122,7 @@ public class Main {
 						System.out.println("ERROR: Unable to download repo files!");
 						return;
 					}
-			 		
+
 			 		// Extract the repository files to a new directory
 			 		try {
 			 			System.out.println("Extracting repository files...");
@@ -133,7 +133,7 @@ public class Main {
 						System.out.println("ERROR: Unable to extract the GH repo file!");
 						return;
 					}
-			 		
+
 			 		// Update the existing guide file
 			 		System.out.println("Updating your Morrowind guide...");
 			 		File guideGH = new File("Morrowind-2019-GH/Morrowind-2019-master/Morrowind_2019.md");
@@ -150,7 +150,7 @@ public class Main {
 							return;
 						}
 			 		}
-			 		
+
 			 		// Update the guide version file
 			 		System.out.println("Updating mte version file...");
 			 		PrintWriter writer = null;
@@ -162,7 +162,7 @@ public class Main {
 						System.out.println("ERROR: Unable to find mte version file!");
 						return;
 					}
-			 		writer.close();	
+			 		writer.close();
 			 		inputFlag = true;
 			 	}
 			 	else if (input.equals("no") || input.equals("n")) {
@@ -174,12 +174,12 @@ public class Main {
 		 }
 		 else System.out.println("\nYour version of the guide is up-to-date!");
 	}
-	
+
 	/**
 	 *  Clean up all temporary files created in the update process
 	 */
 	private static void updaterCleanup() {
-		
+
 		// Delete the temporary version file we created
 		String fileEntryName = "unknown";
 		try {
@@ -197,14 +197,14 @@ public class Main {
 			e.printStackTrace();
 		}
 	}
-	
-	/** Here we are using URL openStream method to create the input stream. 
+
+	/** Here we are using URL openStream method to create the input stream.
 	 * Then we are using a file output stream to read data from the input stream and write to the file.
-	 * @param urlStr 
+	 * @param urlStr
 	 * @param file
 	 * @throws IOException
 	 */
-	private static void downloadUsingStream(String urlStr, String file) throws IOException 
+	private static void downloadUsingStream(String urlStr, String file) throws IOException
 	{
         URL url = new URL(urlStr);
         BufferedInputStream bis = new BufferedInputStream(url.openStream());
@@ -218,16 +218,16 @@ public class Main {
         fis.close();
         bis.close();
     }
-	
+
 	/**
 	 * Read from a text file and return the compiled string
 	 * @param filename Name of the file to read from the root directory
 	 * @return Content of the text file
 	 */
 	private static String readFile(String filename) {
-		
+
 		// Using Apache Commons IO here
-		try(FileInputStream inputStream = new FileInputStream(filename)) {     
+		try(FileInputStream inputStream = new FileInputStream(filename)) {
 			 return IOUtils.toString(inputStream, "UTF-8");
 		} catch (IOException e) {
 			e.printStackTrace();

@@ -1,4 +1,4 @@
-package MTEUpdater;
+package io.mte.updater;
 
 import java.awt.Desktop;
 import java.io.BufferedInputStream;
@@ -23,7 +23,7 @@ import java.util.Scanner;
 import org.apache.commons.io.IOUtils;
 
 
-public class MTEUpdater {
+public class Main {
 
 	static List<File> tempFiles = new ArrayList<File>();
 	

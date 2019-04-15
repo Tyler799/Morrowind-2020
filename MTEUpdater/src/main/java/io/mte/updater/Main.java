@@ -47,7 +47,7 @@ public class Main {
 		// Download the guide version file from GitHub
 		String url = "https://raw.githubusercontent.com/Tyler799/Morrowind-2019/updater/mte-version.txt";
 		try {
-			System.out.println("Downloading mte version file...");
+			System.out.println("\nDownloading mte version file...");
 			downloadUsingStream(url, "mte-version.tmp");
 		} catch (IOException e) {
 			System.out.println("ERROR: Unable to download guide version file!");

@@ -60,11 +60,11 @@ public class Main {
 
 		System.out.println("Comparing version numbers...");
 
-		String curVersion = readFile(versionTmp.getName());
-		String lastVersion = readFile(versionTxt.getName());
+		String remoteVersion = readFile(versionTmp.getName());
+		String localVersion = readFile(versionTxt.getName());
 
 		// Compare version number strings to see if we need to update
-		if (!curVersion.equals(lastVersion)) {
+		if (!remoteVersion.equals(localVersion)) {
 			System.out.println("\nYour version of the guide is out of date");
 
 			Scanner reader = new Scanner(System.in);
@@ -80,18 +80,14 @@ public class Main {
 					// exceptions terminate the method
 					reader.close();
 
-					// Construct the URL in string format
-					String urlString = "https://github.com/Tyler799/Morrowind-2019/compare/" + lastVersion + ".."
-							+ curVersion;
-
-					// Wrap the string with an URI
 					URI compareURL = null;
 					try {
-						compareURL = new java.net.URI(urlString);
+						compareURL = getGithubCompareLink(localVersion, remoteVersion, true, true);
 					} catch (URISyntaxException e) {
 						System.out.print("ERROR: URL string violates RFC 2396!");
 						return;
 					}
+
 					// Open the Github website with the compare arguments in URL
 					try {
 						java.awt.Desktop.getDesktop();
@@ -154,7 +150,7 @@ public class Main {
 					PrintWriter writer = null;
 					try {
 						writer = new PrintWriter(versionTxt);
-						writer.print(curVersion);
+						writer.print(remoteVersion);
 						System.out.println("\nYou're all set, good luck on your adventures!");
 					} catch (FileNotFoundException e) {
 						System.out.println("ERROR: Unable to find mte version file!");
@@ -232,5 +228,28 @@ public class Main {
 			e.printStackTrace();
 			return null;
 		}
+	}
+
+	/**
+	 * Create a hyperlink to a direct comparison between two commits made in the
+	 * guide repository. It's recommended to use richDiff and displayCommits.
+	 * 
+	 * @param commit1 SHA of base commit to compare against
+	 * @param commit2 SHA of comparing commit
+	 * @param richDiff Make the comparison display more user friendly
+	 * @param displayCommits View default comparison for the given commit range
+	 * @return URI wrapped url
+	 * @throws URISyntaxException
+	 */
+	private static URI getGithubCompareLink(String commit1, String commit2, boolean richDiff, boolean displayCommits)
+			throws URISyntaxException {
+		// Construct the URL in string format
+		String baseCompUrl = "https://github.com/Tyler799/Morrowind-2019/compare/";
+
+		String urlString = baseCompUrl + commit1 + (displayCommits ? "..." : "..") + commit2
+				+ (richDiff ? "?short_path=4a4f391#diff-4a4f391a7396ba51c9ba42372b55d34e" : "");
+
+		// Apply URI wrapper to string
+		return new java.net.URI(urlString);
 	}
 }

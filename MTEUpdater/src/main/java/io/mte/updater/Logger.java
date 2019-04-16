@@ -26,14 +26,19 @@ public class Logger {
 	 */
 	public enum Level {
 		
-		LOG(Short.parseShort("0"), ""),
-		VERBOSE(Short.parseShort("1"), "-v", "-verbose"),
-		DEBUG(Short.parseShort("2"), "-d", "-debug");
+		LOG(Short.parseShort("0"), "", ""),
+		ERROR(Short.parseShort("0"), "[ERROR] ", ""),
+		WARNING(Short.parseShort("1"), "[Warning] ", ""),
+		VERBOSE(Short.parseShort("1"), "[LOG] ", "-v", "-verbose"),
+		DEBUG(Short.parseShort("2"), "[DEBUG] ", "-d", "-debug");
 		
 		private final short level;
 		private final String[] argument;
+		private final String tag;
 		
-		Level(short lvl, String...args) {
+		Level(short lvl, String tag, String...args) {
+			
+			this.tag = tag;
 			level = lvl;
 			argument = args;
 		}
@@ -43,9 +48,6 @@ public class Logger {
 			 *  Iterate through every enum entry
 			 */
 			for (Level entry : Level.values()) {
-				// This logger level is not activated with arguments
-				if (entry == LOG)
-					continue;
 				/*
 				 *  Iterate through the list of arguments supplied
 				 */

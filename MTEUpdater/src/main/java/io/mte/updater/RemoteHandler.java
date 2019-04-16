@@ -120,8 +120,12 @@ public class RemoteHandler {
 			handler.downloadUsingStream(releaseLink, RELEASE_FILENAME);
 			handler.registerTempFile(new File(RELEASE_FILENAME));
 			return true;
-		} catch (IOException e1) {
-			System.out.println("ERROR: Unable to download repo files!");
+		} catch (IOException e) {
+			if (e instanceof java.io.FileNotFoundException)
+				Logger.error("Unable to locate download files!");
+			else
+				Logger.error("Unable to download repo files!");
+			
 			return false;
 		}
 	}

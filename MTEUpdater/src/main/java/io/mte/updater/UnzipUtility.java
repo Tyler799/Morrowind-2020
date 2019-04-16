@@ -30,7 +30,7 @@ public class UnzipUtility {
 		// Make sure the zip file under the given path exists
 		File zipFile = new File(zipFilePath);
 		if (!zipFile.exists()) {
-			System.out.println("ERROR: Unable to find zip file with path '" + zipFilePath +'"');
+			Logger.print(Logger.Level.ERROR, "Unable to find zip file with path %s", zipFilePath);
 			return false;
 		}
 		File destDir = new File(destDirectory);
@@ -38,31 +38,31 @@ public class UnzipUtility {
 			destDir.mkdir();
 		}
 	
-		System.out.print("[DEBUG] Unziping from '" + zipFilePath + "' to '" + destDirectory + "'\n");
+		Logger.print(Logger.Level.DEBUG, "Unziping from %s to %s \n", zipFilePath, destDirectory);
 		/*
 		 *  Handle 7z files using Apache Commons Compress library
 		 */
 		if (FilenameUtils.getExtension(zipFilePath).equals("7z")) {
-			System.out.println("[DEBUG] Detected 7Zip archive, using Apache Commons Compress library");
+			Logger.debug("Detected 7Zip archive, using Apache Commons Compress library");
 			try (SevenZFile sevenZFile = new SevenZFile(new File(zipFilePath))) {
 				SevenZArchiveEntry entry = sevenZFile.getNextEntry();
 				
 				// Abort if zip file is empty
 				if (entry == null) {
-					System.out.println("ERROR: Zip contains no valid entries!");
-					System.out.println("Aborting unzipping operation...");
+					Logger.error("Zip contains no valid entries!");
+					Logger.print("Aborting unzipping operation...");
 					return false;
 				}
 				while (entry != null) {
 					
-					System.out.println("[DEBUG] Iterating over zip entry '" + entry.getName() + "'");
+					Logger.print(Logger.Level.DEBUG, "Iterating over zip entry %s", entry.getName());
 					String filePath = destDirectory + File.separator + entry.getName();
 					
 					if (!entry.isDirectory()) {
 						// if the entry is a file, extracts it
 						File extrFile = extractFile(sevenZFile, entry, filePath);
 						if (extrFile == null || !extrFile.exists()) {
-							System.out.println("ERROR: Unable to find extracted file '" + entry.getName() + "'!");
+							Logger.print(Logger.Level.ERROR, "Unable to find extracted file %s!", entry.getName());
 						}
 					} else {
 						// if the entry is a directory, make the directory
@@ -79,7 +79,7 @@ public class UnzipUtility {
 				sevenZFile.close();
 			}
 			catch (IOException e) {
-				System.out.println("ERROR: Unable to read archive '" + zipFile.getName() + "'!");
+				Logger.print(Logger.Level.ERROR, "Unable to read archive %s!", zipFile.getName());
 				return false;
 			}
 			return true;
@@ -94,14 +94,14 @@ public class UnzipUtility {
 			entry = zipIn.getNextEntry();
 			// Abort if zip file is empty
 			if (entry == null) {
-				System.out.println("ERROR: Zip contains no valid entries!");
-				System.out.println("Aborting unzipping operation...");
+				Logger.error("Zip contains no valid entries!");
+				Logger.print("Aborting unzipping operation...");
 				closeZipInputStream(zipIn);
 				return false;
 			}
 		}
 		catch (IOException e) {
-			System.out.println("ERROR: ZIP file error has occurred, unable to get new zip entry!");
+			Logger.error("ZIP file error has occurred, unable to get new zip entry!");
 			e.printStackTrace();
 			closeZipInputStream(zipIn);
 			return false;
@@ -109,14 +109,14 @@ public class UnzipUtility {
 		// iterates over entries in the zip file
 		while (entry != null) {
 			
-			System.out.println("[DEBUG] Iterating over zip entry '" + entry.getName() + "'");
+			Logger.print(Logger.Level.DEBUG, "Iterating over zip entry %s", entry.getName());
 			String filePath = destDirectory + File.separator + entry.getName();
 			
 			if (!entry.isDirectory()) {
 				// if the entry is a file, extracts it
 				File extrFile = extractFile(zipIn, entry.getName(), filePath);
 				if (extrFile == null || !extrFile.exists()) {
-					System.out.println("ERROR: Unable to find extracted file '" + entry.getName() + "'!");
+					Logger.print(Logger.Level.ERROR, "Unable to find extracted file %s!", entry.getName());
 				}
 			} else {
 				// if the entry is a directory, make the directory
@@ -129,8 +129,8 @@ public class UnzipUtility {
 				entry = zipIn.getNextEntry();
 			}
 			catch (IOException e) {
-				System.out.println("ERROR: Unable to close or get next zip entry!");
-				System.out.println("Aborting unzipping operation...");
+				Logger.error("Unable to close or get next zip entry!");
+				Logger.print("Aborting unzipping operation...");
 				return false;
 			}
 		}
@@ -151,13 +151,13 @@ public class UnzipUtility {
 	@SuppressWarnings("resource")
 	private File extractFile(ZipInputStream zipIn, String filename, String filePath)  {
 		
-		System.out.print("[DEBUG] Extracting zip file '" + filename + "' to '" + filePath + "'");
+		Logger.print(Logger.Level.DEBUG, "Extracting zip file %s to %s", filename, filePath);
 		BufferedOutputStream bos = null;
 		try {
 			bos = new BufferedOutputStream(new FileOutputStream(filePath));
 		}
 		catch (java.io.FileNotFoundException e) {
-			System.out.println("ERROR: Unable to create new output stream for path '" + filePath + "'!");
+			Logger.print(Logger.Level.ERROR, "Unable to create new output stream for path %s!", filePath);
 			return null;
 		}
 		byte[] bytesIn = new byte[BUFFER_SIZE];
@@ -168,7 +168,7 @@ public class UnzipUtility {
 			}
 		}
 		catch (IOException e) {
-			System.out.println("ERROR: Unable to read or write from zip input stream!");
+			Logger.error("Unable to read or write from zip input stream!");
 			closeZipOutputStream(bos);
 			return null;
 		}
@@ -192,13 +192,13 @@ public class UnzipUtility {
 	@SuppressWarnings("resource")
 	private File extractFile(SevenZFile sevenZFile, SevenZArchiveEntry entry, String filePath)  {
 	
-		System.out.print("[DEBUG] Extracting zip file '" + entry.getName() + "' to '" + filePath + "'");
+		Logger.print(Logger.Level.DEBUG, "Extracting zip file %s to %s", entry.getName(), filePath);
 		BufferedOutputStream out = null;
 		try {
 			out = new BufferedOutputStream(new FileOutputStream(filePath));
 		}
 		catch (java.io.FileNotFoundException e) {
-			System.out.println("ERROR: Unable to create new output stream for path '" + filePath + "'!");
+			Logger.print(Logger.Level.ERROR, "Unable to create new output stream for path %s!", filePath);
 			return null;
 		}
 		try {
@@ -207,7 +207,7 @@ public class UnzipUtility {
 	        out.write(content);
 		}
 		catch (IOException e) {
-			System.out.println("ERROR: Unable to read or write from zip input stream!");
+			Logger.error("Unable to read or write from zip input stream!");
 			closeZipOutputStream(out);
 			return null;
 		}
@@ -227,7 +227,7 @@ public class UnzipUtility {
 			return true;
 		}
 		catch (IOException e) {
-			System.out.println("ERROR: Unable to close zip output stream!");
+			Logger.error("Unable to close zip output stream!");
 			e.printStackTrace();
 			return false;
 		}
@@ -239,7 +239,7 @@ public class UnzipUtility {
 			return true;
 		}
 		catch (IOException e) {
-			System.out.println("ERROR: Unable to close zip input stream!");
+			Logger.error("Unable to close zip input stream!");
 			e.printStackTrace();
 			return false;
 		}

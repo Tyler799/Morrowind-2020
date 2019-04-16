@@ -44,7 +44,7 @@ public class RemoteHandler {
 			try {
 				return new URL(url);
 			} catch (MalformedURLException e) {
-				System.out.println("ERROR: '" + url + "' is not a valid URL format.");
+				Logger.print(Logger.Level.ERROR, "%s is not a valid URL format", url.toString());
 				return null;
 			}
 		}
@@ -69,7 +69,8 @@ public class RemoteHandler {
 		try {
 			return new java.net.URI(compareUrl.toString());
 		} catch (URISyntaxException e) {
-			System.out.print("ERROR: URL string violates RFC 2396!");
+			Logger.error("URL string violates RFC 2396!");
+			e.printStackTrace();
 			return null;
 		}
 	}
@@ -88,14 +89,14 @@ public class RemoteHandler {
 				//java.awt.Desktop.getDesktop().browse(url);
 				return true;
 			} else {
-				System.out.println("ERROR: Desktop class is not suppored on this platform.");
+				Logger.error("Desktop class is not suppored on this platform");
 				return false;
 			}
 		} catch (Exception e) {
 			if (e instanceof IOException)
-				System.out.print("ERROR: Unable to open web browser, default browser is not found or it failed to launch.");
+				Logger.error("Unable to open web browser, default browser is not found or it failed to launch");
 			else if (e instanceof SecurityException)
-				System.out.print("ERROR: Security manager denied permission or the calling thread is not allowed "
+				Logger.error("Security manager denied permission or the calling thread is not allowed "
 						+ "to create a subprocess; and not invoked from within an applet or Java Web Started application");
 			return false;
 		}
@@ -107,7 +108,7 @@ public class RemoteHandler {
 			handler.downloadUsingStream(Link.versionFile, VERSION_FILENAME + ".remote");
 			return true;
 		} catch (IOException e) {
-			System.out.println("ERROR: Unable to download guide version file!");
+			Logger.error("Unable to download guide version file!");
 			return false;
 		}
 	}

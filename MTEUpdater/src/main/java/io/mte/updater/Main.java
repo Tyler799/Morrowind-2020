@@ -28,23 +28,25 @@ public class Main {
 
 	private static void runUpdater() {
 		
-		System.out.println("\nDownloading mte version file...");
+		Logger.verbose("Start updating...");
+		
+		Logger.print("\nDownloading mte version file...");
 		if (!RemoteHandler.downloadRemoteVersionFile(fileHandler))
 			return;
 		
 		fileHandler.registerRemoteVersionFile();
 
-		System.out.println("Comparing version numbers...");
+		Logger.print("Comparing version numbers...");
 		
 		String remoteSHA = fileHandler.remote.getCommitSHA();
 		String localSHA = fileHandler.local.getCommitSHA();
 
 		// Compare version numbers to see if we need to update
 		if (!remoteSHA.equals(localSHA)) {
-			System.out.println("\nYour version of the guide is out of date");
+			Logger.print("\nYour version of the guide is out of date");
 
 			Scanner reader = new Scanner(System.in);
-			System.out.println("Would you like to see a list of recent updates?");
+			Logger.print("Would you like to see a list of recent updates?");
 
 			// Continue asking for input until the user says yes or no
 			boolean inputFlag = false;
@@ -63,12 +65,12 @@ public class Main {
 					}
 
 					// Download latest release files
-					System.out.println("\nDownloading release files...");
+					Logger.print("\nDownloading release files...");
 					if (!RemoteHandler.downloadLatestRelease(fileHandler))
 						return;
 
 					// Extract the release files to a new directory
-					System.out.println("Extracting release files...");
+					Logger.print("Extracting release files...");
 					if (!fileHandler.extractReleaseFiles())
 						return;
 
@@ -97,12 +99,12 @@ public class Main {
 				}
 			}
 		} else
-			System.out.println("\nYour version of the guide is up-to-date!");
+			Logger.print("\nYour version of the guide is up-to-date!");
 	}
 	
 	public static void terminateApplication() {
 		
-		System.out.println("Terminating updater application...");
+		Logger.print("Terminating updater application...");
 	    System.exit(1);
 	}
 }

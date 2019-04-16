@@ -108,13 +108,14 @@ public class Logger {
 	}
 	
 	/**
-	 * Employ printf method to output log when you have string items 
-	 * you want wrapped in quotation marks.
-	 * @param lvl
-	 * @param log
-	 * @param items
+	 * Employ {@code printf} method to output log when you have string items you want<br>
+	 * wrapped in single quotation marks. Also accepts a single item as an argument.
+	 * 
+	 * @param lvl Logging level of this log
+	 * @param format A format string to process and print
+	 * @param items Array of string items to wrap
 	 */
-	public static void print(Level lvl, String log, String...items) {
+	public static void print(Level lvl, String format, String...items) {
 		
 		if (items == null || items.length == 1 && items[0].isEmpty()) {
 			warning("Attempting to print log with incorrect number of arguments (0)");
@@ -128,10 +129,10 @@ public class Logger {
 				objects[0] = "'" + objects[0];
 				objects[objects.length - 1] += "'";
 				
-				System.out.printf(lvl.tag + log + "\n", objects);
+				System.out.printf(lvl.tag + format + "\n", objects);
 			}
 			else {
-				System.out.printf(lvl.tag + log + "\n", "'" + items + "'");
+				System.out.printf(lvl.tag + format + "\n", "'" + items + "'");
 			}
 		}
 	}

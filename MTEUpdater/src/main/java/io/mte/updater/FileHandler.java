@@ -61,7 +61,7 @@ public class FileHandler {
 			filename = this.getName();
 			
 			if (!this.exists()) {
-				System.out.println("ERROR: Unable to find '" + filename + "' file!");
+				Logger.print(Logger.Level.ERROR, "Unable to find %s file!", filename);
 				Main.terminateApplication();
 			}
 
@@ -97,7 +97,7 @@ public class FileHandler {
 				// We still have to initialize these variables to avoid errors
 				releaseVer = 0;
 				commitSHA = null;
-				System.out.println("ERROR: Malformed version file '" + filename + "'!");
+				Logger.print(Logger.Level.ERROR, "Malformed version file %s !", filename);
 				Main.terminateApplication();
 			}
 		}
@@ -116,21 +116,21 @@ public class FileHandler {
 			
 		    File releaseFile = iter.next();
 		    if (!releaseFile.exists()) {
-		    	System.out.println("ERROR: Unable to find release file '" + releaseFile.getName() + "'!");
+		    	Logger.print(Logger.Level.ERROR, "Unable to find release file %s !", releaseFile.getName());
 		    	return false;
 		    }
 		    else {
 		    	Path from = releaseFile.toPath();
 		    	Path to = Paths.get(Main.root + "\\" + releaseFile.getName());
 		    	
-		    	System.out.println("[DEBUG] Updating release file '" + releaseFile.getName() + "'");
-		    	System.out.println("[DEBUG] Destination path: " + to.toString());
+		    	Logger.print(Logger.Level.DEBUG, "Updating release file %s", releaseFile.getName());
+		    	Logger.print(Logger.Level.DEBUG, "Destination path: %s", to.toString());
 		    	
 		    	try {
 					Files.copy(from, to, StandardCopyOption.REPLACE_EXISTING);
 			    	
 				} catch (IOException e) {
-					System.out.println("ERROR: Unable to overwrite local release file '" + to.getFileName() + "!");
+					Logger.print(Logger.Level.ERROR, "Unable to overwrite local release file %s !", to.getFileName().toString());
 					return false;
 				}
 		    }
@@ -145,7 +145,7 @@ public class FileHandler {
 			//registerTempFile(new File(localReleaseDir));
 			return true;
 		} catch (IOException e1) {
-			System.out.println("ERROR: Unable to extract the GH repo file!");
+			Logger.error("Unable to extract the GH repo file!");
 			return false;
 		}
 	}
@@ -176,7 +176,7 @@ public class FileHandler {
 				}
 			}
 		} catch (SecurityException e) {
-			System.out.println("ERROR: Unable to delete temporary file '" + fileEntryName + "'!");
+			Logger.print(Logger.Level.ERROR, "Unable to delete temporary file %s !", fileEntryName);
 			e.printStackTrace();
 		}
 	}
@@ -189,7 +189,7 @@ public class FileHandler {
 		
 		if (tmpFile.exists())
 			tempFiles.add(tmpFile);
-		else System.out.println("Warning to register non-existing temporary file.");
+		else Logger.warning("Trying to register a non-existing temporary file");
 	}
 	
 	/**
@@ -203,6 +203,7 @@ public class FileHandler {
 	 */
 	void downloadUsingStream(URL url, String file) throws IOException {
 		
+		Logger.print(Logger.Level.DEBUG, "Downloading file %s from %s", file, url.toString());
 		BufferedInputStream bis = new BufferedInputStream(url.openStream());
 		FileOutputStream fis = new FileOutputStream(file);
 		byte[] buffer = new byte[1024];
@@ -227,6 +228,7 @@ public class FileHandler {
 		try (FileInputStream inputStream = new FileInputStream(filename)) {
 			return IOUtils.toString(inputStream, "UTF-8");
 		} catch (IOException e) {
+			Logger.print(Logger.Level.ERROR, "Unable to read file %s", filename);
 			e.printStackTrace();
 			return null;
 		}

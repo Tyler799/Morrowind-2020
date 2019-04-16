@@ -45,11 +45,10 @@ public class Main {
 			System.out.println("Would you like to see a list of recent updates?");
 
 			// Continue asking for input until the user says yes or no
-			// TODO: make the input not case-sensitive
 			boolean inputFlag = false;
 			while (inputFlag == false) {
 				String input = reader.next();
-				if (input.equals("yes") || input.equals("y")) {
+				if (input.equalsIgnoreCase("yes") || input.equalsIgnoreCase("y")) {
 
 					// It's important we close the reader as soon as possible before any
 					// exceptions terminate the method
@@ -89,7 +88,7 @@ public class Main {
 					}
 					writer.close();*/
 					inputFlag = true;
-				} else if (input.equals("no") || input.equals("n")) {
+				} else if (input.equalsIgnoreCase("no") || input.equalsIgnoreCase("n")) {
 					System.out.println("\nNot a wise decision, may the curse of blight strike you down!");
 					reader.close();
 					inputFlag = true;

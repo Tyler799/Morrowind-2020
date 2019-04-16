@@ -93,7 +93,9 @@ public class Main {
 					writer.close();*/
 					inputFlag = true;
 				} else if (input.equalsIgnoreCase("no") || input.equalsIgnoreCase("n")) {
-					System.out.println("\nNot a wise decision, may the curse of blight strike you down!");
+					Logger.print("\nIt is strongly recommended that you update");
+					Logger.print("You can always check the release section of our repository on Github:");
+					Logger.print(RemoteHandler.Link.releasesPage.toString() + "\n");
 					reader.close();
 					inputFlag = true;
 				}

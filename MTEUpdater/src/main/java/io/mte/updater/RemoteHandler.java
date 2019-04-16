@@ -31,6 +31,7 @@ public class RemoteHandler {
 		public static final URL repository = constructURL(github, repoPath);
 		public static final URL commitCompare = constructURL(github, repoPath, comparePath);
 		public static final URL versionFile = constructURL(ghusercontent, repoPath, updaterBranch, VERSION_FILENAME);
+		public static final URL releasesPage = constructURL(github, repoPath, "download"); 
 		
 		private static URL constructURL(URL url, String...paths)  {
 			return constructURL(url.toString() + "/" + String.join("/", paths));

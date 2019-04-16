@@ -82,7 +82,7 @@ public class Logger {
 	public static void init(String[] args) {
 		if (logger == null) {
 			Logger.logger = new Logger(args);
-			print("Logger initialized with level " + logger.getLevel());
+			verbose("Logger initialized with level " + logger.getLevel());
 		}
 		else
 			warning("Trying to initialize logger more then once");
@@ -98,30 +98,41 @@ public class Logger {
 	 * @param lvl Level of the log we want to print
 	 * */
 	private static boolean canPrintLog(Level lvl) {
-		return lvl.level <= logger.getLevel();
+		
+		if (logger == null) {
+			print("[Warning] " + "Trying to print a log before the logger has initialized");
+			return false;
+		}
+		else
+			return lvl.level <= logger.getLevel();
 	}
 	
 	/**
-	 * Employ printf method to output log when you have<br>
-	 * multiple string items you want wrapped in quotation marks.
+	 * Employ printf method to output log when you have string items 
+	 * you want wrapped in quotation marks.
 	 * @param lvl
 	 * @param log
 	 * @param items
 	 */
 	public static void print(Level lvl, String log, String...items) {
 		
-		if (items.length <= 1) {
-			warning("Attempting to print log with incorrect arguments");
+		if (items == null || items.length == 1 && items[0].isEmpty()) {
+			warning("Attempting to print log with incorrect number of arguments (0)");
 		}
 		else if (canPrintLog(lvl)) {
-			/*
-			 * Wrap each string item with single quotation marks
-			 */
-			Object[] objects = String.join("' '", items).split("\\s+");
-			objects[0] = "'" + objects[0];
-			objects[objects.length - 1] += "'";
-			
-			System.out.printf(log + "\n", objects);
+			if (items.length > 1) {
+				/*
+				 * Wrap each string item with single quotation marks
+				 */
+				Object[] objects = String.join("' '", items).split("\\s+");
+				objects[0] = "'" + objects[0];
+				objects[objects.length - 1] += "'";
+				
+				System.out.printf(lvl.tag + log + "\n", objects);
+			}
+			else {
+				System.out.printf(lvl.tag + log + "\n", "'" + items + "'");
+			}
 		}
 	}
 	
@@ -130,22 +141,23 @@ public class Logger {
 	}
 	
 	public static void error(String msg) {
-		print("[ERROR] " + msg);
+		if (canPrintLog(Level.ERROR))
+			print(Level.ERROR.tag + msg);
 	}
 	
 	public static void verbose(String msg) {
 		if (canPrintLog(Level.VERBOSE))
-			print("[LOG] " + msg);
+			print(Level.VERBOSE.tag + msg);
 	}
 	
 	public static void warning(String msg) {
-		if (canPrintLog(Level.VERBOSE))
-			print("[WARNING] " + msg);
+		if (canPrintLog(Level.WARNING))
+			print(Level.WARNING.tag + msg);
 	}
 	
 	public static void debug(String msg) {
 		if (canPrintLog(Level.DEBUG))
-			print("[DEBUG] " + msg);
+			print(Level.DEBUG.tag + msg);
 	}
 	
 	public static void test() {

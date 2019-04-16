@@ -20,6 +20,8 @@ public class Main {
 	
 	public static void main(String[] args) 
 	{
+		Logger.init(args);
+		Logger.test();
 		runUpdater();
 		fileHandler.updaterCleanup();
 	}
@@ -103,14 +105,4 @@ public class Main {
 		System.out.println("Terminating updater application...");
 	    System.exit(1);
 	}
-	
-	/*public static class Print {
-		
-		public static void log(String msg) {
-			System.out.println(msg);
-		}
-		public static void debug(String msg) {
-			log("[DEBUG] " + msg);
-		}
-	}*/
 }

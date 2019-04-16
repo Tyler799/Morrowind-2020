@@ -32,6 +32,12 @@ dependencies {
 	// https://mvnrepository.com/artifact/org.apache.commons/commons-lang3
 	compile group: 'org.apache.commons', name: 'commons-lang3', version: '3.8.1'
 
+	// https://mvnrepository.com/artifact/org.apache.commons/commons-compress
+	compile group: 'org.apache.commons', name: 'commons-compress', version: '1.18'
+	
+	// https://mvnrepository.com/artifact/org.tukaani/xz
+	compile group: 'org.tukaani', name: 'xz', version: '1.8'
+
     // Use JUnit test framework
     testImplementation 'junit:junit:4.12'
 }

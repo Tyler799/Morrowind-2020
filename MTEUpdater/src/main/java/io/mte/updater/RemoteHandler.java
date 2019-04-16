@@ -10,7 +10,7 @@ import java.net.URL;
 
 public class RemoteHandler {
 
-	public final static String RELEASE_FILENAME = "MTE-Release.zip";
+	public final static String RELEASE_FILENAME = "MTE-Release.7z";
 	public final static String VERSION_FILENAME = "mte-version.txt";
 	
 	public static class Link {

@@ -85,11 +85,16 @@ if "x%~1" == "x" goto execute
 set CMD_LINE_ARGS=%*
 
 :execute
-@REM Try to update MWSE first
+@REM Try to update MWSE first, but skip if we are in debug mode
+for %%i in (%CMD_LINE_ARGS%) do (
+	if "%%i" == "-d" goto runapp
+	if "%%i" == "-debug" goto runapp
+)
 if exist MWSE-Update.exe (
 	echo Attempting to update MWSE build...
 	start /wait MWSE-Update.exe
 )
+:runapp
 @rem Setup the command line
 set CLASSPATH=MTE-Updater.jar
 

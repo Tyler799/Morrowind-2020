@@ -1,76 +1,51 @@
 package io.mte.updater;
 
-import java.awt.Desktop;
-import java.io.BufferedInputStream;
 import java.io.File;
-import java.io.FileInputStream;
 import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.net.URI;
-import java.net.URISyntaxException;
-import java.net.URL;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.nio.file.StandardCopyOption;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.ListIterator;
 import java.util.Scanner;
-
-import org.apache.commons.io.IOUtils;
 
 public class Main {
 
-	static List<File> tempFiles = new ArrayList<File>();
-
-	public static void main(String[] args) {
-		try {
-			runUpdater();
-		} catch (FileNotFoundException e) {
-			System.out.println("ERROR: Unable to find " + "'" + e.getMessage() + "'" + " file!");
-		}
-
-		// System.out.println("Cleaning up temporary files...");
-		updaterCleanup();
+	public static final String root = System.getProperty("user.dir");
+	
+	// Use this class instance to handle all file related stuff
+	public static final FileHandler fileHandler = new FileHandler();
+	
+	public static void main(String[] args) 
+	{
+		runUpdater();
+		fileHandler.updaterCleanup();
 	}
 
-	private static void runUpdater() throws FileNotFoundException {
-		// Before we do anything else check if the version file exists
-		File versionTxt = new File("mte-version.txt");
-		if (!versionTxt.exists()) {
-			throw new FileNotFoundException("mte-version.txt");
-		}
-
-		// Download the guide version file from GitHub
-		String url = "https://raw.githubusercontent.com/Tyler799/Morrowind-2019/updater/mte-version.txt";
-		try {
-			System.out.println("\nDownloading mte version file...");
-			downloadUsingStream(url, "mte-version.tmp");
-		} catch (IOException e) {
-			System.out.println("ERROR: Unable to download guide version file!");
+	private static void runUpdater() {
+		
+		System.out.println("\nDownloading mte version file...");
+		if (!RemoteHandler.downloadRemoteVersionFile(fileHandler))
 			return;
-		}
-
-		// Register the temporary version file
-		File versionTmp = new File("mte-version.tmp");
-		tempFiles.add(versionTmp);
+		
+		fileHandler.registerRemoteVersionFile();
 
 		System.out.println("Comparing version numbers...");
+		
+		String remoteSHA = fileHandler.remote.getCommitSHA();
+		String localSHA = fileHandler.local.getCommitSHA();
 
-		String remoteVersion = readFile(versionTmp.getName());
-		String localVersion = readFile(versionTxt.getName());
-
-		// Compare version number strings to see if we need to update
-		if (!remoteVersion.equals(localVersion)) {
+		// Compare version numbers to see if we need to update
+		if (!remoteSHA.equals(localSHA)) {
 			System.out.println("\nYour version of the guide is out of date");
 
 			Scanner reader = new Scanner(System.in);
 			System.out.println("Would you like to see a list of recent updates?");
 
 			// Continue asking for input until the user says yes or no
+			// TODO: make the input not case-sensitive
 			boolean inputFlag = false;
 			while (inputFlag == false) {
 				String input = reader.next();
@@ -80,83 +55,39 @@ public class Main {
 					// exceptions terminate the method
 					reader.close();
 
-					URI compareURL = null;
-					try {
-						compareURL = getGithubCompareLink(localVersion, remoteVersion, true, true);
-					} catch (URISyntaxException e) {
-						System.out.print("ERROR: URL string violates RFC 2396!");
-						return;
-					}
-
 					// Open the Github website with the compare arguments in URL
-					try {
-						java.awt.Desktop.getDesktop();
-						if (Desktop.isDesktopSupported()) {
-							java.awt.Desktop.getDesktop().browse(compareURL);
-						} else {
-							System.out.println("ERROR: Desktop class is not suppored on this platform.");
-							return;
-						}
-					} catch (Exception e) {
-						if (e instanceof IOException)
-							System.out.print(
-									"ERROR: Unable to open web browser, default browser is not found or it failed to launch.");
-						else if (e instanceof SecurityException)
-							System.out.print(
-									"ERROR: Security manager denied permission or the calling thread is not allowed to create a subprocess; and not invoked from within an applet or Java Web Started application");
+					URI compareURL = RemoteHandler.getGithubCompareLink(localSHA, remoteSHA, true, true);
+					if (compareURL == null || !RemoteHandler.browseWebpage(compareURL)) {
 						return;
 					}
 
-					// Download repository files
-					url = "https://github.com/Tyler799/Morrowind-2019/archive/master.zip";
-					try {
-						System.out.println("\nDownloading repository files...");
-						downloadUsingStream(url, "Morrowind-2019.zip");
-						tempFiles.add(new File("Morrowind-2019.zip"));
-					} catch (IOException e1) {
-						System.out.println("ERROR: Unable to download repo files!");
+					// Download latest release files
+					System.out.println("\nDownloading release files...");
+					if (!RemoteHandler.downloadLatestRelease(fileHandler))
 						return;
-					}
 
-					// Extract the repository files to a new directory
-					try {
-						System.out.println("Extracting repository files...");
-						UnzipUtility unzipUtility = new UnzipUtility();
-						unzipUtility.unzip("Morrowind-2019.zip", "Morrowind-2019-GH");
-						tempFiles.add(new File("Morrowind-2019-GH"));
-					} catch (IOException e1) {
-						System.out.println("ERROR: Unable to extract the GH repo file!");
+					// Extract the release files to a new directory
+					System.out.println("Extracting release files...");
+					if (!fileHandler.extractReleaseFiles())
 						return;
-					}
 
-					// Update the existing guide file
-					System.out.println("Updating your Morrowind guide...");
-					File guideGH = new File("Morrowind-2019-GH/Morrowind-2019-master/Morrowind_2019.md");
-					if (!guideGH.exists()) {
-						System.out.println("ERROR: Unable to find the extracted guide file!");
-					} else {
-						Path from = guideGH.toPath(); // convert from File to Path
-						Path to = Paths.get("Morrowind_2019.md"); // convert from String to Path
-						try {
-							Files.copy(from, to, StandardCopyOption.REPLACE_EXISTING);
-						} catch (IOException e) {
-							System.out.println("ERROR: Unable to overwrite existing guide file!");
-							return;
-						}
-					}
-
-					// Update the guide version file
+					// Move files from the target directory
+					//System.out.println("Updating local MTE files...");
+					//if (!fileHandler.updateLocalFiles())
+					//	return;
+					
+					/*// Update the guide version file
 					System.out.println("Updating mte version file...");
 					PrintWriter writer = null;
 					try {
-						writer = new PrintWriter(versionTxt);
-						writer.print(remoteVersion);
+						writer = new PrintWriter(fileHandler.local);
+						writer.print(fileHandler.remote.getReleaseVersion() + remoteSHA);
 						System.out.println("\nYou're all set, good luck on your adventures!");
 					} catch (FileNotFoundException e) {
 						System.out.println("ERROR: Unable to find mte version file!");
 						return;
 					}
-					writer.close();
+					writer.close();*/
 					inputFlag = true;
 				} else if (input.equals("no") || input.equals("n")) {
 					System.out.println("\nNot a wise decision, may the curse of blight strike you down!");
@@ -167,89 +98,20 @@ public class Main {
 		} else
 			System.out.println("\nYour version of the guide is up-to-date!");
 	}
-
-	/**
-	 * Clean up all temporary files created in the update process
-	 */
-	private static void updaterCleanup() {
-
-		// Delete the temporary version file we created
-		String fileEntryName = "unknown";
-		try {
-			ListIterator<File> tempFileItr = tempFiles.listIterator();
-			while (tempFileItr.hasNext()) {
-				// Make sure the file exists before we attempt to delete it
-				File fileEntry = tempFileItr.next();
-				if (fileEntry.exists()) {
-					fileEntry.delete();
-				}
-			}
-		} catch (SecurityException e) {
-			System.out.println("ERROR: Unable to delete temporary file '" + fileEntryName + "'!");
-			e.printStackTrace();
+	
+	public static void terminateApplication() {
+		
+		System.out.println("Terminating updater application...");
+	    System.exit(1);
+	}
+	
+	/*public static class Print {
+		
+		public static void log(String msg) {
+			System.out.println(msg);
 		}
-	}
-
-	/**
-	 * Here we are using URL openStream method to create the input stream. Then we
-	 * are using a file output stream to read data from the input stream and write
-	 * to the file.
-	 *
-	 * @param urlStr
-	 * @param file
-	 * @throws IOException
-	 */
-	private static void downloadUsingStream(String urlStr, String file) throws IOException {
-		URL url = new URL(urlStr);
-		BufferedInputStream bis = new BufferedInputStream(url.openStream());
-		FileOutputStream fis = new FileOutputStream(file);
-		byte[] buffer = new byte[1024];
-		int count = 0;
-		while ((count = bis.read(buffer, 0, 1024)) != -1) {
-			fis.write(buffer, 0, count);
+		public static void debug(String msg) {
+			log("[DEBUG] " + msg);
 		}
-		fis.close();
-		bis.close();
-	}
-
-	/**
-	 * Read from a text file and return the compiled string
-	 *
-	 * @param filename
-	 *            Name of the file to read from the root directory
-	 * @return Content of the text file
-	 */
-	private static String readFile(String filename) {
-
-		// Using Apache Commons IO here
-		try (FileInputStream inputStream = new FileInputStream(filename)) {
-			return IOUtils.toString(inputStream, "UTF-8");
-		} catch (IOException e) {
-			e.printStackTrace();
-			return null;
-		}
-	}
-
-	/**
-	 * Create a hyperlink to a direct comparison between two commits made in the
-	 * guide repository. It's recommended to use richDiff and displayCommits.
-	 * 
-	 * @param commit1 SHA of base commit to compare against
-	 * @param commit2 SHA of comparing commit
-	 * @param richDiff Make the comparison display more user friendly
-	 * @param displayCommits View default comparison for the given commit range
-	 * @return URI wrapped url
-	 * @throws URISyntaxException
-	 */
-	private static URI getGithubCompareLink(String commit1, String commit2, boolean richDiff, boolean displayCommits)
-			throws URISyntaxException {
-		// Construct the URL in string format
-		String baseCompUrl = "https://github.com/Tyler799/Morrowind-2019/compare/";
-
-		String urlString = baseCompUrl + commit1 + (displayCommits ? "..." : "..") + commit2
-				+ (richDiff ? "?short_path=4a4f391#diff-4a4f391a7396ba51c9ba42372b55d34e" : "");
-
-		// Apply URI wrapper to string
-		return new java.net.URI(urlString);
-	}
+	}*/
 }

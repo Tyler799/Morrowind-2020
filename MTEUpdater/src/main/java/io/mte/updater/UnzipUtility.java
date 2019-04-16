@@ -8,6 +8,9 @@ import java.io.IOException;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipInputStream;
 
+import org.apache.commons.compress.archivers.sevenz.SevenZArchiveEntry;
+import org.apache.commons.compress.archivers.sevenz.SevenZFile;
+
 public class UnzipUtility {
 	/**
 	 * Size of the buffer to read/write data
@@ -20,46 +23,142 @@ public class UnzipUtility {
 	 *
 	 * @param zipFilePath
 	 * @param destDirectory
-	 * @throws IOException
 	 */
-	public void unzip(String zipFilePath, String destDirectory) throws IOException {
+	public boolean unzip(String zipFilePath, String destDirectory) throws IOException {
+		
+		// Make sure the zip file under the given path exists
+		File zipFile = new File(zipFilePath);
+		if (!zipFile.exists()) {
+			System.out.println("ERROR: Unable to find zip file with path '" + zipFilePath +'"');
+			return false;
+		}
 		File destDir = new File(destDirectory);
 		if (!destDir.exists()) {
 			destDir.mkdir();
 		}
+	
+		//try (SevenZFile sevenZFile = new SevenZFile(new File(zipFilePath))) {
+	    //    SevenZArchiveEntry entrys = sevenZFile.getNextEntry();
+	    //    System.out.print("[DEBUG] 7z next entry exists: " + ((entrys == null) ? "yes" : "no") + "'");
+		//}
+		
+		System.out.print("[DEBUG] Unziping from '" + zipFilePath + "' to '" + destDirectory + "'\n");
+		
 		ZipInputStream zipIn = new ZipInputStream(new FileInputStream(zipFilePath));
-		ZipEntry entry = zipIn.getNextEntry();
+		ZipEntry entry = null;
+		
+		try {
+			entry = zipIn.getNextEntry();
+			// Abort if zip file is empty
+			if (entry == null) {
+				System.out.println("ERROR: Zip contains no valid entries!");
+				System.out.println("Aborting unzipping operation...");
+				closeZipInputStream(zipIn);
+				return false;
+			}
+		}
+		catch (IOException e) {
+			System.out.println("ERROR: ZIP file error has occurred, unable to get new zip entry!");
+			e.printStackTrace();
+			closeZipInputStream(zipIn);
+			return false;
+		}
 		// iterates over entries in the zip file
 		while (entry != null) {
+			
+			System.out.println("[DEBUG] Iterating over zip entry '" + entry.getName() + "'");
 			String filePath = destDirectory + File.separator + entry.getName();
+			
 			if (!entry.isDirectory()) {
 				// if the entry is a file, extracts it
-				extractFile(zipIn, filePath);
+				File extrFile = extractFile(zipIn, entry.getName(), filePath);
+				if (extrFile == null || !extrFile.exists()) {
+					System.out.println("ERROR: Unable to find extracted file '" + entry.getName() + "'!");
+				}
 			} else {
 				// if the entry is a directory, make the directory
 				File dir = new File(filePath);
 				dir.mkdir();
 			}
-			zipIn.closeEntry();
-			entry = zipIn.getNextEntry();
+			try {
+				zipIn.closeEntry();
+				entry = zipIn.getNextEntry();
+			}
+			catch (IOException e) {
+				System.out.println("ERROR: Unable to close or get next zip entry!");
+				System.out.println("Aborting unzipping operation...");
+				return false;
+			}
 		}
-		zipIn.close();
+		if (!closeZipInputStream(zipIn))
+			return false;
+		
+		return true;
 	}
 
 	/**
 	 * Extracts a zip entry (file entry)
 	 *
-	 * @param zipIn
-	 * @param filePath
-	 * @throws IOException
+	 * @param zipIn Zip stream we are extracting from
+	 * @param filename Used for debug purposes
+	 * @param filePath Where we want to extract
+	 * @return New instance of the extracted file or {@code null} if an error occurred
 	 */
-	private void extractFile(ZipInputStream zipIn, String filePath) throws IOException {
-		BufferedOutputStream bos = new BufferedOutputStream(new FileOutputStream(filePath));
+	@SuppressWarnings("resource")
+	private File extractFile(ZipInputStream zipIn, String filename, String filePath)  {
+		
+		System.out.print("[DEBUG] Extracting zip file '" + filename + "' to '" + filePath + "'");
+		BufferedOutputStream bos = null;
+		try {
+			bos = new BufferedOutputStream(new FileOutputStream(filePath));
+		}
+		catch (java.io.FileNotFoundException e) {
+			System.out.println("ERROR: Unable to create new output stream for path '" + filePath + "'!");
+			return null;
+		}
 		byte[] bytesIn = new byte[BUFFER_SIZE];
 		int read = 0;
-		while ((read = zipIn.read(bytesIn)) != -1) {
-			bos.write(bytesIn, 0, read);
+		try {
+			while ((read = zipIn.read(bytesIn)) != -1) {
+				bos.write(bytesIn, 0, read);
+			}
 		}
-		bos.close();
+		catch (IOException e) {
+			System.out.println("ERROR: Unable to read or write from zip input stream!");
+			closeZipOutputStream(bos);
+			return null;
+		}
+		if (!closeZipOutputStream(bos))
+			return null;
+		
+		// We are getting a warning here that the output stream might not be closed
+		// but that is not true, we are trying to close it in 'closeZipOutputStream()'
+		return new File(filePath);
+	}
+	
+	private boolean closeZipOutputStream(BufferedOutputStream stream) 
+	{
+		try {
+			stream.close();
+			return true;
+		}
+		catch (IOException e) {
+			System.out.println("ERROR: Unable to close zip output stream!");
+			e.printStackTrace();
+			return false;
+		}
+	}
+	
+	private boolean closeZipInputStream(ZipInputStream stream) 
+	{	
+		try {
+			stream.close();
+			return true;
+		}
+		catch (IOException e) {
+			System.out.println("ERROR: Unable to close zip input stream!");
+			e.printStackTrace();
+			return false;
+		}
 	}
 }

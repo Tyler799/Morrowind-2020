@@ -29,6 +29,9 @@ dependencies {
     // https://mvnrepository.com/artifact/commons-io/commons-io
 	compile group: 'commons-io', name: 'commons-io', version: '2.6'
 
+	// https://mvnrepository.com/artifact/org.apache.commons/commons-lang3
+	compile group: 'org.apache.commons', name: 'commons-lang3', version: '3.8.1'
+
     // Use JUnit test framework
     testImplementation 'junit:junit:4.12'
 }

@@ -6,6 +6,8 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.PrintWriter;
+import java.net.URI;
 import java.net.URL;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -100,11 +102,28 @@ public class FileHandler {
 
 			super(pathname);
 			filename = this.getName();
-
+			/*
+			 *  Find out if the version file is local by checking its extension
+			 *  Remote files should have the "remote" extension
+			 */
+			boolean isLocal = !FilenameUtils.getExtension(filename).equals("remote");
+			
 			if (!this.exists()) {
-				Exception e = new java.io.FileNotFoundException();
-				Logger.print(Logger.Level.ERROR, e, "Unable to find %s file!", filename);
-				Main.terminateJavaApplication();
+				/*
+				 *  Remote files should always be present because we initialize
+				 *  them after we perform a download from repository
+				 */
+				if (isLocal != true) {
+					Exception e = new java.io.FileNotFoundException();
+					Logger.print(Logger.Level.ERROR, e, "Unable to find %s version file!", filename);
+					Main.terminateJavaApplication();
+				}
+				//Logger.print(Logger.Level.VERBOSE, 
+				//		"Unable to find local version file %s, going to update", filename);
+				
+				releaseVer = 0;
+				commitSHA = "";
+				return;
 			}
 
 			String contents = readFile(filename);
@@ -170,6 +189,45 @@ public class FileHandler {
 		}
 		catch (IOException e) {
 			Logger.error("Unable to create a copy of this application", e);
+			Main.terminateJavaApplication();
+		}
+	}
+	
+	void doUpdate(String localSHA, String remoteSHA) {
+		
+		// Don't show changes if local version file is not present
+		if (localSHA != null && !localSHA.isEmpty()) {
+			/*
+			 *  Open the Github website with the compare arguments in URL
+			 */
+			URI compareURL = RemoteHandler.getGithubCompareLink(localSHA, remoteSHA, true, true);
+			if (compareURL == null || !RemoteHandler.browseWebpage(compareURL)) {
+				return;
+			}
+		}
+		// Download latest release files
+		Logger.print("\nDownloading release files...");
+		if (!RemoteHandler.downloadLatestRelease(this))
+			return;
+
+		// Extract the release files to a new directory
+		Logger.print("Extracting release files...");
+		if (!extractReleaseFiles())
+			return;
+		
+		// Move files from the target directory
+		Logger.print("Updating local MTE files...");
+		updateLocalFiles();
+		
+		// Update the guide version file
+		Logger.print("Updating mte version file...");
+
+		try (PrintWriter writer = new PrintWriter(local)) {
+			writer.print(remote.getReleaseVersion() + " " + remote.getCommitSHA());
+			Logger.print("\nYou're all set, good luck on your adventures!");
+			writer.close();
+		} catch (FileNotFoundException e) {
+			Logger.error("ERROR: Unable to find mte version file!", e);
 			Main.terminateJavaApplication();
 		}
 	}

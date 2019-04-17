@@ -1,11 +1,8 @@
 package io.mte.updater;
 
 import java.io.File;
-import java.io.FileNotFoundException;
 import java.io.IOException;
-import java.io.PrintWriter;
 import java.lang.management.ManagementFactory;
-import java.net.URI;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.Scanner;
@@ -94,6 +91,12 @@ public class Main {
 		if (!remoteSHA.equals(localSHA)) {
 			Logger.print("\nYour version of the guide is out of date");
 
+			if (localSHA.isEmpty()) {
+				Logger.verbose("Local version file not found, skipping showing updates");
+				fileHandler.doUpdate(localSHA, remoteSHA);
+				return;
+			}
+			
 			Scanner reader = new Scanner(System.in);
 			Logger.print("Would you like to see a list of recent updates?");
 
@@ -106,39 +109,9 @@ public class Main {
 					// It's important we close the reader as soon as possible before any
 					// exceptions terminate the method
 					reader.close();
-
-					// Open the Github website with the compare arguments in URL
-					URI compareURL = RemoteHandler.getGithubCompareLink(localSHA, remoteSHA, true, true);
-					if (compareURL == null || !RemoteHandler.browseWebpage(compareURL)) {
-						return;
-					}
-
-					// Download latest release files
-					Logger.print("\nDownloading release files...");
-					if (!RemoteHandler.downloadLatestRelease(fileHandler))
-						return;
-
-					// Extract the release files to a new directory
-					Logger.print("Extracting release files...");
-					if (!fileHandler.extractReleaseFiles())
-						return;
 					
-					// Move files from the target directory
-					Logger.print("Updating local MTE files...");
-					fileHandler.updateLocalFiles();
+					fileHandler.doUpdate(localSHA, remoteSHA);
 					
-					// Update the guide version file
-					Logger.print("Updating mte version file...");
-					PrintWriter writer = null;
-					try {
-						writer = new PrintWriter(fileHandler.local);
-						writer.print(fileHandler.remote.getReleaseVersion() + " " + fileHandler.remote.getCommitSHA());
-						Logger.print("\nYou're all set, good luck on your adventures!");
-					} catch (FileNotFoundException e) {
-						Logger.error("ERROR: Unable to find mte version file!", e);
-						terminateJavaApplication();
-					}
-					writer.close();
 					inputFlag = true;
 				} 
 				else if (input.equalsIgnoreCase("no") || input.equalsIgnoreCase("n")) {

@@ -3,6 +3,7 @@ package io.mte.updater;
 import java.io.BufferedInputStream;
 import java.io.File;
 import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.net.URL;
@@ -11,12 +12,12 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.nio.file.StandardCopyOption;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Iterator;
 import java.util.List;
 import java.util.ListIterator;
 import java.util.regex.Pattern;
 
+import org.apache.commons.io.FileUtils;
 import org.apache.commons.io.FilenameUtils;
 import org.apache.commons.io.IOUtils;
 import org.apache.commons.lang3.StringUtils;
@@ -24,24 +25,64 @@ import org.apache.commons.lang3.StringUtils;
 public class FileHandler {
 	
 	public static final UnzipUtility unzipUtility = new UnzipUtility();
-	public final String localReleaseDir;
-	
-	private final List<File> releaseFiles;
+
 	private final List<File> tempFiles;
 	protected final VersionFile local;
 	protected VersionFile remote;
 	
+	private static enum ReleaseFiles {
+
+		APPLICATION("MTE-Updater.jar"),
+		GUIDE("Morrowind_2019.md"),
+		LAUNCHER("MTE-Updater.bat");
+
+		private File instance;
+
+		ReleaseFiles(String name) {
+			instance = new File(Dir.localDirectory + File.separator + name);
+		}
+
+		private static class Dir {
+			/** This is where the latest release will be unpacked */
+			private static final String localDirectory =
+					FilenameUtils.removeExtension(RemoteHandler.RELEASE_FILENAME);
+		}
+
+		/**
+		 * Compare remote release files with their local counterparts
+		 * @return a list of release files newer then local versions
+		 */
+		public static ArrayList<File> compare() {
+
+			ArrayList<File> list = new ArrayList<File>();
+			for (ReleaseFiles file : ReleaseFiles.values()) {
+
+				String name = file.instance.getName();
+				File localFile = new File(name);
+
+				if (!localFile.exists()) {
+					Logger.print(Logger.Level.VERBOSE, "Local file %s not found, going to update", name);
+					list.add(file.instance);
+					continue;
+				}
+				Logger.print(Logger.Level.DEBUG, "Comparing %s release to local version", name);
+				try {
+					if (!FileUtils.contentEquals(file.instance, localFile))
+						list.add(file.instance);
+				}
+				catch (IOException e) {
+					Logger.print(Logger.Level.ERROR, e, "Unable to compare release file %s to local version", name);
+					continue;
+				}
+			}
+			return list;
+		}
+	}
+
 	// Create file instances here at runtime
 	// if there is any problems we can terminate application
 	FileHandler() {
-		
-		// This is where the latest release will be unpacked
-		localReleaseDir = FilenameUtils.removeExtension(RemoteHandler.RELEASE_FILENAME);
-		
-		releaseFiles = new ArrayList<File>();
-		releaseFiles.addAll(Arrays.asList(new File("MTE-Updater.jar"),
-				 new File("Morrowind_2019.md"), new File("MTE-Updater.bat")));
-		
+
 		// Store all our temporary file references here
 		tempFiles = new ArrayList<File>();
 		local = new VersionFile(RemoteHandler.VERSION_FILENAME);
@@ -110,40 +151,68 @@ public class FileHandler {
 			return commitSHA;
 		}
 	}
-	
-	boolean updateLocalFiles() {
+
+	protected static void launchApplication() {
+		/*
+		 *	 Create a copy of this application as a temporary file
+		 */
+		try {
+			Logger.debug("Creating a temporary copy of application");
+			String newSelfPath = FilenameUtils.removeExtension(Main.appPath.toString()) + ".tmp";
+			Path selfUpdater = Files.copy(Main.appPath, Paths.get(newSelfPath), StandardCopyOption.REPLACE_EXISTING);
+
+			String cmd = "java -jar " + selfUpdater.getFileName() + " " + Logger.getLevel().getArguments()[0] + " --update-self " + Main.processId;
+			Logger.print(Logger.Level.DEBUG, "Excecuting cmd command: %s", cmd);
+			Main.executeCommand(cmd, true);
+
+			// Exit gracefully so we don't have to be terminated
+			Main.closeJavaApplication();
+		}
+		catch (IOException e) {
+			Logger.error("Unable to create a copy of this application", e);
+			Main.terminateJavaApplication();
+		}
+	}
+
+	void updateLocalFiles() {
 		
-		for (Iterator<File> iter = releaseFiles.iterator(); iter.hasNext(); ) {
-			
-		    File releaseFile = iter.next();
-		    if (!releaseFile.exists()) {
-		    	Logger.print(Logger.Level.ERROR, "Unable to find release file %s!", releaseFile.getName());
-		    	return false;
-		    }
-		    else {
-		    	Path from = releaseFile.toPath();
-		    	Path to = Paths.get(Main.root + "\\" + releaseFile.getName());
-		    	
-		    	Logger.print(Logger.Level.DEBUG, "Updating release file %s", releaseFile.getName());
-		    	Logger.print(Logger.Level.DEBUG, "Destination path: %s", to.toString());
-		    	
-		    	try {
-					Files.copy(from, to, StandardCopyOption.REPLACE_EXISTING);
-			    	
-				} catch (IOException e) {
-					Logger.print(Logger.Level.ERROR, e, "Unable to overwrite local release file %s !", to.getFileName().toString());
-					return false;
-				}
-		    }
-		}	return true;
+		Logger.verbose("Preparing to update release files...");
+		ArrayList<File> releaseFiles = ReleaseFiles.compare();
+		
+		if (!releaseFiles.isEmpty()) {
+			for (Iterator<File> iter = releaseFiles.iterator(); iter.hasNext(); ) {
+
+				File updateFile = iter.next();
+
+			    if (updateFile == null || !updateFile.exists()) {
+			    	FileNotFoundException e = new FileNotFoundException();
+			    	Logger.print(Logger.Level.ERROR, e, "Unable to find release file %s!", updateFile.getName());
+			    	continue;
+			    }
+			    else {
+			    	Path from = updateFile.toPath();
+			    	Path to = Paths.get(updateFile.getName());
+
+			    	Logger.print(Logger.Level.DEBUG, "Updating release file %s", updateFile.getName());
+			    	Logger.print(Logger.Level.DEBUG, "Destination path: %s", to.toString());
+
+			    	try {
+						Files.copy(from, to, StandardCopyOption.REPLACE_EXISTING);
+
+					} catch (IOException e) {
+						Logger.print(Logger.Level.ERROR, e, "Unable to overwrite local release file %s !", to.getFileName().toString());
+						continue;
+					}
+			    }
+			}
+		}
 	}
 	
 	boolean extractReleaseFiles() {
 		
 		try {
-			unzipUtility.unzip(RemoteHandler.RELEASE_FILENAME, localReleaseDir);
-			// TODO: Remove this from comments
-			//registerTempFile(new File(localReleaseDir));
+			unzipUtility.unzip(RemoteHandler.RELEASE_FILENAME, ReleaseFiles.Dir.localDirectory);
+			registerTempFile(new File(ReleaseFiles.Dir.localDirectory));
 			return true;
 		} catch (IOException e) {
 			Logger.error("Unable to extract the GH repo file!", e);

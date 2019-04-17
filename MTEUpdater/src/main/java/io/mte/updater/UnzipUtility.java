@@ -79,7 +79,7 @@ public class UnzipUtility {
 				sevenZFile.close();
 			}
 			catch (IOException e) {
-				Logger.print(Logger.Level.ERROR, "Unable to read archive %s!", zipFile.getName());
+				Logger.print(Logger.Level.ERROR, e, "Unable to read archive %s!", zipFile.getName());
 				return false;
 			}
 			return true;
@@ -101,8 +101,7 @@ public class UnzipUtility {
 			}
 		}
 		catch (IOException e) {
-			Logger.error("ZIP file error has occurred, unable to get new zip entry!");
-			e.printStackTrace();
+			Logger.error("ZIP file error has occurred, unable to get new zip entry!", e);
 			closeZipInputStream(zipIn);
 			return false;
 		}
@@ -129,7 +128,7 @@ public class UnzipUtility {
 				entry = zipIn.getNextEntry();
 			}
 			catch (IOException e) {
-				Logger.error("Unable to close or get next zip entry!");
+				Logger.error("Unable to close or get next zip entry!", e);
 				Logger.print("Aborting unzipping operation...");
 				return false;
 			}
@@ -157,7 +156,7 @@ public class UnzipUtility {
 			bos = new BufferedOutputStream(new FileOutputStream(filePath));
 		}
 		catch (java.io.FileNotFoundException e) {
-			Logger.print(Logger.Level.ERROR, "Unable to create new output stream for path %s!", filePath);
+			Logger.print(Logger.Level.ERROR, e, "Unable to create new output stream for path %s!", filePath);
 			return null;
 		}
 		byte[] bytesIn = new byte[BUFFER_SIZE];
@@ -168,7 +167,7 @@ public class UnzipUtility {
 			}
 		}
 		catch (IOException e) {
-			Logger.error("Unable to read or write from zip input stream!");
+			Logger.error("Unable to read or write from zip input stream!", e);
 			closeZipOutputStream(bos);
 			return null;
 		}
@@ -198,7 +197,7 @@ public class UnzipUtility {
 			out = new BufferedOutputStream(new FileOutputStream(filePath));
 		}
 		catch (java.io.FileNotFoundException e) {
-			Logger.print(Logger.Level.ERROR, "Unable to create new output stream for path %s!", filePath);
+			Logger.print(Logger.Level.ERROR, e, "Unable to create new output stream for path %s!", filePath);
 			return null;
 		}
 		try {
@@ -207,7 +206,7 @@ public class UnzipUtility {
 	        out.write(content);
 		}
 		catch (IOException e) {
-			Logger.error("Unable to read or write from zip input stream!");
+			Logger.error("Unable to read or write from zip input stream!", e);
 			closeZipOutputStream(out);
 			return null;
 		}
@@ -227,8 +226,7 @@ public class UnzipUtility {
 			return true;
 		}
 		catch (IOException e) {
-			Logger.error("Unable to close zip output stream!");
-			e.printStackTrace();
+			Logger.error("Unable to close zip output stream!", e);
 			return false;
 		}
 	}
@@ -239,8 +237,7 @@ public class UnzipUtility {
 			return true;
 		}
 		catch (IOException e) {
-			Logger.error("Unable to close zip input stream!");
-			e.printStackTrace();
+			Logger.error("Unable to close zip input stream!", e);
 			return false;
 		}
 	}

@@ -61,8 +61,9 @@ public class FileHandler {
 			filename = this.getName();
 			
 			if (!this.exists()) {
-				Logger.print(Logger.Level.ERROR, "Unable to find %s file!", filename);
-				Main.terminateApplication();
+				Exception e = new java.io.FileNotFoundException();
+				Logger.print(Logger.Level.ERROR, e, "Unable to find %s file!", filename);
+				Main.terminateJavaApplication();
 			}
 
 			String contents = readFile(filename);
@@ -98,7 +99,7 @@ public class FileHandler {
 				releaseVer = 0;
 				commitSHA = null;
 				Logger.print(Logger.Level.ERROR, "Malformed version file %s !", filename);
-				Main.terminateApplication();
+				Main.terminateJavaApplication();
 			}
 		}
 		
@@ -116,7 +117,7 @@ public class FileHandler {
 			
 		    File releaseFile = iter.next();
 		    if (!releaseFile.exists()) {
-		    	Logger.print(Logger.Level.ERROR, "Unable to find release file %s !", releaseFile.getName());
+		    	Logger.print(Logger.Level.ERROR, "Unable to find release file %s!", releaseFile.getName());
 		    	return false;
 		    }
 		    else {
@@ -130,7 +131,7 @@ public class FileHandler {
 					Files.copy(from, to, StandardCopyOption.REPLACE_EXISTING);
 			    	
 				} catch (IOException e) {
-					Logger.print(Logger.Level.ERROR, "Unable to overwrite local release file %s !", to.getFileName().toString());
+					Logger.print(Logger.Level.ERROR, e, "Unable to overwrite local release file %s !", to.getFileName().toString());
 					return false;
 				}
 		    }
@@ -144,8 +145,8 @@ public class FileHandler {
 			// TODO: Remove this from comments
 			//registerTempFile(new File(localReleaseDir));
 			return true;
-		} catch (IOException e1) {
-			Logger.error("Unable to extract the GH repo file!");
+		} catch (IOException e) {
+			Logger.error("Unable to extract the GH repo file!", e);
 			return false;
 		}
 	}
@@ -176,8 +177,7 @@ public class FileHandler {
 				}
 			}
 		} catch (SecurityException e) {
-			Logger.print(Logger.Level.ERROR, "Unable to delete temporary file %s !", fileEntryName);
-			e.printStackTrace();
+			Logger.print(Logger.Level.ERROR, e, "Unable to delete temporary file %s !", fileEntryName);
 		}
 	}
 
@@ -201,7 +201,7 @@ public class FileHandler {
 	 * @param file
 	 * @throws IOException
 	 */
-	void downloadUsingStream(URL url, String file) throws IOException {
+	boolean downloadUsingStream(URL url, String file) throws IOException {
 		
 		Logger.print(Logger.Level.DEBUG, "Downloading file %s from %s", file, url.toString());
 		BufferedInputStream bis = new BufferedInputStream(url.openStream());
@@ -211,15 +211,16 @@ public class FileHandler {
 		while ((count = bis.read(buffer, 0, 1024)) != -1) {
 			fis.write(buffer, 0, count);
 		}
+		
 		fis.close();
 		bis.close();
 		
 		File dlFile = new File(file);
-		if (!dlFile.exists())
 		if (!dlFile.exists()) {
 			Logger.print(Logger.Level.ERROR, "Unable to find downloaded file %s", dlFile.getName());
-			throw new java.io.FileNotFoundException();
+			return false;
 		}
+		return true;
 	}
 
 	/**
@@ -235,8 +236,7 @@ public class FileHandler {
 		try (FileInputStream inputStream = new FileInputStream(filename)) {
 			return IOUtils.toString(inputStream, "UTF-8");
 		} catch (IOException e) {
-			Logger.print(Logger.Level.ERROR, "Unable to read file %s", filename);
-			e.printStackTrace();
+			Logger.print(Logger.Level.ERROR, e, "Unable to read file %s", filename);
 			return null;
 		}
 	}

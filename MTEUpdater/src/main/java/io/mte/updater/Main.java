@@ -20,8 +20,8 @@ public class Main {
 	
 	public static void main(String[] args) 
 	{
+		// Initialize logger first so we can output logs
 		Logger.init(args);
-		Logger.test();
 		runUpdater();
 		fileHandler.updaterCleanup();
 	}
@@ -104,9 +104,21 @@ public class Main {
 			Logger.print("\nYour version of the guide is up-to-date!");
 	}
 	
-	public static void terminateApplication() {
+	public static void closeJavaApplication() {
+		
+		Logger.verbose("Closing updater application...");
+		
+		fileHandler.updaterCleanup();
+		Logger.closeLogFile();
+		System.exit(0);
+	}
+	
+	public static void terminateJavaApplication() {
 		
 		Logger.print("Terminating updater application...");
+		
+		fileHandler.updaterCleanup();
+		Logger.closeLogFile();
 	    System.exit(1);
 	}
 }

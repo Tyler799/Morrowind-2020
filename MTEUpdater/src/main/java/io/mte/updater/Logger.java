@@ -1,7 +1,14 @@
 package io.mte.updater;
 
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.io.PrintWriter;
+
 public class Logger {
 
+	private static final String LOG_FILENAME = "MTE-Updater.log";
+	private static PrintWriter logFile;
+	
 	/**
 	 * <p>
 	 * The following logger levels regulate what kind of 
@@ -24,6 +31,7 @@ public class Logger {
 	 * <li>Run with JVM argument: <i>-d, -debug</i></li>
 	 * </ul>
 	 */
+	// TODO Add new level type that prints stackTrace directly in console
 	public enum Level {
 		
 		LOG(Short.parseShort("0"), "", ""),
@@ -72,20 +80,30 @@ public class Logger {
 	private final Level LOGGER_LEVEL;
 	private static Logger logger;
 	
-	private Logger(String[] args) {
+	private Logger(String[] args) throws FileNotFoundException {
 		LOGGER_LEVEL = Level.getLoggerLevel(args);
+		logFile = new PrintWriter(LOG_FILENAME);
 	}
 	/**
-	 * Call only once from the main method to create a new instance of the logger
+	 * Call only once from the main method to create a new logger instance
 	 * @param args List of JVM arguments to search for a logger level argument
 	 */
 	public static void init(String[] args) {
-		if (logger == null) {
+		
+		if (logger != null)
+			warning("Trying to initialize logger more then once");
+		
+		try {
+			java.io.File log = new java.io.File(LOG_FILENAME);
+			log.createNewFile();
+			
 			Logger.logger = new Logger(args);
 			verbose("Logger initialized with level " + logger.getLevel());
+		} 
+		catch (IOException e) {
+			Logger.print(Level.ERROR, "Unable to create log or access log file %s", LOG_FILENAME);
+			e.printStackTrace();
 		}
-		else
-			warning("Trying to initialize logger more then once");
 	}
 	
 	/* Getter function to retrieve logger level value */
@@ -130,15 +148,35 @@ public class Logger {
 				objects[objects.length - 1] += "'";
 				
 				System.out.printf(lvl.tag + format + "\n", objects);
+				logFile.printf(lvl.tag + format + "\n", objects);
+				
+				if (lvl == Level.ERROR)
+					new Exception().printStackTrace(logFile);
 			}
 			else {
 				System.out.printf((String)(lvl.tag + format + "\n"), (String)("'" + items[0] + "'"));
+				logFile.printf((String)(lvl.tag + format + "\n"), (String)("'" + items[0] + "'"));
 			}
 		}
 	}
+	/**
+	 *  <p>
+	 *  Employ {@code printf} method to output log when you have string 
+	 *  items you want wrapped in single<br> quotation marks
+	 *  Use this overload method when you want to print stack trace to logfile.
+	 *	</p>
+	 *	See the {@link Logger#print(Level, String, String...) overloaded method} for additional information
+	 *	<p>
+	 */
+	public static void print(Level lvl, Exception e, String format, String...items) {
+		print(lvl, format, items);
+		e.printStackTrace(logFile);
+	}
 	
 	public static void print(String msg) {
-		System.out.println(msg + "");
+		System.out.println(msg);
+		logFile.println(msg);
+		logFile.flush();
 	}
 	
 	public static void error(String msg) {
@@ -148,7 +186,13 @@ public class Logger {
 		 * 
 		 * if (canPrintLog(Level.ERROR))
 		 */
-			print(Level.ERROR.tag + msg);
+		print(Level.ERROR.tag + msg);
+		new Exception().printStackTrace(logFile);
+	}
+	public static void error(String msg, Exception e) {
+		
+		print(Level.ERROR.tag + msg);
+		e.printStackTrace(logFile);
 	}
 	
 	public static void verbose(String msg) {
@@ -164,6 +208,10 @@ public class Logger {
 	public static void debug(String msg) {
 		if (canPrintLog(Level.DEBUG))
 			print(Level.DEBUG.tag + msg);
+	}
+	
+	public static void closeLogFile() {
+		logFile.close();
 	}
 	
 	public static void test() {

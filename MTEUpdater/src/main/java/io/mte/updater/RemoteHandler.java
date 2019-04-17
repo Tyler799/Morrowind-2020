@@ -45,7 +45,7 @@ public class RemoteHandler {
 			try {
 				return new URL(url);
 			} catch (MalformedURLException e) {
-				Logger.print(Logger.Level.ERROR, "%s is not a valid URL format", url.toString());
+				Logger.print(Logger.Level.ERROR, e, "%s is not a valid URL format", url.toString());
 				return null;
 			}
 		}
@@ -70,7 +70,7 @@ public class RemoteHandler {
 		try {
 			return new java.net.URI(compareUrl.toString());
 		} catch (URISyntaxException e) {
-			Logger.error("URL string violates RFC 2396!");
+			Logger.error("URL string violates RFC 2396!", e);
 			e.printStackTrace();
 			return null;
 		}
@@ -95,10 +95,9 @@ public class RemoteHandler {
 			}
 		} catch (Exception e) {
 			if (e instanceof IOException)
-				Logger.error("Unable to open web browser, default browser is not found or it failed to launch");
+				Logger.error("Unable to open web browser, default browser is not found or it failed to launch", e);
 			else if (e instanceof SecurityException)
-				Logger.error("Security manager denied permission or the calling thread is not allowed "
-						+ "to create a subprocess; and not invoked from within an applet or Java Web Started application");
+				Logger.error("Unable to open web browser, security manager denied permission", e);
 			return false;
 		}
 	}
@@ -106,10 +105,10 @@ public class RemoteHandler {
 	static boolean downloadRemoteVersionFile(FileHandler handler) {
 		
 		try {
-			handler.downloadUsingStream(Link.versionFile, VERSION_FILENAME + ".remote");
-			return true;
-		} catch (IOException e) {
-			Logger.error("Unable to download guide version file!");
+			return handler.downloadUsingStream(Link.versionFile, VERSION_FILENAME + ".remote");
+		} 
+		catch (IOException e) {
+			Logger.error("Unable to download project version file!", e);
 			return false;
 		}
 	}
@@ -118,15 +117,12 @@ public class RemoteHandler {
 
 		try {
 			URL releaseLink = Link.constructURL(Link.repository, Link.releasePath, "v" + handler.remote.getReleaseVersion(), RELEASE_FILENAME);
-			handler.downloadUsingStream(releaseLink, RELEASE_FILENAME);
-			handler.registerTempFile(new File(RELEASE_FILENAME));
-			return true;
-		} catch (IOException e) {
-			if (e instanceof java.io.FileNotFoundException)
-				Logger.error("Unable to locate download files!");
-			else
-				Logger.error("Unable to download repo files!");
-			
+			return handler.downloadUsingStream(releaseLink, RELEASE_FILENAME);
+			// TODO: Remove this from comments
+			//handler.registerTempFile(new File(RELEASE_FILENAME));
+		} 
+		catch (IOException e) {
+			Logger.error("Unable to download repository files!", e);
 			return false;
 		}
 	}

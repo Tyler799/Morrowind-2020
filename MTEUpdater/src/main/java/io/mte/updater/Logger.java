@@ -1,14 +1,11 @@
 package io.mte.updater;
 
+import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.PrintWriter;
 
 public class Logger {
-
-	private static final String LOG_FILENAME = "MTE-Updater.log";
-	private static PrintWriter logFile;
-	
 	/**
 	 * <p>
 	 * The following logger levels regulate what kind of 
@@ -77,12 +74,57 @@ public class Logger {
 		}
 		
 	}
+	
+	public static class LogFile {
+		
+		private static final String NAME = "MTE-Updater.log";
+		
+		private static LogFile instance;
+		private static PrintWriter writer;
+		private static File file;
+		
+		LogFile() {
+			try {
+				file = new File(NAME);
+				file.createNewFile();
+				writer  = new PrintWriter(NAME);
+			}
+			catch (IOException e) {
+				Logger.print(Level.ERROR, e, "Unable to create log or access log file %s", NAME);
+			}
+		}
+		/**
+		 *  Purge the log file and create a new instance
+		 */
+		private static void init() {
+			if (instance == null)
+				instance = new LogFile();
+			else 
+				warning("Trying to initialize LogFile more then once");
+		}
+		private static PrintWriter get() {
+			return writer;
+		}
+		public static void close() {
+			writer.close();
+		}
+		private static void clear() {
+			try {
+				writer  = new PrintWriter(NAME);
+				writer.close();
+			} 
+			catch (FileNotFoundException e) {
+				error("Unable to close log file, missing in action", e);
+			}
+		}
+	}
+	
 	private final Level LOGGER_LEVEL;
 	private static Logger logger;
 	
-	private Logger(String[] args) throws FileNotFoundException {
+	private Logger(String[] args) {
 		LOGGER_LEVEL = Level.getLoggerLevel(args);
-		logFile = new PrintWriter(LOG_FILENAME);
+		LogFile.init();
 	}
 	/**
 	 * Call only once from the main method to create a new logger instance
@@ -92,18 +134,9 @@ public class Logger {
 		
 		if (logger != null)
 			warning("Trying to initialize logger more then once");
-		
-		try {
-			java.io.File log = new java.io.File(LOG_FILENAME);
-			log.createNewFile();
-			
-			Logger.logger = new Logger(args);
-			verbose("Logger initialized with level " + logger.getLevel());
-		} 
-		catch (IOException e) {
-			Logger.print(Level.ERROR, "Unable to create log or access log file %s", LOG_FILENAME);
-			e.printStackTrace();
-		}
+					
+		Logger.logger = new Logger(args);
+		verbose("Logger initialized with level " + logger.getLevel());
 	}
 	
 	/* Getter function to retrieve logger level value */
@@ -148,14 +181,14 @@ public class Logger {
 				objects[objects.length - 1] += "'";
 				
 				System.out.printf(lvl.tag + format + "\n", objects);
-				logFile.printf(lvl.tag + format + "\n", objects);
+				LogFile.get().printf(lvl.tag + format + "\n", objects);
 				
 				if (lvl == Level.ERROR)
-					new Exception().printStackTrace(logFile);
+					new Exception().printStackTrace(LogFile.get());
 			}
 			else {
 				System.out.printf((String)(lvl.tag + format + "\n"), (String)("'" + items[0] + "'"));
-				logFile.printf((String)(lvl.tag + format + "\n"), (String)("'" + items[0] + "'"));
+				LogFile.get().printf((String)(lvl.tag + format + "\n"), (String)("'" + items[0] + "'"));
 			}
 		}
 	}
@@ -170,13 +203,13 @@ public class Logger {
 	 */
 	public static void print(Level lvl, Exception e, String format, String...items) {
 		print(lvl, format, items);
-		e.printStackTrace(logFile);
+		e.printStackTrace(LogFile.get());
 	}
 	
 	public static void print(String msg) {
 		System.out.println(msg);
-		logFile.println(msg);
-		logFile.flush();
+		LogFile.get().println(msg);
+		LogFile.get().flush();
 	}
 	
 	public static void error(String msg) {
@@ -187,12 +220,12 @@ public class Logger {
 		 * if (canPrintLog(Level.ERROR))
 		 */
 		print(Level.ERROR.tag + msg);
-		new Exception().printStackTrace(logFile);
+		new Exception().printStackTrace(LogFile.get());
 	}
 	public static void error(String msg, Exception e) {
 		
 		print(Level.ERROR.tag + msg);
-		e.printStackTrace(logFile);
+		e.printStackTrace(LogFile.get());
 	}
 	
 	public static void verbose(String msg) {
@@ -208,10 +241,6 @@ public class Logger {
 	public static void debug(String msg) {
 		if (canPrintLog(Level.DEBUG))
 			print(Level.DEBUG.tag + msg);
-	}
-	
-	public static void closeLogFile() {
-		logFile.close();
 	}
 	
 	public static void test() {

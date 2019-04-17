@@ -109,7 +109,7 @@ public class Main {
 		Logger.verbose("Closing updater application...");
 		
 		fileHandler.updaterCleanup();
-		Logger.closeLogFile();
+		Logger.LogFile.close();
 		System.exit(0);
 	}
 	
@@ -118,7 +118,7 @@ public class Main {
 		Logger.print("Terminating updater application...");
 		
 		fileHandler.updaterCleanup();
-		Logger.closeLogFile();
+		Logger.LogFile.close();
 	    System.exit(1);
 	}
 }

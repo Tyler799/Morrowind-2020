@@ -38,14 +38,14 @@ public class Logger {
 		DEBUG(Short.parseShort("2"), "[DEBUG] ", "-d", "-debug");
 		
 		private final short level;
-		private final String[] argument;
+		private final String[] arguments;
 		private final String tag;
 		
 		Level(short lvl, String tag, String...args) {
 			
 			this.tag = tag;
 			level = lvl;
-			argument = args;
+			arguments = args;
 		}
 		
 		public static Level getLoggerLevel(String[] args) {
@@ -61,8 +61,8 @@ public class Logger {
 					 *  Compare current argument supplied with each argument in the
 					 *  current level entry to find a match
 					 */
-					for (int i2 = entry.argument.length - 1; i2 >= 0; i2--) {
-						if (args[i].equals(entry.argument[i2]))
+					for (int i2 = entry.arguments.length - 1; i2 >= 0; i2--) {
+						if (args[i].equals(entry.arguments[i2]))
 							return entry;
 					}
 				}
@@ -72,7 +72,9 @@ public class Logger {
 			  */
 			return LOG;
 		}
-		
+		public String[] getArguments() {
+			return arguments;
+		}
 	}
 	
 	public static class LogFile {
@@ -119,7 +121,7 @@ public class Logger {
 		}
 	}
 	
-	private final Level LOGGER_LEVEL;
+	private static Level LOGGER_LEVEL;
 	private static Logger logger;
 	
 	private Logger(String[] args) {
@@ -136,12 +138,12 @@ public class Logger {
 			warning("Trying to initialize logger more then once");
 					
 		Logger.logger = new Logger(args);
-		verbose("Logger initialized with level " + logger.getLevel());
+		verbose("Logger initialized with level " + Logger.getLevel());
 	}
 	
-	/* Getter function to retrieve logger level value */
-	private short getLevel() {
-		return LOGGER_LEVEL.level;
+	/* Public getter function to retrieve logger level */
+	public static Level getLevel() {
+		return LOGGER_LEVEL;
 	}
 	
 	/**
@@ -155,7 +157,7 @@ public class Logger {
 			return false;
 		}
 		else
-			return lvl.level <= logger.getLevel();
+			return lvl.level <= Logger.getLevel().level;
 	}
 	
 	/**

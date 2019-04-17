@@ -233,9 +233,16 @@ public class Logger {
 			print(Level.VERBOSE.tag + msg);
 	}
 	
-	public static void warning(String msg) {
-		if (canPrintLog(Level.WARNING))
+	public static boolean warning(String msg) {
+		if (canPrintLog(Level.WARNING)) {
 			print(Level.WARNING.tag + msg);
+			return true;
+		}
+		return false;
+	}
+	public static void warning(String msg, Exception e) {
+		if (warning(msg) == true)
+			e.printStackTrace(LogFile.get());
 	}
 	
 	public static void debug(String msg) {

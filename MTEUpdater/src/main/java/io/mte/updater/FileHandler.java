@@ -23,13 +23,13 @@ import org.apache.commons.io.IOUtils;
 import org.apache.commons.lang3.StringUtils;
 
 public class FileHandler {
-	
+
 	public static final UnzipUtility unzipUtility = new UnzipUtility();
 
 	private final List<File> tempFiles;
 	protected final VersionFile local;
 	protected VersionFile remote;
-	
+
 	private static enum ReleaseFiles {
 
 		APPLICATION("MTE-Updater.jar"),
@@ -87,20 +87,20 @@ public class FileHandler {
 		tempFiles = new ArrayList<File>();
 		local = new VersionFile(RemoteHandler.VERSION_FILENAME);
 	}
-	
+
 	public class VersionFile extends File {
 
 		private static final long serialVersionUID = 1L;
-		
+
 		public final String filename;
 		private final float releaseVer;
 		private final String commitSHA;
 
 		public VersionFile(String pathname) {
-			
+
 			super(pathname);
 			filename = this.getName();
-			
+
 			if (!this.exists()) {
 				Exception e = new java.io.FileNotFoundException();
 				Logger.print(Logger.Level.ERROR, e, "Unable to find %s file!", filename);
@@ -114,18 +114,18 @@ public class FileHandler {
 			// first one being the release version and second the last release commit SHA
 			boolean validVersionFile = false;
 			String versionNumber = "";
-			
-			if (versionLine.length == 2)  
+
+			if (versionLine.length == 2)
 			{
 				versionNumber = versionLine[0].toString();
 				int vnLength = versionNumber.length();
 				int vnDecimal = versionNumber.indexOf(".");
-			
+
 				// Version must be formatted properly
-				if (vnLength > 1 && vnDecimal > 0 && vnDecimal <= (vnLength -2)) 
+				if (vnLength > 1 && vnDecimal > 0 && vnDecimal <= (vnLength -2))
 				{
 					versionNumber = versionNumber.replace(".", "");
-			
+
 					if (Pattern.matches("[a-z0-9]+", versionLine[1]) && StringUtils.isNumeric(versionNumber)) {
 						validVersionFile = true;
 					}
@@ -143,7 +143,7 @@ public class FileHandler {
 				Main.terminateJavaApplication();
 			}
 		}
-		
+
 		public String getReleaseVersion() {
 			return Float.toString(releaseVer);
 		}
@@ -207,9 +207,9 @@ public class FileHandler {
 			}
 		}
 	}
-	
+
 	boolean extractReleaseFiles() {
-		
+
 		try {
 			unzipUtility.unzip(RemoteHandler.RELEASE_FILENAME, ReleaseFiles.Dir.localDirectory);
 			registerTempFile(new File(ReleaseFiles.Dir.localDirectory));
@@ -219,8 +219,8 @@ public class FileHandler {
 			return false;
 		}
 	}
-	
-	/** 
+
+	/**
 	 * Create a version file instance and register as a temporary file
 	 */
 	void registerRemoteVersionFile() {
@@ -228,7 +228,7 @@ public class FileHandler {
 		remote = new VersionFile(RemoteHandler.VERSION_FILENAME + ".remote");
 		registerTempFile(remote);
 	}
-	
+
 	/**
 	 * Clean up all temporary files created in the update process
 	 */
@@ -255,12 +255,12 @@ public class FileHandler {
 	 * @param tmpFile
 	 */
 	void registerTempFile(File tmpFile) {
-		
+
 		if (tmpFile.exists())
 			tempFiles.add(tmpFile);
 		else Logger.warning("Trying to register a non-existing temporary file");
 	}
-	
+
 	/**
 	 * Here we are using URL openStream method to create the input stream. Then we
 	 * are using a file output stream to read data from the input stream and write
@@ -271,7 +271,7 @@ public class FileHandler {
 	 * @throws IOException
 	 */
 	boolean downloadUsingStream(URL url, String file) throws IOException {
-		
+
 		Logger.print(Logger.Level.DEBUG, "Downloading file %s from %s", file, url.toString());
 		BufferedInputStream bis = new BufferedInputStream(url.openStream());
 		FileOutputStream fis = new FileOutputStream(file);
@@ -280,10 +280,10 @@ public class FileHandler {
 		while ((count = bis.read(buffer, 0, 1024)) != -1) {
 			fis.write(buffer, 0, count);
 		}
-		
+
 		fis.close();
 		bis.close();
-		
+
 		File dlFile = new File(file);
 		if (!dlFile.exists()) {
 			Logger.print(Logger.Level.ERROR, "Unable to find downloaded file %s", dlFile.getName());
@@ -295,8 +295,7 @@ public class FileHandler {
 	/**
 	 * Read from a text file and return the compiled string
 	 *
-	 * @param filename
-	 *            Name of the file to read from the root directory
+	 * @param filename Name of the file to read from the root directory
 	 * @return Content of the text file
 	 */
 	String readFile(String filename) {

@@ -6,10 +6,8 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.lang.management.ManagementFactory;
 import java.net.URI;
-import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
-import java.nio.file.StandardCopyOption;
 import java.util.Scanner;
 
 public class Main {
@@ -124,7 +122,7 @@ public class Main {
 					Logger.print("Extracting release files...");
 					if (!fileHandler.extractReleaseFiles())
 						return;
-
+					
 					// Move files from the target directory
 					Logger.print("Updating local MTE files...");
 					fileHandler.updateLocalFiles();

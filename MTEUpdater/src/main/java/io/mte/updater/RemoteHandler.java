@@ -1,7 +1,6 @@
 package io.mte.updater;
 
 import java.awt.Desktop;
-import java.io.File;
 import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URI;
@@ -87,7 +86,7 @@ public class RemoteHandler {
 		try {
 			java.awt.Desktop.getDesktop();
 			if (Desktop.isDesktopSupported()) {
-				//java.awt.Desktop.getDesktop().browse(url);
+				java.awt.Desktop.getDesktop().browse(url);
 				return true;
 			} else {
 				Logger.error("Desktop class is not suppored on this platform");

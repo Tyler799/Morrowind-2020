@@ -14,9 +14,6 @@ set APP_BASE_NAME=%~n0
 set APP_HOME=%DIRNAME%..
 set JAVA_VERSION=18
 
-@rem Add default JVM options here. You can also use JAVA_OPTS and MTE_UPDATER_OPTS to pass JVM options to this script.
-set DEFAULT_JVM_OPTS=
-
 @rem Find java.exe
 if defined JAVA_HOME goto findJavaFromJavaHome
 
@@ -95,13 +92,12 @@ if exist MWSE-Update.exe (
 	start /wait MWSE-Update.exe
 )
 :runapp
-@rem Setup the command line
-set CLASSPATH=MTE-Updater.jar
+@rem Add default JVM options here. You can also use JAVA_OPTS and MTE_UPDATER_OPTS to pass JVM options to this script.
+set APPPATH=MTE-Updater.jar
+set "MTE_UPDATER_OPTS=-Dprogram.name=%APPPATH%"
 
 @rem Execute MTEUpdater
-"%JAVA_EXE%" %DEFAULT_JVM_OPTS% %JAVA_OPTS% %MTE_UPDATER_OPTS%  -jar "%CLASSPATH%" %CMD_LINE_ARGS%
-
-Pause
+"%JAVA_EXE%" %DEFAULT_JVM_OPTS% %JAVA_OPTS% %MTE_UPDATER_OPTS% -jar "%APPPATH%" --launcher %CMD_LINE_ARGS%
 
 :end
 @rem End local scope for the variables with windows NT shell

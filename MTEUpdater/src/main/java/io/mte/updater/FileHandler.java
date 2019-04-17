@@ -216,8 +216,10 @@ public class FileHandler {
 		
 		File dlFile = new File(file);
 		if (!dlFile.exists())
+		if (!dlFile.exists()) {
 			Logger.print(Logger.Level.ERROR, "Unable to find downloaded file %s", dlFile.getName());
 			throw new java.io.FileNotFoundException();
+		}
 	}
 
 	/**

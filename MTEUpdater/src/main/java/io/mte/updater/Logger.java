@@ -142,7 +142,12 @@ public class Logger {
 	}
 	
 	public static void error(String msg) {
-		if (canPrintLog(Level.ERROR))
+		/*
+		 * Don't ask for permission here because there are situations where
+		 * a method might request error logging before the logger has initialized
+		 * 
+		 * if (canPrintLog(Level.ERROR))
+		 */
 			print(Level.ERROR.tag + msg);
 	}
 	

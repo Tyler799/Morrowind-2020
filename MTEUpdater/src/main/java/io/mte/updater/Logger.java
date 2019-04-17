@@ -132,7 +132,7 @@ public class Logger {
 				System.out.printf(lvl.tag + format + "\n", objects);
 			}
 			else {
-				System.out.printf(lvl.tag + format + "\n", "'" + items + "'");
+				System.out.printf((String)(lvl.tag + format + "\n"), (String)("'" + items[0] + "'"));
 			}
 		}
 	}

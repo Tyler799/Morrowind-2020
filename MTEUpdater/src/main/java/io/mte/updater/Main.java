@@ -152,8 +152,12 @@ public class Main {
 		if (!Logger.isDebug()) {
 			Logger.print("Attempting to update MWSE build...");
 			File mwse = new File("MWSE-Update.exe");
-			if (mwse != null && mwse.exists())
-				Execute.start(mwse.getName(), true);
+			
+			if (mwse != null && mwse.exists()) {
+				Process proc = Execute.start(mwse.getName(), true, true);
+				if (proc == null || proc.exitValue() != 0)
+					Logger.warning("Unable to update, check logfile for more details");
+			}
 			else
 				Logger.verbose("Unable to find mwse updater, skipping...");
 		}

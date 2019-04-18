@@ -2,6 +2,9 @@ package io.mte.updater;
 
 import java.io.IOException;
 import java.lang.management.ManagementFactory;
+import java.nio.charset.Charset;
+
+import org.apache.commons.io.IOUtils;
 
 public class Execute {
 
@@ -88,16 +91,23 @@ public class Execute {
 	 * <i>Note that if you start a console application this way it will run hidden</i>
 	 * 
 	 * @param process path to the application or script we want to start
-	 * @param wait should we pause the current thread and wait for the new process to terminate?
+	 * @param wait pause current thread and wait for process to terminate
+	 * @param log redirect process input stream to our logfile
 	 * @return instance of the process started or {@code null} if an error occurred
 	 */
-	public static Process start(String process, boolean wait) {
+	public static Process start(String process, boolean wait, boolean log) {
 		
 		Logger.print(Logger.Level.DEBUG, "Starting new process %s" + 
 				((wait) ? " and waiting for it to terminate" : ""), process);
 		try {
-			Process proc = new ProcessBuilder(process).start();
+			ProcessBuilder builder = new ProcessBuilder(process);
+			Process proc = builder.start();
 			if (wait == true) proc.waitFor();
+			
+			if (log == true) {
+				Charset charset = Charset.defaultCharset();
+				Logger.LogFile.print(IOUtils.toString(proc.getInputStream(), charset));
+			}
 			return proc;
 		} 
 		catch (IOException | InterruptedException e) {

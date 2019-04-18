@@ -120,11 +120,14 @@ public class Logger {
 				error("Unable to close log file, missing in action", e);
 			}
 		}*/
-		private static void print(String log, Level lvl) {
+		public static void print(String log, Level lvl) {
 			writer.println(lvl.getLogTag() + " " + log.replace("\n", ""));
 			writer.flush();
 		}
-		private static void print(Exception e) {
+		public static void print(String log) {
+			print(log, Logger.Level.LOG);
+		}
+		public static void print(Exception e) {
 			if (e != null) e.printStackTrace(writer);
 		}
 	}

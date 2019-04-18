@@ -28,7 +28,7 @@ public class FileHandler {
 
 	public static final UnzipUtility unzipUtility = new UnzipUtility();
 
-	private final List<File> tempFiles;
+	private static List<File> tempFiles;
 	protected final VersionFile local;
 	protected VersionFile remote;
 
@@ -290,20 +290,29 @@ public class FileHandler {
 	/**
 	 * Clean up all temporary files created in the update process
 	 */
-	void updaterCleanup() {
-
-		// Delete the temporary version file we created
+	static void updaterCleanup() {
+		
+		Logger.verbose("Recycling residual temporary files");
 		String fileEntryName = "unknown";
 		try {
 			ListIterator<File> tempFileItr = tempFiles.listIterator();
 			while (tempFileItr.hasNext()) {
-				// Make sure the file exists before we attempt to delete it
+				
 				File fileEntry = tempFileItr.next();
+				fileEntryName = fileEntry.getName();
+				Logger.print(Logger.Level.DEBUG, "Recycling entry: %s", fileEntryName);
+				/*
+				 *  Make sure the file exists before we attempt to delete it
+				 *  If it's a directory use AC-IO to delete the directory recursively
+				 */
 				if (fileEntry.exists()) {
-					fileEntry.delete();
+					if (fileEntry.isDirectory())
+						FileUtils.deleteDirectory(fileEntry);
+					else
+						fileEntry.delete();
 				}
 			}
-		} catch (SecurityException e) {
+		} catch (SecurityException | IOException e) {
 			Logger.print(Logger.Level.ERROR, e, "Unable to delete temporary file %s !", fileEntryName);
 		}
 	}
@@ -314,9 +323,13 @@ public class FileHandler {
 	 */
 	void registerTempFile(File tmpFile) {
 
-		if (tmpFile.exists())
+		if (tmpFile.exists()) {
+			Logger.print(Logger.Level.DEBUG, "Registering temporary file %s", tmpFile.getName());
 			tempFiles.add(tmpFile);
-		else Logger.warning("Trying to register a non-existing temporary file");
+		}
+		else 
+			Logger.print(Logger.Level.WARNING, "Trying to register a non-existing "
+					+ "temporary file %s", tmpFile.getName());
 	}
 
 	/**

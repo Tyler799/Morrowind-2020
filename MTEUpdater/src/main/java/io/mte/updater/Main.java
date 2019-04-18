@@ -11,6 +11,9 @@ public class Main {
 	public static final Path appPath = Paths.get(root + File.separator + System.getProperty("program.name"));
 	public static final short processId = Execute.getProcessId();
 	
+	// TODO: Document this variable
+	public static String runMode;
+	
 	// Use this class instance to handle all file related stuff
 	public static final FileHandler fileHandler = new FileHandler();
 	
@@ -34,10 +37,18 @@ public class Main {
 		Logger.print(Logger.Level.DEBUG, "Started application with %s arguments", String.join(" ", args));
 		//for (int i = args.length - 1; i >= 0; i--) {}
 		
-		if (args[0].equals("--launcher")) {
+		// The first argument should always be a run mode definition
+		runMode = args[0];
+		
+		if (runMode == null || runMode.isEmpty()) {
+			Exception e = new IllegalArgumentException();
+			Logger.error("Application run mode has not been defined", e);
+			Execute.exit(1, false);
+		}
+		else if (isLauncher()) {
 			FileHandler.launchApplication();
 		}
-		else if (args[0].equals("--self-update")) {
+		else if (isSelfUpdating()) {
 			/*
 			 *  We expect to find the process id of the main Java 
 			 *  application in the following argument
@@ -56,6 +67,11 @@ public class Main {
 				Logger.error("Expected PID passed as JVM argument...");
 				Execute.exit(1, false);
 			}
+		}
+		else {
+			Exception e = new IllegalArgumentException();
+			Logger.error("Unknown application run mode definition", e);
+			Execute.exit(1, false);
 		}
 	}
 	
@@ -131,5 +147,17 @@ public class Main {
 			else
 				Logger.verbose("Unable to find mwse updater, skipping...");
 		}
+	}
+	
+	// TODO: Move these values into an enum
+	
+	/** 
+	 * Did the JVM run as a launcher? 
+	 */
+	public static boolean isLauncher() {
+		return runMode.equals("--launcher");
+	}
+	public static boolean isSelfUpdating() {
+		return runMode.equals("--self-update");
 	}
 }

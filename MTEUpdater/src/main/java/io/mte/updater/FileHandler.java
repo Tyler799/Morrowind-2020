@@ -316,8 +316,22 @@ public class FileHandler {
 			Logger.print(Logger.Level.ERROR, e, "Unable to delete temporary file %s !", fileEntryName);
 		}
 		/*
-		 *  Time to delete ourselves
+		 *  Time to delete the temporary updater jar file
+		 *  Do this only if we are in the appropriate run mode
 		 */
+		if (Main.isSelfUpdating())
+			updateSelf();
+	}
+	
+	/**
+	 *  Run the final stage of the updater process.
+	 *  The application will create an un-installer batch script and then run it.<br>
+	 *  The script will delete the jvm application file as well as itself.
+	 *  If we ran the {@link #updaterCleanup()} method before, this should leave 
+	 *  our root folder completely clean of all temporary files.
+	 */
+	private static void updateSelf() {
+		
 		File uninstaller = new File("MTE-Updater-uninstall.bat");
 		try {
 			uninstaller.createNewFile();

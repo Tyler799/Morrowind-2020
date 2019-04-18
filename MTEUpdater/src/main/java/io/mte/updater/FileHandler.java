@@ -339,22 +339,24 @@ public class FileHandler {
 			Logger.error("Unable to create uninstaller file", e);
 			Execute.exit(1, false);
 		}
-		String appName = System.getProperty("program.name");
 		String[] batchLines = 
 		{
 				"@echo off",
-				"echo Running uninstaller script >> " + Logger.LogFile.NAME,
-				":start",
-				"tasklist /FI \"IMAGENAME eq " + appName + "\" 2>NUL | find /I /N \"" + appName + "\">NUL",
-				"if \"%ERRORLEVEL%\"==\"0\" goto start",
-				"if exist " + appName + " (",
-				"echo Recycling temporary application file >> " + Logger.LogFile.NAME + "",
-				"del " + appName + "",
-				") else ( echo [ERROR] Unable to delete application file '" + appName + "' )",
+				"set \"process=" + System.getProperty("program.name") + "\"",
+				"set \"logfile=" + Logger.LogFile.NAME + "\"",
+				"echo Running uninstaller script >> %logfile%",
+				":uninstall",
+				"timeout /t 1 /nobreak > nul",
+				"2>nul ren %process% %process% && goto next || goto uninstall",
+				":next",
+				"if exist %process% (",
+				"	echo Recycling temporary application file >> %logfile%",
+				"	del %process%",
+				") else ( echo [ERROR] Unable to delete application file %process% >> %logfile% )",
 				"if exist %~n0%~x0 (",
-				"echo Recycling uninstaller script >> " + Logger.LogFile.NAME + "",
-				"del %~n0%~x0",
-				") else ( echo [ERROR] Unable to delete uninstaller script ''%~n0%~x0'' >> " + Logger.LogFile.NAME + " )"
+				"	echo Recycling uninstaller script >> %logfile%",
+				"	del %~n0%~x0",
+				") else ( echo [ERROR] Unable to delete uninstaller script %~n0%~x0 >> %logfile% )"
 		};
 		
 		try (PrintWriter writer = new PrintWriter(uninstaller.getName())) {

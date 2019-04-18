@@ -62,14 +62,17 @@ public class Execute {
 	/**
 	 * Use {@code ProcessBuilder} to start a new application or script process. 
 	 * @param process path to the application or script we want to start
+	 * @param wait should we pause the current thread and wait for the new process to terminate?
 	 * @return instance of the process started or {@code null} if an error occurred
 	 */
-	public static Process start(String process) {
+	public static Process start(String process, boolean wait) {
 		
 		try {
-			return new ProcessBuilder(process).start();
+			Process proc = new ProcessBuilder(process).start();
+			if (wait == true) proc.waitFor();
+			return proc;
 		} 
-		catch (IOException e) {
+		catch (IOException | InterruptedException e) {
 			Logger.print(Logger.Level.ERROR, e, "Unable to start new process %s", process);
 			return null;
 		}

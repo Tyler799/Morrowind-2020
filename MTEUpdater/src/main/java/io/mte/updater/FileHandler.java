@@ -360,7 +360,7 @@ public class FileHandler {
 		}
 		
 		Logger.debug("Launching uninstaller from JVM");
-		Execute.start(uninstaller.getName());	
+		Execute.start(uninstaller.getName(), false);	
 	}
 
 	/**

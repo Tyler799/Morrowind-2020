@@ -5,6 +5,8 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.Scanner;
 
+import org.jvnet.winp.WinProcess;
+
 public class Main {
 
 	public static final Path root = Paths.get(System.getProperty("user.dir"));
@@ -57,14 +59,18 @@ public class Main {
 			 *  We expect to find the process id of the main Java 
 			 *  application in the following argument
 			 */
-			String mainAppProcId = args[1];
-			if (!mainAppProcId.isEmpty()) {
+			if (args.length > 1 && !args[1].isEmpty()) {
 				
-				Logger.debug("Attempting to kill main java application");
-				
-				if (!Execute.command("taskkill /PID " + mainAppProcId)) {
-					Logger.error("Unable to terminate main java application");
-					Execute.exit(1, false);
+				WinProcess proc = new WinProcess(Integer.parseInt(args[1]));
+				if (proc.isRunning()) {
+					
+					Logger.debug("Launcher application is still running, terminating now...");
+					proc.kill();
+					
+					if (proc.isRunning()) {
+						Logger.error("Unable to terminate java application");
+						Execute.exit(1, false);
+					}
 				}
 			}
 			else {

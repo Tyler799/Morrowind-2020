@@ -37,6 +37,10 @@ dependencies {
 	
 	// https://mvnrepository.com/artifact/org.tukaani/xz
 	compile group: 'org.tukaani', name: 'xz', version: '1.8'
+	
+	// https://mvnrepository.com/artifact/org.jvnet.winp/winp
+	compile group: 'org.jvnet.winp', name: 'winp', version: '1.28'
+	
 
     // Use JUnit test framework
     testImplementation 'junit:junit:4.12'

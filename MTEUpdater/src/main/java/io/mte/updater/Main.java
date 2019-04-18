@@ -24,7 +24,7 @@ public class Main {
 		if (args != null && args.length > 0)
 			processJVMArguments(args);
 		
-		runUpdater();
+		runMTEUpdater();
 		Execute.pause();
 		Execute.exit(0, true);
 	}
@@ -59,9 +59,9 @@ public class Main {
 		}
 	}
 	
-	private static void runUpdater() {
+	private static void runMTEUpdater() {
 		
-		Logger.verbose("Start updating...");
+		Logger.verbose("Start updating mte...");
 		
 		Logger.print("\nDownloading mte version file...");
 		if (!RemoteHandler.downloadRemoteVersionFile(fileHandler))

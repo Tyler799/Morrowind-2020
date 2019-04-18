@@ -19,16 +19,21 @@ public class Main {
 	
 	public static void main(String[] args) 
 	{
-		// Initialize logger first so we can output logs
-		Logger.init(args);
-		
-		if (args != null && args.length > 0)
-			processJVMArguments(args);
-		
-		updateMWSE();
-		runMTEUpdater();
-		
-		Execute.exit(0, true);
+		try {
+			// Initialize logger first so we can output logs
+			Logger.init(args, false);
+			
+			if (args != null && args.length > 0)
+				processJVMArguments(args);
+			
+			updateMWSE();
+			runMTEUpdater();
+			Execute.exit(0, true);
+		}
+		catch(Exception e) {
+			Logger.error("Unhandled exception occured in main method", e);
+			Execute.exit(1, false);
+		}
 	}
 
 	private static void processJVMArguments(String[] args) {

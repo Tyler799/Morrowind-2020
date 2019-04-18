@@ -121,7 +121,7 @@ public class Logger {
 			}
 		}*/
 		private static void print(String log, Level lvl) {
-			writer.println(lvl.getLogTag() + " " + log);
+			writer.println(lvl.getLogTag() + " " + log.replace("\n", ""));
 			writer.flush();
 		}
 		private static void print(Exception e) {

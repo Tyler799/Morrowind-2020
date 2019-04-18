@@ -24,7 +24,9 @@ public class Main {
 		if (args != null && args.length > 0)
 			processJVMArguments(args);
 		
+		updateMWSE();
 		runMTEUpdater();
+		
 		Execute.pause();
 		Execute.exit(0, true);
 	}
@@ -112,5 +114,24 @@ public class Main {
 			}
 		} else
 			Logger.print("\nYour version of the guide is up-to-date!");
+	}
+	
+	/** 
+	 * <p>Run the MWSE auto-updater program</p>
+	 * This is intended to make the users life easier so they only<br>
+	 * have to run one updater that does it all for them 
+	 */
+	private static void updateMWSE() {
+		/*
+		 *  Don't update mwse if we are running in debug mode
+		 */
+		if (!Logger.isDebug()) {
+			Logger.print("Attempting to update MWSE build...");
+			File mwse = new File("MWSE-Update.exe");
+			if (mwse != null && mwse.exists())
+				Execute.start(mwse.getName(), true);
+			else
+				Logger.verbose("Unable to find mwse updater, skipping...");
+		}
 	}
 }

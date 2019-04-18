@@ -146,6 +146,11 @@ public class Logger {
 		return LOGGER_LEVEL;
 	}
 	
+	/** Did the application start in debug mode */
+	public static boolean isDebug() {
+		return LOGGER_LEVEL == Level.DEBUG;
+	}
+	
 	/**
 	 * See if we are allowed to print the log with argument level 
 	 * @param lvl Level of the log we want to print

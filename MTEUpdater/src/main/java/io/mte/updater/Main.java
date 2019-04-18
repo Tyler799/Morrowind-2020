@@ -28,7 +28,6 @@ public class Main {
 		updateMWSE();
 		runMTEUpdater();
 		
-		Execute.pause();
 		Execute.exit(0, true);
 	}
 

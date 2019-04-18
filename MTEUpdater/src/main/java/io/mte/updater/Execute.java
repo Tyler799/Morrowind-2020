@@ -23,11 +23,27 @@ public class Execute {
 		}
 		catch(IOException e) {
 			Logger.error("Something went wrong while reading user input", e);
-			exit(0, true);
+			exit(0, true, false);
 		}
 	}
 	
+	/**
+	 * Terminate the currently running Java Virtual Machine.<br>
+	 * <i>Note that this will prompt the user to continue before closing the java console window</i>
+	 * @param code exit status <i>(nonzero value indicates abnormal termination)</i>
+	 * @param clean clean all temporary files created while updating
+	 */
 	public static void exit(int code, boolean clean) {
+		exit (code, clean, true);
+	}
+	
+	/**
+	 * Terminate the currently running Java Virtual Machine.<br>
+	 * @param code exit status <i>(nonzero value indicates abnormal termination)</i>
+	 * @param clean clean all temporary files created while updating
+	 * @param pause prompt the user to press enter to continue
+	 */
+	public static void exit(int code, boolean clean, boolean pause) {
 		
 		if (code == 0) Logger.verbose("Closing updater application...");
 		else Logger.print("Terminating updater application...");
@@ -36,6 +52,10 @@ public class Execute {
 			FileHandler.updaterCleanup();
 			
 		Logger.LogFile.close();
+		
+		if (pause == true && !Main.isLauncher())
+			Execute.pause();
+		
 		System.exit(code);
 	}
 	

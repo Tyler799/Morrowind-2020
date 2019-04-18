@@ -336,8 +336,6 @@ public class FileHandler {
 		try {
 			uninstaller.createNewFile();
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
 		}
 		String appName = System.getProperty("program.name");
 		String[] batchLines = 

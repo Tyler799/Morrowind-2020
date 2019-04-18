@@ -162,6 +162,6 @@ public class Main {
 		return runMode.equals("--launcher");
 	}
 	public static boolean isSelfUpdating() {
-		return runMode.equals("--self-update");
+		return runMode.equals("--update-self");
 	}
 }

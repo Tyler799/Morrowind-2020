@@ -182,7 +182,7 @@ public class FileHandler {
 			String selfName = selfUpdater.getFileName().toString();
 			
 			Execute.command("java " + "-Dprogram.name=" + selfName + " -jar " + selfName + " " + 
-					Logger.getLevel().getArguments()[0] + " --update-self " + Main.processId);
+					 " --update-self " + Main.processId + " " + Logger.getLevel().getArguments()[0]);
 
 			// Exit gracefully so we don't have to be terminated
 			Execute.exit(0, false);

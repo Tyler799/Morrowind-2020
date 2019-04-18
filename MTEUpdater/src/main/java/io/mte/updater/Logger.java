@@ -1,8 +1,6 @@
 package io.mte.updater;
 
 import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.IOException;
 import java.io.PrintWriter;
 
 public class Logger {
@@ -91,7 +89,7 @@ public class Logger {
 				file.createNewFile();
 				writer  = new PrintWriter(NAME);
 			}
-			catch (IOException e) {
+			catch (java.io.IOException e) {
 				Logger.print(Level.ERROR, e, "Unable to create log or access log file %s", NAME);
 			}
 		}
@@ -115,7 +113,7 @@ public class Logger {
 				writer  = new PrintWriter(NAME);
 				writer.close();
 			} 
-			catch (FileNotFoundException e) {
+			catch (java.io.FileNotFoundException e) {
 				error("Unable to close log file, missing in action", e);
 			}
 		}

@@ -1,10 +1,6 @@
 package io.mte.updater;
 
-import java.awt.Desktop;
-import java.io.IOException;
-import java.net.MalformedURLException;
 import java.net.URI;
-import java.net.URISyntaxException;
 import java.net.URL;
 
 public class RemoteHandler {
@@ -43,7 +39,7 @@ public class RemoteHandler {
 			
 			try {
 				return new URL(url);
-			} catch (MalformedURLException e) {
+			} catch (java.net.MalformedURLException e) {
 				Logger.print(Logger.Level.ERROR, e, "%s is not a valid URL format", url.toString());
 				return null;
 			}
@@ -68,7 +64,7 @@ public class RemoteHandler {
 		// Apply URI wrapper to string
 		try {
 			return new java.net.URI(compareUrl.toString());
-		} catch (URISyntaxException e) {
+		} catch (java.net.URISyntaxException e) {
 			Logger.error("URL string violates RFC 2396!", e);
 			e.printStackTrace();
 			return null;
@@ -85,7 +81,7 @@ public class RemoteHandler {
 		
 		try {
 			java.awt.Desktop.getDesktop();
-			if (Desktop.isDesktopSupported()) {
+			if (java.awt.Desktop.isDesktopSupported()) {
 				java.awt.Desktop.getDesktop().browse(url);
 				return true;
 			} else {
@@ -93,7 +89,7 @@ public class RemoteHandler {
 				return false;
 			}
 		} catch (Exception e) {
-			if (e instanceof IOException)
+			if (e instanceof java.io.IOException)
 				Logger.error("Unable to open web browser, default browser is not found or it failed to launch", e);
 			else if (e instanceof SecurityException)
 				Logger.error("Unable to open web browser, security manager denied permission", e);
@@ -106,7 +102,7 @@ public class RemoteHandler {
 		try {
 			return handler.downloadUsingStream(Link.versionFile, VERSION_FILENAME + ".remote");
 		} 
-		catch (IOException e) {
+		catch (java.io.IOException e) {
 			Logger.error("Unable to download project version file!", e);
 			return false;
 		}
@@ -122,7 +118,7 @@ public class RemoteHandler {
 			}
 			return false;
 		} 
-		catch (IOException e) {
+		catch (java.io.IOException e) {
 			Logger.error("Unable to download repository files!", e);
 			return false;
 		}

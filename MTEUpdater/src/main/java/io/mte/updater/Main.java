@@ -1,8 +1,6 @@
 package io.mte.updater;
 
 import java.io.File;
-import java.io.IOException;
-import java.lang.management.ManagementFactory;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.Scanner;

@@ -50,12 +50,14 @@ public class Execute {
 		
 		if (clean == true)
 			FileHandler.updaterCleanup();
-			
-		Logger.LogFile.close();
-		
+		/*
+		 *  If we need to pause do it before we close the logfile stream
+		 *  otherwise we get errors because we are still trying to print logs
+		 */
 		if (pause == true && !Main.isLauncher())
 			Execute.pause();
 		
+		Logger.LogFile.close();
 		System.exit(code);
 	}
 	

@@ -336,6 +336,8 @@ public class FileHandler {
 		try {
 			uninstaller.createNewFile();
 		} catch (IOException e) {
+			Logger.error("Unable to create uninstaller file", e);
+			Execute.exit(1, false);
 		}
 		String appName = System.getProperty("program.name");
 		String[] batchLines = 

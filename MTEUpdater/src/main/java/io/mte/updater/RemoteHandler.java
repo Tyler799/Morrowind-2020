@@ -116,9 +116,11 @@ public class RemoteHandler {
 
 		try {
 			URL releaseLink = Link.constructURL(Link.repository, Link.releasePath, "v" + handler.remote.getReleaseVersion(), RELEASE_FILENAME);
-			return handler.downloadUsingStream(releaseLink, RELEASE_FILENAME);
-			// TODO: Remove this from comments
-			//handler.registerTempFile(new File(RELEASE_FILENAME));
+			if (handler.downloadUsingStream(releaseLink, RELEASE_FILENAME)) {
+				handler.registerTempFile(new java.io.File(RELEASE_FILENAME));
+				return true;
+			}
+			return false;
 		} 
 		catch (IOException e) {
 			Logger.error("Unable to download repository files!", e);

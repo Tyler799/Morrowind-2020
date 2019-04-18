@@ -79,7 +79,7 @@ public class Logger {
 	
 	public static class LogFile {
 		
-		private static final String NAME = "MTE-Updater.log";
+		public static final String NAME = "MTE-Updater.log";
 		
 		private static LogFile instance;
 		private static PrintWriter writer;

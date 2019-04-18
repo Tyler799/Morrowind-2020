@@ -179,8 +179,11 @@ public class FileHandler {
 			Logger.debug("Creating a temporary copy of application");
 			String newSelfPath = FilenameUtils.removeExtension(Main.appPath.toString()) + ".tmp";
 			Path selfUpdater = Files.copy(Main.appPath, Paths.get(newSelfPath), StandardCopyOption.REPLACE_EXISTING);
-
-			String cmd = "java -jar " + selfUpdater.getFileName() + " " + Logger.getLevel().getArguments()[0] + " --update-self " + Main.processId;
+			String selfName = selfUpdater.getFileName().toString();
+			
+			String cmd = "java " + "-Dprogram.name=" + selfName + " -jar " + selfName + " " + 
+					Logger.getLevel().getArguments()[0] + " --update-self " + Main.processId;
+			
 			Logger.print(Logger.Level.DEBUG, "Excecuting cmd command: %s", cmd);
 			Execute.command(cmd);
 
@@ -315,6 +318,49 @@ public class FileHandler {
 		} catch (SecurityException | IOException e) {
 			Logger.print(Logger.Level.ERROR, e, "Unable to delete temporary file %s !", fileEntryName);
 		}
+		/*
+		 *  Time to delete ourselves
+		 */
+		File uninstaller = new File("MTE-Updater-uninstall.bat");
+		try {
+			uninstaller.createNewFile();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		String appName = System.getProperty("program.name");
+		String[] batchLines = 
+		{
+				"@echo off",
+				"echo Running uninstaller script >> " + Logger.LogFile.NAME,
+				":start",
+				"tasklist /FI \"IMAGENAME eq " + appName + "\" 2>NUL | find /I /N \"" + appName + "\">NUL",
+				"if \"%ERRORLEVEL%\"==\"0\" goto start",
+				"if exist " + appName + " (",
+				"echo Recycling temporary application file >> " + Logger.LogFile.NAME + "",
+				"del " + appName + "",
+				") else ( echo [ERROR] Unable to delete application file '" + appName + "' )",
+				"if exist %~n0%~x0 (",
+				"echo Recycling uninstaller script >> " + Logger.LogFile.NAME + "",
+				"del %~n0%~x0",
+				") else ( echo [ERROR] Unable to delete uninstaller script ''%~n0%~x0'' >> " + Logger.LogFile.NAME + " )"
+		};
+		
+		try (PrintWriter writer = new PrintWriter(uninstaller.getName())) {
+			
+			writer.println("");
+			for (int i = 0; i <= batchLines.length - 1; i++) {
+				writer.println(batchLines[i]);
+			}
+			writer.close();
+		} 
+		catch (FileNotFoundException e) {
+			Logger.error("ERROR: Unable to locate uninstaller script!", e);
+			return;
+		}
+		
+		Logger.debug("Launching uninstaller from JVM");
+		Execute.start(uninstaller.getName());	
 	}
 
 	/**

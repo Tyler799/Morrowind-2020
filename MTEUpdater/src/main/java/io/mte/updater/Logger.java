@@ -29,19 +29,19 @@ public class Logger {
 	// TODO Add new level type that prints stackTrace directly in console
 	public enum Level {
 		
-		LOG(Short.parseShort("0"), "", ""),
-		ERROR(Short.parseShort("0"), "[ERROR] ", ""),
-		WARNING(Short.parseShort("1"), "[Warning] ", ""),
-		VERBOSE(Short.parseShort("1"), "[LOG] ", "-v", "-verbose"),
-		DEBUG(Short.parseShort("2"), "[DEBUG] ", "-d", "-debug");
+		LOG(Short.parseShort("0"), "", "[LOG]", ""),
+		ERROR(Short.parseShort("0"), "ERROR", "[ERROR]", ""),
+		WARNING(Short.parseShort("1"), "Warning", "[WARNING]", ""),
+		VERBOSE(Short.parseShort("1"), "", "[LOG]", "-v", "-verbose"),
+		DEBUG(Short.parseShort("2"), "DEBUG", "[DEBUG]", "-d", "-debug");
 		
 		private final short level;
 		private final String[] arguments;
-		private final String tag;
+		private final String[] tags;
 		
-		Level(short lvl, String tag, String...args) {
+		Level(short lvl, String consoleTag, String logTag, String...args) {
 			
-			this.tag = tag;
+			tags = new String[] { consoleTag, logTag };
 			level = lvl;
 			arguments = args;
 		}
@@ -73,6 +73,12 @@ public class Logger {
 		public String[] getArguments() {
 			return arguments;
 		}
+		private String getConsoleTag() {
+			return tags[0];
+		}
+		private String getLogTag() {
+			return tags[1];
+		}
 	}
 	
 	public static class LogFile {
@@ -102,13 +108,10 @@ public class Logger {
 			else 
 				warning("Trying to initialize LogFile more then once");
 		}
-		private static PrintWriter get() {
-			return writer;
-		}
 		public static void close() {
 			writer.close();
 		}
-		private static void clear() {
+		/*private static void clear() {
 			try {
 				writer  = new PrintWriter(NAME);
 				writer.close();
@@ -116,6 +119,13 @@ public class Logger {
 			catch (java.io.FileNotFoundException e) {
 				error("Unable to close log file, missing in action", e);
 			}
+		}*/
+		private static void print(String log, Level lvl) {
+			writer.println(lvl.getLogTag() + " " + log);
+			writer.flush();
+		}
+		private static void print(Exception e) {
+			if (e != null) e.printStackTrace(writer);
 		}
 	}
 	
@@ -128,15 +138,17 @@ public class Logger {
 	}
 	/**
 	 * Call only once from the main method to create a new logger instance
-	 * @param args List of JVM arguments to search for a logger level argument
+	 * @param args jvm arguments to search for a logger level argument
+	 * @param test perform a series of logging tests
 	 */
-	public static void init(String[] args) {
+	public static void init(String[] args, boolean test) {
 		
 		if (logger != null)
 			warning("Trying to initialize logger more then once");
 					
 		Logger.logger = new Logger(args);
-		verbose("Logger initialized with level " + Logger.getLevel());
+		verbose("Logger initialized with level: " + Logger.getLevel());
+		if (test == true) test();
 	}
 	
 	/* Public getter function to retrieve logger level */
@@ -181,20 +193,18 @@ public class Logger {
 				/*
 				 * Wrap each string item with single quotation marks
 				 */
-				Object[] objects = String.join("' '", items).split("\\s+");
-				objects[0] = "'" + objects[0];
-				objects[objects.length - 1] += "'";
-				
-				System.out.printf(lvl.tag + format + "\n", objects);
-				LogFile.get().printf(lvl.tag + format + "\n", objects);
-				
-				if (lvl == Level.ERROR)
-					new Exception().printStackTrace(LogFile.get());
+				items = String.join("' '", items).split("\\s+");
+				items[0] = "'" + items[0];
+				items[items.length - 1] += "'";
+				/*
+				 *  Format the log string like printf method does
+				 */
+				for (int i = 0; i <= items.length - 1; i++) {
+					format = format.replaceFirst("%s", items[i]);
+				}
+				print(format, lvl);
 			}
-			else {
-				System.out.printf((String)(lvl.tag + format + "\n"), (String)("'" + items[0] + "'"));
-				LogFile.get().printf((String)(lvl.tag + format + "\n"), (String)("'" + items[0] + "'"));
-			}
+			else print(format.replaceFirst("%s", (String)("'" + items[0] + "'")), lvl);
 		}
 	}
 	/**
@@ -208,58 +218,64 @@ public class Logger {
 	 */
 	public static void print(Level lvl, Exception e, String format, String...items) {
 		print(lvl, format, items);
-		e.printStackTrace(LogFile.get());
+		LogFile.print(e);
 	}
 	
-	public static void print(String msg) {
-		System.out.println(msg);
-		LogFile.get().println(msg);
-		LogFile.get().flush();
+	public static void print(String log) {
+		System.out.println(log);
+		LogFile.print(log, Level.LOG);
+	}
+	private static boolean print(String log, Level lvl) {
+		if (canPrintLog(lvl)) {
+			String tag = lvl.getConsoleTag();
+			System.out.println(tag + (tag.isEmpty() ? "" : ": ") + log);
+			LogFile.print(log, lvl);
+			return true;
+		}
+		else return false;
 	}
 	
-	public static void error(String msg) {
+	public static void error(String log) {
 		/*
 		 * Don't ask for permission here because there are situations where
 		 * a method might request error logging before the logger has initialized
 		 * 
 		 * if (canPrintLog(Level.ERROR))
 		 */
-		print(Level.ERROR.tag + msg);
-		new Exception().printStackTrace(LogFile.get());
+		print(log, Level.ERROR);
+		LogFile.print(new Exception());
 	}
-	public static void error(String msg, Exception e) {
-		
-		print(Level.ERROR.tag + msg);
-		e.printStackTrace(LogFile.get());
+	public static void error(String log, Exception e) {
+		//if (canPrintLog(Level.ERROR))
+		print(log, Level.ERROR);
+		LogFile.print(e);
 	}
-	
-	public static void verbose(String msg) {
-		if (canPrintLog(Level.VERBOSE))
-			print(Level.VERBOSE.tag + msg);
+	public static void verbose(String log) {
+		print(log, Level.VERBOSE);
 	}
-	
-	public static boolean warning(String msg) {
-		if (canPrintLog(Level.WARNING)) {
-			print(Level.WARNING.tag + msg);
-			return true;
-		}
-		return false;
+	public static boolean warning(String log) {
+		return print(log, Level.WARNING);
 	}
 	public static void warning(String msg, Exception e) {
 		if (warning(msg) == true)
-			e.printStackTrace(LogFile.get());
+			LogFile.print(e);
 	}
-	
-	public static void debug(String msg) {
-		if (canPrintLog(Level.DEBUG))
-			print(Level.DEBUG.tag + msg);
+	public static void debug(String log) {
+		print(log, Level.DEBUG);
 	}
 	
 	public static void test() {
 		
+		print("Performing a series of logging tests:\n");
 		print("This is a regular log");
 		print(Logger.Level.LOG, "This %s a %s log", "is", "constructed");
-		warning("This is warning log");
+		print(Logger.Level.LOG, "This is also a %s log", "constructed");
+		verbose("This is a verbose log");
+		warning("This is a warning log");
+		warning("This is a warning log with a stack trace", new Exception());
+		error("This is an error log");
+		error("This is an error log with a stack trace", new Exception());
 		debug("This is a debug log");
+		print("Finished testing the logging system!");
 	}
 }

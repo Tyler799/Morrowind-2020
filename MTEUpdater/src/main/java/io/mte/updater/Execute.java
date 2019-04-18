@@ -49,7 +49,9 @@ public class Execute {
 	}
 	
 	public static boolean command(String cmd) {
+		
 		try {
+			Logger.print(Logger.Level.DEBUG, "Excecuting cmd command: %s in a new window", cmd);
 			Runtime.getRuntime().exec("cmd.exe /c start " + cmd, null, null);
 			return true;
 		} 
@@ -60,13 +62,17 @@ public class Execute {
 	}
 	
 	/**
-	 * Use {@code ProcessBuilder} to start a new application or script process. 
+	 * Use {@code ProcessBuilder} to start a new application or script process.<br>
+	 * <i>Note that if you start a console application this way it will run hidden</i>
+	 * 
 	 * @param process path to the application or script we want to start
 	 * @param wait should we pause the current thread and wait for the new process to terminate?
 	 * @return instance of the process started or {@code null} if an error occurred
 	 */
 	public static Process start(String process, boolean wait) {
 		
+		Logger.print(Logger.Level.DEBUG, "Starting new process %s" + 
+				((wait) ? " and waiting for it to terminate" : ""), process);
 		try {
 			Process proc = new ProcessBuilder(process).start();
 			if (wait == true) proc.waitFor();

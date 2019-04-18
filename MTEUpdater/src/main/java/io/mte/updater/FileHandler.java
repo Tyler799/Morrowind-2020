@@ -181,11 +181,8 @@ public class FileHandler {
 			Path selfUpdater = Files.copy(Main.appPath, Paths.get(newSelfPath), StandardCopyOption.REPLACE_EXISTING);
 			String selfName = selfUpdater.getFileName().toString();
 			
-			String cmd = "java " + "-Dprogram.name=" + selfName + " -jar " + selfName + " " + 
-					Logger.getLevel().getArguments()[0] + " --update-self " + Main.processId;
-			
-			Logger.print(Logger.Level.DEBUG, "Excecuting cmd command: %s", cmd);
-			Execute.command(cmd);
+			Execute.command("java " + "-Dprogram.name=" + selfName + " -jar " + selfName + " " + 
+					Logger.getLevel().getArguments()[0] + " --update-self " + Main.processId);
 
 			// Exit gracefully so we don't have to be terminated
 			Execute.exit(0, false);
@@ -254,7 +251,7 @@ public class FileHandler {
 			    	Path from = updateFile.toPath();
 			    	Path to = Paths.get(updateFile.getName());
 
-			    	Logger.print(Logger.Level.DEBUG, "Updating release file %s", updateFile.getName());
+			    	Logger.print(Logger.Level.DEBUG, "Updating local file %s", updateFile.getName());
 			    	Logger.print(Logger.Level.DEBUG, "Destination path: %s", to.toString());
 
 			    	try {

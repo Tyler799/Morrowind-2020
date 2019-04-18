@@ -116,7 +116,7 @@ public class FileHandler {
 				if (isLocal != true) {
 					Exception e = new java.io.FileNotFoundException();
 					Logger.print(Logger.Level.ERROR, e, "Unable to find %s version file!", filename);
-					Main.terminateJavaApplication();
+					Execute.exit(1, true);
 				}
 				//Logger.print(Logger.Level.VERBOSE, 
 				//		"Unable to find local version file %s, going to update", filename);
@@ -159,7 +159,7 @@ public class FileHandler {
 				releaseVer = 0;
 				commitSHA = null;
 				Logger.print(Logger.Level.ERROR, "Malformed version file %s !", filename);
-				Main.terminateJavaApplication();
+				Execute.exit(1, true);
 			}
 		}
 
@@ -182,14 +182,14 @@ public class FileHandler {
 
 			String cmd = "java -jar " + selfUpdater.getFileName() + " " + Logger.getLevel().getArguments()[0] + " --update-self " + Main.processId;
 			Logger.print(Logger.Level.DEBUG, "Excecuting cmd command: %s", cmd);
-			Main.executeCommand(cmd, true);
+			Execute.command(cmd);
 
 			// Exit gracefully so we don't have to be terminated
-			Main.closeJavaApplication();
+			Execute.exit(0, false);
 		}
 		catch (IOException e) {
 			Logger.error("Unable to create a copy of this application", e);
-			Main.terminateJavaApplication();
+			Execute.exit(1, false);
 		}
 	}
 	
@@ -228,7 +228,7 @@ public class FileHandler {
 			writer.close();
 		} catch (FileNotFoundException e) {
 			Logger.error("ERROR: Unable to find mte version file!", e);
-			Main.terminateJavaApplication();
+			Execute.exit(1, true);
 		}
 	}
 

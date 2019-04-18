@@ -11,7 +11,7 @@ public class Main {
 
 	public static final Path root = Paths.get(System.getProperty("user.dir"));
 	public static final Path appPath = Paths.get(root + File.separator + System.getProperty("program.name"));
-	public static final short processId = getProcessId();
+	public static final short processId = Execute.getProcessId();
 	
 	// Use this class instance to handle all file related stuff
 	public static final FileHandler fileHandler = new FileHandler();
@@ -25,20 +25,8 @@ public class Main {
 			processJVMArguments(args);
 		
 		runUpdater();
-		/*
-		 *  Do not use scanner to scan for user input, I've been getting unknown exceptions being 
-		 *  thrown with no message or stack trace. It just doesn't seem to work for some reason
-		 *  
-		 *  Using direct System InputStream seems like the best idea, and although it only works
-		 *  for ENTER at least it works and won't crash
-		 */
-		Logger.print("Press Enter to continue...");
-		try {
-			System.in.read();
-		}
-		catch(IOException e) {;
-			Logger.error("Something went wrong while reading user input", e);
-		}
+		Execute.pause();
+		Execute.exit(0, true);
 	}
 
 	private static void processJVMArguments(String[] args) {
@@ -48,7 +36,6 @@ public class Main {
 		
 		if (args[0].equals("--launcher")) {
 			FileHandler.launchApplication();
-			closeJavaApplication();
 		}
 		else if (args[0].equals("--self-update")) {
 			/*
@@ -60,14 +47,14 @@ public class Main {
 				
 				Logger.debug("Attempting to kill main java application");
 				
-				if (!executeCommand("taskkill /PID " + mainAppProcId, false)) {
+				if (!Execute.command("taskkill /PID " + mainAppProcId)) {
 					Logger.error("Unable to terminate main java application");
-					terminateJavaApplication();
+					Execute.exit(1, false);
 				}
 			}
 			else {
 				Logger.error("Expected PID passed as JVM argument...");
-				terminateJavaApplication();
+				Execute.exit(1, false);
 			}
 		}
 	}
@@ -125,49 +112,5 @@ public class Main {
 			}
 		} else
 			Logger.print("\nYour version of the guide is up-to-date!");
-	}
-	
-	public static void closeJavaApplication() {
-		
-		Logger.verbose("Closing updater application...");
-		
-		fileHandler.updaterCleanup();
-		Logger.LogFile.close();
-		System.exit(0);
-	}
-	
-	public static void terminateJavaApplication() {
-		
-		Logger.print("Terminating updater application...");
-		
-		fileHandler.updaterCleanup();
-		Logger.LogFile.close();
-	    System.exit(1);
-	}
-	
-	/**
-	 * Get process id of the currently running Java application
-	 * @return numerical value corresponding to the process id
-	 */
-	private static short getProcessId() {
-		String processName = ManagementFactory.getRuntimeMXBean().getName();
-		return Short.parseShort(processName.substring(0, processName.indexOf("@")));
-	}
-	
-	public static boolean executeCommand(String cmd, boolean window) {
-		
-		Runtime rt = Runtime.getRuntime();
-		try {
-			if (window == true)
-				rt.exec("cmd.exe /k start " + cmd, null, null);
-			else
-				rt.exec("cmd.exe /k \"" + cmd + "\"");
-			
-			return true;
-		} 
-		catch (IOException e) {
-			Logger.print(Logger.Level.ERROR, e, "Unable to execute Windows command: %s", cmd);
-			return false;
-		}
 	}
 }

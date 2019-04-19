@@ -2,6 +2,7 @@ package io.mte.updater;
 
 import java.io.File;
 import java.io.PrintWriter;
+import java.util.regex.Matcher;
 
 public class Logger {
 	/**
@@ -203,11 +204,14 @@ public class Logger {
 				 *  Format the log string like printf method does
 				 */
 				for (int i = 0; i <= items.length - 1; i++) {
-					format = format.replaceFirst("%s", items[i]);
+					format = format.replaceFirst("%s", Matcher.quoteReplacement(items[i]));
 				}
 				print(format, lvl);
 			}
-			else print(format.replaceFirst("%s", (String)("'" + items[0] + "'")), lvl);
+			else {
+				String format2 = (String)("'" + Matcher.quoteReplacement(items[0]) + "'");
+				print(format.replaceFirst("%s", format2), lvl);
+			}
 		}
 	}
 	/**

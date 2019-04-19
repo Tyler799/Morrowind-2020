@@ -309,7 +309,8 @@ public class FileHandler {
 					if (fileEntry.isDirectory())
 						FileUtils.deleteDirectory(fileEntry);
 					else
-						fileEntry.delete();
+						// this might not work every time though
+						fileEntry.deleteOnExit();
 				}
 			}
 		} catch (SecurityException | IOException e) {
@@ -361,7 +362,6 @@ public class FileHandler {
 		
 		try (PrintWriter writer = new PrintWriter(uninstaller.getName())) {
 			
-			writer.println("");
 			for (int i = 0; i <= batchLines.length - 1; i++) {
 				writer.println(batchLines[i]);
 			}

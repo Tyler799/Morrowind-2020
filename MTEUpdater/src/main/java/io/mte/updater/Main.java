@@ -5,8 +5,6 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.Scanner;
 
-import org.jvnet.winp.WinProcess;
-
 public class Main {
 
 	public static final Path root = Paths.get(System.getProperty("user.dir"));
@@ -60,21 +58,21 @@ public class Main {
 			 *  application in the following argument
 			 */
 			if (args.length > 1 && !args[1].isEmpty()) {
-				
-				WinProcess proc = new WinProcess(Integer.parseInt(args[1]));
-				if (proc.isRunning()) {
+				/*
+				 *  The launcher process should exit on its own
+				 *  but if it hang for some reason we terminate it here
+				 */
+				if (Execute.isProcessRunning(args[1])) {
 					
 					Logger.debug("Launcher application is still running, terminating now...");
-					proc.kill();
-					
-					if (proc.isRunning()) {
+					if (!Execute.kill(Integer.parseInt(args[1]), 5)) {
 						Logger.error("Unable to terminate java application");
 						Execute.exit(1, false);
 					}
 				}
 			}
 			else {
-				Logger.error("Expected PID passed as JVM argument...");
+				Logger.error("Expected launcher PID passed as JVM argument...");
 				Execute.exit(1, false);
 			}
 		}
@@ -105,7 +103,7 @@ public class Main {
 			Logger.print("\nYour version of the guide is out of date");
 
 			if (localSHA.isEmpty()) {
-				Logger.verbose("Local version file not found, skipping showing updates");
+				Logger.verbose("Local version file not found, skip showing updates");
 				fileHandler.doUpdate(localSHA, remoteSHA);
 				return;
 			}

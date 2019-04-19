@@ -4,6 +4,8 @@ import java.io.IOException;
 import java.lang.management.ManagementFactory;
 import java.nio.charset.Charset;
 import java.nio.file.Path;
+import java.util.Scanner;
+import java.util.concurrent.TimeUnit;
 
 import org.apache.commons.io.IOUtils;
 
@@ -28,6 +30,18 @@ public class Execute {
 		catch(IOException e) {
 			Logger.error("Something went wrong while reading user input", e);
 			exit(0, true, false);
+		}
+	}
+	/**
+	 * Performs a {@code Thread.sleep} using the provided time unit
+	 * @param unit seconds, minutes, days...
+	 * @param time amount of time to wait
+	 */
+	public static void wait(TimeUnit unit, long time) {
+		try {
+			unit.sleep(time);
+		} catch(InterruptedException e) {
+			Logger.error("Thread was interrupted while sleeping");
 		}
 	}
 	
@@ -145,4 +159,44 @@ public class Execute {
 		return command(cmd);
 	}
 	
+	/**
+	 * Find out if process with a given PID is running
+	 * @param pid identifier of the process to find
+	 * @return {@code true} if the process was found in the tasklist, {@code false} otherwise
+	 */
+	public static boolean isProcessRunning(String pid)
+	{
+		try {
+			ProcessBuilder processBuilder = new ProcessBuilder("tasklist.exe");
+			Process process = processBuilder.start();
+			
+			Scanner scanner = new Scanner(process.getInputStream(), "UTF-8");
+			Scanner scannerRef = scanner.useDelimiter("\\A");
+	        String tasksList = scannerRef.hasNext() ? scannerRef.next() : "";
+	        scanner.close();
+	
+			return tasksList.contains(pid);
+		}
+		catch (IOException e) {
+			Logger.print(Logger.Level.ERROR, e, "Unable to find if process %s is running", pid);
+			return false;
+		}
+	}
+	/**
+	 * Try to kill the process with the given PID through cmd. Wait in intervals of <br>
+	 * <i>250ms</i> until the process has terminated or the wait time has elapsed
+	 * 
+	 * @param pid identifier of the process to terminate
+	 * @param wait time in seconds to wait for execution to terminate
+	 * @return {@code true} if the process has been killed within the wait time, {@code false} otherwise
+	 */
+	public static boolean kill(int pid, int wait) {
+		
+		String sPid = String.valueOf(pid);
+		Execute.command("TASKKILL /F /PID " + pid);
+		for (long w = TimeUnit.SECONDS.toMillis(wait); isProcessRunning(sPid) && w >= 0; w-=250) 
+			wait(TimeUnit.MILLISECONDS, 250); 
+
+		return !isProcessRunning(sPid);
+	}
 }

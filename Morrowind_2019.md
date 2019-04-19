@@ -631,7 +631,12 @@ Choose between the following three options. Compare the screenshots from both mo
 (Has an alternate look you can choose instead in the `Alternate` folder=, if you like)
 
 6. Vivec & Velothi
+
+Choose one of the following:
+
 * [Vivec and Velothi - Arkitektora Vol.2](https://www.nexusmods.com/morrowind/mods/46266) - Remember to grab the texture replacer for project atlas in the optional files section. Download the version that's in the same quality as the textures you downloaded.
+* [Vivec-Velothi Retextured V3](https://www.nexusmods.com/morrowind/mods/32886) - A bit lower res in many areas, also not Atlas'd so if you're on a lower end machine you may want the other option. However, some vastly prefer the style here.
+
 * [Set in Stone](http://www.nexusmods.com/morrowind/mods/21377/?)
 * [One True Faith](http://www.nexusmods.com/morrowind/mods/43810/?)
 * [Ministry of truth Bump mapped](http://www.nexusmods.com/morrowind/mods/42921/?) - If you don't want bump maps, the only file you need is `textures\tx_moon_base_01`.

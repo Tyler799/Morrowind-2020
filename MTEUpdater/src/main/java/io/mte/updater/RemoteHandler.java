@@ -17,6 +17,7 @@ public class RemoteHandler {
 		/* These relative paths are used to construct URL's */
 		private static final String repoPath = "Tyler799/Morrowind-2019";
 		private static final String updaterBranch = "updater";
+		private static final String masterBranch = "master";
 		private static final String comparePath = "compare";
 		private static final String releasePath = "releases/download";
 		
@@ -25,7 +26,7 @@ public class RemoteHandler {
 		
 		public static final URL repository = constructURL(github, repoPath);
 		public static final URL commitCompare = constructURL(github, repoPath, comparePath);
-		public static final URL versionFile = constructURL(ghusercontent, repoPath, updaterBranch, VERSION_FILENAME);
+		public static final URL versionFile = constructURL(ghusercontent, repoPath, masterBranch, VERSION_FILENAME);
 		public static final URL releasesPage = constructURL(github, repoPath, "download"); 
 		
 		private static URL constructURL(URL url, String...paths)  {

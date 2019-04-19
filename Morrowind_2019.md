@@ -801,6 +801,7 @@ We'll get a replacer for Dagoth Ur and dremora in the next step.
 1. Heads
 * [Westly's Pluginless Head and Hair Replacer](http://download.fliggerty.com/download-127-874)
 * [Various tweaks and fixes](http://www.nexusmods.com/morrowind/mods/43795/?) - Specifically, Fixed Westly's Female Orc Heads and Fixed Westly's Barenziah Head.
+* [Animation Fix for Westly's Heads](https://www.dropbox.com/s/d70l2lbjvm0xloo/WestlyHeadsAnimFix.zip?dl=0) - Does what it says on the tin
 * [Pluginless Khajiit Head Pack](http://www.nexusmods.com/morrowind/mods/43110/?)
 * [Pluginless Khajiit Head Pack Talk-Blink Fix](http://abitoftaste.altervista.org/morrowind/index.php?option=downloads&task=info&id=68&Itemid=50&-Pluginless-Khajiit-Head-Pack-Talk-Blink-Fix)
 

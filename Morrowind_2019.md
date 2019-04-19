@@ -240,6 +240,8 @@ Download the LGNPC bundle. You should install all of the mods. A few notes:
 
 - [Spell Scroll Text Overhaul](https://www.nexusmods.com/morrowind/mods/42936) gives unique Daedric text to all spell scrolls, making them far more interesting to read if you added Scroll Daedric Alphabet in the JiffyUI install.
 
+- [UI Expansion](https://www.nexusmods.com/morrowind/mods/46071) - Expands UI functionality with searching, filtering, and more visual feedback.	Has compact and expanded views. A very nice mod. 
+
 ### Dialogue Font
 
 Get your dialogue font mods of choice:

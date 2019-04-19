@@ -122,14 +122,17 @@ public class Logger {
 			}
 		}*/
 		public static void print(String log, Level lvl) {
-			writer.println(lvl.getLogTag() + " " + log.replace("\n", ""));
-			writer.flush();
+			if (instance != null) {
+				writer.println(lvl.getLogTag() + " " + log.replace("\n", ""));
+				writer.flush();
+			}
 		}
 		public static void print(String log) {
 			print(log, Logger.Level.LOG);
 		}
 		public static void print(Exception e) {
-			if (e != null) e.printStackTrace(writer);
+			if (e != null && instance != null) 
+				e.printStackTrace(writer);
 		}
 	}
 	

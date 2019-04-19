@@ -179,10 +179,10 @@ public class FileHandler {
 			Logger.debug("Creating a temporary copy of application");
 			String newSelfPath = FilenameUtils.removeExtension(Main.appPath.toString()) + ".tmp";
 			Path selfUpdater = Files.copy(Main.appPath, Paths.get(newSelfPath), StandardCopyOption.REPLACE_EXISTING);
-			String selfName = selfUpdater.getFileName().toString();
 			
-			Execute.command("java " + "-Dprogram.name=" + selfName + " -jar " + selfName + " " + 
-					 " --update-self " + Main.processId + " " + Logger.getLevel().getArguments()[0]);
+			String name = selfUpdater.getFileName().toString();
+			Execute.launch("program.name", name, name, new String[] 
+					{ "--update-self", String.valueOf(Main.processId), Logger.getLevel().getArguments()[0] });
 
 			// Exit gracefully so we don't have to be terminated
 			Execute.exit(0, false);

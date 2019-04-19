@@ -3,6 +3,7 @@ package io.mte.updater;
 import java.io.IOException;
 import java.lang.management.ManagementFactory;
 import java.nio.charset.Charset;
+import java.nio.file.Path;
 
 import org.apache.commons.io.IOUtils;
 
@@ -73,17 +74,27 @@ public class Execute {
 		return Short.parseShort(processName.substring(0, processName.indexOf("@")));
 	}
 	
-	public static boolean command(String cmd) {
+	private static boolean command(String cmd) {
 		
 		try {
 			Logger.print(Logger.Level.DEBUG, "Excecuting cmd command: %s in a new window", cmd);
-			Runtime.getRuntime().exec("cmd.exe /c start " + cmd, null, null);
+			Runtime.getRuntime().exec(cmd, null, null);
 			return true;
 		} 
 		catch (IOException e) {
 			Logger.print(Logger.Level.ERROR, e, "Unable to execute Windows command: %s", cmd);
 			return false;
 		}
+	}
+	/**
+	 * Use {@code Runtime.exec } to start a new program through Windows console.<br> 
+	 * If the program is a batch script or java app, it will be opened in a new console window.
+	 * 
+	 * @param path name or path to the program to start
+	 * @return {@code true} if the command executed without errors
+	 */
+	public static boolean start(Path path) {
+		return command("cmd.exe /c start " + path.toString());
 	}
 	
 	/**
@@ -115,4 +126,23 @@ public class Execute {
 			return null;
 		}
 	}
+	/**
+	 * Launch a new JVM process inside a console window from an executable JAR.<br>
+	 * <i>Note that the jar file should be located inside this app's root directory.</i>
+	 * 
+	 * @param property system property name
+	 * @param value system property value
+	 * @param name java jar filename
+	 * @param args jvm arguments
+	 * @return {@code true} if the process launched successfully, {@code false} otherwise
+	 */
+	public static boolean launch(String property, String value, String name, String[] args) {
+		
+		String cmd = "cmd.exe /c start java " + "-D" + property + "=" + value + " -jar " + name;
+		for (int i = 0; i <= args.length - 1; i++)
+			cmd += " " + args[i];
+
+		return command(cmd);
+	}
+	
 }

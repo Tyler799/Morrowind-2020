@@ -603,10 +603,11 @@ Hopefully this will be slightly less complicated than the nature section. Someth
 
 3. Hlaalu.
 
-Choose between the following two options. Compare the screenshots from both modpages and see what looks more visually appealing to you. They are similar enough, so if in doubt just get Aesthesia for it's more 'vanilla' look.
+Choose between the following three options. Compare the screenshots from both modpages and see what looks more visually appealing to you. They are similar enough, so if in doubt just get Aesthesia for it's more 'vanilla' look.
 
 * [Aesthesia - Hlaalu textures](https://www.nexusmods.com/morrowind/mods/46009) - Slightly more vanilla friendly option, includes custom meshes and all textures are uniformed under either 1k (MQ) or 2k (HQ) standard. However the textures appear more blurry then in Arkitektora.
 * [Hlaalu - Arkitektora Vol.2](https://www.nexusmods.com/morrowind/mods/46246) - Appears more sharper and goes in a bit of a different direction then Aesthesia. Contains no custom meshes and textures resolutions are mixed. Remember to grab the texture replacer for project atlas in the optional files section. Download the version that's in the same quality as the textures you downloaded.
+* [Static's AoF Hlaalu Atlased](https://www.nexusmods.com/morrowind/mods/46022) - An Atlas'd version of AnOldFriend's [Hlaalu Retextured](https://www.nexusmods.com/morrowind/mods/28061) by StaticNation. Signiciantly less vanilla-friendly that the other options, but may be a welcome change of pace to some. 
 
 4. Redoran
 * [Redoran Bump mapped](http://www.nexusmods.com/morrowind/mods/42406/?) - A note on these: they use extremely high poly meshes. If you're already struggling to top 30 FPS in exteriors, you should pass on these.

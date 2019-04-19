@@ -1077,6 +1077,7 @@ This project wouldn't be possible without the help of all the amazing people I'v
 * owlnical - for direct contribution to the github repo, advice and helping to expand and continue the project into the future
 * /u/Tiber-Septim - for long comments helping me to find areas to improve the project as they walked through the install process
 * Corsair - for putting up with my annoying Discord questions and helping an immense amount from finding mods to understanding technical details of Morrowind modding
+* yooksi - for doing an insane amount of work. The updater, tons of mod additions, lots of tweaking and testing, and likely putting in more hours than I have into the project.
 * The many people from the Morrowind Modding Discord and /r/Morrowind subreddit who've helped me in many ways.
 
 Thank you all for everything!

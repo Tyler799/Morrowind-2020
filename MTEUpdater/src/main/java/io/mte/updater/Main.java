@@ -3,7 +3,8 @@ package io.mte.updater;
 import java.io.File;
 import java.nio.file.Path;
 import java.nio.file.Paths;
-import java.util.Scanner;
+
+import io.mte.updater.UserInput.Key;
 
 public class Main {
 
@@ -107,32 +108,18 @@ public class Main {
 				fileHandler.doUpdate(localSHA, remoteSHA);
 				return;
 			}
-			
-			Scanner reader = new Scanner(System.in);
-			Logger.print("Would you like to see a list of recent updates?");
-
 			// Continue asking for input until the user says yes or no
-			boolean inputFlag = false;
-			while (inputFlag == false) {
-				String input = reader.next();
-				if (input.equalsIgnoreCase("yes") || input.equalsIgnoreCase("y")) {
+			Logger.print("Would you like to see a list of recent updates?");
+			Key input = UserInput.waitFor(Key.YES, Key.NO);
 
-					// It's important we close the reader as soon as possible before any
-					// exceptions terminate the method
-					reader.close();
-					
-					fileHandler.doUpdate(localSHA, remoteSHA);
-					
-					inputFlag = true;
-				} 
-				else if (input.equalsIgnoreCase("no") || input.equalsIgnoreCase("n")) {
-					
-					Logger.print("\nIt is strongly recommended that you update");
-					Logger.print("You can always check the release section of our repository on Github:");
-					Logger.print(RemoteHandler.Link.releasesPage.toString() + "\n");
-					reader.close();
-					inputFlag = true;
-				}
+			if (input == Key.YES) {					
+				fileHandler.doUpdate(localSHA, remoteSHA);
+			} 
+			else if (input == Key.NO) {
+				
+				Logger.print("\nIt is strongly recommended that you update");
+				Logger.print("You can always check the release section of our repository on Github:");
+				Logger.print(RemoteHandler.Link.releasesPage.toString() + "\n");
 			}
 		} else
 			Logger.print("\nYour version of the guide is up-to-date!");

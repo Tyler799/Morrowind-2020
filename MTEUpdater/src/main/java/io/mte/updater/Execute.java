@@ -16,21 +16,7 @@ public class Execute {
 	 *  User must press Enter to continue running the application
 	 */
 	public static void pause() {
-		/*
-		 *  Do not use scanner to scan for user input, I've been getting unknown exceptions being 
-		 *  thrown with no message or stack trace. It just doesn't seem to work for some reason
-		 *  
-		 *  Using direct System InputStream seems like the best idea, and although it only works
-		 *  for ENTER at least it works and won't crash
-		 */
-		Logger.print("Press Enter to continue...");
-		try {
-			System.in.read();
-		}
-		catch(IOException e) {
-			Logger.error("Something went wrong while reading user input", e);
-			exit(0, true, false);
-		}
+		UserInput.waitForEnter();
 	}
 	/**
 	 * Performs a {@code Thread.sleep} using the provided time unit
@@ -76,6 +62,7 @@ public class Execute {
 			Execute.pause();
 		
 		Logger.LogFile.close();
+		UserInput.close();
 		System.exit(code);
 	}
 	

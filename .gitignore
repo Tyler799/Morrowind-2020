@@ -1,0 +1,17 @@
+# Ignore Eclipse meta files
+.metadata
+.recommenders
+
+# Ignore Gradle\IDE project-specific directories
+.gradle
+.settings
+
+# Ignore build output directories
+build
+bin
+
+# Eclipse Core
+.project
+
+# JDT-specific (Eclipse Java Development Tools)
+.classpath

@@ -17,6 +17,7 @@ cacheLog="--cache_log /dev/null"
 excludeLabels="--exclude-labels task,invalid"
 
 # Setup custom label names for following sections:
+headerLabel="--header-label '# Changelog'"
 bugsLabel="--bugs-label '**Fixed problems:**'"
 enhancementLabel="--enhancement-label '**Implemented improvements:**'"
 
@@ -39,6 +40,6 @@ listIssueLabels="--issue-line-labels 'add mod','remove mod',improvement,update,i
 
 printf "\nGenerating your changelog...\n"
 
-github_changelog_generator $username $repoPath $cacheLog $tokenVar $excludeLabels $includeLabels $bugsLabel $enhancementLabel $enhancementLabels $bugLabels $nameTags $listIssueLabels
+github_changelog_generator $username $repoPath $cacheLog $tokenVar $excludeLabels $includeLabels $headerLabel $bugsLabel $enhancementLabel $enhancementLabels $bugLabels $nameTags $listIssueLabels
 
 read -p "Press enter to continue..."

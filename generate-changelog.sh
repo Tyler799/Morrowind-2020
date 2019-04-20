@@ -6,6 +6,10 @@ echo Please enter your Github PA token:
 # to run this script with authentication by using a token
 read tokenVar
 
+tokenVar="--token $tokenVar"
+username="-u Tyler799"
+repoPath="-p Morrowind-2019"
+
 # Use --cache_log /dev/null argument to avoid errors on Windows
 cacheLog="--cache_log /dev/null"
 

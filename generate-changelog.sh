@@ -20,6 +20,10 @@ excludeLabels="--exclude-labels task,invalid"
 bugsLabel="--bugs-label '**Fixed problems:**'"
 enhancementLabel="--enhancement-label '**Implemented improvements:**'"
 
+# Only issues with the specified labels will be included in the changelog
+# This means that issues that are included HAVE to have at least one of these labels:
+includeLabels="--include-labels 'add mod',code,format,improvement,problem,'remove mod',update"
+
 # Issues with the specified labels will be always added to these sections:
 enhancementLabels="--enhancement-labels improvement"
 bugLabels="--bug-labels problem"
@@ -35,6 +39,6 @@ listIssueLabels="--issue-line-labels 'add mod','remove mod',improvement,update,i
 
 printf "\nGenerating your changelog...\n"
 
-github_changelog_generator $username $repoPath $cacheLog $tokenVar $excludeLabels $bugsLabel $enhancementLabel $enhancementLabels $bugLabels $nameTags $listIssueLabels
+github_changelog_generator $username $repoPath $cacheLog $tokenVar $excludeLabels $includeLabels $bugsLabel $enhancementLabel $enhancementLabels $bugLabels $nameTags $listIssueLabels
 
 read -p "Press enter to continue..."

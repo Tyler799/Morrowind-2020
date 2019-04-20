@@ -13,8 +13,8 @@ repoPath="-p Morrowind-2019"
 # Use --cache_log /dev/null argument to avoid errors on Windows
 cacheLog="--cache_log /dev/null"
 
-# Define all labels you want excluded from the changelog
-excludeLabels="--exclude-labels discussion,help wanted,question"
+# Define all labels you want excluded from the changelog:
+excludeLabels="--exclude-labels task, invalid"
 
 bugsLabel="--bugs-label \"**Fixed problems:**\""
 enhancementLabel="-enhancement-label \"**Implemented improvements:**\""

@@ -29,11 +29,11 @@ nameTags="--usernames-as-github-logins"
 # The specified labels will be shown in brackets next to each matching issue:
 listIssueLabels="--issue-line-labels 'add mod','remove mod',improvement,update,important,problem,request,code,format"
 
-#github_changelog_generator Tyler799/Morrowind-2019 $cacheLog --token $tokenVar $excludeLabels $bugsLabel $enhancementLabel $enhancementLabels $bugLabels
 # Include pull requests without labels in changelog
 #prWoLabel="pr-wo-labels=false"
 
 printf "\nGenerating your changelog...\n"
 
+github_changelog_generator $username $repoPath $cacheLog $tokenVar $excludeLabels $bugsLabel $enhancementLabel $enhancementLabels $bugLabels $nameTags $listIssueLabels
 
 read -p "Press enter to continue..."

@@ -28,6 +28,8 @@ nameTags="--usernames-as-github-logins"
 
 echo $bugsLabel
 echo $enhancementLabel
+# The specified labels will be shown in brackets next to each matching issue:
+listIssueLabels="--issue-line-labels 'add mod','remove mod',improvement,update,important,problem,request,code,format"
 
 #github_changelog_generator Tyler799/Morrowind-2019 $cacheLog --token $tokenVar $excludeLabels $bugsLabel $enhancementLabel $enhancementLabels $bugLabels
 

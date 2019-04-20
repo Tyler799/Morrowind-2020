@@ -16,6 +16,7 @@ cacheLog="--cache_log /dev/null"
 # Define all labels you want excluded from the changelog:
 excludeLabels="--exclude-labels task,invalid"
 
+# Setup custom label names for following sections:
 bugsLabel="--bugs-label '**Fixed problems:**'"
 enhancementLabel="--enhancement-label '**Implemented improvements:**'"
 

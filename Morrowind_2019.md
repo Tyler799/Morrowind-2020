@@ -827,7 +827,9 @@ Note that at the time this guide is being written, Khajiit meshes are nude. If s
 * [New Beast Bodies - Clean Version](http://mw.modhistory.com/download-10-10928) - You only need the argonian .esp and files. If you want to disable the khajiit meshes and textures, you can, but as long as you don't activate the Khajit bodies .esp, you'll be fine leaving them alone.
 * [Want 'mature' Argonians?](http://mw.modhistory.com/download-10-11364)
 * [Wey's Argonians](http://www.nexusmods.com/morrowind/mods/43766/?) - Get the optional darker mouths file if you wish. I use it.
+
 An newer alternative to Wey's Argonians for those who feel it may stray too far from the vanilla style:
+
 * [Improved Argonians](https://www.nexusmods.com/morrowind/mods/45918)
 
 ## Clothes replacers

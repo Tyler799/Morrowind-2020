@@ -35,9 +35,9 @@
 
 **Merged pull requests:**
 
-- MTE Updater First Release [\#56](https://github.com/Tyler799/Morrowind-2019/pull/56) [[code](https://github.com/Tyler799/Morrowind-2019/labels/code)] (@yooksi)
-- Reformat NT & MR section [\#32](https://github.com/Tyler799/Morrowind-2019/pull/32) [[format](https://github.com/Tyler799/Morrowind-2019/labels/format)] (@yooksi)
-- Reformat UI guide section [\#30](https://github.com/Tyler799/Morrowind-2019/pull/30) [[format](https://github.com/Tyler799/Morrowind-2019/labels/format)] (@yooksi)
+- MTE Updater First Release [\#56](https://github.com/Tyler799/Morrowind-2019/pull/56) [[code](https://github.com/Tyler799/Morrowind-2019/labels/code)] ([yooksi](https://github.com/yooksi))
+- Reformat NT & MR section [\#32](https://github.com/Tyler799/Morrowind-2019/pull/32) [[format](https://github.com/Tyler799/Morrowind-2019/labels/format)] ([yooksi](https://github.com/yooksi))
+- Reformat UI guide section [\#30](https://github.com/Tyler799/Morrowind-2019/pull/30) [[format](https://github.com/Tyler799/Morrowind-2019/labels/format)] ([yooksi](https://github.com/yooksi))
 
 ## [v1.3](https://github.com/Tyler799/Morrowind-2019/tree/v1.3) (2019-04-08)
 [Full Changelog](https://github.com/Tyler799/Morrowind-2019/compare/v1.2...v1.3)
@@ -48,7 +48,7 @@
 
 **Merged pull requests:**
 
-- Remove Script Improvements [\#25](https://github.com/Tyler799/Morrowind-2019/pull/25) [[remove mod](https://github.com/Tyler799/Morrowind-2019/labels/remove%20mod)] (@yooksi)
+- Remove Script Improvements [\#25](https://github.com/Tyler799/Morrowind-2019/pull/25) [[remove mod](https://github.com/Tyler799/Morrowind-2019/labels/remove%20mod)] ([yooksi](https://github.com/yooksi))
 
 ## [v1.2](https://github.com/Tyler799/Morrowind-2019/tree/v1.2) (2019-04-01)
 [Full Changelog](https://github.com/Tyler799/Morrowind-2019/compare/v1.1...v1.2)
@@ -57,9 +57,9 @@
 
 - Tamriel Rebuilt grass generation for MGE options [\#16](https://github.com/Tyler799/Morrowind-2019/issues/16) [[improvement](https://github.com/Tyler799/Morrowind-2019/labels/improvement)] [[request](https://github.com/Tyler799/Morrowind-2019/labels/request)]
 - Table of Contents? [\#9](https://github.com/Tyler799/Morrowind-2019/issues/9) [[improvement](https://github.com/Tyler799/Morrowind-2019/labels/improvement)] [[request](https://github.com/Tyler799/Morrowind-2019/labels/request)]
-- MWSE 2.1 clarifications [\#19](https://github.com/Tyler799/Morrowind-2019/pull/19) [[improvement](https://github.com/Tyler799/Morrowind-2019/labels/improvement)] (@NullCascade)
-- Proposing a section for "Screenshots" [\#17](https://github.com/Tyler799/Morrowind-2019/pull/17) [[improvement](https://github.com/Tyler799/Morrowind-2019/labels/improvement)] (@Tiber-Septim)
-- Added TOC \(excluding first header\) [\#10](https://github.com/Tyler799/Morrowind-2019/pull/10) [[improvement](https://github.com/Tyler799/Morrowind-2019/labels/improvement)] (@owlnical)
+- MWSE 2.1 clarifications [\#19](https://github.com/Tyler799/Morrowind-2019/pull/19) [[improvement](https://github.com/Tyler799/Morrowind-2019/labels/improvement)] ([NullCascade](https://github.com/NullCascade))
+- Proposing a section for "Screenshots" [\#17](https://github.com/Tyler799/Morrowind-2019/pull/17) [[improvement](https://github.com/Tyler799/Morrowind-2019/labels/improvement)] ([Tiber-Septim](https://github.com/Tiber-Septim))
+- Added TOC \(excluding first header\) [\#10](https://github.com/Tyler799/Morrowind-2019/pull/10) [[improvement](https://github.com/Tyler799/Morrowind-2019/labels/improvement)] ([owlnical](https://github.com/owlnical))
 
 **Fixed problems:**
 
@@ -74,15 +74,15 @@
 
 **Merged pull requests:**
 
-- Replaced quotes around file and folder names with inline code tag [\#11](https://github.com/Tyler799/Morrowind-2019/pull/11) [[format](https://github.com/Tyler799/Morrowind-2019/labels/format)] (@owlnical)
+- Replaced quotes around file and folder names with inline code tag [\#11](https://github.com/Tyler799/Morrowind-2019/pull/11) [[format](https://github.com/Tyler799/Morrowind-2019/labels/format)] ([owlnical](https://github.com/owlnical))
 
 ## [v1.1](https://github.com/Tyler799/Morrowind-2019/tree/v1.1) (2018-11-28)
 [Full Changelog](https://github.com/Tyler799/Morrowind-2019/compare/v1.0...v1.1)
 
 **Merged pull requests:**
 
-- Markdown links [\#2](https://github.com/Tyler799/Morrowind-2019/pull/2) [[format](https://github.com/Tyler799/Morrowind-2019/labels/format)] (@owlnical)
-- Added syntax highlighting for ini files [\#1](https://github.com/Tyler799/Morrowind-2019/pull/1) [[format](https://github.com/Tyler799/Morrowind-2019/labels/format)] (@owlnical)
+- Markdown links [\#2](https://github.com/Tyler799/Morrowind-2019/pull/2) [[format](https://github.com/Tyler799/Morrowind-2019/labels/format)] ([owlnical](https://github.com/owlnical))
+- Added syntax highlighting for ini files [\#1](https://github.com/Tyler799/Morrowind-2019/pull/1) [[format](https://github.com/Tyler799/Morrowind-2019/labels/format)] ([owlnical](https://github.com/owlnical))
 
 ## [v1.0](https://github.com/Tyler799/Morrowind-2019/tree/v1.0) (2018-11-24)
 

@@ -34,7 +34,7 @@ bugLabels="--bug-labels problem"
 listIssueLabels="--issue-line-labels 'add mod','remove mod',improvement,update,important,problem,request,code,format"
 
 # Use GitHub tags instead of Markdown links for the author of an issue or pull-request
-nameTags="--usernames-as-github-logins"
+nameTags="" # "--usernames-as-github-logins"
 
 # Include pull requests without labels in changelog
 #prWoLabel="pr-wo-labels=false"

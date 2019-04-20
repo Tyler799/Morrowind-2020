@@ -711,7 +711,7 @@ textures\q_wood_plate
 ```
 
 4. Other, less complicated to install mods
-* [Connary's Fine Vials](http://www.fullrest.ru/files/connarysfinevials/files) - disable `tx_rustedmetal0`.
+* [Connary's Fine Vials](http://www.fullrest.ru/files/connarysfinevials/files) - disable `tx_rustedmetal00.dds` and `tx_rustedmetal10.dds`, Morrowind Visual Pack has better versions of these.
 * [Connary's Mixed Pottery](http://www.fullrest.ru/files/connarysmixedpottery/files) - disable the mottled texture and pewter 1 texture.
 * [AOF Containers](http://www.nexusmods.com/morrowind/mods/32427/?) - disable `meshes\m\misc_com_bucket_01`.
 * [Small Mods by Wolli](http://www.nexusmods.com/morrowind/mods/42453/?) - Just get Darker Crates to match AOF's barrels.

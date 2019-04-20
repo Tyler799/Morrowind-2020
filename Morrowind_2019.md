@@ -194,8 +194,8 @@ As you begin installing mods, I recommend that you right click them and hit "Ign
 * [Bloated Caves](http://www.nexusmods.com/morrowind/mods/43141/) - Adds bloatspores (a plant) to Morrowind. Bloatspores were included in the game files but not placed in the world.
 
 One of the following:
-* [Delayed Dark Brotherhood Attack Add-On 2.0](http://mw.modhistory.com/download-90-7300) - Delays the Tribunal main quest from staring until certain "immersive" requirements are met.
-* [Dark Brotherhood Delay - Player's Choice](https://www.nexusmods.com/morrowind/mods/46533) - Delays the Tribunal main quest from starting until either a level condition is met, or you've completed the main quest depending on what option you choose. 
+* [Delayed Dark Brotherhood Attack Add-On 2.0](http://mw.modhistory.com/download-90-7300) - Delays the Tribunal main quest from staring until certain "immersive" requirements are met. Does NOT work with Rebirth!
+* [Dark Brotherhood Delay - Player's Choice](https://www.nexusmods.com/morrowind/mods/46533) - Delays the Tribunal main quest from starting until either a level condition is met, or you've completed the main quest depending on what option you choose. Does work with Rebirth. 
 
 ## Official Bethesda Plugins
 

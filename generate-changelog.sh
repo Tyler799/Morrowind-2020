@@ -1,6 +1,6 @@
 
 echo Time to generate a new project changelog
-echo Please enter your Github PA token:
+printf "\nPlease enter your Github PA token:\n"
 
 # GitHub only allows 50 unauthenticated requests per hour so we need
 # to run this script with authentication by using a token
@@ -26,8 +26,6 @@ bugLabels="--bug-labels problem"
 # Use GitHub tags instead of Markdown links for the author of an issue or pull-request
 nameTags="--usernames-as-github-logins"
 
-echo $bugsLabel
-echo $enhancementLabel
 # The specified labels will be shown in brackets next to each matching issue:
 listIssueLabels="--issue-line-labels 'add mod','remove mod',improvement,update,important,problem,request,code,format"
 
@@ -35,4 +33,7 @@ listIssueLabels="--issue-line-labels 'add mod','remove mod',improvement,update,i
 # Include pull requests without labels in changelog
 prWoLabel="[no-]pr-wo-labels=false"
 
-read -p "Press enter to continue"
+printf "\nGenerating your changelog...\n"
+
+
+read -p "Press enter to continue..."

@@ -16,31 +16,31 @@ cacheLog="--cache_log /dev/null"
 # Define all labels you want excluded from the changelog:
 excludeLabels="--exclude-labels task,invalid"
 
+# Only issues with the specified labels will be included in the changelog
+# This means that issues that are included HAVE to have at least one of these labels:
+includeLabels="--include-labels 'add mod',code,format,improvement,problem,'remove mod',update"
+
 # Setup custom label names for following sections:
 headerLabel="--header-label '# Changelog'"
 bugsLabel="--bugs-label '**Fixed problems:**'"
 enhancementLabel="--enhancement-label '**Implemented improvements:**'"
 issuesLabel="--issues-label '**Modlist updates:**'"
 
-# Only issues with the specified labels will be included in the changelog
-# This means that issues that are included HAVE to have at least one of these labels:
-includeLabels="--include-labels 'add mod',code,format,improvement,problem,'remove mod',update"
-
 # Issues with the specified labels will be always added to these sections:
 enhancementLabels="--enhancement-labels improvement"
 bugLabels="--bug-labels problem"
 
-# Use GitHub tags instead of Markdown links for the author of an issue or pull-request
-nameTags="--usernames-as-github-logins"
-
 # The specified labels will be shown in brackets next to each matching issue:
 listIssueLabels="--issue-line-labels 'add mod','remove mod',improvement,update,important,problem,request,code,format"
+
+# Use GitHub tags instead of Markdown links for the author of an issue or pull-request
+nameTags="--usernames-as-github-logins"
 
 # Include pull requests without labels in changelog
 #prWoLabel="pr-wo-labels=false"
 
 printf "\nGenerating your changelog...\n"
 
-github_changelog_generator $username $repoPath $cacheLog $tokenVar $excludeLabels $includeLabels $headerLabel $bugsLabel $enhancementLabel $issuesLabel $enhancementLabels $bugLabels $nameTags $listIssueLabels
+github_changelog_generator $username $repoPath $cacheLog $tokenVar $excludeLabels $includeLabels $headerLabel $bugsLabel $enhancementLabel $issuesLabel $enhancementLabels $bugLabels $listIssueLabels $nameTags
 
 read -p "Press enter to continue..."

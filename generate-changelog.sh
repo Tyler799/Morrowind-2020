@@ -32,5 +32,7 @@ echo $enhancementLabel
 listIssueLabels="--issue-line-labels 'add mod','remove mod',improvement,update,important,problem,request,code,format"
 
 #github_changelog_generator Tyler799/Morrowind-2019 $cacheLog --token $tokenVar $excludeLabels $bugsLabel $enhancementLabel $enhancementLabels $bugLabels
+# Include pull requests without labels in changelog
+prWoLabel="[no-]pr-wo-labels=false"
 
 read -p "Press enter to continue"

@@ -432,7 +432,9 @@ If you aren't using Graphic Herbalism, it's actually safe to disable the entire 
 
 ### Solstheim Textures
 
-* [Solstheim - Tomb of the Snow Prince](http://www.nexusmods.com/morrowind/mods/42979/?)
+* [Solstheim - Tomb of the Snow Prince v1.3](http://abitoftaste.altervista.org/morrowind/sopp/)
+
+Download either `wl_SolstheimOverhaul_v1.3.7z` or `wl_SolstheimOverhaul_v1.3 - BSA version.7z`. If using the BSA version, make sure to append it to the list of BSAs as stated earlier in the guide. This is an ABOT-updated and much-fixed version of TOTSP. 
 
 This mod is actually a massive overhaul of Solstheim. If you're not interested in a massive overhaul, you should download it for the meshes and textures. Just don't activate the .esm. You can safely disable the following folders: (However, they will simply not be loaded, so it is not necessary to disable them)
 

@@ -23,6 +23,9 @@ enhancementLabel="--enhancement-label '**Implemented improvements:**'"
 enhancementLabels="--enhancement-labels improvement"
 bugLabels="--bug-labels problem"
 
+# Use GitHub tags instead of Markdown links for the author of an issue or pull-request
+nameTags="--usernames-as-github-logins"
+
 echo $bugsLabel
 echo $enhancementLabel
 

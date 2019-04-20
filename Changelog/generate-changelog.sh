@@ -43,4 +43,7 @@ printf "\nGenerating your changelog...\n"
 
 github_changelog_generator $username $repoPath $cacheLog $tokenVar $excludeLabels $includeLabels $headerLabel $bugsLabel $enhancementLabel $issuesLabel $enhancementLabels $bugLabels $listIssueLabels $nameTags
 
+# Move the file one level up
+mv CHANGELOG.md ..
+
 read -p "Press enter to continue..."

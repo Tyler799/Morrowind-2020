@@ -990,6 +990,7 @@ UFR_v3dot2.esp
 Better Morrowind Armor.esp
 Illy's Hot Pots.ESP
 Vurt's Grazeland Trees [Palms].esp
+wl_SO_v1.3_newGH_patch.esp
 ```
 
 To actually clean, first open Wrye using MO2. Then, right click on a given plugin and hit "Clean with TES3CMD"

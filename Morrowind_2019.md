@@ -436,6 +436,11 @@ If you aren't using Graphic Herbalism, it's actually safe to disable the entire 
 
 Download either `wl_SolstheimOverhaul_v1.3.7z` or `wl_SolstheimOverhaul_v1.3 - BSA version.7z`. If using the BSA version, make sure to append it to the list of BSAs as stated earlier in the guide. This is an ABOT-updated and much-fixed version of TOTSP. 
 
+The only real difference between these two is:
+
+* BSAs always lose to loose files in terms of conflict resolution in MO2. If you're concerned that TOTSP might have some files over-written by another mod in a way that could cause issues, you'll want the loose files instead
+* BSAs are generally read faster by Morrowind, and are also more compact. This can help in load times. 
+
 This mod is actually a massive overhaul of Solstheim. If you're not interested in a massive overhaul, you should download it for the meshes and textures. Just don't activate the .esm. You can safely disable the following folders: (However, they will simply not be loaded, so it is not necessary to disable them)
 
 ```

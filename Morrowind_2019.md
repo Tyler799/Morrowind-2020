@@ -816,6 +816,8 @@ We'll get a replacer for Dagoth Ur and dremora in the next step.
 ## Bodies
 
 1. Heads
+
+  *Note that if you're using any of the head replacers linked here in conjunction with Tamriel Rebuilt the heads provided by TR will not be fully replaced because the mod assigns unique IDs to their heads.*
 * [Westly's Pluginless Head and Hair Replacer](http://download.fliggerty.com/download-127-874)
 * [Various tweaks and fixes](http://www.nexusmods.com/morrowind/mods/43795/?) - Specifically, Fixed Westly's Female Orc Heads and Fixed Westly's Barenziah Head.
 * [Animation Fix for Westly's Heads](https://www.dropbox.com/s/d70l2lbjvm0xloo/WestlyHeadsAnimFix.zip?dl=0) - Does what it says on the tin

@@ -30,7 +30,7 @@ If you need to reach me regarding this guide or otherwise, PM me at /u/Night_Tha
 * [Mesh fixes and improvements](#mesh-fixes-and-improvements)
 * [Nature Texture &amp; Mesh Replacers](#nature-texture--mesh-replacers)
   * [Want plants to not "bend" or "grow" towards you?](#want-plants-to-not-bend-or-grow-towards-you)
-* [Skies](#skies)
+* [Weather](#weather)
 * [Architecture Replacers](#architecture-replacers)
 * [Miscellaneous replacers](#miscellaneous-replacers)
 * [Creature replacers](#creature-replacers)

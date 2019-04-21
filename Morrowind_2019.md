@@ -34,7 +34,7 @@ If you need to reach me regarding this guide or otherwise, PM me at /u/Night_Tha
 * [Architecture Replacers](#architecture-replacers)
 * [Miscellaneous replacers](#miscellaneous-replacers)
 * [Creature replacers](#creature-replacers)
-* [Bodies](#bodies)
+* [Heads & Bodies](#heads--bodies)
 * [Clothes replacers](#clothes-replacers)
 * [Weapons](#weapons)
 * [Armor](#armor)
@@ -813,7 +813,7 @@ We'll get a replacer for Dagoth Ur and dremora in the next step.
 * Kwama Forager Bump Mapped by Lougian - Nexus, specifically in his Various Little Mods
 * Tyddy's Cliff Racer Aendemika - Nexus
 
-## Bodies
+## Heads & Bodies
 
 1. Heads
 

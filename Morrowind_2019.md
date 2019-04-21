@@ -39,6 +39,7 @@ If you need to reach me regarding this guide or otherwise, PM me at /u/Night_Tha
 * [Weapons](#weapons)
 * [Armor](#armor)
 * [Animations](#animations)
+* [Finishing Touch](#finishing-touch)
 * [MGE XE Setup](#mge-xe-setup)
 * [Cleaning mods](#cleaning-mods)
 * [Creating a multipatch](#creating-a-multipatch)

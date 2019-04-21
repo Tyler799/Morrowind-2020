@@ -15,14 +15,16 @@ public class Main {
 	// TODO: Document this variable
 	public static String runMode;
 	
-	// Use this class instance to handle all file related stuff
-	public static final FileHandler fileHandler = new FileHandler();
-	
 	public static void main(String[] args) 
 	{
 		try {
-			// Initialize logger first so we can output logs
+			/*
+			 *  Initialize logger first before doing anything else so we can output logs
+			 *  Note that we will crash if we try to output logs before logger is initialized
+			 */
 			Logger.init(args, false);
+			
+			FileHandler.init();
 			
 			if (args != null && args.length > 0)
 				processJVMArguments(args);
@@ -89,15 +91,15 @@ public class Main {
 		Logger.verbose("Start updating mte...");
 		
 		Logger.print("\nDownloading mte version file...");
-		if (!RemoteHandler.downloadRemoteVersionFile(fileHandler))
+		if (!RemoteHandler.downloadRemoteVersionFile())
 			return;
 		
-		fileHandler.registerRemoteVersionFile();
+		FileHandler.get().registerRemoteVersionFile();
 
 		Logger.print("Comparing version numbers...");
 		
-		String remoteSHA = fileHandler.remote.getCommitSHA();
-		String localSHA = fileHandler.local.getCommitSHA();
+		String remoteSHA = FileHandler.get().remote.getCommitSHA();
+		String localSHA = FileHandler.get().local.getCommitSHA();
 
 		// Compare version numbers to see if we need to update
 		if (!remoteSHA.equals(localSHA)) {
@@ -105,7 +107,7 @@ public class Main {
 
 			if (localSHA.isEmpty()) {
 				Logger.verbose("Local version file not found, skip showing updates");
-				fileHandler.doUpdate(localSHA, remoteSHA);
+				FileHandler.get().doUpdate(localSHA, remoteSHA);
 				return;
 			}
 			// Continue asking for input until the user says yes or no
@@ -113,7 +115,7 @@ public class Main {
 			Key input = UserInput.waitFor(Key.YES, Key.NO);
 
 			if (input == Key.YES) {					
-				fileHandler.doUpdate(localSHA, remoteSHA);
+				FileHandler.get().doUpdate(localSHA, remoteSHA);
 			} 
 			else if (input == Key.NO) {
 				

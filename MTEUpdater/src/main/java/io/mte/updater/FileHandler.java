@@ -28,6 +28,7 @@ public class FileHandler {
 
 	public static final UnzipUtility unzipUtility = new UnzipUtility();
 
+	private static FileHandler instance;
 	private static List<File> tempFiles;
 	protected final VersionFile local;
 	protected VersionFile remote;
@@ -89,7 +90,21 @@ public class FileHandler {
 		tempFiles = new ArrayList<File>();
 		local = new VersionFile(RemoteHandler.VERSION_FILENAME);
 	}
-
+	
+	public static void init() {
+		/*
+		 *  Initialize only once per session
+		 */
+		if (instance != null)
+			instance = new FileHandler();
+		else
+			Logger.warning("Trying to initialize FileHandler more then once");
+	}
+	public static FileHandler get() {
+		return instance;
+	}
+	
+	
 	public class VersionFile extends File {
 
 		private static final long serialVersionUID = 1L;
@@ -118,8 +133,8 @@ public class FileHandler {
 					Logger.print(Logger.Level.ERROR, e, "Unable to find %s version file!", filename);
 					Execute.exit(1, true);
 				}
-				//Logger.print(Logger.Level.VERBOSE, 
-				//		"Unable to find local version file %s, going to update", filename);
+				Logger.print(Logger.Level.VERBOSE, 
+						"Unable to find local version file %s, going to update", filename);
 				
 				releaseVer = 0;
 				commitSHA = "";
@@ -207,7 +222,7 @@ public class FileHandler {
 		}
 		// Download latest release files
 		Logger.print("\nDownloading release files...");
-		if (!RemoteHandler.downloadLatestRelease(this))
+		if (!RemoteHandler.downloadLatestRelease())
 			return;
 
 		// Extract the release files to a new directory

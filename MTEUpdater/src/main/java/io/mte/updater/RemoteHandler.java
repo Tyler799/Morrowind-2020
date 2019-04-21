@@ -98,10 +98,10 @@ public class RemoteHandler {
 		}
 	}
 	
-	static boolean downloadRemoteVersionFile(FileHandler handler) {
+	static boolean downloadRemoteVersionFile() {
 		
 		try {
-			return handler.downloadUsingStream(Link.versionFile, VERSION_FILENAME + ".remote");
+			return FileHandler.get().downloadUsingStream(Link.versionFile, VERSION_FILENAME + ".remote");
 		} 
 		catch (java.io.IOException e) {
 			Logger.error("Unable to download project version file!", e);
@@ -109,12 +109,13 @@ public class RemoteHandler {
 		}
 	}
 	
-	static boolean downloadLatestRelease(FileHandler handler) {
+	static boolean downloadLatestRelease() {
 
 		try {
-			URL releaseLink = Link.constructURL(Link.repository, Link.releasePath, "v" + handler.remote.getReleaseVersion(), RELEASE_FILENAME);
-			if (handler.downloadUsingStream(releaseLink, RELEASE_FILENAME)) {
-				handler.registerTempFile(new java.io.File(RELEASE_FILENAME));
+			FileHandler fh = FileHandler.get();
+			URL releaseLink = Link.constructURL(Link.repository, Link.releasePath, "v" + fh.remote.getReleaseVersion(), RELEASE_FILENAME);
+			if (fh.downloadUsingStream(releaseLink, RELEASE_FILENAME)) {
+				fh.registerTempFile(new java.io.File(RELEASE_FILENAME));
 				return true;
 			}
 			return false;

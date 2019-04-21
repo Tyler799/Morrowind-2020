@@ -131,8 +131,10 @@ public class Logger {
 			print(log, Logger.Level.LOG);
 		}
 		public static void print(Exception e) {
-			if (e != null && instance != null) 
+			if (e != null && instance != null) {
 				e.printStackTrace(writer);
+				writer.flush();
+			}
 		}
 	}
 	

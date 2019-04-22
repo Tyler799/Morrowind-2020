@@ -90,16 +90,23 @@ public class Main {
 		
 		Logger.verbose("Start updating mte...");
 		
-		Logger.print("\nDownloading mte version file...");
-		if (!RemoteHandler.downloadRemoteVersionFile())
-			return;
+		Logger.print("\nReading remote mte version file...");
+		String remoteLine = RemoteHandler.downloadStringLine(RemoteHandler.Link.versionFile);
+		VersionFile.Data remoteData = VersionFile.readData(remoteLine, VersionFile.Type.MTE);
 		
-		FileHandler.get().registerRemoteVersionFile();
-
+		if (remoteData.isEmpty()) {
+			Logger.error("Remote version file data is corrupted");
+			Execute.exit(1, false);
+		}
+		
+		Logger.verbose("Loading local version file...");
+		VersionFile localVerFile = VersionFile.load(VersionFile.Type.MTE);
+		
 		Logger.print("Comparing version numbers...");
 		
-		String remoteSHA = FileHandler.get().remote.getCommitSHA();
-		String localSHA = FileHandler.get().local.getCommitSHA();
+		String remoteSHA = remoteData.getCommitSHA();
+		String localSHA = localVerFile.getData().getCommitSHA();
+		float version = remoteData.getReleaseVersion();
 
 		// Compare version numbers to see if we need to update
 		if (!remoteSHA.equals(localSHA)) {
@@ -107,7 +114,7 @@ public class Main {
 
 			if (localSHA.isEmpty()) {
 				Logger.verbose("Local version file not found, skip showing updates");
-				FileHandler.get().doUpdate(localSHA, remoteSHA);
+				FileHandler.get().doUpdate(version, localSHA, remoteSHA);
 				return;
 			}
 			// Continue asking for input until the user says yes or no
@@ -115,7 +122,7 @@ public class Main {
 			Key input = UserInput.waitFor(Key.YES, Key.NO);
 
 			if (input == Key.YES) {					
-				FileHandler.get().doUpdate(localSHA, remoteSHA);
+				FileHandler.get().doUpdate(version, localSHA, remoteSHA);
 			} 
 			else if (input == Key.NO) {
 				

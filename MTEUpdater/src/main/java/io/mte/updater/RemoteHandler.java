@@ -6,7 +6,6 @@ import java.net.URL;
 public class RemoteHandler {
 
 	public final static String RELEASE_FILENAME = "MTE-Release.7z";
-	public final static String VERSION_FILENAME = "mte-version.txt";
 	
 	public static class Link {
 	
@@ -26,7 +25,7 @@ public class RemoteHandler {
 		
 		public static final URL repository = constructURL(github, repoPath);
 		public static final URL commitCompare = constructURL(github, repoPath, comparePath);
-		public static final URL versionFile = constructURL(ghusercontent, repoPath, masterBranch, VERSION_FILENAME);
+		public static final URL versionFile = constructURL(ghusercontent, repoPath, masterBranch, VersionFile.Type.MTE.getName());
 		public static final URL releasesPage = constructURL(github, repoPath, "download"); 
 		
 		private static URL constructURL(URL url, String...paths)  {
@@ -98,22 +97,11 @@ public class RemoteHandler {
 		}
 	}
 	
-	static boolean downloadRemoteVersionFile() {
-		
-		try {
-			return FileHandler.get().downloadUsingStream(Link.versionFile, VERSION_FILENAME + ".remote");
-		} 
-		catch (java.io.IOException e) {
-			Logger.error("Unable to download project version file!", e);
-			return false;
-		}
-	}
-	
-	static boolean downloadLatestRelease() {
+	static boolean downloadLatestRelease(float tag) {
 
 		try {
 			FileHandler fh = FileHandler.get();
-			URL releaseLink = Link.constructURL(Link.repository, Link.releasePath, "v" + fh.remote.getReleaseVersion(), RELEASE_FILENAME);
+			URL releaseLink = Link.constructURL(Link.repository, Link.releasePath, "v" + tag, RELEASE_FILENAME);
 			if (fh.downloadUsingStream(releaseLink, RELEASE_FILENAME)) {
 				fh.registerTempFile(new java.io.File(RELEASE_FILENAME));
 				return true;

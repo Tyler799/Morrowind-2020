@@ -82,7 +82,7 @@ public class FileHandler {
 
 	// Create file instances here at runtime
 	// if there is any problems we can terminate application
-	FileHandler() {
+	private FileHandler() {
 
 		Logger.debug("Initializing file handler instance");
 		

@@ -31,52 +31,46 @@ public class FileHandler {
 	private static FileHandler instance;
 	private static List<File> tempFiles;
 
-	private static enum ReleaseFiles {
+	private static class ReleaseFiles {
 
-		APPLICATION("MTE-Updater.jar"),
-		GUIDE("Morrowind_2019.md"),
-		LAUNCHER("MTE-Updater.bat");
-
-		private File instance;
-
-		ReleaseFiles(String name) {
-			instance = new File(Dir.localDirectory + File.separator + name);
-		}
-
-		private static class Dir {
-			/** This is where the latest release will be unpacked */
-			private static final String localDirectory =
-					FilenameUtils.removeExtension(RemoteHandler.RELEASE_FILENAME);
-		}
-
+		/** This is where the latest release will be unpacked */
+		protected static final File dir = new File(
+				FilenameUtils.removeExtension(RemoteHandler.RELEASE_FILENAME));
+		
 		/**
 		 * Compare remote release files with their local counterparts
 		 * @return a list of release files newer then local versions
 		 */
 		public static ArrayList<File> compare() {
 
-			ArrayList<File> list = new ArrayList<File>();
-			for (ReleaseFiles file : ReleaseFiles.values()) {
+			ArrayList<File> updates = new ArrayList<File>();
+			File[] releaseFiles = dir.listFiles();
+			/*
+			 *  Iterate through all release files located in the directory
+			 *  we extracted our downloaded release
+			 */
+			for (int i = 0; i < releaseFiles.length; i++) {
 
-				String name = file.instance.getName();
+				File releaseFile = releaseFiles[i];
+				String name = releaseFile.getName();
 				File localFile = new File(name);
 
 				if (!localFile.exists()) {
 					Logger.print(Logger.Level.VERBOSE, "Local file %s not found, going to update", name);
-					list.add(file.instance);
+					updates.add(releaseFile);
 					continue;
 				}
 				Logger.print(Logger.Level.DEBUG, "Comparing %s release to local version", name);
 				try {
-					if (!FileUtils.contentEquals(file.instance, localFile))
-						list.add(file.instance);
+					if (!FileUtils.contentEquals(releaseFile, localFile))
+						updates.add(releaseFile);
 				}
 				catch (IOException e) {
 					Logger.print(Logger.Level.ERROR, e, "Unable to compare release file %s to local version", name);
 					continue;
 				}
 			}
-			return list;
+			return updates;
 		}
 	}
 

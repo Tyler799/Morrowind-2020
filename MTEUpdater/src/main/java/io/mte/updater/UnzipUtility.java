@@ -24,14 +24,17 @@ public class UnzipUtility {
 	 *
 	 * @param zipFilePath
 	 * @param destDirectory
+	 * @return list of files that were extracted
 	 */
-	public boolean unzip(String zipFilePath, String destDirectory) throws IOException {
+	public java.util.ArrayList<File> unzip(String zipFilePath, String destDirectory) throws IOException {
+		
+		java.util.ArrayList<File> unzippedFiles = new java.util.ArrayList<File>();
 		
 		// Make sure the zip file under the given path exists
 		File zipFile = new File(zipFilePath);
 		if (!zipFile.exists()) {
 			Logger.print(Logger.Level.ERROR, "Unable to find zip file with path %s", zipFilePath);
-			return false;
+			return null;
 		}
 		File destDir = new File(destDirectory);
 		if (!destDir.exists()) {
@@ -51,7 +54,7 @@ public class UnzipUtility {
 				if (entry == null) {
 					Logger.error("Zip contains no valid entries!");
 					Logger.print("Aborting unzipping operation...");
-					return false;
+					return null;
 				}
 				while (entry != null) {
 					
@@ -64,6 +67,7 @@ public class UnzipUtility {
 						if (extrFile == null || !extrFile.exists()) {
 							Logger.print(Logger.Level.ERROR, "Unable to find extracted file %s!", entry.getName());
 						}
+						else unzippedFiles.add(extrFile);
 					} else {
 						// if the entry is a directory, make the directory
 						File dir = new File(filePath);
@@ -80,9 +84,9 @@ public class UnzipUtility {
 			}
 			catch (IOException e) {
 				Logger.print(Logger.Level.ERROR, e, "Unable to read archive %s!", zipFile.getName());
-				return false;
+				return null;
 			}
-			return true;
+			return unzippedFiles;
 		}
 		/*
 		 * Use the standard method for regular zip files
@@ -97,13 +101,13 @@ public class UnzipUtility {
 				Logger.error("Zip contains no valid entries!");
 				Logger.print("Aborting unzipping operation...");
 				closeZipInputStream(zipIn);
-				return false;
+				return null;
 			}
 		}
 		catch (IOException e) {
 			Logger.error("ZIP file error has occurred, unable to get new zip entry!", e);
 			closeZipInputStream(zipIn);
-			return false;
+			return null;
 		}
 		// iterates over entries in the zip file
 		while (entry != null) {
@@ -117,6 +121,7 @@ public class UnzipUtility {
 				if (extrFile == null || !extrFile.exists()) {
 					Logger.print(Logger.Level.ERROR, "Unable to find extracted file %s!", entry.getName());
 				}
+				else unzippedFiles.add(extrFile);
 			} else {
 				// if the entry is a directory, make the directory
 				File dir = new File(filePath);
@@ -130,13 +135,13 @@ public class UnzipUtility {
 			catch (IOException e) {
 				Logger.error("Unable to close or get next zip entry!", e);
 				Logger.print("Aborting unzipping operation...");
-				return false;
+				return null;
 			}
 		}
 		if (!closeZipInputStream(zipIn))
-			return false;
+			return null;
 		
-		return true;
+		return unzippedFiles;
 	}
 
 	/**

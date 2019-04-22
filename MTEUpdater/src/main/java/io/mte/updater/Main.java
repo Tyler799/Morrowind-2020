@@ -163,7 +163,7 @@ public class Main {
 	 * Did the JVM run as a launcher? 
 	 */
 	public static boolean isLauncher() {
-		return runMode.equals("--launcher");
+		return runMode.equals("--launch");
 	}
 	public static boolean isSelfUpdating() {
 		return runMode.equals("--update-self");

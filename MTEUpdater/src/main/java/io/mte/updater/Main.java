@@ -23,11 +23,9 @@ public class Main {
 			 *  Note that we will crash if we try to output logs before logger is initialized
 			 */
 			Logger.init(args, false);
-			
 			FileHandler.init();
 			
-			if (args != null && args.length > 0)
-				processJVMArguments(args);
+			processJVMArguments(args);
 			
 			updateMWSE();
 			runMTEUpdater();

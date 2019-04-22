@@ -26,7 +26,7 @@ import org.apache.commons.lang3.StringUtils;
 
 public class FileHandler {
 
-	public static final UnzipUtility unzipUtility = new UnzipUtility();
+	public static final UnzipUtility unzipper = new UnzipUtility();
 
 	private static FileHandler instance;
 	private static List<File> tempFiles;
@@ -201,8 +201,8 @@ public class FileHandler {
 	boolean extractReleaseFiles() {
 
 		try {
-			unzipUtility.unzip(RemoteHandler.RELEASE_FILENAME, ReleaseFiles.Dir.localDirectory);
-			registerTempFile(new File(ReleaseFiles.Dir.localDirectory));
+			unzipper.unzip(RemoteHandler.RELEASE_FILENAME, ReleaseFiles.dir.getName());
+			registerTempFile(ReleaseFiles.dir);
 			return true;
 		} catch (IOException e) {
 			Logger.error("Unable to extract the GH repo file!", e);

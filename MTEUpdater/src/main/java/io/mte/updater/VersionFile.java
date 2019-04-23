@@ -32,10 +32,12 @@ public class VersionFile {
 					new java.util.LinkedHashMap<Entry, String>(values)); 
 		}
 		public float getReleaseVersion() {
-			return Float.parseFloat(map.get(Entry.VERSION));
+			String version = map.get(Entry.VERSION);
+			return (version != null) ? Float.parseFloat(version) : 0;
 		}
 		public String getCommitSHA() {
-			return map.get(Entry.SHA);
+			String sha = map.get(Entry.SHA);
+			return (sha != null) ? sha : "";
 		}
 		public boolean isEmpty() {
 			return map.isEmpty();
@@ -45,6 +47,10 @@ public class VersionFile {
 	VersionFile(Type type) {
 		
 		file = new File(type.filename);
+		if (!file.exists()) {
+			Logger.print(Logger.Level.VERBOSE, "Unable to find version file %s, going to update", type.filename);
+			data = new Data(new java.util.HashMap<>()); return;
+		}
 		
 		String contents = FileHandler.readFile(type.filename);
 		if (contents == null || contents.isEmpty()) {

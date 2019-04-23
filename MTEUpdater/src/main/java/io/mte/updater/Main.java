@@ -138,21 +138,28 @@ public class Main {
 	 * have to run one updater that does it all for them 
 	 */
 	private static void updateMWSE() {
-		/*
-		 *  Don't update mwse if we are running in debug mode
-		 */
-		if (!Logger.isDebug()) {
-			Logger.print("Attempting to update MWSE build...");
-			File mwse = new File("MWSE-Update.exe");
+
+		Logger.print("Attempting to update MWSE build...");
+		File mwse = new File("MWSE-Update.exe");
+		
+		if (mwse != null && mwse.exists()) {
+			/*
+			 *  Get the version data before running the program as it will change
+			 *  The remote dev version contains trailing space, so we need to trim it
+			 */
+			String mwseDevVersion = RemoteHandler.getMwseDevVersion().trim();
+			String mwseLocalVersion = new VersionFile(VersionFile.Type.MWSE).getData().getCommitSHA();
 			
-			if (mwse != null && mwse.exists()) {
-				Process proc = Execute.start(mwse.getName(), true, true);
-				if (proc == null || proc.exitValue() != 0)
-					Logger.warning("Unable to update, check logfile for more details");
+			Process proc = Execute.start(mwse.getName(), true, true);
+			if (proc == null || proc.exitValue() != 0) {
+				Logger.warning("Unable to update due to an error, check logfile for more details");
 			}
-			else
-				Logger.verbose("Unable to find mwse updater, skipping...");
+			else if (mwseDevVersion.equals(mwseLocalVersion)) {
+					Logger.print("Your MWSE version is up-to-date");
+			}
+			else Logger.print("Installed new version of MWSE!");
 		}
+		else Logger.verbose("Unable to find mwse updater, skipping...");
 	}
 	
 	// TODO: Move these values into an enum

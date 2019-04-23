@@ -27,6 +27,7 @@ public class RemoteHandler {
 		public static final URL commitCompare = constructURL(github, repoPath, comparePath);
 		public static final URL versionFile = constructURL(ghusercontent, repoPath, masterBranch, VersionFile.Type.MTE.getName());
 		public static final URL releasesPage = constructURL(github, repoPath, "download"); 
+		public static final URL mwseDevVersion = constructURL("https://nullcascade.com/mwse/version_dev");
 		
 		private static URL constructURL(URL url, String...paths)  {
 			return constructURL(url.toString() + "/" + String.join("/", paths));
@@ -111,6 +112,27 @@ public class RemoteHandler {
 		catch (java.io.IOException e) {
 			Logger.error("Unable to download repository files!", e);
 			return false;
+		}
+	}
+	/** Returns the latest nightly build version of MWSE. */
+	static String getMwseDevVersion() {
+		return downloadStringLine(Link.mwseDevVersion);
+	}
+	/** 
+	 * Reads a text file from url and returns the first line as string. 
+	 * @param url web location of the text file to read
+	 * @return {@code null} if an error occurred
+	 */
+	static String downloadStringLine(URL url) {
+		
+		try {
+			java.io.InputStreamReader stream = new java.io.InputStreamReader(url.openStream());
+			java.io.BufferedReader reader = new java.io.BufferedReader(stream);
+			return reader.readLine();
+		}
+		catch (java.io.IOException e) {
+			Logger.print(Logger.Level.ERROR, e, "Unable to download string from %s", url.toString());
+			return null;
 		}
 	}
 }

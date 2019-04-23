@@ -17,12 +17,10 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 import java.util.ListIterator;
-import java.util.regex.Pattern;
 
 import org.apache.commons.io.FileUtils;
 import org.apache.commons.io.FilenameUtils;
 import org.apache.commons.io.IOUtils;
-import org.apache.commons.lang3.StringUtils;
 
 public class FileHandler {
 
@@ -343,11 +341,10 @@ public class FileHandler {
 	 * Read from a text file and return the compiled string
 	 *
 	 * @param filename Name of the file to read from the root directory
-	 * @return Content of the text file
+	 * @return Content of the text file or {@code null} if an error occurred
 	 */
 	 static String readFile(String filename) {
 
-		// Using Apache Commons IO here
 		try (FileInputStream inputStream = new FileInputStream(filename)) {
 			return IOUtils.toString(inputStream, "UTF-8");
 		} catch (IOException e) {

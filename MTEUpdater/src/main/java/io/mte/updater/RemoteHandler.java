@@ -15,7 +15,7 @@ public class RemoteHandler {
 		
 		/* These relative paths are used to construct URL's */
 		private static final String repoPath = "Tyler799/Morrowind-2019";
-		private static final String updaterBranch = "updater";
+		//private static final String updaterBranch = "updater";
 		private static final String masterBranch = "master";
 		private static final String comparePath = "compare";
 		private static final String releasePath = "releases/download";
@@ -97,7 +97,10 @@ public class RemoteHandler {
 			return false;
 		}
 	}
-	
+	/** 
+	 * Download latest project release from Github
+	 * @param tag number used to find the latest release
+	 */
 	static boolean downloadLatestRelease(float tag) {
 
 		try {

@@ -15,17 +15,17 @@ public class Main {
 	// TODO: Document this variable
 	public static String runMode;
 	
-	// Use this class instance to handle all file related stuff
-	public static final FileHandler fileHandler = new FileHandler();
-	
 	public static void main(String[] args) 
 	{
 		try {
-			// Initialize logger first so we can output logs
+			/*
+			 *  Initialize logger first before doing anything else so we can output logs
+			 *  Note that we will crash if we try to output logs before logger is initialized
+			 */
 			Logger.init(args, false);
+			FileHandler.init();
 			
-			if (args != null && args.length > 0)
-				processJVMArguments(args);
+			processJVMArguments(args);
 			
 			updateMWSE();
 			runMTEUpdater();
@@ -88,16 +88,23 @@ public class Main {
 		
 		Logger.verbose("Start updating mte...");
 		
-		Logger.print("\nDownloading mte version file...");
-		if (!RemoteHandler.downloadRemoteVersionFile(fileHandler))
-			return;
+		Logger.print("\nReading remote mte version file...");
+		String remoteLine = RemoteHandler.downloadStringLine(RemoteHandler.Link.versionFile);
+		VersionFile.Data remoteData = VersionFile.readData(remoteLine, VersionFile.Type.MTE);
 		
-		fileHandler.registerRemoteVersionFile();
-
+		if (remoteData.isEmpty()) {
+			Logger.error("Remote version file data is corrupted");
+			Execute.exit(1, false);
+		}
+		
+		Logger.verbose("Loading local version file...");
+		VersionFile localVerFile = VersionFile.load(VersionFile.Type.MTE);
+		
 		Logger.print("Comparing version numbers...");
 		
-		String remoteSHA = fileHandler.remote.getCommitSHA();
-		String localSHA = fileHandler.local.getCommitSHA();
+		String remoteSHA = remoteData.getCommitSHA();
+		String localSHA = localVerFile.getData().getCommitSHA();
+		float version = remoteData.getReleaseVersion();
 
 		// Compare version numbers to see if we need to update
 		if (!remoteSHA.equals(localSHA)) {
@@ -105,7 +112,7 @@ public class Main {
 
 			if (localSHA.isEmpty()) {
 				Logger.verbose("Local version file not found, skip showing updates");
-				fileHandler.doUpdate(localSHA, remoteSHA);
+				FileHandler.get().doUpdate(version, localSHA, remoteSHA);
 				return;
 			}
 			// Continue asking for input until the user says yes or no
@@ -113,7 +120,7 @@ public class Main {
 			Key input = UserInput.waitFor(Key.YES, Key.NO);
 
 			if (input == Key.YES) {					
-				fileHandler.doUpdate(localSHA, remoteSHA);
+				FileHandler.get().doUpdate(version, localSHA, remoteSHA);
 			} 
 			else if (input == Key.NO) {
 				
@@ -131,21 +138,28 @@ public class Main {
 	 * have to run one updater that does it all for them 
 	 */
 	private static void updateMWSE() {
-		/*
-		 *  Don't update mwse if we are running in debug mode
-		 */
-		if (!Logger.isDebug()) {
-			Logger.print("Attempting to update MWSE build...");
-			File mwse = new File("MWSE-Update.exe");
+
+		Logger.print("Attempting to update MWSE build...");
+		File mwse = new File("MWSE-Update.exe");
+		
+		if (mwse != null && mwse.exists()) {
+			/*
+			 *  Get the version data before running the program as it will change
+			 *  The remote dev version contains trailing space, so we need to trim it
+			 */
+			String mwseDevVersion = RemoteHandler.getMwseDevVersion().trim();
+			String mwseLocalVersion = new VersionFile(VersionFile.Type.MWSE).getData().getCommitSHA();
 			
-			if (mwse != null && mwse.exists()) {
-				Process proc = Execute.start(mwse.getName(), true, true);
-				if (proc == null || proc.exitValue() != 0)
-					Logger.warning("Unable to update, check logfile for more details");
+			Process proc = Execute.start(mwse.getName(), true, true);
+			if (proc == null || proc.exitValue() != 0) {
+				Logger.warning("Unable to update due to an error, check logfile for more details");
 			}
-			else
-				Logger.verbose("Unable to find mwse updater, skipping...");
+			else if (mwseDevVersion.equals(mwseLocalVersion)) {
+					Logger.print("Your MWSE version is up-to-date");
+			}
+			else Logger.print("Installed new version of MWSE!");
 		}
+		else Logger.verbose("Unable to find mwse updater, skipping...");
 	}
 	
 	// TODO: Move these values into an enum
@@ -154,7 +168,7 @@ public class Main {
 	 * Did the JVM run as a launcher? 
 	 */
 	public static boolean isLauncher() {
-		return runMode.equals("--launcher");
+		return runMode.equals("--launch");
 	}
 	public static boolean isSelfUpdating() {
 		return runMode.equals("--update-self");

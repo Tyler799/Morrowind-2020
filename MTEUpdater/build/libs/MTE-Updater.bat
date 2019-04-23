@@ -87,7 +87,7 @@ set APPPATH=MTE-Updater.jar
 set "MTE_UPDATER_OPTS=-Dprogram.name=%APPPATH%"
 
 @rem Execute MTEUpdater
-"%JAVA_EXE%" %DEFAULT_JVM_OPTS% %JAVA_OPTS% %MTE_UPDATER_OPTS% -jar "%APPPATH%" --launcher %CMD_LINE_ARGS%
+"%JAVA_EXE%" %DEFAULT_JVM_OPTS% %JAVA_OPTS% %MTE_UPDATER_OPTS% -jar "%APPPATH%" --launch %CMD_LINE_ARGS%
 
 :end
 @rem End local scope for the variables with windows NT shell

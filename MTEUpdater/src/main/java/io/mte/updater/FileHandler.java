@@ -17,158 +17,82 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 import java.util.ListIterator;
-import java.util.regex.Pattern;
 
 import org.apache.commons.io.FileUtils;
 import org.apache.commons.io.FilenameUtils;
 import org.apache.commons.io.IOUtils;
-import org.apache.commons.lang3.StringUtils;
 
 public class FileHandler {
 
-	public static final UnzipUtility unzipUtility = new UnzipUtility();
+	public static final UnzipUtility unzipper = new UnzipUtility();
 
+	private static FileHandler instance;
 	private static List<File> tempFiles;
-	protected final VersionFile local;
-	protected VersionFile remote;
 
-	private static enum ReleaseFiles {
+	private static class ReleaseFiles {
 
-		APPLICATION("MTE-Updater.jar"),
-		GUIDE("Morrowind_2019.md"),
-		LAUNCHER("MTE-Updater.bat");
-
-		private File instance;
-
-		ReleaseFiles(String name) {
-			instance = new File(Dir.localDirectory + File.separator + name);
-		}
-
-		private static class Dir {
-			/** This is where the latest release will be unpacked */
-			private static final String localDirectory =
-					FilenameUtils.removeExtension(RemoteHandler.RELEASE_FILENAME);
-		}
-
+		/** This is where the latest release will be unpacked */
+		protected static final File dir = new File(
+				FilenameUtils.removeExtension(RemoteHandler.RELEASE_FILENAME));
+		
 		/**
 		 * Compare remote release files with their local counterparts
 		 * @return a list of release files newer then local versions
 		 */
 		public static ArrayList<File> compare() {
 
-			ArrayList<File> list = new ArrayList<File>();
-			for (ReleaseFiles file : ReleaseFiles.values()) {
+			ArrayList<File> updates = new ArrayList<File>();
+			File[] releaseFiles = dir.listFiles();
+			/*
+			 *  Iterate through all release files located in the directory
+			 *  we extracted our downloaded release
+			 */
+			for (int i = 0; i < releaseFiles.length; i++) {
 
-				String name = file.instance.getName();
+				File releaseFile = releaseFiles[i];
+				String name = releaseFile.getName();
 				File localFile = new File(name);
 
 				if (!localFile.exists()) {
 					Logger.print(Logger.Level.VERBOSE, "Local file %s not found, going to update", name);
-					list.add(file.instance);
+					updates.add(releaseFile);
 					continue;
 				}
 				Logger.print(Logger.Level.DEBUG, "Comparing %s release to local version", name);
 				try {
-					if (!FileUtils.contentEquals(file.instance, localFile))
-						list.add(file.instance);
+					if (!FileUtils.contentEquals(releaseFile, localFile))
+						updates.add(releaseFile);
 				}
 				catch (IOException e) {
 					Logger.print(Logger.Level.ERROR, e, "Unable to compare release file %s to local version", name);
 					continue;
 				}
 			}
-			return list;
+			return updates;
 		}
 	}
 
 	// Create file instances here at runtime
 	// if there is any problems we can terminate application
-	FileHandler() {
+	private FileHandler() {
 
+		Logger.debug("Initializing file handler instance");
+		
 		// Store all our temporary file references here
 		tempFiles = new ArrayList<File>();
-		local = new VersionFile(RemoteHandler.VERSION_FILENAME);
 	}
-
-	public class VersionFile extends File {
-
-		private static final long serialVersionUID = 1L;
-
-		public final String filename;
-		private final float releaseVer;
-		private final String commitSHA;
-
-		public VersionFile(String pathname) {
-
-			super(pathname);
-			filename = this.getName();
-			/*
-			 *  Find out if the version file is local by checking its extension
-			 *  Remote files should have the "remote" extension
-			 */
-			boolean isLocal = !FilenameUtils.getExtension(filename).equals("remote");
-			
-			if (!this.exists()) {
-				/*
-				 *  Remote files should always be present because we initialize
-				 *  them after we perform a download from repository
-				 */
-				if (isLocal != true) {
-					Exception e = new java.io.FileNotFoundException();
-					Logger.print(Logger.Level.ERROR, e, "Unable to find %s version file!", filename);
-					Execute.exit(1, true);
-				}
-				//Logger.print(Logger.Level.VERBOSE, 
-				//		"Unable to find local version file %s, going to update", filename);
-				
-				releaseVer = 0;
-				commitSHA = "";
-				return;
-			}
-
-			String contents = readFile(filename);
-			CharSequence versionLine[] = contents.split(" ");
-
-			// The version file should contain a single line with two numbers,
-			// first one being the release version and second the last release commit SHA
-			boolean validVersionFile = false;
-			String versionNumber = "";
-
-			if (versionLine.length == 2)
-			{
-				versionNumber = versionLine[0].toString();
-				int vnLength = versionNumber.length();
-				int vnDecimal = versionNumber.indexOf(".");
-
-				// Version must be formatted properly
-				if (vnLength > 1 && vnDecimal > 0 && vnDecimal <= (vnLength -2))
-				{
-					versionNumber = versionNumber.replace(".", "");
-
-					if (Pattern.matches("[a-z0-9]+", versionLine[1]) && StringUtils.isNumeric(versionNumber)) {
-						validVersionFile = true;
-					}
-				}
-			}
-			if (validVersionFile) {
-				releaseVer = Float.parseFloat(versionLine[0].toString());
-				commitSHA = versionLine[1].toString();
-			}
-			else {
-				// We still have to initialize these variables to avoid errors
-				releaseVer = 0;
-				commitSHA = null;
-				Logger.print(Logger.Level.ERROR, "Malformed version file %s !", filename);
-				Execute.exit(1, true);
-			}
-		}
-
-		public String getReleaseVersion() {
-			return Float.toString(releaseVer);
-		}
-		public String getCommitSHA() {
-			return commitSHA;
-		}
+	
+	public static void init() {
+		/*
+		 *  Initialize only once per session
+		 */
+		if (instance == null)
+			instance = new FileHandler();
+		else
+			Logger.warning("Trying to initialize FileHandler more then once");
+	}
+	public static FileHandler get() {
+		return instance;
 	}
 
 	protected static void launchApplication() {
@@ -193,7 +117,7 @@ public class FileHandler {
 		}
 	}
 	
-	void doUpdate(String localSHA, String remoteSHA) {
+	void doUpdate(float tag, String localSHA, String remoteSHA) {
 		
 		// Don't show changes if local version file is not present
 		if (localSHA != null && !localSHA.isEmpty()) {
@@ -207,7 +131,7 @@ public class FileHandler {
 		}
 		// Download latest release files
 		Logger.print("\nDownloading release files...");
-		if (!RemoteHandler.downloadLatestRelease(this))
+		if (!RemoteHandler.downloadLatestRelease(tag))
 			return;
 
 		// Extract the release files to a new directory
@@ -222,8 +146,8 @@ public class FileHandler {
 		// Update the guide version file
 		Logger.print("Updating mte version file...");
 
-		try (PrintWriter writer = new PrintWriter(local)) {
-			writer.print(remote.getReleaseVersion() + " " + remote.getCommitSHA());
+		try (PrintWriter writer = new PrintWriter(VersionFile.Type.MTE.getName())) {
+			writer.print(tag + " " + remoteSHA);
 			Logger.print("\nYou're all set, good luck on your adventures!");
 			writer.close();
 		} catch (FileNotFoundException e) {
@@ -269,22 +193,13 @@ public class FileHandler {
 	boolean extractReleaseFiles() {
 
 		try {
-			unzipUtility.unzip(RemoteHandler.RELEASE_FILENAME, ReleaseFiles.Dir.localDirectory);
-			registerTempFile(new File(ReleaseFiles.Dir.localDirectory));
+			unzipper.unzip(RemoteHandler.RELEASE_FILENAME, ReleaseFiles.dir.getName());
+			registerTempFile(ReleaseFiles.dir);
 			return true;
 		} catch (IOException e) {
 			Logger.error("Unable to extract the GH repo file!", e);
 			return false;
 		}
-	}
-
-	/**
-	 * Create a version file instance and register as a temporary file
-	 */
-	void registerRemoteVersionFile() {
-
-		remote = new VersionFile(RemoteHandler.VERSION_FILENAME + ".remote");
-		registerTempFile(remote);
 	}
 
 	/**
@@ -426,11 +341,10 @@ public class FileHandler {
 	 * Read from a text file and return the compiled string
 	 *
 	 * @param filename Name of the file to read from the root directory
-	 * @return Content of the text file
+	 * @return Content of the text file or {@code null} if an error occurred
 	 */
-	String readFile(String filename) {
+	 static String readFile(String filename) {
 
-		// Using Apache Commons IO here
 		try (FileInputStream inputStream = new FileInputStream(filename)) {
 			return IOUtils.toString(inputStream, "UTF-8");
 		} catch (IOException e) {

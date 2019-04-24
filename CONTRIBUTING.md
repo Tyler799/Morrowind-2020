@@ -4,7 +4,7 @@ The following is a set of guidelines for contributing to this project. Keep in m
 
 ## Table of Contents
 
-[How Can I Contribute?](how-can-i-contribute)
+[How Can I Contribute?](#how-can-i-contribute)
 
 * [Reporting Problems](#reporting-problems)
 

@@ -31,5 +31,10 @@ This includes everything that can be considered a technical improvement to the g
 
 Create a new issue with appropriate title and explain how would the improvement benefit the project and why you believe it should be implemented. Once the ticket has been submitted it will be marked with a ```improvement``` label and processed by a project developer. If a discussion is needed to work out the details a ```discussion``` label will be added. Once the ticket has been processed it will either be approved or rejected. In the latter case you will be notified and the issue will be closed and marked with a ```rejected``` label. As with problem tickets, if the improvement ends up being implemented you will be informed and the ticket will be resolved _(closed)_ by an appropriate commit. Following the next release both the issue and the resolving commit will be linked in the changelog under it's respected release section.
 
-### Pull Requests
+### Direct Contributions
+
+This section is for those that would like to get directly involved in developing the guide. Reporting problems, making requests and posting questions are known as indirect contributions, which does not in any way mean they are less valuable, just that they are in an indirect way helping the development process. Creates issues still need to be resolved by commits created by contributors, and we are always looking for more contributors to get directly involved in writing and expanding the guide.
+
+If you are interested in making direct contributions to this project read the following section.
+
 

@@ -2,6 +2,26 @@
 
 The following is a set of guidelines for contributing to this project. Keep in mind that they are mostly guidelines, not rules so you are not obliged to follow them. But in the interest of keeping this guide project organized and easy to follow you are encouraged to do so.
 
+## Table of Contents
+
+[How Can I Contribute?](how-can-i-contribute)
+
+* [Reporting Problems](#reporting-problems)
+
+* [Suggesting Improvements](#suggesting-improvements)
+
+* [Direct Contributions](#direct-contributions)
+
+[Your First Contribution](#your-first-contribution)
+
+* [Working Environment](#working-environment)
+* [Your First Commit](#your-first-commit)
+* [Creating a Pull Request](#creating-a-pull-request)
+
+[Styleguides](#styleguides)
+
+* [Commits](#commits)
+
 ## How Can I Contribute?
 
 ### Reporting Problems

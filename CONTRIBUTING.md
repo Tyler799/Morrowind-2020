@@ -35,7 +35,9 @@ To report a problem you should first open a new ticket in the issue tracker on t
 - **Describe steps to reproduce the problem** in as much details as possible. For example if your game is experiencing a CTD after following the guide, include your mod load order as an attachment and explain when has the game last worked what have you changed since then. 
 - **Explain which behavior you expected to see instead and why.**
 - **Include an error or warning log if one is present**. If the problem is connected with your mod manager you will have to include an error log as an attachment. Same goes for game crashes that will often _(but not alway)_ create a log report in ```Warnings.txt``` file located in your game root directory.
-- **Include screenshots** if an error log was not printed or the problem is related to graphics. In the latter case you would also need to provide your MGE settings and a copy of your configuration (_ini_) file.
+- **Include screenshots** if an error log was not printed or the problem is related to graphics. In the latter case you would also need to provide your MGE settings and a copy of your Morrowind ini file.
+
+_**Note**: all externals files such as screenshots or text files need to be submitted as attachments packed in a simple zip file. This helps keep the issue easy to read and free of clutter. Name the file appropriately and place the link at the very end of your comment._
 
 Your issue will then be marked with a ```problem``` label and quickly processed by a project developer. If the issue was not directly caused by our mod-list or installation instruction, or the problem was non-issue you will receive a response followed by the ticket being marked with an ```invalid``` label and closed. If a solution to your problem results in a direct change to the guide you will be informed and the ticket will be resolved _(closed)_ by an appropriate commit. Following the next release both the issue and the resolving commit will be linked in the changelog under it's respected release section.
 

@@ -37,4 +37,26 @@ This section is for those that would like to get directly involved in developing
 
 If you are interested in making direct contributions to this project read the following section.
 
+## Styleguides
 
+### Commits
+
+The following style is project specific and derived from commonly accepted Git conventions. Sticking to these ensures that all commits are readable and easy to understand at first glance.
+
+- Capitalize the first word and do **not** end the commit summary with a period.
+- Write your commit message in the imperative (*Add* a cool mod" and not "*Added* a cool mod").
+- Use the imperative mood ("*Format* paragraph..." not "*Formats* paragraph...").
+- Use as little characters as possible for your commit summary.
+- The commit body is optional but when used it should **shortly** explain the *what*, *why* and *how*. Text spanning longer then a couple of lines should be placed in an issue and referenced in the footer.
+
+The commit footer is used to attach references to issues and other commits. Each footer line should start with designated keywords that represent the reference category followed by a semicolon:
+
+- Use `Resolves` to automatically close an open issue.
+- Use `See` to reference other commits or issues.
+
+```
+Resolves: #10
+See: 50b7a68
+```
+
+Note that if the commit is in a non-default branch, the issue will remain open and it will be referenced with a tooltip. Read more about closing issues using keywords on [Github](https://help.github.com/articles/closing-issues-using-keywords/).

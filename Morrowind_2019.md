@@ -372,10 +372,6 @@ If you've chosen to go for the Vurt option you'll need to install this fix:
 
 * [Vurt's Trees Fix by Greatness7](https://www.dropbox.com/s/rwtjc7stx1gbeje/VurtsTreesFix.7z?dl=0) - Install the meshes from the `Ascadian Isles` folder only. Leafy West Gash can be disabled if you're following this guide as we used different trees. Only use the Grazelands folder if you're using Grazelands II. You'll need to re-pack these, as they aren't correctly archived. In each folder, all the .NIF files should be in a `Meshes/f` folder. Make sure to set them up that way and re-pack them, then install as normal.
 
-#### Ashland Trees
-
-* [Dahrk Mods by Melchior](http://www.nexusmods.com/morrowind/mods/43528/?) - Specifically, Vurt's Ashtrees - Shorter. 
-
 #### Mournhold Trees
 
 The following two are the recommended tree replacers for the Mournhold region. They are well optimized and quite beautiful. I would recommend merging these two mods into one called "Vurt's Mournhold Trees". If you noticed that they contain some duplicate textures that's fine, just overwrite them.

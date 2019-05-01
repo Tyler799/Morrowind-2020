@@ -294,14 +294,12 @@ The following mods are optional to install, but have compatibility patches liste
 
 * [Tamriel Data](http://www.nexusmods.com/morrowind/mods/44537/?) - This is a requirement for the below mod. Download the HD version.
 * [Tamriel Rebuilt](http://www.nexusmods.com/morrowind/mods/42145/?) - One of the biggest mods in Morrowind and still a work in progress, but it adds a huge chunk of playable landscape (mainland Morrowind). It shouldn't be incompatible with anything listed here, but you should keep an eye out for things with TR compatibility if you choose to install it.
-* [Graphic Herbalism](http://www.nexusmods.com/morrowind/mods/43140/?) - By default, plants in Morrowind act as containers: when you activate them, the container interface opens and you can remove any ingredients that might be present 'inside' the plant. Graphic Herbalism is a rather old mod that makes plants act more like plants; activating the plant picks it, you automatically get the ingredients, and the plant changes in the world to show it has been picked. Think Skyrim plants. If you want to use Graphic Herbalism, you'll need to keep compatibility in mind when we download plant replacers, otherwise it might be a little jarring when your smooth plant mesh gets replaced with an ugly vanilla mesh and texture.
-
-If using both Tamriel Rebuilt and Graphic Herbalism, you'll want the Tamriel Data patch from [here](http://www.nexusmods.com/morrowind/mods/43829/)
-
+* [Graphic Herbalism - MWSE Edition](https://www.nexusmods.com/morrowind/mods/46599) - By default, plants in Morrowind act as containers: when you activate them, the container interface opens and you can remove any ingredients that might be present 'inside' the plant. Graphic Herbalism MWSE is an updated version of an old mod that makes plants act more like plants; activating the plant picks it, you automatically get the ingredients, and the plant changes in the world to show it has been picked. Think Skyrim plants. Ignore the `GH Patches and Replacers` file, that needs to be later.
 * [Glow in the Dahrk](https://www.nexusmods.com/morrowind/mods/45886/) is essentially a replacement for WinDoors Glow. Highly recommended.
+
 (I personally chose the High-res and rays options, and left the rest off)
 
-However: If you want to use it you *must* have MWSE alpha 2.1. It will not work with 2.0!
+However: If you want to use it you *must* have MWSE alpha 2.1 or later. It will not work with 2.0!
 
 ## Mesh fixes and improvements
 
@@ -347,8 +345,6 @@ Time for rocks. Download the following:
 * [WIP Smooth Correct UV Rocks](http://forums.bethsoft.com/topic/1514660-alternatives-to-on-the-rocks/?p=23908143)
 * [Ore Rock Retexture ORR](http://mw.modhistory.com/download-56-12942)
 * [correctUV Diverse Ore veins v1.0](http://mw.modhistory.com/download-56-13484)
-
-If you're using Graphic Herbalism and it's Extra Mining module, get this [patch](http://www.nexusmods.com/morrowind/mods/43197/?). You will need to disable Graphic Herbalism - EXTRA mod in your left pane completely, or if you merged it, just disable it's ESP.
 
 ### Waterfalls
 
@@ -421,24 +417,23 @@ For the West Gash trees, you have two options. Vurt's look nicer, in my opinion,
 * [Plant life retexture](http://www.nexusmods.com/morrowind/mods/37947/?)
 * [Bloatspore retexture](http://www.nexusmods.com/morrowind/mods/42384/?) - We already have a better bloatspore mesh, so just get the 'simple retexture' file. Unless you REALLY want bump/glow mapped bloatspores for some reason, but you'll have a less smooth bloatspore as a result.
 * [flora_bush_01 replacer](http://www.nexusmods.com/morrowind/mods/42941/?) - Get the 1.3 file, and I highly recommend grabbing the 1k texture optional file because 2k textures for a bush is a little overkill. Make sure to look through your options. I used the flowerless version of the mesh with browner bark. If you do decide to change anything, make sure to follow the instructions closely and rename the files properly.
-* [Trama Bump mapped](http://www.nexusmods.com/morrowind/mods/43015/?) - Make sure to get the Graphic Herbalism compatibility patch if you need it.
-* [Hackle-lo Fixed](http://www.nexusmods.com/morrowind/mods/42784/?) - The "EXTRAS" option in the BAIN installer is the Graphic Herbalism patch.
-* [Comberry Bush and Ingredient Replacer](http://www.nexusmods.com/morrowind/mods/42586/?) - The EXTRAS option contains a patch for Graphic Herbalism. Additionally, there's another option which includes vanilla style textures. I recommend it.
-* [Improved Kwama Eggs and Egg Sacs](http://www.nexusmods.com/morrowind/mods/43555/?) - Technically not a plant, but they work the same way plants do. The install is a little complicated if you're doing it manually. If you want the full package (bump maps + animation) get `00` + `01` + `03` (and `05` if you use Graphic Herbalism). If you don't want bump maps but do want the animation, get `00` + `02` (and `04` for GH). For a no frills retexture, just get folder `00` (and `04` for GH).
+* [Trama Bump mapped](http://www.nexusmods.com/morrowind/mods/43015/?) - If you like bump-maped mods.
+* [Hackle-lo Fixed](http://www.nexusmods.com/morrowind/mods/42784/?)
+* [Comberry Bush and Ingredient Replacer](http://www.nexusmods.com/morrowind/mods/42586/?) - The EXTRAS option contains another option which includes vanilla style textures. I recommend it.
+* [Improved Kwama Eggs and Egg Sacs](http://www.nexusmods.com/morrowind/mods/43555/?) - Technically not a plant, but they work the same way plants do. The install is a little complicated if you're doing it manually. If you want the full package (bump maps + animation) get `00` + `01` + `03`. If you don't want bump maps but do want the animation, get `00` + `02` (and `04` for GH). For a no frills retexture, just get folder `00` (and `04` for GH).
 * [Fire Fern Plant and Ingredient Retexture](http://www.nexusmods.com/morrowind/mods/43568/?) - Get the GH patch if you need it.
 
-* [Better flora](https://mega.nz/#!HwpRRRZQ!IKYOhTxBrfEATUXGltYNsESBZs_Y-CZRQ4zq2bM8duo)  - We're just after the meshes from this mod, but the original had collisions for all the flower meshes. I've fixed that in this version. You do need to disable four files from `meshes\o`), and those are the three kreshweed .nifs and the marshmerrow .nif. If you don't like spinning flowers, you might want to disable the gold kanet meshes as well, as the flowers will rotate when you move your camera. Included in the extras folder are Graphic Herbalism meshes. If you want to use them, you'll either need to make them a seperate mod, or just pull them into the `meshes` folder with the rest of the mod and re-pack it.
+* [Better flora](https://mega.nz/#!HwpRRRZQ!IKYOhTxBrfEATUXGltYNsESBZs_Y-CZRQ4zq2bM8duo)  - We're just after the meshes from this mod, but the original had collisions for all the flower meshes. I've fixed that in this version. You do need to disable four files from `meshes\o`), and those are the three kreshweed .nifs and the marshmerrow .nif. If you don't like spinning flowers, you might want to disable the gold kanet meshes as well, as the flowers will rotate when you move your camera. If you want to use them, you'll either need to make them a seperate mod, or just pull them into the `meshes` folder with the rest of the mod and re-pack it.
 Original mod this was based on can be found [here](http://www.nexusmods.com/morrowind/mods/43288/) (Do not download this)
 
 * [Ascadian Isles Plants](http://www.nexusmods.com/morrowind/mods/36810/?) - If you'd like, install these. I personally don't like the way they look in-game, I think they stick out too much. You might want to skip the comberry bush meshes and textures if you prefer Pherim's (which we already installed). Your choice. If you'd like to use the flowers but want to skip the bush, simply disable the following files before copying into your installation:
 
 ```
 Meshes\f\flora_comberry_01
-Meshes\Gherb\Comberry_01_P
 Meshes\n\ingred_comberry_01
 ```
 
-If you aren't using Graphic Herbalism, it's actually safe to disable the entire `Meshes\Gherb` folder.
+You should disable the entire `Meshes\Gherb` folder.
 
 * [EKM Corkbulb Retexture](http://www.nexusmods.com/morrowind/mods/43809/?)
 * [EKM Vanilla-Based Ash Grasses](http://www.nexusmods.com/morrowind/mods/43836/?)
@@ -463,8 +458,6 @@ Textures\WL
 ```
 
 Some players report that this mod is an FPS killer, has broken quests and might otherwise be a slight pain. However, it is being redone. Should that happen, I'll replace it in this list. Remember, it's not mandatory.
-
-For Graphic Herbalism users, you'll need the relevantly-named patch from [here](https://www.nexusmods.com/morrowind/mods/43829)
 
 REMINDER: IF YOU ARE USING THIS OVERHAUL (TOTSP) YOU MUST REMOVE "Texture Fix: Bloodmoon" (As it is made for a vanilla landscape)
 
@@ -509,6 +502,12 @@ with
     return saturate(0.02 * h) * (harmonics * displace);
 
 Ta-da! Effect removed!
+
+## Graphic Herbalism Finisher
+
+For those of you using the new Graphic Herbalism - MWSE, you'll need to go back to its mod page [here](https://www.nexusmods.com/morrowind/mods/46599) and download `GH Patches and Replacers`. Install it, and choose the options `00`, `01` (Pherim's) and `12` (Atlas BC Mushrooms Smoothed). If you used the animated Kwama earlier, you should also take `04` or `05`. That should cover everything this guide installs, but if you install those other mods instead of ones in the guide or on top of the guide, you should take those options as well.
+
+If you took Trama Bump-mapped, you'll need option `17` as well. 
 
 ## Weather
 
@@ -906,6 +905,7 @@ There are likely a ton of unique/artifact weapon replacers I've missed. I was ne
 * [Spear-Staff Fix](http://www.nexusmods.com/morrowind/mods/43353/?) - An optional fix for the position where spears and staves are held. Use it if you want. If you do, you'll need the Real Reflective Weapons Iron, Improved Weapon Meshes Steel, and Improved Weapon Meshes Ebony files from the `Compatibility` folder, then drag them out and over-write their normal versions from the mod, and then re-pack and install as normal.
 
 ## Armor
+
 * [Darknut's Armor Textures](http://www.nexusmods.com/morrowind/mods/43416/?) - Make sure to get the newest version.
 * [Various little mods](http://www.nexusmods.com/morrowind/mods/43330/?) - Install Colovian helm and Dust adept helm.
 * [Improved Armor Parts](https://www.dropbox.com/sh/l1660o8fg664bii/AAB-OssUyNu03Y5aGCO1Gav0a/Improved%20Armor%20parts?dl=0) - Download as .zip. First, disable the `Bloodmoon` folder; you already have that mesh. If you want a less bulky chitin pauldron, put that in `meshes\a`. Then go ahead and install the `meshes` and `texture` folder.
@@ -993,10 +993,8 @@ LGNPC_SecretMasters_v1_30.esp
 LGNPC_IndarysManor_v1_51.esp
 LGNPC_PaxRedoran_v1_20.esp
 Bloated Caves.esp
-Graphic Herbalism.esp
 Apel's_Asura_Coast_Fix.esp
 Vurt's BC Tree Replacer II.ESP
-Graphic Herbalism TotSP.esp
 VoicedVivec.ESP
 YaketyYagrum.ESP
 Better Clothes_v1.1_nac.esp
@@ -1004,7 +1002,6 @@ UFR_v3dot2.esp
 Better Morrowind Armor.esp
 Illy's Hot Pots.ESP
 Vurt's Grazeland Trees [Palms].esp
-wl_SO_v1.3_newGH_patch.esp
 ```
 
 To actually clean, first open Wrye using MO2. Then, right click on a given plugin and hit "Clean with TES3CMD"

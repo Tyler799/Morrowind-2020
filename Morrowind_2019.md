@@ -991,6 +991,22 @@ wl_SO_v1.3_newGH_patch.esp
 
 To actually clean, first open Wrye using MO2. Then, right click on a given plugin and hit "Clean with TES3CMD"
 
+## Testing your Setup
+
+Aside from simply making sure the game opens and loads, there are several tools in place that will help you quickly get into game and search for anything that might have gone wrong.
+
+The one we recommend is [Skip Tutorial](https://www.nexusmods.com/morrowind/mods/27266) being a relatively new and clean alternative to older mods like QuickChar and SilentCharGen. It lets you skip the early tutorial section and go right into making a character.
+
+You can then also COC to various locations to do some testing, such as:
+
+`Clutter Warehouse - Everything Must Go!`
+`ToddTest`
+`Character Stuff Wonderland`
+`Ken's Test Hole`
+`Mark's Vampire Test Cell`
+`Redoran Interior`
+`Redoran Interior2`
+
 ## Creating a multipatch
 
 This is very easy. Open Wrye. At the top bar, go to "Misc" then "TES3CMD" then "Create Multipatch". It shouldn't take too long.
@@ -1019,7 +1035,7 @@ All of your saves should appear Purple in the list now. For each save, all of it
 ## Load Order
 
 If you've followed this guide to the letter, your (almost!) final load order of ACTIVATED .esps should look something like this:
-[TODO ONCE COMPLETE]
+[TODO]
 
 ## Other mods
 Not satisfied with just a graphics overhaul? Here are some other mods you might want to try. Please, PLEASE read the mod pages for the following mods. Simply downloading and installing everything here could very well make your game laggy and/or unstable, especially if you don't use a proper load order. I do not play with all of the below mods myself anymore, but have played most of them in the past. Some I've never played at all, but they do come highly recommended and endorsed by the community.

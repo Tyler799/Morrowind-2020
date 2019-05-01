@@ -305,7 +305,7 @@ However: If you want to use it you *must* have MWSE alpha 2.1. It will not work 
 
 This is by far going to be the most complicated part of the guide so hold on to your butts.
 
-* [Morrowind Visual Pack](http://mw.modhistory.com/download-56-6990) - This is our base mod. It replaces a lot of stuff that still isn't touched by modern mods, mostly because they're not really used often enough to think about replacing. Most of the textures will be overwritten.
+* [Morrowind Visual Pack](http://mw.modhistory.com/download-56-6990) ([Alternate Download](https://www.nexusmods.com/morrowind/mods/44311)) - This is our base mod. It replaces a lot of stuff that still isn't touched by modern mods, mostly because they're not really used often enough to think about replacing. Most of the textures will be overwritten.
 
 ### Bitter Coast Region
 

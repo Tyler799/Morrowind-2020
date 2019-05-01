@@ -912,6 +912,8 @@ There are likely a ton of unique/artifact weapon replacers I've missed. I was ne
 
 * [Daedric Lord Armor Morrowind Edition](https://www.nexusmods.com/morrowind/mods/44081) - Not only does this replace Daedric armor and gives bound armor a unique look, it acts as a replacer for Dremora as well. It's newer than Better Morrowind Armor and should load after it, so you'll get this nicer looking Daedric Armor in game.
 
+* [Daedric Lord Armor Face of God](https://www.nexusmods.com/morrowind/mods/45037/) - A replacer for the Face of God, since the previous mod didn't cover it. 
+
 * [Less Bulky Pauldrons](http://www.nexusmods.com/morrowind/mods/42566/?) - Optionally, you might like this. If you do decide to use it, make sure to use the the BAM & Native HiRez 2 files in the optional folder. To use them, create the folder `Data Files\Meshes\bam` inside the un-packed mod. Then, move the files from the `BAM & Native HiRez 2` into that `bam` folder, not the `a` folder like the rest of the mod's contents.
 
 ## Animations

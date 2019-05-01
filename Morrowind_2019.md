@@ -92,6 +92,20 @@ A lot of links in this guide will have bump map versions available, especially o
 ### Great House Fliggerty
 This site hosts a few of the mods for this list. However, due to server migration problems, downloads are broken. You can solve this by using the Wayback Machine (internet archive) for any of the given downloads. I already have links to a few of the mods, but you should be able to get the others as well.
 
+### MWSE - The Morrowind Script Extender
+
+Momentarily in this guide, we'll have you install MWSE. Based on the name alone, many of you will realize this is similar to the projects OBSE and SKSE, though it is maintained by a completely different team.
+
+Here is a short summary of what it is:
+
+>The Morrowind Script Extender adds new functionality to the scripting language of Morrowind, allowing for new features to be implemented into the game. 
+
+It comes with its own updater, and the latest versions are distributed on their Discord, which the mod page links to. 
+
+MWSE, along with MWSE-LUA, offers amazing functionality in the game that was previously completely impossible.
+
+However, as with most things script-related, this does mean hard-incompatibility with OpenMW. As stated earlier, if you plan on using OpenMW with the guide, no support is offered. However if you do, realize that MWSE and any MWSE mods will be off-the-table if you do so and keep that in mind as you move forward. 
+
 ## Baseline Installation and Boilerplate
 
 1. Wipe any previous install, any tools, folders, etc. Everything must be clean.

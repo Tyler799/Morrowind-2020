@@ -923,13 +923,13 @@ There are likely a ton of unique/artifact weapon replacers I've missed. I was ne
 
 * [Better Morrowind Armor](http://www.nexusmods.com/morrowind/mods/42509/?) - This needs more detailed install instructions:
 
-1) First, extract the archive. You need to activate the Better Morrowind Armor .esp, and optionally one DeFemm patch of your choice. A removes all female versions of cuirasses (no boob armor for females), O acts like the original game, R gives boob armor only to stretchy armor. You should use the DeFemm patches from [here](https://mega.nz/#!WgBQ2RRL!5CQU0ZIVvIv1vyUsutAr3gT-qMhRUU6E4KEvoE9AeOs).
+1) First, extract the archive. You need to activate the Better Morrowind Armor .esp, and optionally one DeFemm patch of your choice. A removes all female versions of cuirasses (no boob armor for females), O acts like the original game, R gives boob armor only to stretchy armor. 
 
-2) Install the patch for Hirez Armors - Native Styles V2. (Overwriting the main files in the mod folder)
+2) You should use the DeFemm patches from [here](https://mega.nz/#!WgBQ2RRL!5CQU0ZIVvIv1vyUsutAr3gT-qMhRUU6E4KEvoE9AeOs). Just make sure to put it directly after the main mod, and only enable the ESPs you were using from the original mod. (In my case, I use `Better Morrowind Armor.esp` and `Better Morrowind Armor DeFemm(o).ESP`)
 
-3) If you're using the LeFemm official plugin for Bethesda, install the patch for that as well. That means DEACTIVATING the `[Official]LeFemm Armor.esp` included with WHReaper's Morrowind Official Plugins and using the `LeFemmArmor.esp` included with Better Morrowind Armor.
+3) Install the patch for Hirez Armors - Native Styles V2. (Overwriting the main files in the mod folder)
 
-(Personally, I still haven't figured out how I want to handle the official addons since both options are giving me trouble, so as of writing this guide I am *personally* just ignoring all Defemm/LeFemm patches and just using the Hirez Native styles patch)
+4) If you're using the LeFemm official plugin for Bethesda, install the patch for that as well. That means DEACTIVATING the `[Official]LeFemm Armor.esp` included with WHReaper's Morrowind Official Plugins and using the `LeFemmArmor.esp` included with Better Morrowind Armor.
 
 * [Daedric Lord Armor Morrowind Edition](https://www.nexusmods.com/morrowind/mods/44081) - Not only does this replace Daedric armor and gives bound armor a unique look, it acts as a replacer for Dremora as well. It's newer than Better Morrowind Armor and should load after it, so you'll get this nicer looking Daedric Armor in game.
 

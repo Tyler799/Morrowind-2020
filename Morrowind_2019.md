@@ -40,7 +40,7 @@ If you need to reach me regarding this guide or otherwise, PM me at /u/Night_Tha
 * [Armor](#armor)
 * [Animations](#animations)
 * [Finishing Touch](#finishing-touch)
-* [MGE XE Setup](#mge-xe-setup)
+* [Setup](#mge-xe-setup)
 * [Cleaning mods](#cleaning-mods)
 * [Creating a multipatch](#creating-a-multipatch)
 * [Updating Masters, Syncing and Reparing your Saves](#updating-masters-syncing-and-reparing-your-saves)
@@ -114,8 +114,9 @@ Extract it in your game directory and run it. Read through the patches, but the 
 
 5. The 4GB patch is no longer required, as it has been rolled into Morrowind Code Patch as of a recent version. However, running it against MGEXEGui.exe may improve its performance when generating distant land. The patcher can be downloaded [here](https://www.ntcore.com/4gb_patch.php)
 
-6. Download the latest version of MGE XE. While its mod page can be found [here](https://www.nexusmods.com/morrowind/mods/41102) the development version (like MCP) exists [here](https://www.nexusmods.com/morrowind/mods/26348)
-(As of writing this guide, the mod page has the newest version, Skunk Works' copy is older. Check both first though, as it could change!)
+6. Download the latest version of MGE XE. While its mod page can be found [here](https://www.nexusmods.com/morrowind/mods/41102) the development version (like MCP) exists [here](https://www.nexusmods.com/morrowind/mods/26348). This comes with an optional plugin `XE Sky Variations.esp`, that will randomize the sky colour and sunrise/sunset every day. It requires high quality sky scattering enabled, and MWSE enabled. Use it if you want.
+
+(As of writing this guide, the mod page has the newest version, Skunk Works' copy is older (despite having a higher version number). Check both first though, as it could change!)
 
 Consider patching it with the 4GB patch if distant land generation takes too long when you get to that step.
 

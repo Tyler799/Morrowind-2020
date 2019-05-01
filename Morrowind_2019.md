@@ -262,19 +262,30 @@ Get any or all of these if you like:
 
 ### Splash Screen Replacers
 
-Before installing any of these it might be a good idea to move all of vanilla splash screens located in ```Data Files/Splash``` in a new mod and then disable it. Just create the directory structure just mentioned, drag and drop all vanilla splash screens in there, package it with a name like "Vanilla Splash Screens" and add it through MO. This will ensure that only the custom splash screens get shown in the game, and if you ever want the vanilla ones back you can just enable the new mod.
+Choose either 
+
+* one mod that replaces BOTH the main menu AND the loading screens (1 total)
+* one mod that JUST replaces the main menu AND another mod that JUST replaces the loading screens (2 total)
+
+Mods that replace JUST the main menu:
+
+* [2015 Main Menu Background Replacers](http://www.nexusmods.com/morrowind/mods/43923/) - These look absolutely gorgeous, and in most cases would be the ones I would recommend first when it comes to the main menu. Only choose one.
+
+* [Animated Main Menu for Morrowind](http://www.nexusmods.com/morrowind/mods/43341/) - This is a really pretty main menu. The downside is that it's a 300 mb file. I personally don't want to waste that much space on the main menu, but if you don't care about that this may be a good option.
+
+Mods that replace JUST the loading screens:
+
+* [Concept Art Based Loading Screens](http://www.nexusmods.com/morrowind/mods/43603/) - For splash screens, this would be my personal recommendation. If you like the look of the primary replacer but can't stand the Russian writing, you may enjoy this.
 
 * [Fresco Splash Screens](https://www.nexusmods.com/morrowind/mods/45680) - This is a set of 14 splash screens showing off Tyddy's frescoes. They are very vanilla friendly and quite minimalistic. Editors personal choice.
 
-* [HD Concept-art Splash Screen and Main Menu](http://www.nexusmods.com/morrowind/mods/43081/) - Skip this if you absolutely can't stand the Russian writing on the splash screens, but the screens look amazing enough that you should overlook it. To install, you'll just need to set the "Data Files" section as the Data directory when installing via MO2, then it works fine.
-* [Morrowind Screens Redone](https://www.nexusmods.com/morrowind/mods/46259) - An English alternative to the above, based on the same concept art. Looks a bit different, compare their images and decide yourself.
-
-If you aren't a fan of the suggested main menu/splash screen replacer, you have several other options to choose from:
-
-* [2015 Main Menu Background Replacers](http://www.nexusmods.com/morrowind/mods/43923/) - These look absolutely gorgeous, and in most cases would be the ones I would recommend first when it comes to the main menu. Only choose one.
-* [Animated Main Menu for Morrowind](http://www.nexusmods.com/morrowind/mods/43341/) - This is a really pretty main menu. The downside is that it's a 300 mb file. I personally don't want to waste that much space on the main menu, but if you don't care about that this may be a good option.
-* [Concept Art Based Loading Screens](http://www.nexusmods.com/morrowind/mods/43603/) - For splash screens, this would be my personal recommendation. If you like the look of the primary replacer but can't stand the Russian writing, you may enjoy this.
 * [Morrowloading](http://www.nexusmods.com/morrowind/mods/44364/) - If you want splash screens with tidbits of information, like in Oblivion and Skyrim. Note that the screenshots used by this mod differ occasionally from how your game will look following this guide.
+
+Mods that replace both:
+
+* [HD Concept-art Splash Screen and Main Menu](http://www.nexusmods.com/morrowind/mods/43081/) - Skip this if you absolutely can't stand the Russian writing on the splash screens, but the screens look amazing enough that you should overlook it. To install, you'll just need to set the "Data Files" section as the Data directory when installing via MO2, then it works fine.
+
+* [Morrowind Screens Redone](https://www.nexusmods.com/morrowind/mods/46259) - An English alternative to the above, based on the same concept art. Looks a bit different, compare their images and decide yourself.
 
 ## Major mods to be aware of
 

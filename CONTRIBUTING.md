@@ -16,3 +16,7 @@ If you're looking to help us out with contributions, here's some brief info to h
 ### Scope
 
 * Mods, extenders and tools of all kinds are welcome, as well as sections explaining *how* to mod the game (like cleaning mods, testing, etc). The only major consideration is massive overhauls like Tamriel Rebuilt. For these, the guide would need to have specific instructions for nearly every mod, which is tedious and unclean. If you want to approach that, fork the guide instead.
+
+### Other Notes
+
+You can directly edit/fork from Github, or fork using something like Github Desktop and edit using something like Notepad++. However, you might find [Typora](https://typora.io/) to be a useful tool for Markdown editing. It allows you to simultaneously preview and write in markdown, which is nice.

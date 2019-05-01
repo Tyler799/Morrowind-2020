@@ -14,3 +14,5 @@ Finally: You are always welcome to contribute to the guide! We are *not* always 
 
 If you need to reach me regarding this guide or otherwise, PM me at /u/Night_Thastus on Reddit. Or respond to my Reddit post. Or find me on Discord, Night Thastus #6641.
 
+The Morrowind Modding Community discord can be found [here](https://discord.me/mwmods). If you want to discuss this guide, we have a channel called #thastus. 
+

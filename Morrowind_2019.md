@@ -111,7 +111,7 @@ How can we remedy this?
 
 Project Atlas some with batch scripts (.bat) that generates Atlased textures for *one specific area*, if you put it in a folder with all of the textures that it needs. In a normal non-MO2 or Wrye install, we could just move the .bat file into our `Textures` folder and we'd be golden. However...that won't work here in a virtualized environment.
 
-What is the solution? Well, you could dig through and find whatever is currently winning texture-wise for all of the texture files needed by that area. Then, copy them all into some temporary folder, drop the .BAT in, and move the result into its own mod. For obvious reasons, this is super impractical, both for us to write as instruction as well as for you to perform. 
+What is the solution? Well, you could dig through and find whatever is currently winning texture-wise for all of the texture files needed by that area. Then, copy them all into some temporary folder, drop the .BAT in, and move the result into its own mod. For obvious reasons, this is super impractical, both for us to write as instruction as well as for you to perform. Not only that, you'd need to re-do this process over if you re-ordered, deleted or added any mods that touched those textures.
 
 We're looking into better solutions at the moment, and any thoughts are appreciated. However, for the moment, we're skipping out on this. That means if you choose to use Atlased versions for mods, just be aware that if there's a conflict down the line you may not get the performance boost you thought you would. 
 

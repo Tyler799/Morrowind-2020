@@ -468,31 +468,15 @@ REMINDER: IF YOU ARE USING THIS OVERHAUL (TOTSP) YOU MUST REMOVE "Texture Fix: B
 
 ### Landscape Textures
 
-* [Tyddy's Landscape Textures](http://www.fullrest.ru/files/tyd_landscape-texture_compilation_1/files) OR [Vanilla Land](https://www.nexusmods.com/morrowind/mods/45953)
+* [Tyddy's Landscape Textures](http://www.fullrest.ru/files/tyd_landscape-texture_compilation_1/files) - Make sure to download the HQ version along with the UHQ (ultra-high-quality) addon.
 
-Vanilla land is generally thought of as better looking and more compatible visually with vanilla style textures.
+**OR** 
 
-Alternatively, choose both, and put Vanilla Land after. (My personal choice, but it is more downloading for you to do)
+* [Vanilla Land](https://www.nexusmods.com/morrowind/mods/45953)
 
-There's a lot of overlap between these two mods, but 50 textures or so from Tyddy's aren't covered by Vanilla Land. Thus, by loading both and putting Vanilla Land After after, we get the vanilla land textures while still keeping anything from Tyddy's that VL doesn't cover.
+Vanilla land is generally thought of as better looking and more compatible visually with vanilla style textures. However, Tyddy's are strictly higher-resolution in many cases.
 
-Disable the following after installing, we have better from Lush Ascadian Isles:
-
-```
-tx_ai_clover_02
-tx_ai_dirtpatch_01
-tx_ai_dirtroad_01
-tx_ai_grass_01
-tx_ai_grass_dirt_01
-tx_ai_mudflats_01
-tx_grass_01
-tx_grass_rocky_01
-tx_rock_brown_02
-tx_rockybadlands_01
-tx_rockyscrub_01
-```
-
-Note that some of these may not exist in the files to disable. This isn't a problem, jut disable all of the ones that are listed and can be found. And no, simply loading this mod and STOSP before Lush isn't quite good enough, there are other files that lush would take priority for that we don't want)
+There are a total of only 11 textures out of hundreds that are covered by Tyddy but not by Vanilla Land, so using both doesn't serve much purpose at the moment.
 
 ### Want plants to not "bend" or "grow" towards you?
 
@@ -532,9 +516,8 @@ If you took Trama Bump-mapped, you'll need option `17` as well.
 
 You might notice your clouds moving by far too quickly. Let's fix that. First, make a backup of your `Morrowind.ini`. (This can be found under `Morrowind/Mod Organizer 2/Profiles/Default`, or whatever you named your profile if you renamed it)
 
-~~Now you need to edit your ini file by carefully following the instructions provided in the "Weather settings.txt" that comes with Alternate Skies.~~
-
 Since Morrowind stores the settings related to weather and nighttime lighting levels in MORROWIND.INI which cannot be modified by simply installing a mod in the Data Files directory. You should download Vladimir Kraus' excellent MiNi to help make the necessary INI modifications:
+
 - [Download](https://cdn.discordapp.com/attachments/533267121384325120/564203414590980097/Alternate_Skies_Settings_Automated_.7z) and run MiNi.exe
 - Ensure that the path displayed at the bottom of the screen points to your Morrowind directory (eg. 'C:\Program Files\Morrowind')
 - Select the Green down arrow to backup your current MORROWIND.INI file

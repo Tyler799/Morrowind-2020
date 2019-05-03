@@ -82,7 +82,6 @@ A lot of links in this guide will have bump map versions available, especially o
 This site hosts a few of the mods for this list. However, due to server migration problems, downloads are broken. You can solve this by using the Wayback Machine (internet archive) for any of the given downloads. I already have links to a few of the mods, but you should be able to get the others as well.
 
 ### MWSE - The Morrowind Script Extender
-
 Momentarily in this guide, we'll have you install MWSE. Based on the name alone, many of you will realize this is similar to the projects OBSE and SKSE, though it is maintained by a completely different team.
 
 Here is a short summary of what it is:
@@ -94,6 +93,27 @@ It comes with its own updater, and the latest versions are distributed on their 
 MWSE, along with MWSE-LUA, offers amazing functionality in the game that was previously completely impossible.
 
 However, as with most things script-related, this does mean hard-incompatibility with OpenMW. As stated earlier, if you plan on using OpenMW with the guide, no support is offered. However if you do, realize that MWSE and any MWSE mods will be off-the-table if you do so and keep that in mind as you move forward. 
+
+
+### Atlasing - What It Is And Installation Concerns
+
+This description from the Project Atlas page sums up what and why fairly nicely:
+
+>Vanilla Morrowind has objects split into different shapes each using its own unique texture. This is bad for performance and is one of the game's primary FPS bottlenecks. Each shape (even within a single mesh file) requires its own drawcall. There are close to 5,000 different textures in Morrowind's data; many of which are very similar or outright identical and some meshes are split into more than 75 different shapes. Merging those meshes into a single shape which references a single texture atlas is the ideal situation for game performance.
+
+In essence, atlasing just means: Turn many textures or meshes into *one* thing to make the game run better.
+
+However, there is a catch.
+
+Several mods (Project Atlas Included) provide you with Atlased versions of some textures or meshes. That's great on its own. But what happens if you have several re-textures or some mesh improvements *after* the Atlased versions? In this case, the Atlased version will do nothing. As well, these Atlases don't cover everything in the game to start with.
+
+How can we remedy this?
+
+Project Atlas some with batch scripts (.bat) that generates Atlased textures for *one specific area*, if you put it in a folder with all of the textures that it needs. In a normal non-MO2 or Wrye install, we could just move the .bat file into our `Textures` folder and we'd be golden. However...that won't work here in a virtualized environment.
+
+What is the solution? Well, you could dig through and find whatever is currently winning texture-wise for all of the texture files needed by that area. Then, copy them all into some temporary folder, drop the .BAT in, and move the result into its own mod. For obvious reasons, this is super impractical, both for us to write as instruction as well as for you to perform. 
+
+We're looking into better solutions at the moment, and any thoughts are appreciated. However, for the moment, we're skipping out on this. That means if you choose to use Atlased versions for mods, just be aware that if there's a conflict down the line you may not get the performance boost you thought you would. 
 
 ## Baseline Installation and Boilerplate
 

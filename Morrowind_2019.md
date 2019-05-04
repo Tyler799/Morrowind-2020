@@ -273,8 +273,6 @@ Download the LGNPC bundle. You should install all of the mods. A few notes:
 
 - [UI Expansion](https://www.nexusmods.com/morrowind/mods/46071) - Expands UI functionality with searching, filtering, and more visual feedback.	Has compact and expanded views. A very nice mod. 
 
-- [Easy MCM](https://www.nexusmods.com/morrowind/mods/46427) - Useful for MWSE mods to give a simple MCM. 
-
 ### Dialogue Font
 
 Get your dialogue font mods of choice:

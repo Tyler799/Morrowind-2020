@@ -780,7 +780,7 @@ Moving on:
 * [Django's Rugs and Tapestries](http://www.nexusmods.com/morrowind/mods/36872/?)
 * [Detailed Tapestries](http://www.nexusmods.com/morrowind/mods/22551/?)
 * [Shiny Septims](http://www.nexusmods.com/morrowind/mods/42113/?) - I get the dulled version.
-* [Pherim's Silverware Repolished](https://www.nexusmods.com/morrowind/mods/46385)
+* [Pherim's Silverware Repolished](https://www.nexusmods.com/morrowind/mods/46385) - Take 00 Data Files and the 2K Atlas option.
 * [Better Blood Morrowind](http://www.nexusmods.com/morrowind/mods/33426/?)
 * [Flash's Minor Retextures](http://www.nexusmods.com/morrowind/mods/44322/?) - Contains 2 files. 1 is an alternate Blood texture if you dislike BBM's. It also has a Mist retexture, which you should definitely get.
 * [Skeleton and Metal Sparks blood retexture](http://www.nexusmods.com/morrowind/mods/43359/?)

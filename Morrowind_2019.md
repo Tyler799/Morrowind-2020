@@ -267,6 +267,8 @@ Download the LGNPC bundle. You should install all of the mods. A few notes:
 
 - [Ultimate Icon Replacer](http://mw.modhistory.com/download-56-6673). This will replaces all Morrowind object/inventory icons with better icons. Mods you install further down the line will take priority over some of these.
 
+* Alternatives, for potions you may want [Potions and Scrolls](http://mw.modhistory.com/download-35-2339). Take a look at the screenshots of both and decide for yourself. If you do want "Potions and Scrolls" just load it directly after Ultimate Icon Replacer.
+
 - [JiFFY Morrowind UI Revamped](http://www.nexusmods.com/morrowind/mods/43922/?). This UI mod was chosen in particular because of how much it revamps, and it looks nice to boot. Choose between Dark or Classic, pick your crosshair and choose any size options. I went with 50% smaller crosshair and 25% smaller cursor, but you can and should try all the sizes in game to see which you prefer. Optionally for those avid readers, this mod includes the mod "Scroll Daedric Alphabet". This mod gives you a key to read the Daedric characters on spell scrolls. Lastly, don't forget to make the necessary changes to your .ini.
 
 - [Spell Scroll Text Overhaul](https://www.nexusmods.com/morrowind/mods/42936) gives unique Daedric text to all spell scrolls, making them far more interesting to read if you added Scroll Daedric Alphabet in the JiffyUI install.

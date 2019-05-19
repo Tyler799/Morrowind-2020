@@ -751,7 +751,15 @@ Note that "tribunal required" actually has 3 sub-packages. You'll need to open t
 * [Illy's Bedspreads](http://www.nexusmods.com/morrowind/mods/43565/?) [Wayback link](https://web.archive.org/web/*/http://download.fliggerty.com/file.php?id=1108)
 * [Illy's Hot Pots](http://www.nexusmods.com/morrowind/mods/43206/?) - Make sure to activate the .esp. [Wayback link](https://web.archive.org/web/*/http://download.fliggerty.com/file.php?id=1054)
 * [AST redware texture replacer](http://www.nexusmods.com/morrowind/mods/21981/?)
-* [Improved Better Skulls](https://www.nexusmods.com/morrowind/mods/46012) - In the BAIN installer, do *not* check the "Vanilla Textures" option.
+
+One of the following:
+
+* [Improved Better Skulls](https://www.nexusmods.com/morrowind/mods/46012) - In the BAIN installer, select "Data files" and "Fixed Skeletons". If you want, download the optional file "Skeletons Atlased" for atlased skeleton textures. If you do so, make sure to choose option 01 "Improved Better Skull Textures (Connary)". 
+
+OR:
+
+* [Bone Items](http://tesall.ru/files/file/1633-bone-items/) 
+
 * [Dunmeri Urns Aestetika](http://www.nexusmods.com/morrowind/mods/43541/?) - Get either the simple retexture or the bump map file, you don't need both.
 
 **NOTE**: If you are using the non-bump-mapped version, it's missing `tx_urn_01_nm.dds`. You have a couple options to remedy this:

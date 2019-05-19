@@ -449,10 +449,11 @@ For the West Gash trees, you have two options. Vurt's look nicer, in my opinion,
 * [Trama Bump mapped](http://www.nexusmods.com/morrowind/mods/43015/?) - If you like bump-maped mods.
 * [Hackle-lo Fixed](http://www.nexusmods.com/morrowind/mods/42784/?)
 * [Comberry Bush and Ingredient Replacer](http://www.nexusmods.com/morrowind/mods/42586/?) - The EXTRAS option contains another option which includes vanilla style textures. I recommend it.
-* [Improved Kwama Eggs and Egg Sacs](http://www.nexusmods.com/morrowind/mods/43555/?) - Technically not a plant, but they work the same way plants do. The install is a little complicated if you're doing it manually. If you want the full package (bump maps + animation) get `00` + `01` + `03`. If you don't want bump maps but do want the animation, get `00` + `02` (and `04` for GH). For a no frills retexture, just get folder `00` (and `04` for GH).
-* [Fire Fern Plant and Ingredient Retexture](http://www.nexusmods.com/morrowind/mods/43568/?) - Get the GH patch if you need it.
+* [Improved Kwama Eggs and Egg Sacs](http://www.nexusmods.com/morrowind/mods/43555/?) - Technically not a plant, but they work the same way plants do. The install is a little complicated if you're doing it manually. If you want the full package (bump maps + animation) get `00` + `01` + `03`. If you don't want bump maps but do want the animation, get `00` + `02`. For a no frills retexture, just get folder `00`.
+* [Fire Fern Plant and Ingredient Retexture](http://www.nexusmods.com/morrowind/mods/43568/?)
 
 * [Better flora](https://mega.nz/#!HwpRRRZQ!IKYOhTxBrfEATUXGltYNsESBZs_Y-CZRQ4zq2bM8duo)  - We're just after the meshes from this mod, but the original had collisions for all the flower meshes. I've fixed that in this version. You do need to disable four files from `meshes\o`), and those are the three kreshweed .nifs and the marshmerrow .nif. If you don't like spinning flowers, you might want to disable the gold kanet meshes as well, as the flowers will rotate when you move your camera. If you want to use them, you'll either need to make them a seperate mod, or just pull them into the `meshes` folder with the rest of the mod and re-pack it.
+
 Original mod this was based on can be found [here](http://www.nexusmods.com/morrowind/mods/43288/) (Do not download this)
 
 * [Ascadian Isles Plants](http://www.nexusmods.com/morrowind/mods/36810/?) - If you'd like, install these. I personally don't like the way they look in-game, I think they stick out too much. You might want to skip the comberry bush meshes and textures if you prefer Pherim's (which we already installed). Your choice. If you'd like to use the flowers but want to skip the bush, simply disable the following files before copying into your installation:

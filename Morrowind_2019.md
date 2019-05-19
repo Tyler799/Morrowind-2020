@@ -370,7 +370,7 @@ While we're at it, lets get a few more Connary packs. Some of this stuff will en
 
 Time for rocks. Download the following:
 
-* [Correct UV rocks v1.0](http://mw.modhistory.com/download-56-12003)
+* [Correct UV rocks v1.3](http://tesall.ru/files/file/1891-correct-uv-rocks/)
 * [WIP Smooth Correct UV Rocks](http://forums.bethsoft.com/topic/1514660-alternatives-to-on-the-rocks/?p=23908143)
 * [Ore Rock Retexture ORR](http://mw.modhistory.com/download-56-12942)
 * [correctUV Diverse Ore veins v1.0](http://mw.modhistory.com/download-56-13484)

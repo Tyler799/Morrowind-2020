@@ -787,7 +787,7 @@ Moving on:
 * [Insanity's lowres](https://mega.nz/#!T4pB3TCY!wQ3okENYSVv8T2PpHW5jxPiPkbOGrlXBP7ODVglGsDA) - Insanity's replacers are really high resolution for such small objects, especially in an old game like Morrowind. If you'd like, you can get these resized textures instead. You'll still need the original mods for the meshes! Also, if you're only using the grand soul gem, make sure to disable the other textures in the `soulgems` folder, as you don't need them.
 * [Long Live The Glassware](http://www.nexusmods.com/morrowind/mods/44016/?) - disable `tx_metal_strip_02`.
 * [Long Live The Limeware](http://www.nexusmods.com/morrowind/mods/44045/?)
-* [R-Zero's Random Retextures](http://www.nexusmods.com/morrowind/mods/44025/?) - The original guide (2017) existed when only the Coin and Quill (the oldest mods) were available. Now that more exist, I recommend installing all of them. The servent's skull replaces one from Better Skulls (but is based upon BS), so compare them before deciding. The Chimney smoke and Towershield overwrite patch-for-purists, so consider that as well.
+* [R-Zero's Random Retextures](http://www.nexusmods.com/morrowind/mods/44025/?) - Get the following: "Chimney Smoke", "Iron Towershield" and "Quill".
 
 ## Creature replacers
 

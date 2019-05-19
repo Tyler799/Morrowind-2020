@@ -735,11 +735,7 @@ Note that "tribunal required" actually has 3 sub-packages. You'll need to open t
 
 3. Qarl's mods. The following mods were made by Qarl but uploaded by someone else on fullrest.
 * [Plates](http://www.fullrest.ru/files/Plate_Items/files)
-* [Bowls](http://www.fullrest.ru/files/Bowl_Items/files) - disable the following after installing, we have better:
-```
-meshes folder
-textures\q_wood_plate
-```
+* [Bowls](http://www.fullrest.ru/files/Bowl_Items/files)
 
 4. Other, less complicated to install mods
 * [Connary's Fine Vials](http://www.fullrest.ru/files/connarysfinevials/files) - disable `tx_rustedmetal00.dds` and `tx_rustedmetal10.dds`, Morrowind Visual Pack has better versions of these.

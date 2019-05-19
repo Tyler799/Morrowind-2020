@@ -755,10 +755,9 @@ Note that "tribunal required" actually has 3 sub-packages. You'll need to open t
 One of the following:
 
 * [Improved Better Skulls](https://www.nexusmods.com/morrowind/mods/46012) - In the BAIN installer, select "Data files" and "Fixed Skeletons". If you want, download the optional file "Skeletons Atlased" for atlased skeleton textures. If you do so, make sure to choose option 01 "Improved Better Skull Textures (Connary)". 
-
-OR:
-
 * [Bone Items](http://tesall.ru/files/file/1633-bone-items/) 
+
+Moving on:
 
 * [Dunmeri Urns Aestetika](http://www.nexusmods.com/morrowind/mods/43541/?) - Get either the simple retexture or the bump map file, you don't need both.
 

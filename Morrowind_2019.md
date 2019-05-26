@@ -444,7 +444,6 @@ For the West Gash trees, you have two options. Vurt's look nicer, in my opinion,
 
 * [Underwater Static Replacer](http://mw.modhistory.com/download-56-11998)
 * [Better Barnacles](http://www.nexusmods.com/morrowind/mods/43605/?)
-* [Lush Ascadian Isles](http://www.nexusmods.com/morrowind/mods/43872/?)
 * [Plant life retexture](http://www.nexusmods.com/morrowind/mods/37947/?)
 * [Bloatspore retexture](http://www.nexusmods.com/morrowind/mods/42384/?) - We already have a better bloatspore mesh, so just get the 'simple retexture' file. Unless you REALLY want bump/glow mapped bloatspores for some reason, but you'll have a less smooth bloatspore as a result.
 * [flora_bush_01 replacer](http://www.nexusmods.com/morrowind/mods/42941/?) - Get the 1.3 file, and I highly recommend grabbing the 1k texture optional file because 2k textures for a bush is a little overkill. Make sure to look through your options. I used the flowerless version of the mesh with browner bark. If you do decide to change anything, make sure to follow the instructions closely and rename the files properly.

@@ -1074,13 +1074,14 @@ Not satisfied with just a graphics overhaul? Here are some other mods you might 
 
 0) I (Thastus) personally very much enjoy [Races Are More Fun](https://www.nexusmods.com/morrowind/mods/21875) and [Birthsigns are More Fun](https://www.nexusmods.com/morrowind/mods/17888)
 
-
 If you enjoy H2H characters, the MGE XE version of the Opponent Fatigue Indicator can be found [here](https://www.nexusmods.com/morrowind/mods/44363)
-(However, it does not scale with MGE XE gui size options. Not sure if possible to modify it to do that.)
+(However, it does not scale with MGE XE gui size options. Considering re-making it myself using MWSE-LUA to do so very cleanly)
 
 As well, I find [MCC leveler](https://www.nexusmods.com/morrowind/mods/44294) (inspired by GCC and MADD) to be the best leveling system for my personal tastes (Others certainly exist though).
 
 (Includes optional state-based HP, optional state-based magicka regen, as well as just a better overall leveling system inspired by MADD and GCD, but far better than either. No micro-management required! No min-maxing needed!)
+
+Finally, [IMMERSIVE RUN FIX](https://www.nexusmods.com/morrowind/mods/45947) makes running diagonally not faster. 
 
 1) Want your sound overhauled as well as your graphics? You can try [Atmospheric Sound Effects](http://mw.modhistory.com/download-51-7148).
 

@@ -900,7 +900,9 @@ Alternative: [Unique Jewelry Redone](https://www.nexusmods.com/morrowind/mods/46
 
 3. Robes
 * [Better Robes](http://www.nexusmods.com/morrowind/mods/42773/?) - Make sure to also install the patches for Tamriel Rebuilt if you're using it (`TR` folder) and UFR. If you plan to use Animated Morrowind, download the separate patch for that as well.
-If using the Tamriel Rebuilt patch, you'll need [this patch]([https://www.nexusmods.com/morrowind/mods/44875]) for that patch, since it crashes due to a Master reformat in 2015 that TR did. (However, note that this doesn't fix the issue with the TR-BR-Animated Morrowind combined patch, so you're kind of out of luck if using that)
+
+If using the Tamriel Rebuilt patch, you'll need [this patch](https://www.nexusmods.com/morrowind/mods/44875) for that patch, since it crashes due to a Master reformat in 2015 that TR did. (However, note that this doesn't fix the issue with the TR-BR-Animated Morrowind combined patch, so you're kind of out of luck if using that)
+
 * [Robe Overhaul](http://www.nexusmods.com/morrowind/mods/43748/?)
 * [Various tweaks and fixes](http://www.nexusmods.com/morrowind/mods/43795/?) - Optionally, if you hate the glow effect that Robe Overhaul adds to some robes, you can download Blank Glow Maps for Robe Overhaul. You might also be interested in Pluginless NoGlow Lite, which removes the plastic-y looking 'enchantment' effect from all items in game.
 

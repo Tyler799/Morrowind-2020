@@ -151,7 +151,7 @@ Consider patching it with the 4GB patch if distant land generation takes too lon
 
 MGE XE comes with MWSE 2.0. Some mods require the alpha version (2.1) to work properly. If so, get 2.1 from [here](https://nullcascade.com/mwse/mwse-dev.zip).
 
-If you do not have a mod that requires 2.1, there is no reason to install it - stick with what MGE XE provides. 2.1 provides support for new mods, bug fixes, and performance improvements, but is under rapid development that may cause issues. New versions of MWSE 2.1 come out daily/weekly, and it comes with a MWSE-Update program that will download any new version, if available. Visit the Morrowind Modding Discord under #MWSE for more information. To report issues, visit the Discord channel or their [GitHub project](https://github.com/MWSE/MWSE/issues).
+If you do not have a mod that requires 2.1, there is no reason to install it - stick with what MGE XE provides. 2.1 provides support for new mods, bug fixes, and performance improvements, but is under rapid development that may cause issues. New versions of MWSE 2.1 come out daily/weekly, and it comes with a MWSE-Update program that will download any new alpha version, if available. Visit the Morrowind Modding Discord under #MWSE for more information. To report issues, visit the Discord channel or their [GitHub project](https://github.com/MWSE/MWSE/issues).
 
 Extract it into your install folder (the folder with Morrowind.exe in it)--not the data folder! This should result in MGEXEgui ending up in the same folder as Morrowind.exe.
 

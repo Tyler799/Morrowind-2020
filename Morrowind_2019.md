@@ -1,8 +1,8 @@
-This is a changing guide. While currently considered a release canidate, it is still very open to changes and new sections.
+This is a changing guide. While currently considered a release candidate, it is still very open to changes and new sections.
 
 # Morrowind 2019: Thastus Edition
 
-The README, Liscense and other info can be found in the rest of the repo. 
+The [README](https://github.com/Tyler799), License and other info can be found in the rest of the repo. If you want to discuss this guide, we have a [Discord](https://discord.me/mwmods) channel called #thastus.
 
 ## Table of Contents
 
@@ -18,7 +18,7 @@ The README, Liscense and other info can be found in the rest of the repo.
 * [Dialogue Mods](#dialogue-mods)
 * [User Interface](#user-interface)
   * [Dialogue Font](#Dialogue-Font)
-  * [Dialogue Font](#HD-Video-Screen-Replacers)
+  * [HD Video Screen Replacers](#HD-Video-Screen-Replacers)
   * [Splash Screen Replacers](#Splash-Screen-Replacers)
 * [Major mods to be aware of](#major-mods-to-be-aware-of)
 * [Mesh fixes and improvements](#mesh-fixes-and-improvements)

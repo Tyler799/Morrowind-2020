@@ -334,13 +334,13 @@ However: If you want to use it you *must* have MWSE alpha 2.1 or later. It will 
 
 ## Mesh fixes and improvements
 
+* [Morrowind Optimization Patch](https://www.nexusmods.com/morrowind/mods/45384) - Improves performance by optimizing meshes.
+* [Project Atlas](https://www.nexusmods.com/morrowind/mods/45399) - Improves performance by merging meshes into a single shape, reducing draw calls significantly for the same visual quality. Download all files except ASL Urns. (Dunmeri urns will cover this) 
 * [Better Meshes plus Optimization](http://www.nexusmods.com/morrowind/mods/38170/?)
 * [Dwemer Mesh Improvement](http://www.nexusmods.com/morrowind/mods/43101/?)
 * [Mesh Improvements Optimized](http://download.fliggerty.com/download-56-1088)
 * [RR Mod Series - Better Meshes](http://www.nexusmods.com/morrowind/mods/43266/?) - Get the RR - Better Meshes V1.2 file, `Fix for misc_com_metal_plate_05`, `Fix for artifact_bittercup_01` and `Fix for misc_dwrv_artifact60`. Before installing, disable `meshes/m/misc_com_pillow_01` from the main mod. 
 * [MOAR Mesh Replacers](http://www.nexusmods.com/morrowind/mods/44057/?)
-* [Morrowind Optimization Patch](https://www.nexusmods.com/morrowind/mods/45384) - Improves performance by optimizing meshes.
-* [Project Atlas](https://www.nexusmods.com/morrowind/mods/45399) - Improves performance by merging meshes into a single shape, reducing draw calls significantly for the same visual quality. Download all files except ASL Urns. (Dunmeri urns will cover this) 
 
 For the `ATL BC Mushrooms`, make sure to choose just `00 Core - Smoothed Meshes`.
 

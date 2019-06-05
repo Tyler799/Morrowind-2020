@@ -1,8 +1,8 @@
-This is a changing guide. While currently considered a release canidate, it is still very open to changes and new sections.
+This is a changing guide. While currently considered a release candidate, it is still very open to changes and new sections.
 
 # Morrowind 2019: Thastus Edition
 
-The README, Liscense and other info can be found in the rest of the repo. 
+The [README](https://github.com/Tyler799), License and other info can be found in the rest of the repo. If you want to discuss this guide, we have a [Discord](https://discord.me/mwmods) channel called #thastus.
 
 ## Table of Contents
 
@@ -18,7 +18,7 @@ The README, Liscense and other info can be found in the rest of the repo.
 * [Dialogue Mods](#dialogue-mods)
 * [User Interface](#user-interface)
   * [Dialogue Font](#Dialogue-Font)
-  * [Dialogue Font](#HD-Video-Screen-Replacers)
+  * [HD Video Screen Replacers](#HD-Video-Screen-Replacers)
   * [Splash Screen Replacers](#Splash-Screen-Replacers)
 * [Major mods to be aware of](#major-mods-to-be-aware-of)
 * [Mesh fixes and improvements](#mesh-fixes-and-improvements)
@@ -38,7 +38,7 @@ The README, Liscense and other info can be found in the rest of the repo.
 * [Setup](#mge-xe-setup)
 * [Cleaning mods](#cleaning-mods)
 * [Creating a multipatch](#creating-a-multipatch)
-* [Updating Masters, Syncing and Reparing your Saves](#updating-masters-syncing-and-reparing-your-saves)
+* [Updating Masters, Syncing and Repairing your Saves](#updating-masters-syncing-and-repairing-your-saves)
 * [Load Order](#load-order)
 * [Other mods](#other-mods)
 * [Screenshots](#screenshots)
@@ -47,13 +47,13 @@ The README, Liscense and other info can be found in the rest of the repo.
 
 ## Before we begin
 
-**You must have an official copy of the base game! Pirated/torrented copies will *not* work!** You need an official CD, the Steam version, or the GOG version. This isn't just heresay, this is true of every Bethesda game Morrowind and forward. All mod tools (LOOT/BOSS, Mod Organizer, Wyre Bash, MWSE/OBSE/SKSE, xEdit, etc) and even many mods themselves just don't work properly on unofficial copies of the game. The exact reasoning is fairly technical in explanation, but it's not an anti-piracy measure, it's just a fact of the game engine and how tools hook in. I'm not inherently anti-piracy, I actually think it has a lot of value for several reasons. However, for the sake of this guide, if you don't have an official copy you can expect everything to break. You likely won't even be able to start the game properly. As a veteran player of the series, **I offer exactly 0 help if you don't have an official copy**.
+**You must have an official copy of the base game! Pirated/torrented copies will *not* work!** You need an official CD, the Steam version, or the GOG version. This isn't just hearsay, this is true of every Bethesda game Morrowind and forward. All mod tools (LOOT/BOSS, Mod Organizer, Wyre Bash, MWSE/OBSE/SKSE, xEdit, etc) and even many mods themselves just don't work properly on unofficial copies of the game. The exact reasoning is fairly technical in explanation, but it's not an anti-piracy measure, it's just a fact of the game engine and how tools hook in. I'm not inherently anti-piracy, I actually think it has a lot of value for several reasons. However, for the sake of this guide, if you don't have an official copy you can expect everything to break. You likely won't even be able to start the game properly. As a veteran player of the series, **I offer exactly 0 help if you don't have an official copy**.
 
 **You should always read the mod page or glance through the readme of any mod we're downloading**, so you'll at least be aware of what you're getting and what your options are. Mod are, above all else, personal preference. Knowledge is power!
 
 As well: While many of the mods here may be compatible with OpenMW, many are not. Do not attempt to follow this guide with OpenMW! It is an amazing accomplishment by the community, but this guide is not attuned to it.
 
-All installation of mods (with minor exception, mainly for tools like MGE/MCP/Mlox) will be done with Mod Organizer 2, which has built-in support for Morrowind. This is highly recommended, as it allows you to very easily disable files/folders or mods, re-order mods or plugins and otherwise. It makes maintenance of a large mod list effortless, hence its heavy adoption in the Skyrim modding scene. (Do not substitute with NMM, Vortex or otherwise. Seriously. It *will* break things.)
+All installation of mods (with minor exception, mainly for tools like MGE/MCP/Mlox) will be done with Mod Organizer 2, which has built-in support for Morrowind. This is highly recommended, as it allows you to very easily disable files/folders or mods, supports subfolders within mods, re-order mods or plugins and otherwise. It makes maintenance of a large mod list effortless, hence its heavy adoption in the Skyrim modding scene. (Do not substitute with NMM, Vortex or otherwise. Seriously. It *will* break things.)
 
 However: [Wrye Bash (Polemo's Fork)](https://www.nexusmods.com/morrowind/mods/45439/) is an *excellent* alternative. While a little less friendly at face value, it offers a similar ability to revert the game and mods to their base state upon revising your list. It's a fantastically made tool, and we'll be installing it anyways for some of its feature set.
 
@@ -61,7 +61,7 @@ However: [Wrye Bash (Polemo's Fork)](https://www.nexusmods.com/morrowind/mods/45
 
 **Note**: Because we're using MO2, installation order for mods is meaningless, only their order in the left pane and plugin order in the right matter. Just remember that.
 
-**Warning**: Do *not* enable "Automatic Archive Invalidation" when using Mod Organizer 2 for Morrowind. This is needed for a bug introducted in Oblivion. However, if used in Morrowind it *will* break things like Distant Land generation. 
+**Warning**: Do *not* enable "Automatic Archive Invalidation" when using Mod Organizer 2 for Morrowind. This is needed for a bug introduced in Oblivion. However, if used in Morrowind it *will* break things like Distant Land generation. 
 
 ### Regarding mods with archives:
 
@@ -85,7 +85,7 @@ NOTE: You must edit the `Morrowind.ini` inside your Mod Organizer profile that y
 A lot of links in this guide will have bump map versions available, especially once we hit the architecture section. I don't know all the technical details of it, but bump mapping in Morrowind isn't quite like what you'd expect it to be. It's often very shiny looking, sometimes plastic-y, and it can make things look very bright depending on the reflection texture used. This is fine for metals and wet looking plants (it looks great on mushrooms, in my opinion), but can sometimes look a little weird on architecture. That means, if you ever have a choice between getting a bump map or no bump map version, the choice is 100% yours. If you do download a bump map version and decide you don't like it, you can get rid of the bumps by deleting the meshes that were included in the mod, and you can also disable the normal maps (usually they have `_nm` or `_n` at the end of their filename) if you want to save space.
 
 ### Great House Fliggerty
-This site hosts a few of the mods for this list. However, due to server migration problems, downloads are broken. You can solve this by using the Wayback Machine (internet archive) for any of the given downloads. I already have links to a few of the mods, but you should be able to get the others as well.
+This site hosts a few of the mods for this list. However, due to server migration problems, downloads are broken. You can solve this by using the [Wayback Machine](https://archive.org/web/) (internet archive) for any of the given downloads. I already have links to a few of the mods, but you should be able to get the others as well.
 
 ### MWSE - The Morrowind Script Extender
 Momentarily in this guide, we'll have you install MWSE. Based on the name alone, many of you will realize this is similar to the projects OBSE and SKSE, though it is maintained by a completely different team.
@@ -105,7 +105,7 @@ However, as with most things script-related, this does mean hard-incompatibility
 
 This description from the Project Atlas page sums up what and why fairly nicely:
 
->Vanilla Morrowind has objects split into different shapes each using its own unique texture. This is bad for performance and is one of the game's primary FPS bottlenecks. Each shape (even within a single mesh file) requires its own drawcall. There are close to 5,000 different textures in Morrowind's data; many of which are very similar or outright identical and some meshes are split into more than 75 different shapes. Merging those meshes into a single shape which references a single texture atlas is the ideal situation for game performance.
+>Vanilla Morrowind has objects split into different shapes each using its own unique texture. This is bad for performance and is one of the game's primary FPS bottlenecks. Each shape (even within a single mesh file) requires its own draw call. There are close to 5,000 different textures in Morrowind's data; many of which are very similar or outright identical and some meshes are split into more than 75 different shapes. Merging those meshes into a single shape which references a single texture atlas is the ideal situation for game performance.
 
 In essence, atlasing just means: Turn many textures or meshes into *one* thing to make the game run better.
 
@@ -151,7 +151,7 @@ Consider patching it with the 4GB patch if distant land generation takes too lon
 
 MGE XE comes with MWSE 2.0. Some mods require the alpha version (2.1) to work properly. If so, get 2.1 from [here](https://nullcascade.com/mwse/mwse-dev.zip).
 
-If you do not have a mod that requires 2.1, there is no reason to install it - stick with what MGE XE provides. 2.1 provides support for new mods, bug fixes, and performance improvements, but is under rapid development that may cause issues. New versions of MWSE 2.1 come out daily/weekly, and it comes with a MWSE-Update program that will download any new version, if available. Visit the Morrowind Modding Discord under #MWSE for more information. To report issues, visit the Discord channel or their [GitHub project](https://github.com/MWSE/MWSE/issues).
+If you do not have a mod that requires 2.1, there is no reason to install it - stick with what MGE XE provides. 2.1 provides support for new mods, bug fixes, and performance improvements, but is under rapid development that may cause issues. New versions of MWSE 2.1 come out daily/weekly, and it comes with a MWSE-Update program that will download any new alpha version, if available. Visit the Morrowind Modding Discord under #MWSE for more information. To report issues, visit the Discord channel or their [GitHub project](https://github.com/MWSE/MWSE/issues).
 
 Extract it into your install folder (the folder with Morrowind.exe in it)--not the data folder! This should result in MGEXEgui ending up in the same folder as Morrowind.exe.
 
@@ -211,7 +211,7 @@ A note before we start installing mods:
 
 MO2 allows you to use the "Download with Manager" option on the nexus pages that have it. Feel free to use this to save time. However, MO2 of course can install archives too using the second to leftmost top button with a CD on it.
 
-As you begin installing mods, I recommend that you right click them and hit "Ignore Update" if the version number shows up in red. This will happen due to some mod authors having poorly layed out versioning for their mods, making a mod show up as "out of date" despite you just installing it. This isn't harmful in any way, but if you do this *now* then when you hit "Check all for updates" in the future you'll actually have a pretty good idea if any of your Nexus mods have updates available. Very useful!
+As you begin installing mods, I recommend that you right click them and hit "Ignore Update" if the version number shows up in red. This will happen due to some mod authors having poorly laid out versioning for their mods, making a mod show up as "out of date" despite you just installing it. This isn't harmful in any way, but if you do this *now* then when you hit "Check all for updates" in the future you'll actually have a pretty good idea if any of your Nexus mods have updates available. Very useful!
 
 1. You may be familiar with projects like the Unofficial Patches for Oblivion and Skyrim. Morrowind *sort of* has its own versions of these in the form of two options: the Morrowind Patch Project and the Patch for Purists. The MPP makes a lot of balance-related changes some players feel is untrue to the original experience. Thus, currently most players recommend the Patch for Purists which you can get [here](https://www.nexusmods.com/morrowind/mods/45096/)
 
@@ -230,7 +230,7 @@ One of the following:
 
 ## Official Bethesda Plugins
 
-Bethesda made a number of official plug-ins for Morrowind. Unfortunately, they have some problems. While you can download their vanilla versions individually, it's recommended to instead download a patch version of all of them. (You can easily disable the plugins you dislike in MO2)
+Bethesda made several official plug-ins for Morrowind. Unfortunately, they have some problems. While you can download their vanilla versions individually, it's recommended to instead download a patch version of all of them. (You can easily disable the plugins you dislike in MO2)
 
 There are two main options for fixed version of these addons:
 
@@ -250,7 +250,7 @@ Download the LGNPC bundle. You should install all of the mods. A few notes:
 * If you want to avoid wereguars, skip LGNPC Pelagiad. It's one of their earliest mods and it really shows.
 * Make sure to read LGNPC Soul Sickness Patch's readme. It's optional, so decide on your own if you want it or not.
 * The plugin "LGNPC_SecretMasters_MCA5.esp" is only relevant if you have Morrowind Comes Alive. If you do not, make sure to right click the "Secret masters" mod and turn this ESP from "Available ESPs" to "Optional ESPs", or just make it hidden.
-* The Soul Sickness patch comes bundled with Pax Redoran, and does not need to be installed seperately.
+* The Soul Sickness patch comes bundled with Pax Redoran, and does not need to be installed separately.
 
 2. Get the Less Generic modules. These give the main quests of Morrowind, Tribunal and Bloodmoon the LGNPC treatment and are fantastic. It does tend to make some of the quests a little trickier, though.
 
@@ -265,7 +265,7 @@ Download the LGNPC bundle. You should install all of the mods. A few notes:
 
 ## User Interface
 
-- [Ultimate Icon Replacer](http://mw.modhistory.com/download-56-6673). This will replaces all Morrowind object/inventory icons with better icons. Mods you install further down the line will take priority over some of these.
+- [Ultimate Icon Replacer](http://mw.modhistory.com/download-56-6673). This replaces all Morrowind object/inventory icons with better icons. Mods you install further down the line will take priority over some of these.
 
 * Alternatives, for potions and scrolls you may want [Potions and Scrolls](http://mw.modhistory.com/download-35-2339). Take a look at the screenshots of both and decide for yourself. If you do want "Potions and Scrolls" just load it directly after Ultimate Icon Replacer.
 
@@ -340,7 +340,7 @@ However: If you want to use it you *must* have MWSE alpha 2.1 or later. It will 
 * [RR Mod Series - Better Meshes](http://www.nexusmods.com/morrowind/mods/43266/?) - Get the RR - Better Meshes V1.2 file, `Fix for misc_com_metal_plate_05`, `Fix for artifact_bittercup_01` and `Fix for misc_dwrv_artifact60`. Before installing, disable `meshes/m/misc_com_pillow_01` from the main mod. 
 * [MOAR Mesh Replacers](http://www.nexusmods.com/morrowind/mods/44057/?)
 * [Morrowind Optimization Patch](https://www.nexusmods.com/morrowind/mods/45384) - Improves performance by optimizing meshes.
-* [Project Atlas](https://www.nexusmods.com/morrowind/mods/45399) - Improves performance by merging meshes into a single shape, reducing drawcalls significantly for the same visual quality. Download all files except ASL Urns. (Dunmeri urns will cover this) 
+* [Project Atlas](https://www.nexusmods.com/morrowind/mods/45399) - Improves performance by merging meshes into a single shape, reducing draw calls significantly for the same visual quality. Download all files except ASL Urns. (Dunmeri urns will cover this) 
 
 For the `ATL BC Mushrooms`, make sure to choose just `00 Core - Smoothed Meshes`.
 
@@ -447,13 +447,13 @@ For the West Gash trees, you have two options. Vurt's look nicer, in my opinion,
 * [Plant life retexture](http://www.nexusmods.com/morrowind/mods/37947/?)
 * [Bloatspore retexture](http://www.nexusmods.com/morrowind/mods/42384/?) - We already have a better bloatspore mesh, so just get the 'simple retexture' file. Unless you REALLY want bump/glow mapped bloatspores for some reason, but you'll have a less smooth bloatspore as a result.
 * [flora_bush_01 replacer](http://www.nexusmods.com/morrowind/mods/42941/?) - Get the 1.3 file, and I highly recommend grabbing the 1k texture optional file because 2k textures for a bush is a little overkill. Make sure to look through your options. I used the flowerless version of the mesh with browner bark. If you do decide to change anything, make sure to follow the instructions closely and rename the files properly.
-* [Trama Bump mapped](http://www.nexusmods.com/morrowind/mods/43015/?) - If you like bump-maped mods.
+* [Trama Bump mapped](http://www.nexusmods.com/morrowind/mods/43015/?) - If you like bump-mapped mods.
 * [Hackle-lo Fixed](http://www.nexusmods.com/morrowind/mods/42784/?)
 * [Comberry Bush and Ingredient Replacer](http://www.nexusmods.com/morrowind/mods/42586/?) - The EXTRAS option contains another option which includes vanilla style textures. I recommend it.
 * [Improved Kwama Eggs and Egg Sacs](http://www.nexusmods.com/morrowind/mods/43555/?) - Technically not a plant, but they work the same way plants do. The install is a little complicated if you're doing it manually. If you want the full package (bump maps + animation) get `00` + `01` + `03`. If you don't want bump maps but do want the animation, get `00` + `02`. For a no frills retexture, just get folder `00`.
 * [Fire Fern Plant and Ingredient Retexture](http://www.nexusmods.com/morrowind/mods/43568/?)
 
-* [Better flora](https://mega.nz/#!HwpRRRZQ!IKYOhTxBrfEATUXGltYNsESBZs_Y-CZRQ4zq2bM8duo)  - We're just after the meshes from this mod, but the original had collisions for all the flower meshes. I've fixed that in this version. You do need to disable four files from `meshes\o`), and those are the three kreshweed .nifs and the marshmerrow .nif. If you don't like spinning flowers, you might want to disable the gold kanet meshes as well, as the flowers will rotate when you move your camera. If you want to use them, you'll either need to make them a seperate mod, or just pull them into the `meshes` folder with the rest of the mod and re-pack it.
+* [Better flora](https://mega.nz/#!HwpRRRZQ!IKYOhTxBrfEATUXGltYNsESBZs_Y-CZRQ4zq2bM8duo)  - We're just after the meshes from this mod, but the original had collisions for all the flower meshes. I've fixed that in this version. You do need to disable four files from `meshes\o`), and those are the three kreshweed .nifs and the marshmerrow .nif. If you don't like spinning flowers, you might want to disable the gold kanet meshes as well, as the flowers will rotate when you move your camera. If you want to use them, you'll either need to make them a separate mod, or just pull them into the `meshes` folder with the rest of the mod and re-pack it.
 
 Original mod this was based on can be found [here](http://www.nexusmods.com/morrowind/mods/43288/) (Do not download this)
 
@@ -873,9 +873,9 @@ An newer alternative to Wey's Argonians for those who feel it may stray too far 
 ## Clothes replacers
 
 1. Clothes
-* [Better Clothes](http://www.nexusmods.com/morrowind/mods/42262/?) - Get the non-installer version. Only activate ONE esp. If you want your Argonian females to have breasts lumps when clothed for some reason, choose the regular version. For flat Argonian females, choose the nac version.
+* [Better Clothes](http://www.nexusmods.com/morrowind/mods/42262/?) - Get the non-installer version. Only activate ONE esp. If you want your Argonian females to have breasts lumps when clothed for some reason, choose the regular version. For flat Argonian females, activate the '\_nac' version.
 
-Note: When opening Mlox, it will warn you that Better Clothes depends upon Better Bodies. This is not unwarrented, there will be clipping. You can ignore this if you like, or install Better Bodies instead of Roberts bodies. Robert's bodies is heavily incompatible with other mods, including later mods in this guide. You also have a couple alternative options:
+Note: When opening Mlox, it will warn you that Better Clothes depends upon Better Bodies. This is not unwarranted, there will be clipping. You can ignore this if you like, or install Better Bodies instead of Roberts bodies. Robert's bodies is heavily incompatible with other mods, including later mods in this guide. You also have a couple alternative options:
 
 > 1) Get the [Robert's Bodies version of Better Clothes on Wolflore](http://wolflore.net/viewtopic.php?f=15&t=2086&sid=53e89d737b9bbe081c9946c8c0d11b37) (Requires an account, also that link may not be right)
 > 2) Forgo Better Clothes and use something like Articus' clothes which are compatible with both Robert's and Better Bodies
@@ -914,7 +914,7 @@ There are likely a ton of unique/artifact weapon replacers I've missed. I was ne
 * [Crossbows](http://download.fliggerty.com/download-98-1010) - If you don't want the new crossbows, don't activate the .esps. You'll still get new meshes for the base game's crossbows. For TR users, note that this ESP is also set up requiring the old TR's ESP as a master, so it'll crash if you try to use it on modern TR installs.
 * [Real Reflective Weapons - Iron](http://www.nexusmods.com/morrowind/mods/43077/?) - Install the base (`Data Files`) folder and the `bonus` folder.
 * [Improved Weapon Meshes - Steel](http://www.nexusmods.com/morrowind/mods/43120/?) - Install `00` and `01`. You do not need the .esps.
-* [Improved Weapon Mehses - Ebony](http://www.nexusmods.com/morrowind/mods/43484/?) - Install `00`. Install `01` if you want an Ebony Claymore in your game, you'll need the .esp. If you do so, note that it'll install two ESPs, one being german. Make sure to move it to the "Optional" section after installing.
+* [Improved Weapon Mehses - Ebony](http://www.nexusmods.com/morrowind/mods/43484/?) - Install `00`. Install `01` if you want an Ebony Claymore in your game, you'll need the .esp. If you do so, note that it'll install two ESPs, one being German. Make sure to move it to the "Optional" section after installing.
 * [Dwemer Armoury](http://www.nexusmods.com/morrowind/mods/43335/?) - Unfortunately, this isn't totally compatible with our armor mods, but the weapon meshes and a few of the armor meshes will show up in game.
 * [Mehrunes Razor Replacer - Oblivion](http://www.nexusmods.com/morrowind/mods/23825/?)
 * [True Trueflame](http://www.nexusmods.com/morrowind/mods/33432/?)
@@ -990,7 +990,7 @@ First, make sure all the mods you're using are activated in the launcher (again,
 
 4. Shaders
 
-Click the shader setup screen on the General tab. If you're using the latest MGE XE beta, the shaders screen will be pretty easy for you. Pick your quality preset, adjust it how you want (turning on/off DoF, using lower quality SSAO, etc.), and play. 
+Click the shader setup screen on the General tab. If you're using the latest MGE XE beta, the shaders screen will be pretty easy for you. Pick your quality preset, adjust it how you want (turning on/off Depth of Field, using lower quality SSAO, etc.), and play. 
 
 Optionally, you might want to take a look at [this water shader](https://www.nexusmods.com/morrowind/mods/45432).
 
@@ -1049,7 +1049,7 @@ It will automatically be appended to the end of your load order. You're now good
 
 (Note: You must re-do this upon adding, removing or re-ordering mods)
 
-## Updating Masters, Syncing and Reparing your Saves
+## Updating Masters, Syncing and Repairing your Saves
 
 This should be done periodically with saves. You *must* do this anytime you add, remove or move a mod while in the middle of a playthrough.
 
@@ -1145,7 +1145,7 @@ If you would like to see reference images of the finished install, or contribute
 
 This project wouldn't be possible without the help of all the amazing people I've met on the way. :)
 
-* owlnical - for direct contribution to the github repo, advice and helping to expand and continue the project into the future
+* owlnical - for direct contribution to the Github repo, advice and helping to expand and continue the project into the future
 * /u/Tiber-Septim - for long comments helping me to find areas to improve the project as they walked through the install process
 * Corsair - for putting up with my annoying Discord questions and helping an immense amount from finding mods to understanding technical details of Morrowind modding
 * yooksi - for doing an insane amount of work. The updater, tons of mod additions, lots of tweaking and testing, and likely putting in more hours than I have into the project.

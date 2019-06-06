@@ -59,9 +59,9 @@ However: [Wrye Bash (Polemo's Fork)](https://www.nexusmods.com/morrowind/mods/45
 
 **Note**: When I say "Disable" regarding a file, I'm referring to the "HIDE" feature MO2 gives. If the guide says to "Disable" a file or folder, that means "HIDE" it. However, the original guide had a lot of "DELETE" wording. I simply find/replaced that with "DISABLE". There are likely many instances where with using MO2 disabling like the original guide suggested is unnecessary - just let another mod take priority. However, I have no way of knowing immediately which disables would be pointless, so I'm leaving them in for now.
 
-**Note**: Because we're using MO2, installation order for mods is meaningless, only their order in the left pane and plugin order in the right matter. Just remember that.
+**Note**: Because we're using MO2, the order you install and enable mods is meaningless, only their order in the left pane and plugin order in the right matter. Just remember that.
 
-**Warning**: Do *not* enable "Automatic Archive Invalidation" when using Mod Organizer 2 for Morrowind. This is needed for a bug introduced in Oblivion. However, if used in Morrowind it *will* break things like Distant Land generation. 
+**Warning**: Do *not* enable "Automatic Archive Invalidation" when using Mod Organizer 2 for Morrowind profile. This is needed for a bug introduced in Oblivion. However, if used in Morrowind it *will* break things like Distant Land generation. 
 
 ### Regarding mods with archives:
 
@@ -123,6 +123,8 @@ We're looking into better solutions at the moment, and any thoughts are apprecia
 
 ## Baseline Installation and Boilerplate
 
+Note: MO2 can't handle the installation of this section, and will warn you accordingly.
+
 1. Wipe any previous install, any tools, folders, etc. Everything must be clean.
 
 2. Install the game, preferably not in Program Files for technical reasons to do with Windows permissions. If using steam, you can find information about this [here](https://support.steampowered.com/kb_article.php?ref=7418-YUBN-8129)
@@ -131,38 +133,38 @@ Make sure to run the game *at least once* to make sure it's registered on your c
 
 If you are using the GOTY edition, no patches are necessary. If you have some ancient disc version, the Tribunal patch is [here](http://download.zenimax.com/elderscrolls/morrowind/patches/tribunal_v1.4.1313.exe) and the Bloodmoon patch is [here](http://download.zenimax.com/elderscrolls/morrowind/patches/Bloodmoon_v1.6.1820.exe).
 
-3. Download the latest Morrowind Code patch. While its mod page can be found [here](http://www.nexusmods.com/morrowind/mods/19510/) the most updated version can often (though not always) be found [here](https://www.nexusmods.com/morrowind/mods/26348)
+3. Download the latest Morrowind Code patch. While its mod page can be found [here](http://www.nexusmods.com/morrowind/mods/19510/) the most updated version can often (though not always) be found [here](https://www.nexusmods.com/morrowind/mods/26348). You may need the .exe from the first link.
 
 As of writing this guide, the Skunk Works has a *PATCH* 2.5B3, significantly more up-to-date than the mod page's 2.4, featuring many new features and improvements. (Check both first though, as it could change!)
 
 The patch must be installed on top of the main file, in this particular case. (Again, this could change! Always check first.)
 
-Extract it in your game directory and run it. Read through the patches, but the most important ones should be checked already. You might be interested in some of the game mechanic changing options--toggle sneak is great! For a modern install, make sure to check 'Bump/reflect map local lighting' under Graphics changes. If you want to download HD cutscene replacers, check 'Hi-def cutscene support' under Mod related features. If you want to try a sound overhaul mod later (like Morrowind Acoustic Overhaul) make sure to check 'Scripted music uninterruptible' and 'Separate axe inventory sounds'.
+Extract it in your game directory and run 'Morrowind Code Patch.exe'. Read through the patches, but the most important ones should be checked already. You might be interested in some of the game mechanic changing options--toggle sneak is great! For a modern install, make sure to check 'Bump/reflect map local lighting' under Graphics changes. If you want to download HD cutscene replacers, check 'Hi-def cutscene support' under Mod related features. If you want to try a sound overhaul mod later (like Morrowind Acoustic Overhaul) make sure to check 'Scripted music uninterruptible' and 'Separate axe inventory sounds'.
 
-4. Timeslips' EXE optimizer has been removed for this guide, determined to be essentially ineffectual. (Though not harmful, from what I can tell)
+4. NOTE: Timeslips' EXE optimizer has been removed for this guide, determined to be essentially ineffectual. (Though not harmful, from what I can tell)
 
-5. The 4GB patch is no longer required, as it has been rolled into Morrowind Code Patch as of a recent version. However, running it against MGEXEGui.exe may improve its performance when generating distant land. The patcher can be downloaded [here](https://www.ntcore.com/4gb_patch.php)
+5. NOTE: Manually installing the 4GB patch is no longer required, as it has been rolled into Morrowind Code Patch as of a recent version. However, running it against MGEXEGui.exe may improve its performance when generating distant land. The patcher can be downloaded [here](https://www.ntcore.com/4gb_patch.php)
 
-6. Download the latest version of MGE XE. While its mod page can be found [here](https://www.nexusmods.com/morrowind/mods/41102) the development version (like MCP) exists [here](https://www.nexusmods.com/morrowind/mods/26348). This comes with an optional plugin `XE Sky Variations.esp`, that will randomize the sky colour and sunrise/sunset every day. It requires high quality sky scattering enabled, and MWSE enabled. Use it if you want.
+6. Download the latest version of MGE XE. Its mod page can be found [here](https://www.nexusmods.com/morrowind/mods/41102) the development version (like MCP) was previously hosted [here](https://www.nexusmods.com/morrowind/mods/26348). This comes with an optional plugin `XE Sky Variations.esp`, that will randomize the sky colour and sunrise/sunset every day. It requires high quality sky scattering enabled, and MWSE enabled. Use it if you want.
 
 (As of writing this guide, the mod page has the newest version, Skunk Works' copy is older (despite having a higher version number). Check both first though, as it could change!)
 
 Consider patching it with the 4GB patch if distant land generation takes too long when you get to that step.
 
-MGE XE comes with MWSE 2.0. Some mods require the alpha version (2.1) to work properly. If so, get 2.1 from [here](https://nullcascade.com/mwse/mwse-dev.zip).
+MGE XE used to come with MWSE 2.0, now includes alpha 2.1 as part of the installer and updater. Some mods require the alpha version (2.1) to work properly. If so, get 2.1 from [here](https://nullcascade.com/mwse/mwse-dev.zip).
 
 If you do not have a mod that requires 2.1, there is no reason to install it - stick with what MGE XE provides. 2.1 provides support for new mods, bug fixes, and performance improvements, but is under rapid development that may cause issues. New versions of MWSE 2.1 come out daily/weekly, and it comes with a MWSE-Update program that will download any new alpha version, if available. Visit the Morrowind Modding Discord under #MWSE for more information. To report issues, visit the Discord channel or their [GitHub project](https://github.com/MWSE/MWSE/issues).
 
 Extract it into your install folder (the folder with Morrowind.exe in it)--not the data folder! This should result in MGEXEgui ending up in the same folder as Morrowind.exe.
 
-Run MGEXEgui, choose your resolution and settings from the first tab (don't forget to click the Auto FOV button). I don't recommend messing with shaders at this time, and don't even bother clicking on the Distant Land tab; that's going to be one of our final steps. The In-Game tab lets you edit some .ini settings easily. Choose whatever you want. For lighting settings, use the following (from Knots' old guide):
+Run MGEXEgui, choose your resolution and settings from the first tab (don't forget to click the Auto FOV button). I don't recommend messing with shaders at this time, and don't even bother clicking on the Distant Land tab; that's going to be one of our final steps. The In-Game tab lets you edit some .ini settings easily. Choose whatever you want. For lighting settings, use the following (from Knots' [old guide](https://vsrecommendedgames.fandom.com/wiki/Morrowind_Modding)):
 Quadratic 2.619
 Linear 1.0
 Constant 0.382
 
-7. Download mlox. While its mod page can be found [here](https://www.nexusmods.com/morrowind/mods/43001) You should actually get the latest version of it from [here](https://github.com/mlox/mlox/releases/) (They migrated away from Sourceforge some time ago)
+7. Download mlox. While its mod page can be ~~found [here](https://www.nexusmods.com/morrowind/mods/43001)~~ You should actually get the latest version of it from [here](https://github.com/mlox/mlox/releases/) (They migrated away from Sourceforge some time ago)
 
-mlox is the Morrowind equivalent of LOOT or BOSS, and it needs to go into its own folder in your Morrowind install. Mine is in `Morrowind\mlox`. Run the application and hit "update load order". You should get into the habit of doing this after you install mods that require an .esp to be activated. **NOTE:** Mlox often refuses to work properly the first time, or sometimes intermittently. Just re-start your computer, it'll work again.
+mlox is the Morrowind equivalent of LOOT or BOSS, and it needs to go into its own folder in your Morrowind install. Mine is in `Morrowind\mlox`. Run the application and hit "update load order". You should get into the habit of doing this after you install mods that require an .esp to be activated. **NOTE:** Mlox often refuses to work properly the first time, or sometimes intermittently. At this point in the install, it has a green 'already optimized' warning scrolled offscreen. Just re-start your computer, it'll work again.
 
 mlox is currently highly out of date, even using version 0.62. It suggests the Morrowind Patch Project (despite those links no longer working) and has other outdated information. However, it does form a good baseline and has some information still relevant you can at least look into if it warns you.
 
@@ -172,7 +174,7 @@ This is a powerful tool that will allow us to handle conflict resolution, cleani
 
 To do this, first download the "Manual Installation Archive"
 
-Then, extract it. The contents (`Data Files` and `Mopy`) should be put into your `Morrowind` directory, so that the Data files merges with the vanilla `Data Files` folder.
+Then, extract it. The contents (`Data Files` and the Wyre program folder `Mopy`) should be put into your `Morrowind` directory, so that the Data files merges with the vanilla `Data Files` folder.
 
 NOTE: YOU MUST RUN WRYE ONCE MANUALLY BEFORE RUNNING IT INSIDE MO2.
 
@@ -209,9 +211,9 @@ Congratulations, you've completed the baseline installation for Morrowind!
 
 A note before we start installing mods:
 
-MO2 allows you to use the "Download with Manager" option on the nexus pages that have it. Feel free to use this to save time. However, MO2 of course can install archives too using the second to leftmost top button with a CD on it.
+MO2 allows you to use the "Download with Manager" option on the nexus pages that have it, then you can double click to install. Feel free to use this to save time. Of course, MO2 can install archives one at a time using the second to leftmost top button with a CD on it. Once installed, you can enable the mod and its plugin ESPs by ticking a mod or by selecting several mods and right-click-Enable.
 
-As you begin installing mods, I recommend that you right click them and hit "Ignore Update" if the version number shows up in red. This will happen due to some mod authors having poorly laid out versioning for their mods, making a mod show up as "out of date" despite you just installing it. This isn't harmful in any way, but if you do this *now* then when you hit "Check all for updates" in the future you'll actually have a pretty good idea if any of your Nexus mods have updates available. Very useful!
+If the version number shows up in red as you begin installing mods, I recommend that you right click them and hit "Ignore Update". This will happen due to some mod authors having poorly laid out versioning for their mods, making a mod show up as "out of date" despite you just installing it. This isn't harmful in any way, but if you do this *now* then when you hit "Check all for updates" in the future you'll actually have a pretty good idea if any of your Nexus mods have updates available. Very useful!
 
 1. You may be familiar with projects like the Unofficial Patches for Oblivion and Skyrim. Morrowind *sort of* has its own versions of these in the form of two options: the Morrowind Patch Project and the Patch for Purists. The MPP makes a lot of balance-related changes some players feel is untrue to the original experience. Thus, currently most players recommend the Patch for Purists which you can get [here](https://www.nexusmods.com/morrowind/mods/45096/)
 
@@ -267,7 +269,7 @@ Download the LGNPC bundle. You should install all of the mods. A few notes:
 
 - [Ultimate Icon Replacer](http://mw.modhistory.com/download-56-6673). This replaces all Morrowind object/inventory icons with better icons. Mods you install further down the line will take priority over some of these.
 
-* Alternatives, for potions and scrolls you may want [Potions and Scrolls](http://mw.modhistory.com/download-35-2339). Take a look at the screenshots of both and decide for yourself. If you do want "Potions and Scrolls" just load it directly after Ultimate Icon Replacer.
+* Alternatives, for potions and scrolls you may want [Potions and Scrolls](http://mw.modhistory.com/download-35-2339). Take a look at the screenshots of both and decide for yourself. If you do want "Potions and Scrolls" just load it directly after Ultimate Icon Replacer. Note this is in ACE archive format which MO2 can't directly open.
 
 - [JiFFY Morrowind UI Revamped](http://www.nexusmods.com/morrowind/mods/43922/?). This UI mod was chosen in particular because of how much it revamps, and it looks nice to boot. Choose between Dark or Classic, pick your crosshair and choose any size options. I went with 50% smaller crosshair and 25% smaller cursor, but you can and should try all the sizes in game to see which you prefer. Optionally for those avid readers, this mod includes the mod "Scroll Daedric Alphabet". This mod gives you a key to read the Daedric characters on spell scrolls. Lastly, don't forget to make the necessary changes to your .ini.
 
@@ -281,7 +283,9 @@ Get your dialogue font mods of choice:
 
 * Start with [Better Dialogue fonts](http://www.nexusmods.com/morrowind/mods/36873/), which makes the standard Morrowind font (Magic Cards) higher resolution. Consider the mods below afterwards if you wish.
 
-* [Bigger Vanilla Font](http://www.nexusmods.com/morrowind/mods/42420/) - Optional. Use if you'd like a larger font. Requires Better Dialogue Font and 'Unrestrict menu size' option from MCP.
+* ~~[Bigger Vanilla Font](http://www.nexusmods.com/morrowind/mods/42420/) - Optional. Use if you'd like a larger font. Requires Better Dialogue Font and 'Unrestrict menu size' option from MCP.~~ Withdrawn from Nexus 'due to existance of Better Dialogue Font by Hrnchamd and MGE XE by Hrnchamd with "Scale UI" option'
+
+
 
 * [MORRA BUF - MORe ReadAble Bigger UI Fonts](http://www.nexusmods.com/morrowind/mods/42934/) - This is an alternative to Better Dialogue Font if you dislike the "Magic Cards" font. Take note of the .ini changes you'll need to do.
 
@@ -291,6 +295,7 @@ Get any or all of these if you like:
 
 * [HD Intro Cinematic - English](http://www.nexusmods.com/morrowind/mods/39329/) - Make sure to pick the right one for your resolution, and only get this if you picked the proper option in MCP. To install, you need to rename the movie file to `mw_intro.bik` after installing it via MO2.
 * [Morrowind Bethesda Logo HD Makeover](http://www.nexusmods.com/morrowind/mods/42352/) - If you have 'skip intro movie' turned on in MGE XE, there's no point to downloading this. In order to install, you'll need to make a folder called `Video` and drop the `bethesda logo.bik` file into it.
+* No references to other ingame video replacement yet.
 
 ### Splash Screen Replacers
 

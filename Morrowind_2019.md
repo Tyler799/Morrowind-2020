@@ -938,6 +938,10 @@ Vurt's Grazeland Trees [Palms].esp
 
 To actually clean, first open Wrye using MO2. Then, right click on a given plugin and hit "Clean with TES3CMD"
 
+**NOTE:** It looks like cleaning multiple mods at once (possibly at all) is causing Wrye Bash to put some of its log file into Morrowind.ini by accident. Whether this is Wrye's fault or MO2 I am unsure on.
+
+If this happens to you, just get a backup of Morrowind.ini and replace it. You should not need to reinstall the game, or even the mods that were cleaned. 
+
 ## Testing your Setup
 
 Aside from simply making sure the game opens and loads, there are several tools in place that will help you quickly get into game and search for anything that might have gone wrong.

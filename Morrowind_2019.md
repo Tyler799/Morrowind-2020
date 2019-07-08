@@ -733,7 +733,6 @@ Moving on:
 * [Luminous Atronachs](http://www.nexusmods.com/morrowind/mods/42613/?)
 * [Vurt's Silt Strider Retexture](http://www.nexusmods.com/morrowind/mods/30696/?) - Don't use skin_01 and skin_03, we have fixed versions of those.
 * [Netch Bump mapped](http://www.nexusmods.com/morrowind/mods/42851/?) - Get the main file and the optional file.
-* [HiRes Scrib](http://www.nexusmods.com/morrowind/mods/43352/?) - I use the bright version.
 * [Unique Winged Twilights](http://download.fliggerty.com/download--743) - The .esp is unnecessary if you just want a replacer.
 * [BB Dwarven Spectre](http://www.nexusmods.com/morrowind/mods/29671/?)
 * [Better Almalexia](http://www.nexusmods.com/morrowind/mods/23388/?) - Comes with alternate pupil textures if you want. (You'll need to unpack/repack to add them). Also comes with a splash screen (`Splash_almalexia.tga`) you may want to disable if you feel it clashes with the existing splash screen replacers.

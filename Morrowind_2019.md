@@ -910,6 +910,10 @@ Optionally, you might want to take a look at [this water shader](https://www.nex
 
 ## Cleaning mods
 
+**Note:** Make a backup of ```Mod Organizer 2/Profiles/Your Profile Name Here (Likely 'Default')/Morrowind.ini```, as there is a bug that may occur during this step.
+
+**NOTE:** DO NOT CLEAN MULTIPLE OF THESE MODS AT ONCE! It has been known to cause odd, errant behavior. Do not do it! Clean one at a time.
+
 Several of the plugins in this list need to be cleaned. Here is the list of plugins that need to be cleaned, and do not have any warning about cleaning in their readme:
 
 ```
@@ -937,9 +941,7 @@ Vurt's Grazeland Trees [Palms].esp
 
 To actually clean, first open Wrye using MO2. Then, right click on a given plugin and hit "Clean with TES3CMD"
 
-**NOTE: It looks like cleaning multiple mods at once (possibly at all) is causing Wrye Bash to put some of its log file into Morrowind.ini by accident. Whether this is Wrye's fault or MO2 I am unsure on.**
-
-If this happens to you, just get a backup of Morrowind.ini and replace it. You should not need to reinstall the game, or even the mods that were cleaned. 
+**POTENTIAL GAME-BREAKING BUG:** Wyre is ocassionally writing its log during this process into Morrowind.ini instead. **This breaks the game**. To fix it, you must find a backup of Morrowind.ini and use it to replace the (now broken) one in ``` Mod Organizer 2/Profiles/Your Profile Name Here (Likely 'Default')/Morrowind.ini```. That's why we made the backup earlier, just in case. 
 
 ## Testing your Setup
 

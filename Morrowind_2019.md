@@ -835,7 +835,7 @@ There are likely a ton of unique/artifact weapon replacers I've missed. I was ne
 * [True Trueflame](http://www.nexusmods.com/morrowind/mods/33432/?)
 * [HopesFire Replacer Morrowind Edition](http://mw.modhistory.com/download-98-12378) - Has an `AltTextures` folder with an alternate texture for Hopesfire. You'll need to move the folder's contents into the `Textures` folder and over-write after installing if you wish to use it. (Or un-pack/repack)
 * [Various little mods](http://www.nexusmods.com/morrowind/mods/43330/?) - Volendrung.
-* [Improved Weapon Meshes & Textures WIP](https://www.dropbox.com/sh/l1660o8fg664bii/AAAO3m96a4O4J4JOUOUBmFnFa/Improved%20Weapon%20Meshes%20%26%20Textures%20WIP?dl=0) - Download as .zip.
+* [Pherim's Improved Weapon Meshes & Textures WIP](https://www.dropbox.com/sh/l1660o8fg664bii/AAAO3m96a4O4J4JOUOUBmFnFa/Improved%20Weapon%20Meshes%20%26%20Textures%20WIP?dl=0) - Download as .zip.
 * [Spear-Staff Fix](http://www.nexusmods.com/morrowind/mods/43353/?) - An optional fix for the position where spears and staves are held. Use it if you want. If you do, you'll need the Real Reflective Weapons Iron, Improved Weapon Meshes Steel, and Improved Weapon Meshes Ebony files from the `Compatibility` folder, then drag them out and over-write their normal versions from the mod, and then re-pack and install as normal.
 
 ## Armor

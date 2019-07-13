@@ -624,7 +624,10 @@ For things that don't really fit in any other section. If some of this seems too
 
 1. Book mods
 * [Arukinn's Better Books and Scrolls](http://www.nexusmods.com/morrowind/mods/43100/?)
-Illy's Dirty Books was an alternative to this, but was removed along with all of Illy's other mods, so you won't find it anymore except through hand-me-downs.
+
+Alternative: [Illy's Dirty Books](https://download.fliggerty.com/download-11-715)
+
+
 * [Melchior's Magnificent Manuscripts](https://www.nexusmods.com/morrowind/mods/45626) - Has an extra folder (`patches`) that offers compatibility with the mod [Book Jackets](http://mw.modhistory.com/download-56-10464). Un-pack the mod, merge the `patches` folder contents in, and re-pack if you'd like that.
 
 2. [Papill6n's various graphic things.](http://www.nexusmods.com/morrowind/mods/39122/?) Grab the following in the BAIN installer:
@@ -664,7 +667,7 @@ Note that "tribunal required" actually has 3 sub-packages. You'll need to open t
 * [EKM Vanilla-Based Paper Lanterns](http://www.nexusmods.com/morrowind/mods/43837/?)
 * [AST beds texture replacer](http://www.nexusmods.com/morrowind/mods/21970/?) - We only want the chair mesh, the rest will be overwritten with the next mod.
 * [Illy's Bedspreads](http://www.nexusmods.com/morrowind/mods/43565/?) [Wayback link](https://web.archive.org/web/*/http://download.fliggerty.com/file.php?id=1108)
-* [Illy's Hot Pots](http://www.nexusmods.com/morrowind/mods/43206/?) - Make sure to activate the .esp. [Wayback link](https://web.archive.org/web/*/http://download.fliggerty.com/file.php?id=1054)
+* [Illy's Hot Pots](https://download.fliggerty.com/download--1054)
 * [AST redware texture replacer](http://www.nexusmods.com/morrowind/mods/21981/?)
 
 One of the following:

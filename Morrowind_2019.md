@@ -2,7 +2,7 @@ This is a changing guide. While complete, it is still very open to changes and n
 
 # Morrowind 2019: Thastus Edition
 
-The [README](https://github.com/Tyler799), License and other info can be found in the rest of the repo. If you want to discuss this guide, we have a [Discord](https://discord.me/mwmods) channel called #thastus.
+The [README](https://github.com/Tyler799/Morrowind-2019/blob/master/README.md), License and other info can be found in the rest of the repo. If you want to discuss this guide, we have a [Discord](https://discord.me/mwmods) channel called #thastus.
 
 ## Table of Contents
 

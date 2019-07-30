@@ -340,8 +340,6 @@ However: If you want to use it you *must* have MWSE alpha 2.1 or later. It will 
 
 For the `ATL BC Mushrooms`, make sure to choose just `00 Core - Smoothed Meshes`.
 
-For the Velothi and Imperial mods, you'll need to go into the `Extras` folder, then into the `GITD` folder and copy the meshes folder next to the mods main `Meshes` folder, if you are using the mod Glow in the Dahrk. 
-
 ## Nature Texture & Mesh Replacers
 
 This is by far going to be the most complicated part of the guide so hold on to your butts.
@@ -582,6 +580,8 @@ Choose one of the following two:
 
 * [Vivec and Velothi - Arkitektora Vol.2](https://www.nexusmods.com/morrowind/mods/46266) - Remember to grab the texture replacer for project atlas in the optional files section. Download the version that's in the same quality as the textures you downloaded.
 * [Vivec-Velothi Retextured V3](https://www.nexusmods.com/morrowind/mods/32886) - A bit lower res in many areas, also not Atlas'd so if you're on a lower end machine you may want the other option. However, some vastly prefer the style here.
+
+For the Velothi and Imperial mods, you'll need to go into the `Extras` folder, then into the `GITD` folder and copy the meshes folder next to the mods main `Meshes` folder, if you are using the mod Glow in the Dahrk. 
 
 Then take all of these:
 

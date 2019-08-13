@@ -159,6 +159,8 @@ Constant 0.382
 
 7. Download mlox. While its mod page can be ~~found [here](https://www.nexusmods.com/morrowind/mods/43001)~~ You should actually get the latest version of it from [here](https://github.com/mlox/mlox/releases/) (They migrated away from Sourceforge some time ago)
 
+**UPDATE:** Do *not* get version 1.0. It is currently bugged, or I misunderstood the install process. Get the next latest version until we get this sorted.
+
 mlox is the Morrowind equivalent of LOOT or BOSS, and it needs to go into its own folder in your Morrowind install. Mine is in `Morrowind\mlox`. Run the application and hit "update load order". You should get into the habit of doing this after you install mods that require an .esp to be activated. **NOTE:** Mlox often refuses to work properly the first time, or sometimes intermittently. At this point in the install, it has a green 'already optimized' warning scrolled offscreen. Just re-start your computer, it'll work again.
 
 mlox is currently highly out of date, even using version 0.62. It suggests the Morrowind Patch Project (despite those links no longer working) and has other outdated information. However, it does form a good baseline and has some information still relevant you can at least look into if it warns you.

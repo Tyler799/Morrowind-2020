@@ -20,8 +20,8 @@ The [README](https://github.com/Tyler799/Morrowind-2019/blob/master/README.md), 
   * [Dialogue Font](#Dialogue-Font)
   * [HD Video Screen Replacers](#HD-Video-Screen-Replacers)
   * [Splash Screen Replacers](#Splash-Screen-Replacers)
-* [Major mods to be aware of](#major-mods-to-be-aware-of)
 * [Mesh fixes and improvements](#mesh-fixes-and-improvements)
+* [Major mods to be aware of](#major-mods-to-be-aware-of)
 * [Nature Texture &amp; Mesh Replacers](#nature-texture--mesh-replacers)
   * [Want plants to not "bend" or "grow" towards you?](#want-plants-to-not-bend-or-grow-towards-you)
 * [Graphic Herbalism Finisher](#Graphic-Herbalism-Finisher)
@@ -317,19 +317,6 @@ Mods that replace both:
 
 * [Morrowind Screens Redone](https://www.nexusmods.com/morrowind/mods/46259) - An English alternative to the above, based on the same concept art. Looks a bit different, compare their images and decide yourself.
 
-## Major mods to be aware of
-
-The following mods are optional to install, but have compatibility patches listed in the mesh/texture replacers we'll soon be downloading, so I'm listing them here. Read up on them and decide if you want to use them or not.
-
-* [Tamriel Data](http://www.nexusmods.com/morrowind/mods/44537/?) - This is a requirement for the below mod. Download the HD version.
-* [Tamriel Rebuilt](http://www.nexusmods.com/morrowind/mods/42145/?) - One of the biggest mods in Morrowind and still a work in progress, but it adds a huge chunk of playable landscape (mainland Morrowind). It shouldn't be incompatible with anything listed here, but you should keep an eye out for things with TR compatibility if you choose to install it.
-* [Graphic Herbalism - MWSE Edition](https://www.nexusmods.com/morrowind/mods/46599) - By default, plants in Morrowind act as containers: when you activate them, the container interface opens and you can remove any ingredients that might be present 'inside' the plant. Graphic Herbalism MWSE is an updated version of an old mod that makes plants act more like plants; activating the plant picks it, you automatically get the ingredients, and the plant changes in the world to show it has been picked. Think Skyrim plants. Ignore the `GH Patches and Replacers` file, that needs to be later.
-* [Glow in the Dahrk](https://www.nexusmods.com/morrowind/mods/45886/) is essentially a replacement for WinDoors Glow. Highly recommended.
-
-(I personally chose the High-res and rays options, and left the rest off)
-
-However: If you want to use it you *must* have MWSE alpha 2.1 or later. It will not work with 2.0!
-
 ## Mesh fixes and improvements
 
 * [Morrowind Optimization Patch](https://www.nexusmods.com/morrowind/mods/45384) - Improves performance by optimizing meshes.
@@ -343,6 +330,19 @@ However: If you want to use it you *must* have MWSE alpha 2.1 or later. It will 
 For the `ATL BC Mushrooms`, make sure to choose just `00 Core - Smoothed Meshes`.
 
 For the Velothi and Imperial mods, you'll need to go into the `Extras` folder, then into the `GITD` folder and copy the meshes folder next to the mods main `Meshes` folder, if you are using the mod Glow in the Dahrk. 
+
+## Major mods to be aware of
+
+The following mods are optional to install, but have compatibility patches listed in the mesh/texture replacers we'll soon be downloading, so I'm listing them here. Read up on them and decide if you want to use them or not.
+
+* [Tamriel Data](http://www.nexusmods.com/morrowind/mods/44537/?) - This is a requirement for the below mod. Download the HD version.
+* [Tamriel Rebuilt](http://www.nexusmods.com/morrowind/mods/42145/?) - One of the biggest mods in Morrowind and still a work in progress, but it adds a huge chunk of playable landscape (mainland Morrowind). It shouldn't be incompatible with anything listed here, but you should keep an eye out for things with TR compatibility if you choose to install it.
+* [Graphic Herbalism - MWSE Edition](https://www.nexusmods.com/morrowind/mods/46599) - By default, plants in Morrowind act as containers: when you activate them, the container interface opens and you can remove any ingredients that might be present 'inside' the plant. Graphic Herbalism MWSE is an updated version of an old mod that makes plants act more like plants; activating the plant picks it, you automatically get the ingredients, and the plant changes in the world to show it has been picked. Think Skyrim plants. Ignore the `GH Patches and Replacers` file, that needs to be later.
+* [Glow in the Dahrk](https://www.nexusmods.com/morrowind/mods/45886/) is essentially a replacement for WinDoors Glow. Highly recommended.
+
+(I personally chose the High-res and rays options, and left the rest off)
+
+However: If you want to use it you *must* have MWSE alpha 2.1 or later. It will not work with 2.0!
 
 ## Nature Texture & Mesh Replacers
 

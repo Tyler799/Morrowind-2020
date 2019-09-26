@@ -377,7 +377,7 @@ Time for rocks. Download the following:
 
 ### Waterfalls
 
-Test each waterfall mod quickly by starting the game, pressing `\`` to go into the console, typing `COC "Vivec, Puzzle Canal, Level 1"`, hitting enter, and leaving through the grate ahead of you.
+Test each waterfall mod quickly by starting the game, pressing `` ` `` to go into the console, typing `COC "Vivec, Puzzle Canal, Level 1"`, hitting enter, and leaving through the grate ahead of you.
 * [Better Waterfalls](https://www.nexusmods.com/morrowind/mods/45424) - Best looking ones out there. Editors personal choice. Be sure to grab the [Waterfalls Tweaks](https://www.nexusmods.com/morrowind/mods/46271) for better compatibility.
 * [Waterfalls Bump mapped](http://www.nexusmods.com/morrowind/mods/42405/?) - Author's personal choice.
 * [Dongle's Waterpack Bumpmapped](http://www.nexusmods.com/morrowind/mods/42317/?) - Some may like how these look.

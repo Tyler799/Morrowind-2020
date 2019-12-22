@@ -53,7 +53,9 @@ The [README](https://github.com/Tyler799/Morrowind-2019/blob/master/README.md), 
 
 As well: While many of the mods here may be compatible with OpenMW, many are not. Do not attempt to follow this guide with OpenMW! It is an amazing accomplishment by the community, but this guide is not attuned to it.
 
-All installation of mods (with minor exception, mainly for tools like MGE/MCP/Mlox) will be done with Mod Organizer 2, which has built-in support for Morrowind. This is highly recommended, as it allows you to very easily disable files/folders or mods, supports subfolders within mods, re-order mods or plugins and otherwise. It makes maintenance of a large mod list effortless, hence its heavy adoption in the Skyrim modding scene. (Do not substitute with NMM, Vortex or otherwise. Seriously. It *will* break things.)
+All installation of mods (with minor exception, mainly for tools like MGE/MCP/Mlox) will be done with **Mod Organizer 2**, which has built-in support for Morrowind. This is highly recommended, as it allows you to very easily disable files/folders or mods, supports subfolders within mods, re-order mods or plugins and otherwise. It makes maintenance of a large mod list effortless, hence its heavy adoption in the Skyrim modding scene. (Do not substitute with NMM, Vortex or otherwise. Seriously. It *will* break things.)
+
+Note that mods not on the nexus (like the various links to .ZIP or .7ZIP files) can be and should be installed via Mod Organizer 2 as well. It provides an "Install Mod From Archive" button in the top left that will handle this for you, with a couple exceptions I mention in the guide. 
 
 However: [Wrye Bash (Polemo's Fork)](https://www.nexusmods.com/morrowind/mods/45439/) is an *excellent* alternative. While a little less friendly at face value, it offers a similar ability to revert the game and mods to their base state upon revising your list. It's a fantastically made tool, and we'll be installing it anyways for some of its feature set. (Note: You *cannot* use both to manage mods - either one or the other. If you're following our MO2 steps, you'll only use Wrye to make multipatches asnd clean mods. Installing mods through Wrye *will* cause issues. Don't do it.)
 
@@ -63,7 +65,7 @@ However: [Wrye Bash (Polemo's Fork)](https://www.nexusmods.com/morrowind/mods/45
 
 **Warning**: Do *not* enable "Automatic Archive Invalidation" when using Mod Organizer 2 for Morrowind profile. This is needed for a bug introduced in Oblivion. However, if used in Morrowind it *will* break things like Distant Land generation. 
 
-### Regarding mods with archives:
+### Regarding mods with Bethesda Archives (.BSA):
 
 Mods with archives (.BSA files) need to be added into the `Morrowind.ini` file. However, we have a tool to automate the process that can be found [here](http://download.fliggerty.com/download-58-633)
 (Download down due to Fliggery site being broken)

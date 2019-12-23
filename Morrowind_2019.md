@@ -7,11 +7,13 @@ The [README](https://github.com/Tyler799/Morrowind-2019/blob/master/README.md), 
 ## Table of Contents
 
 * [Before we begin](#before-we-begin)
-  * [Regarding mods with archives](#regarding-mods-with-archives)
+  * [Regarding Regarding Open Morrowind (OpenMW)](#regarding-open-morrowind)
+  * [Regarding mods with archives](#regarding-mods-with-bethesda-archives)
+  * [Regarding Mod Organizer 2](#regarding-mod-organizer-2)
   * [Bump mapped mods](#bump-mapped-mods)
   * [Great House Fliggerty](#great-house-fliggerty)
   * [MWSE](#MWSE---The-Morrowind-Script-Extender)
-  * [Atlasing](#Atlasing---What-It-Is-And-Installation-Concerns)fff
+  * [Atlasing](#Atlasing---What-It-Is-And-Installation-Concerns)
 * [Baseline Installation and Boilerplate](#baseline-installation-and-boilerplate)
 * [Patches, Fixes and Otherwise](#patches-fixes-and-otherwise)
 * [Official Bethesda Plugins](#official-bethesda-plugins)
@@ -51,18 +53,11 @@ The [README](https://github.com/Tyler799/Morrowind-2019/blob/master/README.md), 
 
 **You should always read the mod page or glance through the readme of any mod we're downloading**, so you'll at least be aware of what you're getting and what your options are. Mod are, above all else, personal preference. Knowledge is power!
 
-As well: While many of the mods here may be compatible with OpenMW, many are not. Do not attempt to follow this guide with OpenMW! It is an amazing accomplishment by the community, but this guide is not attuned to it.
+### Regarding Open Morrowind (OpenMW):
 
-All installation of mods (with minor exception, mainly for tools like MGE/MCP/Mlox) will be done with **Mod Organizer 2**, which has built-in support for Morrowind. This is highly recommended, as it allows you to very easily disable files/folders or mods, supports subfolders within mods, re-order mods or plugins and otherwise. It makes maintenance of a large mod list effortless, hence its heavy adoption in the Skyrim modding scene. (Do not substitute with NMM, Vortex or otherwise. Seriously. It *will* break things.)
+[OpenMW](https://openmw.org/en/) is an open-source engine created by fans for Morrowind. It performs significantly better than Morrowind's original engine, while also fixing many bugs and issues the original had while offering enhanecments and new functionality - like multiplayer support.
 
-Note that mods not on the nexus (like the various links to .ZIP or .7ZIP files) can be and should be installed via Mod Organizer 2 as well. It provides an "Install Mod From Archive" button in the top left that will handle this for you, with a couple exceptions I mention in the guide. 
-
-However: [Wrye Bash (Polemo's Fork)](https://www.nexusmods.com/morrowind/mods/45439/) is an *excellent* alternative. While a little less friendly at face value, it offers a similar ability to revert the game and mods to their base state upon revising your list. It's a fantastically made tool, and we'll be installing it anyways for some of its feature set. (Note: You *cannot* use both to manage mods - either one or the other. If you're following our MO2 steps, you'll only use Wrye to make multipatches asnd clean mods. Installing mods through Wrye *will* cause issues. Don't do it.)
-
-**Note**: When I say "Disable" regarding a file, I'm referring to the "HIDE" feature MO2 gives. If the guide says to "Disable" a file or folder, that means "HIDE" it. However, the original guide had a lot of "DELETE" wording. I simply find/replaced that with "DISABLE". There are likely many instances where with using MO2 disabling like the original guide suggested is unnecessary - just let another mod take priority. However, I have no way of knowing immediately which disables would be pointless, so I'm leaving them in for now.
-
-**Note**: Because we're using MO2, the order you install and enable mods is meaningless, only their order in the left pane and plugin order in the right matter. Just remember that.
-
+While many of the mods here may be compatible with OpenMW, many are not. Do not attempt to follow this guide with OpenMW! It is an amazing accomplishment by the community, but this guide is not attuned to it.
 **Warning**: Do *not* enable "Automatic Archive Invalidation" when using Mod Organizer 2 for Morrowind profile. This is needed for a bug introduced in Oblivion. However, if used in Morrowind it *will* break things like Distant Land generation. 
 
 ### Regarding mods with Bethesda Archives (.BSA):
@@ -81,15 +76,36 @@ Archive 2=neat.bsa
 
 NOTE: You must edit the `Morrowind.ini` inside your Mod Organizer profile that you're playing on for it to have any effect. Assuming you didn't rename it, it's under `Morrowind/Mod Organizer 2/Profiles/Default/Morrowind.ini`.
 
-(MO2 has a button to edit this INI directly as well)
+### Regarding Mod Organier 2 (MO2):
+
+**Mod Organizer 2** is a mod organization tool, similar to Wyre Mash, Oblivion Mod Manager, Vortex, Kortex, Nexus Mod Manager or others. However, it is a far better tool than most of them and is the tool of choice for this guide. It makes maintaining massive, complicated load orders a breeze. 
+
+If you would like an excellent tutorial series for using Mod Organizer 2, I recommend [this one](https://www.youtube.com/watch?v=ruq6hQIAvB8&list=PLlN8weLk86Xh3ue76x2ibqtmMramwQmHB) by Gamerpoets. You can also ask on the Mod Organizer 2 discord, [here](https://discordapp.com/invite/5tCqt6V), or even on the Skyrimmods discord if you like. 
+
+All installation of mods (with minor exception, mainly for tools like MGE/MCP/Mlox) will be done with this tool, which has  had built-in support for Morrowind for some time now. It is highly recommended, as it allows you to very easily disable files/folders or mods, supports subfolders within mods, re-order mods or plugins and otherwise. It makes maintenance of a large mod list effortless, hence its heavy adoption in the Skyrim modding scene. (Do not substitute with NMM, Vortex or otherwise. Seriously. It *will* break things.)
+
+With MO2 you will *never* need to reinstall a mod or the base game if it is used properly, no matter how badly you mess up. 
+
+However: [Wrye Bash (Polemo's Fork)](https://www.nexusmods.com/morrowind/mods/45439/) is an *excellent* alternative. While a little less friendly at face value, it offers a similar ability to revert the game and mods to their base state upon revising your list. It's a fantastically made tool, and we'll be installing it anyways for some of its feature set. (Note: You *cannot* use both to manage mods - either one or the other. If you're following our MO2 steps, you'll only use Wrye to make multipatches and to clean mods. Installing mods through both *will* cause issues. Don't do it.)
+
+Note that mods not on the nexus (like the various links to .ZIP or .7ZIP files) can be and should be installed via Mod Organizer 2 as well. It provides an "Install Mod From Archive" button in the top left that will handle this for you, with a couple exceptions I mention in the guide. 
+
+Because we're using MO2, the order you install and enable mods is meaningless. You can change the order of mods in the left-hand pane and right-hand pane at any time. The left hand pane defines which files (like textures, sounds, meshes) will take priority, while the right pane defines which plugins (and thus which records) will take priority. 
+
+Mod Organizer 2 has INI files for each profile you create. This means that if you try to edit files like Skyrimprefs.ini or otherwise, you will find they have no effect - unless you modify the ones inside MO2's profiles folders. MO2 also offers a button in the GUI to directly edit the INI files if you like. 
+
+**Note**: When I say "Disable" regarding a file, I'm referring to the "HIDE" feature MO2 gives. If the guide says to "Disable" a file or folder, that means "HIDE" it. However, the original guide had a lot of "DELETE" wording. I simply find/replaced that with "DISABLE". There are likely many instances where with using MO2 disabling like the original guide suggested is unnecessary - just let another mod take priority. However, I have no way of knowing immediately which disables would be pointless, so I'm leaving them in for now
 
 ### Bump mapped mods:
+
 A lot of links in this guide will have bump map versions available, especially once we hit the architecture section. I don't know all the technical details of it, but bump mapping in Morrowind isn't quite like what you'd expect it to be. It's often very shiny looking, sometimes plastic-y, and it can make things look very bright depending on the reflection texture used. This is fine for metals and wet looking plants (it looks great on mushrooms, in my opinion), but can sometimes look a little weird on architecture. That means, if you ever have a choice between getting a bump map or no bump map version, the choice is 100% yours. If you do download a bump map version and decide you don't like it, you can get rid of the bumps by deleting the meshes that were included in the mod, and you can also disable the normal maps (usually they have `_nm` or `_n` at the end of their filename) if you want to save space.
 
 ### Great House Fliggerty
+
 This site hosts a few of the mods for this list. However, due to server migration problems, downloads are broken. You can solve this by using the [Wayback Machine](https://archive.org/web/) (internet archive) for any of the given downloads. I already have links to a few of the mods, but you should be able to get the others as well.
 
 ### MWSE - The Morrowind Script Extender
+
 Momentarily in this guide, we'll have you install MWSE. Based on the name alone, many of you will realize this is similar to the projects OBSE and SKSE, though it is maintained by a completely different team.
 
 Here is a short summary of what it is:

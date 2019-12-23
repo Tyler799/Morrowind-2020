@@ -58,7 +58,6 @@ The [README](https://github.com/Tyler799/Morrowind-2019/blob/master/README.md), 
 [OpenMW](https://openmw.org/en/) is an open-source engine created by fans for Morrowind. It performs significantly better than Morrowind's original engine, while also fixing many bugs and issues the original had while offering enhancements and new functionality - like multiplayer support.
 
 While many of the mods here may be compatible with OpenMW, many are not. Do not attempt to follow this guide with OpenMW! It is an amazing accomplishment by the community, but this guide is not attuned to it.
-**Warning**: Do *not* enable "Automatic Archive Invalidation" when using Mod Organizer 2 for Morrowind profile. This is needed for a bug introduced in Oblivion. However, if used in Morrowind it *will* break things like Distant Land generation. 
 
 ### Regarding mods with Bethesda Archives (.BSA):
 
@@ -95,6 +94,8 @@ Because we're using MO2, the order you install and enable mods is meaningless. Y
 Mod Organizer 2 has INI files for each profile you create. This means that if you try to edit files like Skyrimprefs.ini or otherwise, you will find they have no effect - unless you modify the ones inside MO2's profiles folders. MO2 also offers a button in the GUI to directly edit the INI files if you like. 
 
 **Note**: When I say "Disable" regarding a file, I'm referring to the "HIDE" feature MO2 gives. If the guide says to "Disable" a file or folder, that means "HIDE" it. However, the original guide had a lot of "DELETE" wording. I simply find/replaced that with "DISABLE". There are likely many instances where with using MO2 disabling like the original guide suggested is unnecessary - just let another mod take priority. However, I have no way of knowing immediately which disables would be pointless, so I'm leaving them in for now
+
+**Warning**: Do *not* enable "Automatic Archive Invalidation" when using Mod Organizer 2 for Morrowind profile. This is needed for a bug introduced in Oblivion. However, if used in Morrowind it *will* break things like Distant Land generation. 
 
 ### Bump mapped mods:
 

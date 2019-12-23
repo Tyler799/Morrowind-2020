@@ -55,7 +55,7 @@ The [README](https://github.com/Tyler799/Morrowind-2019/blob/master/README.md), 
 
 ### Regarding Open Morrowind (OpenMW):
 
-[OpenMW](https://openmw.org/en/) is an open-source engine created by fans for Morrowind. It performs significantly better than Morrowind's original engine, while also fixing many bugs and issues the original had while offering enhanecments and new functionality - like multiplayer support.
+[OpenMW](https://openmw.org/en/) is an open-source engine created by fans for Morrowind. It performs significantly better than Morrowind's original engine, while also fixing many bugs and issues the original had while offering enhancements and new functionality - like multiplayer support.
 
 While many of the mods here may be compatible with OpenMW, many are not. Do not attempt to follow this guide with OpenMW! It is an amazing accomplishment by the community, but this guide is not attuned to it.
 **Warning**: Do *not* enable "Automatic Archive Invalidation" when using Mod Organizer 2 for Morrowind profile. This is needed for a bug introduced in Oblivion. However, if used in Morrowind it *will* break things like Distant Land generation. 

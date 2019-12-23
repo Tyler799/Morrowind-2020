@@ -205,7 +205,7 @@ HOWEVER: DO NOT ATTEMPT TO JUST CLEAN YOUR ENTIRE LOAD ORDER! Some mods *will* b
 Install it by putting it in the `Data Files` folder.
 
 8. Download [Mod Organizer 2](https://www.nexusmods.com/skyrimspecialedition/mods/6194)
-(The latest dev versions can be found on the MO2 Discord, but as of writing this, 2.1.5 is perfectly fine for Morrowind use)
+(The latest dev versions can be found on the MO2 Discord, but as of writing this, 2.2.1 is perfectly fine for Morrowind use)
 
 Extract it so that the `Mod Organizer 2 (Archive)` folder is inside your Morrowind installation folder.
 

@@ -10,6 +10,7 @@ The [README](https://github.com/Tyler799/Morrowind-2019/blob/master/README.md), 
   * [Regarding Regarding Open Morrowind (OpenMW)](#regarding-open-morrowind)
   * [Regarding mods with archives](#regarding-mods-with-bethesda-archives)
   * [Regarding Mod Organizer 2](#regarding-mod-organizer-2)
+  * [Regarding Russian Websites](#regarding-russian-websites)
   * [Bump mapped mods](#bump-mapped-mods)
   * [Great House Fliggerty](#great-house-fliggerty)
   * [MWSE](#MWSE---The-Morrowind-Script-Extender)
@@ -96,6 +97,14 @@ Mod Organizer 2 has INI files for each profile you create. This means that if yo
 **Note**: When I say "Disable" regarding a file, I'm referring to the "HIDE" feature MO2 gives. If the guide says to "Disable" a file or folder, that means "HIDE" it. However, the original guide had a lot of "DELETE" wording. I simply find/replaced that with "DISABLE". There are likely many instances where with using MO2 disabling like the original guide suggested is unnecessary - just let another mod take priority. However, I have no way of knowing immediately which disables would be pointless, so I'm leaving them in for now
 
 **Warning**: Do *not* enable "Automatic Archive Invalidation" when using Mod Organizer 2 for Morrowind profile. This is needed for a bug introduced in Oblivion. However, if used in Morrowind it *will* break things like Distant Land generation. 
+
+**"NO GAME DATA AT TOP LEVEL** is common for many Morrowind mods. All this means is that the folder structure of the mod is not exactly what Mod Organizer 2 is expecting. MO2 provides a small tutorial on this warning and the fix is very easy. Just expand the folder inside the warning, and look for the "Data Files" folder. Right click it and select "Set Data Directory", while will fix the warning. Some Morrowind mods however include patches in other directories in the mod, and for those we must manually un-zip the archive, move the relevant files, and then re-zip it and install via MO2 as normal. I will warn you when this needs to occur. 
+
+### Regarding Russian Websites:
+
+Some of the websites used in this guide are only in Russian. The ones that do should have a fairly obvious download button, but Chrome out-of-the-box offers a translate feature that may help you, and Firefox can also perform the translation via something [like this](https://addons.mozilla.org/en-US/firefox/addon/simple-translate/) or other, similar tools. 
+
+For your own safety downloading files anywhere on the web (especially a site where you cannot easily read the text), I highly recommend you install a competent ad-blocker like [uBlock Origin](https://addons.mozilla.org/en-US/firefox/addon/ublock-origin/). 
 
 ### Bump mapped mods:
 
@@ -774,6 +783,9 @@ Argonians will be in the next step, don't worry.
 
 2. Body replacers
 * [Robert's bodies](http://www.nexusmods.com/morrowind/mods/43138/?) - Get the main file. Optionally, get Dagoth Ur OR Dagoth Ur (vanilla shaders), and RB Altmer Females, RB Bosmer Females, RB Orcish females. For the last three, you should look at the images section to see what they do; Westly's version is on the top, RB version is in the middle, and vanilla is at the bottom. The Orcish heads in particular are a drastic departure from Westly's heads, but they look more like the vanilla heads.
+
+Robert's bodies is heavily incompatible with other mods, including later mods in this guide. I mention some workarounds, just keep that in mind. 
+
 * OR [Install Better Bodies](https://www.nexusmods.com/morrowind/mods/3880)
 
 Note that at the time this guide is being written, Khajiit meshes are nude. If seeing girl Khajiit nipples bother you, you should consider activating New Beast Bodies Khajit - Clean below, and make sure it overrides Robert's bodies. Also, it seems the nude meshes have been removed.
@@ -792,7 +804,7 @@ An newer alternative to Wey's Argonians for those who feel it may stray too far 
 1. Clothes
 * [Better Clothes](http://www.nexusmods.com/morrowind/mods/42262/?) - Get the non-installer version. Only activate ONE esp. If you want your Argonian females to have breasts lumps when clothed for some reason, choose the regular version. For flat Argonian females, activate the '\_nac' version.
 
-Note: When opening Mlox, it will warn you that Better Clothes depends upon Better Bodies. This is not unwarranted, there will be clipping. You can ignore this if you like, or install Better Bodies instead of Roberts bodies. Robert's bodies is heavily incompatible with other mods, including later mods in this guide. You also have a couple alternative options:
+Note: When opening Mlox, it will warn you that Better Clothes depends upon Better Bodies. This is not unwarranted, there will be clipping. You can ignore this if you like, or install Better Bodies instead of Roberts bodies. Alternatively: 
 
 > 1) Get the [Robert's Bodies version of Better Clothes on Wolflore](http://wolflore.net/viewtopic.php?f=15&t=2086&sid=53e89d737b9bbe081c9946c8c0d11b37) (Requires an account, also that link may not be right)
 > 2) Forgo Better Clothes and use something like Articus' clothes which are compatible with both Robert's and Better Bodies

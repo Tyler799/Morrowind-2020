@@ -7,7 +7,7 @@ The [README](https://github.com/Tyler799/Morrowind-2019/blob/master/README.md), 
 ## Table of Contents
 
 * [Before we begin](#before-we-begin)
-  * [Regarding Regarding Open Morrowind (OpenMW)](#regarding-open-morrowind)
+  * [Regarding Open Morrowind (OpenMW)](#regarding-open-morrowind)
   * [Regarding mods with archives](#regarding-mods-with-bethesda-archives)
   * [Regarding Mod Organizer 2](#regarding-mod-organizer-2)
   * [Regarding Russian Websites](#regarding-russian-websites)
@@ -15,6 +15,7 @@ The [README](https://github.com/Tyler799/Morrowind-2019/blob/master/README.md), 
   * [Great House Fliggerty](#great-house-fliggerty)
   * [MWSE](#MWSE---The-Morrowind-Script-Extender)
   * [Atlasing](#Atlasing---What-It-Is-And-Installation-Concerns)
+  * [Regarding Mlox and Sorting Mods](#Regarding-Mlox-and-Sorting-Mods)
 * [Baseline Installation and Boilerplate](#baseline-installation-and-boilerplate)
 * [Patches, Fixes and Otherwise](#patches-fixes-and-otherwise)
 * [Official Bethesda Plugins](#official-bethesda-plugins)
@@ -33,11 +34,11 @@ The [README](https://github.com/Tyler799/Morrowind-2019/blob/master/README.md), 
 * [Miscellaneous replacers](#miscellaneous-replacers)
 * [Creature replacers](#creature-replacers)
 * [Heads & Bodies](#heads--bodies)
-* [Clothes replacers](#clothes-replacers)
+* [Clothing replacers](#clothing-replacers)
 * [Weapons](#weapons)
 * [Armor](#armor)
 * [Animations](#animations)
-* [Finishing Touch](#finishing-touch)
+* [Finishing Touches](#finishing-touches)
 * [Setup](#mge-xe-setup)
 * [Cleaning mods](#cleaning-mods)
 * [Creating a multipatch](#creating-a-multipatch)
@@ -106,15 +107,15 @@ Some of the websites used in this guide are only in Russian. The ones that do sh
 
 For your own safety downloading files anywhere on the web (especially a site where you cannot easily read the text), I highly recommend you install a competent ad-blocker like [uBlock Origin](https://addons.mozilla.org/en-US/firefox/addon/ublock-origin/). 
 
-### Bump mapped mods:
+### Bump-mapped mods:
 
 A lot of links in this guide will have bump map versions available, especially once we hit the architecture section. I don't know all the technical details of it, but bump mapping in Morrowind isn't quite like what you'd expect it to be. It's often very shiny looking, sometimes plastic-y, and it can make things look very bright depending on the reflection texture used. This is fine for metals and wet looking plants (it looks great on mushrooms, in my opinion), but can sometimes look a little weird on architecture. That means, if you ever have a choice between getting a bump map or no bump map version, the choice is 100% yours. If you do download a bump map version and decide you don't like it, you can get rid of the bumps by deleting the meshes that were included in the mod, and you can also disable the normal maps (usually they have `_nm` or `_n` at the end of their filename) if you want to save space.
 
-### Great House Fliggerty
+### Great House Fliggerty:
 
 This site hosts a few of the mods for this list. However, due to server migration problems, downloads are broken. You can solve this by using the [Wayback Machine](https://archive.org/web/) (internet archive) for any of the given downloads. I already have links to a few of the mods, but you should be able to get the others as well.
 
-### MWSE - The Morrowind Script Extender
+### MWSE - The Morrowind Script Extender:
 
 Momentarily in this guide, we'll have you install MWSE. Based on the name alone, many of you will realize this is similar to the projects OBSE and SKSE, though it is maintained by a completely different team.
 
@@ -129,7 +130,7 @@ MWSE, along with MWSE-LUA, offers amazing functionality in the game that was pre
 However, as with most things script-related, this does mean hard-incompatibility with OpenMW. As stated earlier, if you plan on using OpenMW with the guide, no support is offered. However if you do, realize that MWSE and any MWSE mods will be off-the-table if you do so and keep that in mind as you move forward. 
 
 
-### Atlasing - What It Is And Installation Concerns
+### Atlasing - What It Is And Installation Concerns:
 
 This description from the Project Atlas page sums up what and why fairly nicely:
 
@@ -149,6 +150,12 @@ What is the solution? Well, you could dig through and find whatever is currently
 
 We're looking into better solutions at the moment, and any thoughts are appreciated. However, for the moment, we're skipping out on this. That means if you choose to use Atlased versions for mods, just be aware that if there's a conflict down the line you may not get the performance boost you thought you would. 
 
+### Regarding Mlox and Sorting Mods:
+
+For those of you coming from other titles, you may be familiar with tools such as BOSS or LOOT. Morrowind existed prior to those tools, and the one that came to prominence was [Mlox](https://github.com/mlox/mlox/releases/). While it is not perfect and the masterlist is highly out-of-date with modern mods and load orders, it is likely still the best tool. Support for Morrowind is work-in-progress by the LOOT team, but frankly not many of them play Morrowind and few community members have contributed to it so it's at a standstill.
+
+Mlox has many warnings which you should safely ignore. If you want to edit it yourself, you can find its masterlist in ```AppData\Local\mlox\mlox\mlox_base.txt```. 
+
 ## Baseline Installation and Boilerplate
 
 Note: MO2 can't handle the installation of this section, and will warn you accordingly.
@@ -165,9 +172,9 @@ If you are using the GOTY edition, no patches are necessary. If you have some an
 
 Extract it in your game directory and run 'Morrowind Code Patch.exe'. Read through the patches, but the most important ones should be checked already. You might be interested in some of the game mechanic changing options--toggle sneak is great! For a modern install, make sure to check 'Bump/reflect map local lighting' under Graphics changes. If you want to download HD cutscene replacers, check 'Hi-def cutscene support' under Mod related features. If you want to try a sound overhaul mod later (like Morrowind Acoustic Overhaul) make sure to check 'Scripted music uninterruptible' and 'Separate axe inventory sounds'.
 
-4. NOTE: Timeslips' EXE optimizer has been removed for this guide, determined to be essentially ineffectual. (Though not harmful, from what I can tell)
+4. Timeslips' EXE optimizer has been removed for this guide, determined to be essentially ineffectual. (Though not harmful, from what I can tell)
 
-5. NOTE: Manually installing the 4GB patch is no longer required, as it has been rolled into Morrowind Code Patch as of a recent version. However, running it against MGEXEGui.exe may improve its performance when generating distant land. The patcher can be downloaded [here](https://www.ntcore.com/4gb_patch.php)
+5. Manually installing the 4GB patch is no longer required, as it has been rolled into Morrowind Code Patch as of a recent version. However, running it against MGEXEGui.exe may improve its performance when generating distant land. The patcher can be downloaded [here](https://www.ntcore.com/4gb_patch.php)
 
 6. Download the latest version of MGE XE. Its mod page can be found [here](https://www.nexusmods.com/morrowind/mods/41102) and the development version (like MCP) was previously hosted [here](https://www.nexusmods.com/morrowind/mods/26348). This comes with an optional plugin `XE Sky Variations.esp`, that will randomize the sky colour and sunrise/sunset every day. It requires high quality sky scattering enabled, and MWSE enabled. Use it if you want.
 
@@ -398,7 +405,7 @@ While we're at it, lets get a few more Connary packs. Some of this stuff will en
 
 Time for rocks. Download the following:
 
-* [Correct UV rocks v1.3](http://tesall.ru/files/file/1891-correct-uv-rocks/)
+* [Correct UV rocks v1.4](https://www.nexusmods.com/morrowind/mods/46104)
 * [WIP Smooth Correct UV Rocks](http://forums.bethsoft.com/topic/1514660-alternatives-to-on-the-rocks/?p=23908143)
 * [Ore Rock Retexture ORR](http://mw.modhistory.com/download-56-12942)
 * [correctUV Diverse Ore veins v1.0](http://mw.modhistory.com/download-56-13484)
@@ -455,7 +462,7 @@ Alternatively you can choose CptJoker's Flora Redux:
 
 #### Solstheim Trees
 
-* [Vurt's Solstheim Tree Replacer II](http://www.nexusmods.com/morrowind/mods/37856/?) - Also comes with a "Fixed Collision" patch. Will also need to be re-packed so all .NIF files are in a `/Meshes/f` folder. Be sure to install the following fix as well.
+* [Vurt's Solstheim Tree Replacer II](http://www.nexusmods.com/morrowind/mods/37856/?) - Make sure to also download the "Fixed Collision" patch. You can install this patch seperately, just make sure to move its files into a `/Meshes/f` folder, or drop them into that folder from the original mod. Be sure to install the following fix as well:
 * [Vurt's Solstheim Tree Replacer II Fix](https://www.nexusmods.com/morrowind/mods/45941) - Fixes `Meshes/f/Flora_tree_BM_snow_01.nif`
 
 #### West Gash Trees

@@ -67,7 +67,7 @@ Open Morrowind ([OpenMW](https://openmw.org/en/)) is an open-source engine creat
 
 While many of the mods here may be compatible with OpenMW, many are not. Do not attempt to follow this guide with OpenMW! It is an amazing accomplishment by the community, but this guide is not attuned to it.
 
-### Regarding mods with Bethesda Archives (.BSA):
+### Regarding Mods With Bethesda Archives
 
 Mods with archives (.BSA files) need to be added into the `Morrowind.ini` file. However, we have a tool to automate the process that can be found [here](http://download.fliggerty.com/download-58-633)
 

@@ -7,7 +7,7 @@ The [README](https://github.com/Tyler799/Morrowind-2019/blob/master/README.md), 
 ## Table of Contents
 
 * [Before we begin](#before-we-begin)
-  * [Regarding Open Morrowind (OpenMW)](#regarding-open-morrowind)
+  * [Regarding Open Morrowind (OpenMW)](#regarding-open-morrowind-(openmw):)
   * [Regarding mods with archives](#regarding-mods-with-bethesda-archives)
   * [Regarding Mod Organizer 2](#regarding-mod-organizer-2)
   * [Regarding Russian Websites](#regarding-russian-websites)

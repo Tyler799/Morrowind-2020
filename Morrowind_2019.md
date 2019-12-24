@@ -900,7 +900,7 @@ There are likely a ton of unique/artifact weapon replacers I've missed. I was ne
 
 * [Animation Compilation](http://www.nexusmods.com/morrowind/mods/43982/?) - Download the "Fixes by Greatness7" version.
 
-# Conclusions And Wrapping Up
+# Conclusion And Wrapping Up
 
 ## Testing Your Setup
 

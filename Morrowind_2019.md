@@ -64,7 +64,6 @@ While many of the mods here may be compatible with OpenMW, many are not. Do not 
 ### Regarding mods with Bethesda Archives (.BSA):
 
 Mods with archives (.BSA files) need to be added into the `Morrowind.ini` file. However, we have a tool to automate the process that can be found [here](http://download.fliggerty.com/download-58-633)
-(Download down due to Fliggery site being broken)
 
 An example for handling it manually, using my_test_mod, which has a file called `neat.BSA`:
 

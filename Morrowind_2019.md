@@ -40,7 +40,7 @@ The [README](https://github.com/Tyler799/Morrowind-2019/blob/master/README.md), 
    * [3.10 Weapons](#weapons)
    * [3.11 Armor](#armor)
    * [3.12 Animations](#animations)
-* [4.0 Conclusion and Wrapping Up](#conclusion-and-wrapup)
+* [4.0 Conclusion and Wrapping Up](#conclusion-and-wrapping-up)
    * [4.1 Testing Your Setup](#testing-your-setup)
    * [4.2 MGE XE Setup](#mge-xe-setup)
    * [4.3 Cleaning Mods](#cleaning-mods)

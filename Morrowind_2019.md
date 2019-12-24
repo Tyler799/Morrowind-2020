@@ -6,48 +6,54 @@ The [README](https://github.com/Tyler799/Morrowind-2019/blob/master/README.md), 
 
 ## Table of Contents
 
-* [Before we begin](#before-we-begin)
-  * [Regarding Open Morrowind (OpenMW)](#regarding-open-morrowind-(openmw):)
-  * [Regarding mods with archives](#regarding-mods-with-bethesda-archives)
-  * [Regarding Mod Organizer 2](#regarding-mod-organizer-2)
-  * [Regarding Russian Websites](#regarding-russian-websites)
-  * [Bump mapped mods](#bump-mapped-mods)
-  * [Great House Fliggerty](#great-house-fliggerty)
-  * [MWSE](#MWSE---The-Morrowind-Script-Extender)
-  * [Atlasing](#Atlasing---What-It-Is-And-Installation-Concerns)
-  * [Regarding Mlox and Sorting Mods](#Regarding-Mlox-and-Sorting-Mods)
-* [Baseline Installation and Boilerplate](#baseline-installation-and-boilerplate)
-* [Patches, Fixes and Otherwise](#patches-fixes-and-otherwise)
-* [Official Bethesda Plugins](#official-bethesda-plugins)
-* [Dialogue Mods](#dialogue-mods)
-* [User Interface](#user-interface)
-  * [Dialogue Font](#Dialogue-Font)
-  * [HD Video Screen Replacers](#HD-Video-Screen-Replacers)
-  * [Splash Screen Replacers](#Splash-Screen-Replacers)
-* [Major mods to be aware of](#major-mods-to-be-aware-of)
-* [Mesh fixes and improvements](#mesh-fixes-and-improvements)
-* [Nature Texture &amp; Mesh Replacers](#nature-texture--mesh-replacers)
-  * [Want plants to not "bend" or "grow" towards you?](#want-plants-to-not-bend-or-grow-towards-you)
-* [Graphic Herbalism Finisher](#Graphic-Herbalism-Finisher)
-* [Weather](#weather)
-* [Architecture Replacers](#architecture-replacers)
-* [Miscellaneous replacers](#miscellaneous-replacers)
-* [Creature replacers](#creature-replacers)
-* [Heads & Bodies](#heads--bodies)
-* [Clothing replacers](#clothing-replacers)
-* [Weapons](#weapons)
-* [Armor](#armor)
-* [Animations](#animations)
-* [Finishing Touches](#finishing-touches)
-* [Setup](#mge-xe-setup)
-* [Cleaning mods](#cleaning-mods)
-* [Creating a multipatch](#creating-a-multipatch)
-* [Updating Masters, Syncing and Repairing your Saves](#updating-masters-syncing-and-repairing-your-saves)
-* [Load Order](#load-order)
-* [Other mods](#other-mods)
-* [Screenshots](#screenshots)
-* [Contributors](#contributors)
-* [License](#license)
+* [1.0 Introduction](#introduction)
+ * [1.1 Before We Begin](#before-we-begin)
+ * [1.1 Regarding Open Morrowind (OpenMW)](#regarding-open-morrowind)
+ * [1.2 Regarding Mods With Archives](#regarding-mods-with-bethesda-archives)
+ * [1.3 Regarding Mod Organizer 2](#regarding-mod-organizer-2)
+ * [1.4 Regarding Russian Websites](#regarding-russian-websites)
+ * [1.5 Regarding Bump mapped mods](#bump-mapped-mods)
+ * [1.6 Regarding MWSE](#MWSE---The-Morrowind-Script-Extender)
+ * [1.7 Regarding Atlasing](#Atlasing---What-It-Is-And-Installation-Concerns)
+ * [1.8 Regarding Mlox and Sorting Mods](#Regarding-Mlox-and-Sorting-Mods)
+* [2.0 Non-Graphical Mods]
+ * [2.1 Baseline Installation and Boilerplate](#baseline-installation-and-boilerplate)
+ * [2.2 Patches, Fixes and Otherwise](#patches-fixes-and-otherwise)
+ * [2.3 Official Bethesda Plugins](#official-bethesda-plugins)
+ * [2.4 Dialogue Mods](#dialogue-mods)
+ * [2.5 User Interface](#user-interface)
+  * [2.5.1 Dialogue Font](#Dialogue-Font)
+  * [2.5.2 HD Video Screen Replacers](#HD-Video-Screen-Replacers)
+  * [2.5.3 Splash Screen Replacers](#Splash-Screen-Replacers)
+ * [2.6 Major Mods To Be Aware Of](#major-mods-to-be-aware-of)
+* [3.0 Graphical Mods Begin](#graphical-mods-begin)
+ * [3.1 Mesh fixes and improvements](#mesh-fixes-and-improvements)
+ * [3.2 Nature Texture & Mesh Replacers](#nature-texture--mesh-replacers)
+  * [3.2.1 Want plants To Not "Bend" Or "Grow" Towards You?](#want-plants-to-not-bend-or-grow-towards-you)
+ * [3.3 Graphic Herbalism Finisher](#Graphic-Herbalism-Finisher)
+ * [3.4 Weather](#weather)
+ * [3.5 Architecture Replacers](#architecture-replacers)
+ * [3.6 Miscellaneous Replacers](#miscellaneous-replacers)
+ * [3.7 Creature Replacers](#creature-replacers)
+ * [3.8 Heads & Bodies](#heads--bodies)
+ * [3.9 Clothing replacers](#clothing-replacers)
+ * [3.10 Weapons](#weapons)
+ * [3.11 Armor](#armor)
+ * [3.12 Animations](#animations)
+* [4.0 Conclusion and Wrapping Up](#conclusion-and-wrapup)
+ * [4.1 Testing Your Setup](#testing-your-setup)
+ * [4.2 MGE XE Setup](#mge-xe-setup)
+ * [4.3 Cleaning Mods](#cleaning-mods)
+ * [4.4 Creating A Multipatch](#creating-a-multipatch)
+* [5.0 Aftercare](#aftercare)
+ * [5.1 Updating Masters, Syncing and Repairing your Saves](#updating-masters-syncing-and-repairing-your-saves)
+ * [5.2 Load Order](#load-order)
+* [6.0 Misc Other Info](#misc-other-info)
+ * [6.1 Other Mods](#other-mods)
+ * [6.2 Screenshots](#screenshots)
+ * [6.3 Contributors](#contributors)
+
+# Introduction
 
 ## Before we begin
 
@@ -154,6 +160,8 @@ We're looking into better solutions at the moment, and any thoughts are apprecia
 For those of you coming from other titles, you may be familiar with tools such as BOSS or LOOT. Morrowind existed prior to those tools, and the one that came to prominence was [Mlox](https://github.com/mlox/mlox/releases/). While it is not perfect and the masterlist is highly out-of-date with modern mods and load orders, it is likely still the best tool. Support for Morrowind is work-in-progress by the LOOT team, but frankly not many of them play Morrowind and few community members have contributed to it so it's at a standstill.
 
 Mlox has many warnings which you should safely ignore. If you want to edit it yourself, you can find its masterlist in ```AppData\Local\mlox\mlox\mlox_base.txt```. 
+
+# Non-Graphical Mods
 
 ## Baseline Installation and Boilerplate
 
@@ -363,6 +371,8 @@ The following mods are optional to install, but have compatibility patches liste
 (I personally chose the High-res and rays options, and left the rest off)
 
 However: If you want to use it you *must* have MWSE alpha 2.1 or later. It will not work with 2.0!
+
+# Graphical Mods Begin
 
 ## Mesh fixes and improvements
 
@@ -890,11 +900,10 @@ There are likely a ton of unique/artifact weapon replacers I've missed. I was ne
 
 * [Animation Compilation](http://www.nexusmods.com/morrowind/mods/43982/?) - Download the "Fixes by Greatness7" version.
 
-## Finishing Touch
-
-For our last step in adding new meshes and textures we will download a new mod called [Asset Overrides](https://www.dropbox.com/sh/cmf60boahjpdbt9/AACWM1LFtbxtN5pMRxHeClS2a?dl=0) which is a collection of miscellaneous asset files that will either patch or improve the quality of existing assets you've downloaded with this guide. This is where you can place all those asset files you want to override the ones you are currently using. Using MO2 you can just place them in the override folder if you want, but you have less control over them that way.
+# Conclusion and Wrapping Up
 
 ## MGE XE Setup
+
 If you have a toaster, you might want to skip most of this section. Run distant land as explained towards the end with default settings and see how the game runs for you first before trying out grass or any of the fancier light settings in the distant land tab. You might also try out shaders.
 
 1. Before we begin, we need to download mod(s) related to grass. 
@@ -1013,6 +1022,7 @@ If you've followed this guide to the letter, your (almost!) final load order of 
 [TODO]
 
 ## Other mods
+
 Not satisfied with just a graphics overhaul? Here are some other mods you might want to try. Please, PLEASE read the mod pages for the following mods. Simply downloading and installing everything here could very well make your game laggy and/or unstable, especially if you don't use a proper load order. I do not play with all of the below mods myself anymore, but have played most of them in the past. Some I've never played at all, but they do come highly recommended and endorsed by the community.
 
 0) I (Thastus) personally very much enjoy [Races Are More Fun](https://www.nexusmods.com/morrowind/mods/21875) and [Birthsigns are More Fun](https://www.nexusmods.com/morrowind/mods/17888)

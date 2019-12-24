@@ -9,7 +9,7 @@ The [README](https://github.com/Tyler799/Morrowind-2019/blob/master/README.md), 
 * [1.0 Introduction](#introduction)
    * [1.1 Before We Begin](#before-we-begin)
    * [1.1 Regarding Open Morrowind (OpenMW)](#regarding-open-morrowind)
-   * [1.2 Regarding Mods With Archives](#regarding-mods-with-bethesda-archives)
+   * [1.2 Regarding Mods With BEthesda Archives (.BSA)](#regarding-mods-with-bethesda-archives)
    * [1.3 Regarding Mod Organizer 2](#regarding-mod-organizer-2)
    * [1.4 Regarding Russian Websites](#regarding-russian-websites)
    * [1.5 Regarding Bump mapped mods](#bump-mapped-mods)
@@ -900,7 +900,25 @@ There are likely a ton of unique/artifact weapon replacers I've missed. I was ne
 
 * [Animation Compilation](http://www.nexusmods.com/morrowind/mods/43982/?) - Download the "Fixes by Greatness7" version.
 
-# Conclusion and Wrapping Up
+# Conclusions And Wrapping Up
+
+## Testing Your Setup
+
+Aside from simply making sure the game opens and loads, there are several tools in place that will help you quickly get into game and search for anything that might have gone wrong.
+
+The one we recommend is [Skip Tutorial](https://www.nexusmods.com/morrowind/mods/27266) being a relatively new and clean alternative to older mods like QuickChar and SilentCharGen. It lets you skip the early tutorial section and go right into making a character.
+
+You can then also COC to various locations to do some walking around, such as:
+
+`Clutter Warehouse - Everything Must Go!`
+`ToddTest`
+`Character Stuff Wonderland`
+`Ken's Test Hole`
+`Mark's Vampire Test Cell`
+`Redoran Interior`
+`Redoran Interior2`
+
+Do you get any errors while loading? Any errors while moving around? Anything missing a texture, or look out-of-place? It's likely we missed something in the guide. Make sure to let us know via a Github issue!
 
 ## MGE XE Setup
 
@@ -940,7 +958,7 @@ Optionally, you might want to take a look at [this water shader](https://www.nex
 
 5. Finally, and only when you're satisfied with your distant land generation, install [Lore-Friendly Ghostfence Texture](http://www.nexusmods.com/morrowind/mods/29206/?). Why is this step last? Because if you generate distant land with these textures in your folder, it makes the ghostfence look like it has holes in it. Stick with the vanilla textures for distant land generation. If you re-run your distant land generation later, try to remove the textures `tx_gg_fence_01` and `tx_gg_fence_02` from your `textures` folder first.
 
-## Cleaning mods
+## Cleaning Mods
 
 **Note:** Make a backup of ```Mod Organizer 2/Profiles/Your Profile Name Here (Likely 'Default')/Morrowind.ini```, as there is a bug that may occur during this step.
 
@@ -975,23 +993,7 @@ To actually clean, first open Wrye using MO2. Then, right click on a given plugi
 
 **POTENTIAL GAME-BREAKING BUG:** Wyre is ocassionally writing its log during this process into Morrowind.ini instead. **This breaks the game**. To fix it, you must find a backup of Morrowind.ini and use it to replace the (now broken) one in ``` Mod Organizer 2/Profiles/Your Profile Name Here (Likely 'Default')/Morrowind.ini```. That's why we made the backup earlier, just in case. 
 
-## Testing your Setup
-
-Aside from simply making sure the game opens and loads, there are several tools in place that will help you quickly get into game and search for anything that might have gone wrong.
-
-The one we recommend is [Skip Tutorial](https://www.nexusmods.com/morrowind/mods/27266) being a relatively new and clean alternative to older mods like QuickChar and SilentCharGen. It lets you skip the early tutorial section and go right into making a character.
-
-You can then also COC to various locations to do some testing, such as:
-
-`Clutter Warehouse - Everything Must Go!`
-`ToddTest`
-`Character Stuff Wonderland`
-`Ken's Test Hole`
-`Mark's Vampire Test Cell`
-`Redoran Interior`
-`Redoran Interior2`
-
-## Creating a multipatch
+## Creating A Multipatch
 
 This is very easy. Open Wrye. At the top bar, go to "Misc" then "TES3CMD" then "Create Multipatch". It shouldn't take too long.
 
@@ -999,13 +1001,15 @@ It will automatically be appended to the end of your load order. You're now good
 
 (Note: You must re-do this upon adding, removing or re-ordering mods)
 
+# Aftercare
+
 ## Updating Masters, Syncing and Repairing your Saves
 
 This should be done periodically with saves. You *must* do this anytime you add, remove or move a mod while in the middle of a playthrough.
 
 The steps are as follows:
 
-1. Open Wrye
+1. Open Wrye Mash (Polemo's Fork)
 2. Go to the "Saves" Tab
 3. Right click anywhere in the plugins list under "Masters" on the right side. A popup should appear asking you if you wish to edit the list. This will automatically perform an update of the masters.
 4. Right click on the "Masters" column header, choose "Sync to Mod List"
@@ -1018,10 +1022,11 @@ All of your saves should appear Purple in the list now. For each save, all of it
 
 ## Load Order
 
-If you've followed this guide to the letter, your (almost!) final load order of ACTIVATED .esps should look something like this:
-[TODO]
+We currently do not have a reccommended load order for Morrowind 2019. Recommendations are welcome for this section!
 
-## Other mods
+# Misc Other Info
+
+## Other Mods
 
 Not satisfied with just a graphics overhaul? Here are some other mods you might want to try. Please, PLEASE read the mod pages for the following mods. Simply downloading and installing everything here could very well make your game laggy and/or unstable, especially if you don't use a proper load order. I do not play with all of the below mods myself anymore, but have played most of them in the past. Some I've never played at all, but they do come highly recommended and endorsed by the community.
 

@@ -61,9 +61,9 @@ The [README](https://github.com/Tyler799/Morrowind-2019/blob/master/README.md), 
 
 **You should always read the mod page or glance through the readme of any mod we're downloading**, so you'll at least be aware of what you're getting and what your options are. Mod are, above all else, personal preference. Knowledge is power!
 
-### Regarding Open Morrowind (OpenMW):
+### Regarding Open Morrowind
 
-[OpenMW](https://openmw.org/en/) is an open-source engine created by fans for Morrowind. It performs significantly better than Morrowind's original engine, while also fixing many bugs and issues the original had while offering enhancements and new functionality - like multiplayer support.
+Open Morrowind ([OpenMW](https://openmw.org/en/)) is an open-source engine created by fans for Morrowind. It performs significantly better than Morrowind's original engine, while also fixing many bugs and issues the original had while offering enhancements and new functionality - like multiplayer support.
 
 While many of the mods here may be compatible with OpenMW, many are not. Do not attempt to follow this guide with OpenMW! It is an amazing accomplishment by the community, but this guide is not attuned to it.
 

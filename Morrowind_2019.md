@@ -55,7 +55,7 @@ The [README](https://github.com/Tyler799/Morrowind-2019/blob/master/README.md), 
 
 # Introduction
 
-## Before we begin
+## Before We Begin
 
 **You must have an official copy of the base game! Pirated/torrented copies will *not* work!** You need an official CD, the Steam version, or the GOG version. This isn't just hearsay, this is true of every Bethesda game Morrowind and forward. All mod tools (LOOT/BOSS, Mod Organizer, Wyre Bash, MWSE/OBSE/SKSE, xEdit, etc) and even many mods themselves just don't work properly on unofficial copies of the game. The exact reasoning is fairly technical in explanation, but it's not an anti-piracy measure, it's just a fact of the game engine and how tools hook in. I'm not inherently anti-piracy, I actually think it has a lot of value for several reasons. However, for the sake of this guide, if you don't have an official copy you can expect everything to break. You likely won't even be able to start the game properly. As a veteran player of the series, **I offer exactly 0 help if you don't have an official copy**.
 
@@ -115,10 +115,6 @@ For your own safety downloading files anywhere on the web (especially a site whe
 ### Bump-mapped mods:
 
 A lot of links in this guide will have bump map versions available, especially once we hit the architecture section. I don't know all the technical details of it, but bump mapping in Morrowind isn't quite like what you'd expect it to be. It's often very shiny looking, sometimes plastic-y, and it can make things look very bright depending on the reflection texture used. This is fine for metals and wet looking plants (it looks great on mushrooms, in my opinion), but can sometimes look a little weird on architecture. That means, if you ever have a choice between getting a bump map or no bump map version, the choice is 100% yours. If you do download a bump map version and decide you don't like it, you can get rid of the bumps by deleting the meshes that were included in the mod, and you can also disable the normal maps (usually they have `_nm` or `_n` at the end of their filename) if you want to save space.
-
-### Great House Fliggerty:
-
-This site hosts a few of the mods for this list. However, due to server migration problems, downloads are broken. You can solve this by using the [Wayback Machine](https://archive.org/web/) (internet archive) for any of the given downloads. I already have links to a few of the mods, but you should be able to get the others as well.
 
 ### MWSE - The Morrowind Script Extender:
 
@@ -359,7 +355,7 @@ Mods that replace both:
 
 * [Morrowind Screens Redone](https://www.nexusmods.com/morrowind/mods/46259) - An English alternative to the above, based on the same concept art. Looks a bit different, compare their images and decide yourself.
 
-## Major mods to be aware of
+## Major Mods To Be Aware Of
 
 The following mods are optional to install, but have compatibility patches listed in the mesh/texture replacers we'll soon be downloading, so I'm listing them here. Read up on them and decide if you want to use them or not.
 
@@ -374,7 +370,7 @@ However: If you want to use it you *must* have MWSE alpha 2.1 or later. It will 
 
 # Graphical Mods Begin
 
-## Mesh fixes and improvements
+## Mesh fixes and Improvements
 
 * [Morrowind Optimization Patch](https://www.nexusmods.com/morrowind/mods/45384) - Improves performance by optimizing meshes.
 * [Project Atlas](https://www.nexusmods.com/morrowind/mods/45399) - Improves performance by merging meshes into a single shape, reducing draw calls significantly for the same visual quality. Download all files except ASL Urns. (Dunmeri urns will cover this) 
@@ -645,7 +641,7 @@ Q: What about Bloodmoon?
 A: Bloodmoon textures were actually covered in nature when we downloaded STOTSP. Remember, STOTSP is a massive overhaul of Solstheim's entire landscape. You do NOT need to activate the .esm if you only wanted to use it as a texture/mesh replacer.
 ```
 
-## Miscellaneous replacers
+## Miscellaneous Replacers
 
 For things that don't really fit in any other section. If some of this seems too tedious to you, feel free to skip it. Some of this is pretty nitpicky...
 
@@ -734,7 +730,7 @@ Moving on:
 * [Long Live The Limeware](http://www.nexusmods.com/morrowind/mods/44045/?)
 * [R-Zero's Random Retextures](http://www.nexusmods.com/morrowind/mods/44025/?) - Get the following: "Chimney Smoke", "Iron Towershield" and "Quill".
 
-## Creature replacers
+## Creature Replacers
 
 1. Let's start off with our base. We're starting off with Darknut's suite of textures.
 * [Darknut's Creature Textures](http://www.nexusmods.com/morrowind/mods/43420/?)
@@ -815,7 +811,7 @@ An newer alternative to Wey's Argonians for those who feel it may stray too far 
 
 * [Improved Argonians](https://www.nexusmods.com/morrowind/mods/45918)
 
-## Clothes replacers
+## Clothing Replacers
 
 1. Clothes
 * [Better Clothes](http://www.nexusmods.com/morrowind/mods/42262/?) - Get the non-installer version. Only activate ONE esp. If you want your Argonian females to have breasts lumps when clothed for some reason, choose the regular version. For flat Argonian females, activate the '\_nac' version.

@@ -411,7 +411,7 @@ While we're at it, lets get a few more Connary packs. Some of this stuff will en
 Time for rocks. Download the following:
 
 * [Correct UV rocks v1.4](https://www.nexusmods.com/morrowind/mods/46104)
-* [WIP Smooth Correct UV Rocks](http://forums.bethsoft.com/topic/1514660-alternatives-to-on-the-rocks/?p=23908143)
+* [WIP Detailed Correct UV Rocks](https://www.nexusmods.com/morrowind/mods/44321?tab=files)
 * [Ore Rock Retexture ORR](http://mw.modhistory.com/download-56-12942)
 * [correctUV Diverse Ore veins v1.0](http://mw.modhistory.com/download-56-13484)
 

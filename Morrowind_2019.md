@@ -421,12 +421,19 @@ Time for rocks. Download the following:
 * [Ore Rock Retexture ORR](http://mw.modhistory.com/download-56-12942)
 * [correctUV Diverse Ore veins v1.0](http://mw.modhistory.com/download-56-13484)
 
-### Waterfalls
+### Water and Waterfalls
 
 Test each waterfall mod quickly by starting the game, pressing `` ` `` to go into the console, typing `COC "Vivec, Puzzle Canal, Level 1"`, hitting enter, and leaving through the grate ahead of you.
-* [Better Waterfalls](https://www.nexusmods.com/morrowind/mods/45424) - Best looking ones out there. Editors personal choice. Be sure to grab the [Waterfalls Tweaks](https://www.nexusmods.com/morrowind/mods/46271) for better compatibility.
-* [Waterfalls Bump mapped](http://www.nexusmods.com/morrowind/mods/42405/?) - Author's personal choice.
-* [Dongle's Waterpack Bumpmapped](http://www.nexusmods.com/morrowind/mods/42317/?) - Some may like how these look.
+
+* [Dongle's Waterpack Bumpmapped](http://www.nexusmods.com/morrowind/mods/42317/?)
+
+If you do not like the waterfalls provided in Dongle's Waterpack, here are two optional replacements that you can load after to replace them:
+
+* [Better Waterfalls](https://www.nexusmods.com/morrowind/mods/45424) Be sure to grab the [Waterfalls Tweaks](https://www.nexusmods.com/morrowind/mods/46271) for better compatibility. Not bump-mapped.
+
+OR:
+
+* [Waterfalls Bump mapped](http://www.nexusmods.com/morrowind/mods/42405/?) - An alternative bump-mapped texture.
 
 ### Fire and Smoke
 

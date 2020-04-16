@@ -104,7 +104,7 @@ Mod Organizer 2 has INI files for each profile you create. This means that if yo
 
 **Warning**: Do *not* enable "Automatic Archive Invalidation" when using Mod Organizer 2 for Morrowind profile. This is needed for a bug introduced in Oblivion. However, if used in Morrowind it *will* break things like Distant Land generation. 
 
-**"NO GAME DATA AT TOP LEVEL** is common for many Morrowind mods. All this means is that the folder structure of the mod is not exactly what Mod Organizer 2 is expecting. MO2 provides a small tutorial on this warning and the fix is very easy. Just expand the folder inside the warning, and look for the "Data Files" folder. Right click it and select "Set Data Directory", while will fix the warning. Some Morrowind mods however include patches in other directories in the mod, and for those we must manually un-zip the archive, move the relevant files, and then re-zip it and install via MO2 as normal. I will warn you when this needs to occur. 
+**"NO GAME DATA AT TOP LEVEL"** is a common MO2 warning for many Morrowind mods. All this means is that the folder structure of the mod is not exactly what Mod Organizer 2 is expecting. MO2 provides a small tutorial on this warning and the fix is very easy. Just expand the folder inside the warning, and look for the "Data Files" folder. Right click it and select "Set Data Directory", while will fix the warning. Some Morrowind mods however include patches in other directories in the mod, and for those we must manually un-zip the archive, move the relevant files, and then re-zip it and install via MO2 as normal. I will warn you when this needs to occur. 
 
 ### Regarding Russian Websites:
 

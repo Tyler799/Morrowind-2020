@@ -1,8 +1,8 @@
 This is a changing guide. While complete, it is still very open to changes and new sections.
 
-# Morrowind 2019: Thastus Edition
+# Morrowind 2020: Thastus Edition
 
-The [README](https://github.com/Tyler799/Morrowind-2019/blob/master/README.md), License and other info can be found in the rest of the repo. If you want to discuss this guide, we have a [Discord](https://discord.me/mwmods) channel called #thastus.
+The [README](https://github.com/Tyler799/Morrowind-2020/blob/master/README.md), License and other info can be found in the rest of the repo. If you want to discuss this guide, we have a [Discord](https://discord.me/mwmods) channel called #thastus.
 
 ## Table of Contents
 
@@ -1012,7 +1012,7 @@ All of your saves should appear Purple in the list now. For each save, all of it
 
 ## Load Order
 
-We currently do not have a reccommended load order for Morrowind 2019. Recommendations are welcome for this section!
+We currently do not have a reccommended load order for Morrowind 2020. Recommendations are welcome for this section!
 
 # Misc Other Info
 

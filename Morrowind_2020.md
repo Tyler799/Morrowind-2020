@@ -273,7 +273,13 @@ Bethesda made several official plug-ins for Morrowind. Unfortunately, they have 
 
 There are two main options for fixed version of these addons:
 
-- [Unofficial Morrowind Official Plugins Patched](https://www.nexusmods.com/morrowind/mods/43931) - This is the most up-to-date option that comes with compatibility patches for various big mods. You need the main file and optionally "Merged and Compatibility versions for UMOPP" as well. I personally recommend the optional compatibility merged file as it gives you wider compatibility with other mods you might use in the future. If you do use it, choose the "`UMOPP Compatibility Merged` in the BAIN installer. Remember to disable the main package plugins if you are using the merged version. If for some reason you don't want to use specific addons, you shouldn't use the merged version and just load the *Compatibility ESPs* after the main package.
+- [Unofficial Morrowind Official Plugins Patched](https://www.nexusmods.com/morrowind/mods/43931) - 
+
+  Download and install the main file. Then, download and install "Merged and Compatibility Versions", choosing ```UMOPP Compatibility``` in the BAIN installer. 
+  
+  Optionally, you can use the Merged version of UMOPP. The only advantage to doing so is lowering the number of ESPs in your load order. If you do, you will need to disable all ESPs from the main mod, and choose the ```UMOPP Compatibility Merged``` BAIN option instead. 
+
+Alternatively:
 
 - [WHReaper's Morrowind Official Plugins](http://download.fliggerty.com/download-13-1079) ([Mirror](https://web.archive.org/web/*/http://download.fliggerty.com/file.php?id=1079)) - Some of the folders have optional components, usually with higher res textures, glow maps, or normal maps. Feel free to install all of the optional folders. To install, you'll need to download the archive, merge any optional folders into their parent mod folder, and then pack them into .7Zip or .zip files, which you then can install via MO2 as normal)
 

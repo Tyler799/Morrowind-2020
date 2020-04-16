@@ -226,6 +226,8 @@ Install it by putting it in the `Data Files` folder.
 8. Download [Mod Organizer 2](https://www.nexusmods.com/skyrimspecialedition/mods/6194)
 (The latest dev versions can be found on the MO2 Discord, but as of writing this, 2.2.1 is perfectly fine for Morrowind use)
 
+Note that as of writing this, the latest version of MO2 requires a special install of the Visual C++ Redistributable 2015 package, which can be found [here](https://aka.ms/vs/16/release/vc_redist.x64.exe). 
+
 Extract it so that the `Mod Organizer 2 (Archive)` folder is inside your Morrowind installation folder.
 
 Then, go ahead and run Mod Organizer.exe. It should pop up asking you about a couple things. You'll want to choose a "PORTABLE" install (unless you're much more familiar with MO2 and know what you're doing) and when it asks you about which game you want to manage, navigate to the `Steam/steamapps/common/Morrowind` folder.

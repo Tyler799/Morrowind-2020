@@ -390,7 +390,7 @@ For the Velothi and Imperial mods, you'll need to go into the `Extras` folder, t
 
 This is by far going to be the most complicated part of the guide so hold on to your butts.
 
-* [Morrowind Visual Pack](http://mw.modhistory.com/download-56-6990) ([Alternate Download](https://www.nexusmods.com/morrowind/mods/44311)) - This is our base mod. It replaces a lot of stuff that still isn't touched by modern mods, mostly because they're not really used often enough to think about replacing. Most of the textures will be overwritten.
+* [Intelligent Textures](https://www.nexusmods.com/morrowind/mods/47469) - This is our new base mod, which replaced Morrowind Visual Pack. It replaces a lot of stuff that still isn't touched by modern mods, mostly because they're not really used often enough to think about replacing. Most of the textures will be overwritten.
 
 ### Bitter Coast Region
 
@@ -734,13 +734,7 @@ Moving on:
 
 ## Creature Replacers
 
-1. Let's start off with our base. We're starting off with Darknut's suite of textures.
-* [Darknut's Creature Textures](http://www.nexusmods.com/morrowind/mods/43420/?)
-* [Darknut's Creature Textures addendum](http://www.nexusmods.com/morrowind/mods/43441/?)
-* [Darknut's Creature Textures TB](http://www.nexusmods.com/morrowind/mods/43421/?)
-* [Darknut's Creature Textures BM](http://www.nexusmods.com/morrowind/mods/43422/?)
-
-2. Connary made some good creature retextures.
+1. Connary made some good creature retextures.
 * [Storm Atronach](http://www.fullrest.ru/files/connarysstormatronach/files)
 * [Skeleton](http://www.fullrest.ru/files/connarysskeleton/files)
 * [Lich](http://www.fullrest.ru/files/connaryslichking/files)
@@ -749,7 +743,7 @@ Moving on:
 * [Bonewalker](http://www.fullrest.ru/files/connarysbonewalker/files)
 * [Daedroth](http://www.fullrest.ru/files/connarysbaddaedroth/files)
 
-3. And now for other replacers
+2. And now for other replacers
 * [Correct UV Mudcrabs](http://www.nexusmods.com/morrowind/mods/42130/?) - Not strictly a retexture, but does improve visuals. I chose the "regular" option rather than smoothed. No screenshots exist to compare the two, but you can test this easily yourself by installing it twice (once for each option) and test enabling/disabling them in-game to see what looks better. [TODO]
 * [Guars Aendemika](http://www.nexusmods.com/morrowind/mods/42521/?)
 * [Kagouti Aendemika](http://www.nexusmods.com/morrowind/mods/42523/?)
@@ -816,22 +810,9 @@ An newer alternative to Wey's Argonians for those who feel it may stray too far 
 ## Clothing Replacers
 
 1. Clothes
-* [Better Clothes](http://www.nexusmods.com/morrowind/mods/42262/?) - Get the non-installer version. Only activate ONE esp. If you want your Argonian females to have breasts lumps when clothed for some reason, choose the regular version. For flat Argonian females, activate the '\_nac' version.
 
-Note: When opening Mlox, it will warn you that Better Clothes depends upon Better Bodies. This is not unwarranted, there will be clipping. You can ignore this if you like, or install Better Bodies instead of Roberts bodies. Alternatively: 
-
-> 1) Get the [Robert's Bodies version of Better Clothes on Wolflore](http://wolflore.net/viewtopic.php?f=15&t=2086&sid=53e89d737b9bbe081c9946c8c0d11b37) (Requires an account, also that link may not be right)
-> 2) Forgo Better Clothes and use something like Articus' clothes which are compatible with both Robert's and Better Bodies
-
-* [Common Shirt Fix](https://www.dropbox.com/s/3kwi2ha2anpu7kw/BCFix.zip)
-* [BC Shoes Fix](https://www.dropbox.com/s/usgjr6hwi53c6ma/BC%20Shoes%20Fix.zip)
-* [Expensive Female Shirt Fix](http://mw.modhistory.com/download--14998) - Put this in your `meshes\BC` folder.
-* [More Better Clothes](http://mw.modhistory.com/download-53-6647) - Get both the main file at the bottom of the page and the `MBC_ArmsFix`.
-For the Arms fix, make sure to un-pack it and create a `Meshes/BC` folder, then drop those .nif files into it and re-pack it to install.
-* [Better Clothes for Tribunal](http://mw.modhistory.com/download-87-11804)
-* [Better Clothes Bloodmoon Plus](http://download.fliggerty.com/download-21-804) ([Wayback Link](https://web.archive.org/web/20161103154305/http://download.fliggerty.com/file.php?id=804))
-* [BCBM Pants Fix](https://www.dropbox.com/s/lkxditr9gl3a92c/BCBM_Pants_Fix.zip)
-* [Darknut's Better Clothes Textures](http://www.nexusmods.com/morrowind/mods/43423/?)
+* [Better Clothes Complete](https://www.nexusmods.com/morrowind/mods/47549)
+* [HiRez Better Clothes](https://www.nexusmods.com/morrowind/mods/45499)
 
 2. Accessories.
 Note that some of this stuff (belts, rings, amulets) won't actually appear on your character model. It's mostly so your unique, fancy stuff will look cool when you painstakingly put it on shelves in your stronghold later.

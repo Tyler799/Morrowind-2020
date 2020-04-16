@@ -9,7 +9,7 @@ The [README](https://github.com/Tyler799/Morrowind-2020/blob/master/README.md), 
 * [1.0 Introduction](#introduction)
    * [1.1 Before We Begin](#before-we-begin)
    * [1.1 Regarding Open Morrowind (OpenMW)](#regarding-open-morrowind)
-   * [1.2 Regarding Mods With BEthesda Archives (.BSA)](#regarding-mods-with-bethesda-archives)
+   * [1.2 Regarding Mods With Bethesda Archives (.BSA)](#regarding-mods-with-bethesda-archives)
    * [1.3 Regarding Mod Organizer 2](#regarding-mod-organizer-2)
    * [1.4 Regarding Russian Websites](#regarding-russian-websites)
    * [1.5 Regarding Bump mapped mods](#bump-mapped-mods)

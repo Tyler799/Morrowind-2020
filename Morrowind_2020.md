@@ -157,6 +157,10 @@ For those of you coming from other titles, you may be familiar with tools such a
 
 Mlox has many warnings which you should safely ignore. If you want to edit it yourself, you can find its masterlist in ```AppData\Local\mlox\mlox\mlox_base.txt```. 
 
+### Regarding Tamriel Rebuilt
+
+This is one of the biggest mods in Morrowind and still a work in progress, but it adds a huge chunk of playable landscape (mainland Morrowind). This guide does not offer support for Tamriel Rebuilt as it is a massive overhaul and touches nearly everything in the base game. A few of the mods listed here do have patches expressly for TR but not all of them do - run TR with this guide **at your own risk** and do not expect support if you use it. 
+
 # Non-Graphical Mods
 
 ## Baseline Installation and Boilerplate
@@ -367,19 +371,6 @@ Mods that replace both:
 
 * [Morrowind Screens Redone](https://www.nexusmods.com/morrowind/mods/46259) - An English alternative to the above, based on the same concept art. Looks a bit different, compare their images and decide yourself.
 
-## Major Mods To Be Aware Of
-
-The following mods are optional to install, but have compatibility patches listed in the mesh/texture replacers we'll soon be downloading, so I'm listing them here. Read up on them and decide if you want to use them or not.
-
-* [Tamriel Data](http://www.nexusmods.com/morrowind/mods/44537/?) - This is a requirement for the below mod. Download the HD version.
-* [Tamriel Rebuilt](http://www.nexusmods.com/morrowind/mods/42145/?) - One of the biggest mods in Morrowind and still a work in progress, but it adds a huge chunk of playable landscape (mainland Morrowind). This guide does not offer support for Tamriel Rebuilt as it is a massive overhaul and touches nearly everything in the base game. A few of the mods listed here do have patches expressly for TR but not all of them do - run TR with this guide at your own risk. 
-* [Graphic Herbalism - MWSE Edition](https://www.nexusmods.com/morrowind/mods/46599) - By default, plants in Morrowind act as containers: when you activate them, the container interface opens and you can remove any ingredients that might be present 'inside' the plant. Graphic Herbalism MWSE is an updated version of an old mod that makes plants act more like plants; activating the plant picks it, you automatically get the ingredients, and the plant changes in the world to show it has been picked. Think Skyrim plants. Ignore the `GH Patches and Replacers` file, that needs to be later.
-* [Glow in the Dahrk](https://www.nexusmods.com/morrowind/mods/45886/) is essentially a replacement for WinDoors Glow. Highly recommended.
-
-(I personally chose the High-res and rays options, and left the rest off)
-
-However: If you want to use it you *must* have MWSE alpha 2.1 or later. It will not work with 2.0!
-
 # Graphical Mods Begin
 
 ## Mesh fixes and Improvements
@@ -499,6 +490,8 @@ For the West Gash trees, you have two options. Vurt's look nicer, in my opinion,
 
 ### Plants
 
+* [Graphic Herbalism - MWSE Edition](https://www.nexusmods.com/morrowind/mods/46599) - By default, plants in Morrowind act as containers: when you activate them, the container interface opens and you can remove any ingredients that might be present 'inside' the plant. Graphic Herbalism MWSE is an updated version of an old mod that makes plants act more like plants; activating the plant picks it, you automatically get the ingredients, and the plant changes in the world to show it has been picked. Think Skyrim plants. Ignore the `GH Patches and Replacers` file, that needs to be later.
+
 * [Underwater Static Replacer](http://mw.modhistory.com/download-56-11998)
 * [Better Barnacles](http://www.nexusmods.com/morrowind/mods/43605/?)
 * [Plant life retexture](http://www.nexusmods.com/morrowind/mods/37947/?)
@@ -580,9 +573,12 @@ If you took Trama Bump-mapped, you'll need option `17` as well.
 
 Hopefully this will be slightly less complicated than the nature section. Something to keep in mind: if a section mentions bump mapping, you CAN safely ignore/skip the bump map mod and use only the textures listed if you want to. Bump mapping doesn't always look great in Morrowind. If, as you're going along, you actually prefer the look of one of the bump-mapped mods instead of my suggestion (meaning Lougian's textures instead of Tyddy's, most of the time), feel free to use the bump map textures instead and skip my recommendation. The ones I picked are closer to vanilla Morrowind, but that doesn't mean it's to everyone's taste.
 
-1. Windows. No longer required, Glow in the Dahrk handles this great now. You can look at getting texture replacements, but look at them beforehand first and ask around a bit.
+1. Windows
 
-2. Imperial architecture and shacks.
+* [Glow in the Dahrk](https://www.nexusmods.com/morrowind/mods/45886/) is essentially a replacement for WinDoors Glow. Choose the "High resolution" and "Rays" options, leave the rest disabled.
+
+2. Imperial architecture and shacks
+
 * [Bump-mapped AOFs Imperial Housing](http://www.nexusmods.com/morrowind/mods/42407/?) - Install options 1 and 3 in the BAIN installer.
 * [Bump-mapped Imperial Housing Fixed Filter Mode](https://www.dropbox.com/s/sjsxdkuy46d136k/Bump-mapped_AOFs_Imperial_Housing-fixed_Filter_Mode.7z) - Fixes issues with the meshes from the last step. Again, skip this if you don't want bump maps. Only choose the first option in the BAIN installer. (Ignore WinDoors glow option)
 * [Imperial Houses and Forts Retexture](http://www.nexusmods.com/morrowind/mods/43940/?) - This is the actual texture pack we'll be using. HQ is 2k, MQ is 1k. Get the optional Bump Mapped files if you're using those.
@@ -591,7 +587,7 @@ Hopefully this will be slightly less complicated than the nature section. Someth
 * [Shacks, Docks and Ships](http://www.nexusmods.com/morrowind/mods/43520/?)
 * [Tydz Small Mods](http://www.nexusmods.com/morrowind/mods/44028/?) - Specifically, the Gnisis Fort Roof file. It's a very small change, so feel free to skip it if you want. Also incorrectly packaged. You'll need to extact it, drop the `x` folder into a `Meshes` folder and then re-pack it.
 
-3. Hlaalu.
+3. Hlaalu
 
 Choose between the following three options. Compare the screenshots from both modpages and see what looks more visually appealing to you. They are similar enough, so if in doubt just get Aesthesia for it's more 'vanilla' look.
 
@@ -600,6 +596,7 @@ Choose between the following three options. Compare the screenshots from both mo
 * [Static's AoF Hlaalu Atlased](https://www.nexusmods.com/morrowind/mods/46022) - An Atlas'd version of AnOldFriend's [Hlaalu Retextured](https://www.nexusmods.com/morrowind/mods/28061) by StaticNation. Signiciantly less vanilla-friendly that the other options, but may be a welcome change of pace to some. 
 
 4. Redoran
+
 * [Redoran Bump mapped](http://www.nexusmods.com/morrowind/mods/42406/?) - A note on these: they use extremely high poly meshes. If you're already struggling to top 30 FPS in exteriors, you should pass on these.
 * [Redoran Bump mapped fixes](https://mega.nz/#!qkY2gRJI!VSHQoMctyzL9X2qGYXMC2qqN7kHmu2kzsF--nwBJR2Y) - You only need these if you're using bump maps, obviously.
 * [Redoran - Arkitektora Vol.2](https://www.nexusmods.com/morrowind/mods/46235) - An improved version of Redoran - Arkitektora. Completely over-writes all files from the original, so that mod is not needed, only this one. Remember to grab the texture replacer for project atlas in the optional files section. Download the version that's in the same quality as the textures you downloaded.

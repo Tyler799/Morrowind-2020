@@ -903,19 +903,18 @@ Some MGE XE relevant mods
 * [Distant Mournhold](http://www.nexusmods.com/morrowind/mods/43255/?) - DO activate this .esp in your launcher.
 * [PeterBitt's Small Mods](http://www.nexusmods.com/morrowind/mods/42306/?) - If you have a good computer and plan to use Per Pixel Lighting, get the Negative Lights Remover. Activate in your launcher. If this does not work for you for some reason, there is an alternative you can download [here](https://cdn.discordapp.com/attachments/381217735306248192/510372103460093953/lighting_betav24RC.7z). You only need the ```MWSE``` folder to drop into the ```Data Files``` folder. 
 
-3. Distant Land
+3. Distant Land  
+   3.1. First, download [this mod](https://www.nexusmods.com/morrowind/mods/45588). It doesn't do anything except supress an annoying warning when generating distant land. 
+   
+   3.2 Make sure all the mods you're using are activated in the launcher (again, don't activate the grass mods in the launcher). Then, run MGEXEgui.
+   
+   3.3 Go into your Distant Land tab, and click on Distant land generator.
+   
+   3.4 Click 'Use current load order', then go through the list and activate Grass_AC&S, Vurt's Groundcover - The Ashlands (if you're using it), and either Ozzy's Grass packages (there are five total) or Vurt's Groundcover - BC, AI, WG, GL and Vurt's Groundcover - Solstheim. Also, activate the reeds module and the corals module if you're using those. Click continue.
 
-First, make sure all the mods you're using are activated in the launcher (again, don't activate the grass mods in the launcher). Then, run MGEXEgui.
+   3.5 On the next few screens, change the settings only if you think it's necessary. If you're running a toaster you might want to turn your settings down. Be very conservative if you try to turn the settings up higher, as it CAN make your game run very slow. That said, re-running the distant land generator isn't too difficult. On the statics screen, make sure to read the tooltips for your options and set them accordingly.
 
-  0) Download [this mod](https://www.nexusmods.com/morrowind/mods/45588). It doesn't do anything except supress an annoying warning when generating distant land.
-
-  1) Go into your Distant Land tab, and click on Distant land generator.
-
-  2) Click 'Use current load order', then go through the list and activate Grass_AC&S, Vurt's Groundcover - The Ashlands (if you're using it), and either Ozzy's Grass packages (there are five total) or Vurt's Groundcover - BC, AI, WG, GL and Vurt's Groundcover - Solstheim. Also, activate the reeds module and the corals module if you're using those. Click continue.
-
-  3) On the next few screens, change the settings only if you think it's necessary. If you're running a toaster you might want to turn your settings down. Be very conservative if you try to turn the settings up higher, as it CAN make your game run very slow. That said, re-running the distant land generator isn't too difficult. On the statics screen, make sure to read the tooltips for your options and set them accordingly.
-
-  4) When your distant land generation is finally complete, you'll have a lot more options in MGE XE to play with. Most of these are self-explanatory. If you have a toaster, you probably shouldn't mess with the default settings much; instead, launch the game and see how it runs for you with the basic settings, and with shaders, before messing with anything here. If you have a beastly machine, try out Per-pixel lighting (make sure to use Negative Lights Remover.esp in this case), high quality exponential fog, and high quality atmosphere and distance coloring. And, of course, turn up your draw distance. I play with 10 visible cells.
+   3.6 When your distant land generation is finally complete, you'll have a lot more options in MGE XE to play with. Most of these are self-explanatory. If you have a toaster, you probably shouldn't mess with the default settings much; instead, launch the game and see how it runs for you with the basic settings, and with shaders, before messing with anything here. If you have a beastly machine, try out Per-pixel lighting (make sure to use Negative Lights Remover.esp in this case), high quality exponential fog, and high quality atmosphere and distance coloring. And, of course, turn up your draw distance. I play with 10 visible cells.
 
 4. Shaders
 

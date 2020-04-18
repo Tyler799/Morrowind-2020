@@ -646,7 +646,7 @@ Feel free to choose between Lougian and Tyddy's packs, if you prefer Lougian's t
 * [Road Marker retextured](http://www.nexusmods.com/morrowind/mods/28311/?) - Incorrectly archived. You'll need to unzip it and move the textures into a `Textures` folder, then re-zip it and install as normal.
 * [Banners retextured](http://www.nexusmods.com/morrowind/mods/21405/?) - Some of these will be overridden by Django's Tapestries
 * [Arukinn's Better Banner Signs and Signposts](http://www.nexusmods.com/morrowind/mods/41658/?)
-* [Signposts Retextured](http://www.nexusmods.com/morrowind/mods/42126/?) Optional, as they are lower res than Arukinn's, but if you want signposts readable in English this is what I would recommend. Download the Tamriel Rebuilt patch if using TR.
+* [Signposts Retextured](http://www.nexusmods.com/morrowind/mods/42126/?) Optional, as they are lower res than Arukinn's, but if you want signposts readable in English this is what I would recommend. 
 
 ```
 Q: What about Bloodmoon?
@@ -790,7 +790,6 @@ We'll get a replacer for Dagoth Ur and dremora in the next step.
 
 1. Heads
 
-  *Note that if you're using any of the head replacers linked here in conjunction with Tamriel Rebuilt the heads provided by TR will not be fully replaced because the mod assigns unique IDs to their heads.*
 * [Westly's Pluginless Head and Hair Replacer](http://download.fliggerty.com/download-127-874)
 * [Various tweaks and fixes](http://www.nexusmods.com/morrowind/mods/43795/?) - Specifically, Fixed Westly's Female Orc Heads and Fixed Westly's Barenziah Head.
 * [Animation Fix for Westly's Heads](https://www.dropbox.com/s/d70l2lbjvm0xloo/WestlyHeadsAnimFix.zip?dl=0) - Does what it says on the tin
@@ -833,9 +832,7 @@ Alternative: [Unique Jewelry Redone](https://www.nexusmods.com/morrowind/mods/46
 * [Unique Finery Replacer UFR](http://www.nexusmods.com/morrowind/mods/25725/?) - Activate the regular version. The robe mod we'll be using comes with a compatibility patch.
 
 3. Robes
-* [Better Robes](http://www.nexusmods.com/morrowind/mods/42773/?) - Make sure to also install the patches for Tamriel Rebuilt if you're using it (`TR` folder) and UFR. If you plan to use Animated Morrowind, download the separate patch for that as well.
-
-If using the Tamriel Rebuilt patch, you'll need [this patch](https://www.nexusmods.com/morrowind/mods/44875) for that patch, since it crashes due to a Master reformat in 2015 that TR did. (However, note that this doesn't fix the issue with the TR-BR-Animated Morrowind combined patch, so you're kind of out of luck if using that)
+* [Better Robes](http://www.nexusmods.com/morrowind/mods/42773/?) - If you plan to use Animated Morrowind, download the separate patch for that as well.
 
 * [Robe Overhaul](http://www.nexusmods.com/morrowind/mods/43748/?)
 * [Various tweaks and fixes](http://www.nexusmods.com/morrowind/mods/43795/?) - Optionally, if you hate the glow effect that Robe Overhaul adds to some robes, you can download Blank Glow Maps for Robe Overhaul. You might also be interested in Pluginless NoGlow Lite, which removes the plastic-y looking 'enchantment' effect from all items in game.
@@ -845,7 +842,7 @@ If using the Tamriel Rebuilt patch, you'll need [this patch](https://www.nexusmo
 There are likely a ton of unique/artifact weapon replacers I've missed. I was never very good at keeping track of weapon mods...
 * [Darknut's Little Weapons Mod Complete](http://www.nexusmods.com/morrowind/mods/43418/?) - Has a `Textures/512` and a `Textures/1024` folder. You should be able to handle the 1K textures. In either case, you'll need to un-pack the mod and move all of whichever you choose (in my case 1K) out of the `1024` folder, and into the root `Textures` folder, and then re-pack.
 * [Oriental Mesh Improvements](http://www.nexusmods.com/morrowind/mods/29906/?)
-* [Crossbows](http://download.fliggerty.com/download-98-1010) - If you don't want the new crossbows, don't activate the .esps. You'll still get new meshes for the base game's crossbows. For TR users, note that this ESP is also set up requiring the old TR's ESP as a master, so it'll crash if you try to use it on modern TR installs.
+* [Crossbows](http://download.fliggerty.com/download-98-1010) - If you don't want the new crossbows, don't activate the .esps. You'll still get new meshes for the base game's crossbows. 
 * [Real Reflective Weapons - Iron](http://www.nexusmods.com/morrowind/mods/43077/?) - Install the base (`Data Files`) folder and the `bonus` folder.
 * [Improved Weapon Meshes - Steel](http://www.nexusmods.com/morrowind/mods/43120/?) - Install `00` and `01`. You do not need the .esps.
 * [Improved Weapon Mehses - Ebony](http://www.nexusmods.com/morrowind/mods/43484/?) - Install `00`. Install `01` if you want an Ebony Claymore in your game, you'll need the .esp. If you do so, note that it'll install two ESPs, one being German. Make sure to move it to the "Optional" section after installing.
@@ -917,9 +914,8 @@ If you have a toaster, you might want to skip most of this section. Run distant 
 * [Aesthesia Groundcover - grass mod](https://www.nexusmods.com/morrowind/mods/46377/) - An excellent looking and performing grass mod to replace "Azura's Coast and Sheogorath - Grassmod" and "Morrowind grass mod combined v1.0"
 
 Alternatively, you could use...
-* [Vurt's Groundcover](http://www.nexusmods.com/morrowind/mods/31051/?) - If you want Ashlands grass, you'll need to download this as none was included in the previous download. Use EITHER the previous mod OR this one for the other regions, do NOT use both. Use Reeds and the optional Corals download if you want, they should work with Grass Mod Combined just fine.
 
-For those of your with Tamriel Rebuilt, [Tamriel Rebuilt - Old Ebonheart Groundcover](https://www.nexusmods.com/morrowind/mods/45973) will enable Vurt's groundcovers to extend to Tamriel Rebuilt.
+* [Vurt's Groundcover](http://www.nexusmods.com/morrowind/mods/31051/?) - If you want Ashlands grass, you'll need to download this as none was included in the previous download. Use EITHER the previous mod OR this one for the other regions, do NOT use both. Use Reeds and the optional Corals download if you want, they should work with Grass Mod Combined just fine.
 
 2. Some other MGE XE relevant mods
 
@@ -1067,8 +1063,6 @@ Finally, [IMMERSIVE RUN FIX](https://www.nexusmods.com/morrowind/mods/45947) mak
 9) Are you an aspiring member of House Telvanni? The following mods might interest you, and as a bonus, they can all be used together
 
 * [Uvirith's Legacy](http://download.fliggerty.com/download-35-884) - A major revamp of Tel Uvirith, your stronghold if you join and advance in House Telvanni. Make sure to use the RoHT addon from the addons folder if you plan to use Rise of House Telvanni (see below).
-
-Using TR? [Here](https://www.nexusmods.com/morrowind/mods/44656) is a patch for it.
 
 * [Building Up Uvirith's Legacy](http://mw.modhistory.com/download-47-11851) - This mod is a major revamp of Uvirith's Grave, which is the area surrounding Tel Uvirith. If you plan to use Uvirith's Legacy, this is the version of BuUG you should use.
 * [Rise of House Telvanni](http://mw.modhistory.com/download-21-10664) - Further expands the Telvanni questline in a major way. Be warned there are some... special characters included in this. Do NOT get the compatibility addon! It's very out of date, use the one from Uvirith's Legacy instead!

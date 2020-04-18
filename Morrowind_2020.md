@@ -291,23 +291,13 @@ You can read about the official add-ons [here](http://www.uesp.net/wiki/Morrowin
 
 ## Dialogue Mods
 
-1. First and foremost you should get the [LGNPC](http://lgnpc.org/downloads)
-
-Download the LGNPC bundle. You should install all of the mods. A few notes:
-
-* If you download the "all in one" it is indeed not properly archived for installation. It also includes old versions of several of the mods. You'll need to extract it, then delete the archives inside for the older copies, then install each individually. My recommendation is just to skip the "all in one" and download the latest versions of each individually.
-* If you want to avoid wereguars, skip LGNPC Pelagiad. It's one of their earliest mods and it really shows.
-* Make sure to read LGNPC Soul Sickness Patch's readme. It's optional, so decide on your own if you want it or not.
-* The plugin "LGNPC_SecretMasters_MCA5.esp" is only relevant if you have Morrowind Comes Alive. If you do not, make sure to right click the "Secret masters" mod and turn this ESP from "Available ESPs" to "Optional ESPs", or just make it hidden.
-* The Soul Sickness patch comes bundled with Pax Redoran, and does not need to be installed separately.
-
-2. Get the Less Generic modules. These give the main quests of Morrowind, Tribunal and Bloodmoon the LGNPC treatment and are fantastic. It does tend to make some of the quests a little trickier, though.
+1. Get the Less Generic modules. These give the main quests of Morrowind, Tribunal and Bloodmoon the LGNPC treatment and are fantastic. It does tend to make some of the quests a little trickier, though.
 
 * [Less Generic Nerevarine](http://www.nexusmods.com/morrowind/mods/23335/)
 * [Less Generic Tribunal Restored](https://www.nexusmods.com/morrowind/mods/44819) (This is a fixed version of Less Generic Tribunal that doesn't need several patches)
 * [Less Generic Bloodmoon](http://www.nexusmods.com/morrowind/mods/23346/) - Comes with one patch for users of Thirsk Expanded, and one patch for users of **both** Thirsk Expanded and Children of Morrowind, and finally the main plugin. Make sure to enable the main plugin, and one of the two patches if appropriate. (For reference, this guide installs neither TE nor CoM)
 
-3. A few extra mods to add even more to the dialogue of the game:
+2. A few extra mods to add even more to the dialogue of the game:
 * [Django's Dialogue 1.4](https://www.nexusmods.com/morrowind/mods/47253)
 * [Nastier Camonna Tong](http://www.nexusmods.com/morrowind/mods/22601/)
 * [What Thieves Guild?](https://www.nexusmods.com/morrowind/mods/47728)
@@ -1018,49 +1008,58 @@ We currently do not have a reccommended load order for Morrowind 2020. Recommend
 
 Not satisfied with just a graphics overhaul? Here are some other mods you might want to try. Please, PLEASE read the mod pages for the following mods. Simply downloading and installing everything here could very well make your game laggy and/or unstable, especially if you don't use a proper load order. I do not play with all of the below mods myself anymore, but have played most of them in the past. Some I've never played at all, but they do come highly recommended and endorsed by the community.
 
-0) I (Thastus) personally very much enjoy [Races Are More Fun](https://www.nexusmods.com/morrowind/mods/21875) and [Birthsigns are More Fun](https://www.nexusmods.com/morrowind/mods/17888)
+1) I (Thastus) personally very much enjoy [Races Are More Fun](https://www.nexusmods.com/morrowind/mods/21875) and [Birthsigns are More Fun](https://www.nexusmods.com/morrowind/mods/17888) to add some variety between the different classes/birthsigns/races.
 
-If you enjoy H2H characters, the MGE XE version of the Opponent Fatigue Indicator can be found [here](https://www.nexusmods.com/morrowind/mods/44363)
-(However, it does not scale with MGE XE gui size options. Considering re-making it myself using MWSE-LUA to do so very cleanly)
+2) If you enjoy H2H characters, the MGE XE version of the Opponent Fatigue Indicator can be found [here](https://www.nexusmods.com/morrowind/mods/44363)
 
-As well, I find [MCC leveler](https://www.nexusmods.com/morrowind/mods/44294) (inspired by GCC and MADD) to be the best leveling system for my personal tastes (Others certainly exist though).
+   (However, it does not scale with MGE XE gui size options. Considering re-making it myself using MWSE-LUA to do so very cleanly)
 
-(Includes optional state-based HP, optional state-based magicka regen, as well as just a better overall leveling system inspired by MADD and GCD, but far better than either. No micro-management required! No min-maxing needed!)
+3) As well, I find [MCC leveler](https://www.nexusmods.com/morrowind/mods/44294) (inspired by GCC and MADD) to be the best leveling system for my personal tastes (Others certainly exist though).
 
-Finally, [IMMERSIVE RUN FIX](https://www.nexusmods.com/morrowind/mods/45947) makes running diagonally not faster. 
+   (Includes optional state-based HP, optional state-based magicka regen, as well as just a better overall leveling system inspired by MADD and GCD, but far better than either. No micro-management required! No min-maxing needed!)
 
-1) Want your sound overhauled as well as your graphics? You can try [Atmospheric Sound Effects](http://mw.modhistory.com/download-51-7148).
+4) [LGNPC](http://lgnpc.org/downloads) - This set of mods expands the dialogue of many characters and adds new ones to talk to, including several quests. It's a touchy subject in the community though as its quality varies significantly. 
 
-2) Are you used to newer Bethesda games where you swing your weapon and hit the enemy without miss chance? Is Morrowind absolutely ruined for you if your attacks miss when it clearly looks like they should hit? [Try this](http://forums.bethsoft.com/topic/1513002-rel-oblivion-like-combat-tweaks-part-of-men-project/).
-*Disclaimer: I haven't tried this. But reading through the forum thread, it seems like a solid mod.*
+   Download the LGNPC bundle. You should install all of the mods. A few notes:
 
-3) Want to be a wizard? Here are some mods you might like.
+* If you download the "all in one" it is indeed not properly archived for installation. It also includes old versions of several of the mods. You'll need to extract it, then delete the archives inside for the older copies, then install each individually. My recommendation is just to skip the "all in one" and download the latest versions of each individually.
+* If you want to avoid wereguars, skip LGNPC Pelagiad. It's one of their earliest mods and it really shows.
+* Make sure to read LGNPC Soul Sickness Patch's readme. It's optional, so decide on your own if you want it or not.
+* The plugin "LGNPC_SecretMasters_MCA5.esp" is only relevant if you have Morrowind Comes Alive. If you do not, make sure to right click the "Secret masters" mod and turn this ESP from "Available ESPs" to "Optional ESPs", or just make it hidden.
+* The Soul Sickness patch comes bundled with Pax Redoran, and does not need to be installed separately.
+
+3) [IMMERSIVE RUN FIX](https://www.nexusmods.com/morrowind/mods/45947) makes running diagonally not faster. 
+
+4) Want your sound overhauled as well as your graphics? You can try [Atmospheric Sound Effects](http://mw.modhistory.com/download-51-7148).
+
+6) Want to be a wizard? Here are some mods you might like:
+
 * [Mastering Magicka](http://www.nexusmods.com/morrowind/mods/42269/?) - This mod is a complete overhaul of the magic system. You should read the mod page to learn more. If you think this mod does a little too much and want to pick and choose for yourself, keep reading.
 * [Fair Magicka Regen](http://www.nexusmods.com/morrowind/mods/39350/?)
 * [Raym's Simple Mana Regeneration](http://www.wolflore.net/viewtopic.php?f=108&t=1553.) - Use either this OR Fair Magicka Regen, not both. The difference between them is that Fair Magicka Regen is percent based, while Raym's is simpler and lighter on CPU/scripting. Don't use this OR Fair Magicka Regen if you're using Mastering Magicka.
 * [Spell Cast Reduction](http://mw.modhistory.com/download-37-1406) - Another feature already included in Mastering Magicka.
 * [Melian's Teleport Mod](http://mw.modhistory.com/download-21-6360) - Not only for wizards, this mod makes travelling around Vvardenfell a breeze by allowing you to have unlimited Mark locations.
 
-4) Do you want to travel with a companion (or two)? Then here is, hands down, the best Morrowind companion mod: [Julan, Ashlander Companion](http://lovkullen.net/Emma/Kateri.htm) You might also be interested in [this](http://www.nexusmods.com/morrowind/mods/42780/?) to give Julan plus some other characters the fully red Dunmer eyes. There are some other companion mods for Morrowind, but none with the sheer amount of dialogue (or a quest directly tied to the main plot) as Julan.
+7) Do you want to travel with a companion (or two)? Then here is, hands down, the best Morrowind companion mod: [Julan, Ashlander Companion](http://lovkullen.net/Emma/Kateri.htm) You might also be interested in [this](http://www.nexusmods.com/morrowind/mods/42780/?) to give Julan plus some other characters the fully red Dunmer eyes. There are some other companion mods for Morrowind, but none with the sheer amount of dialogue (or a quest directly tied to the main plot) as Julan.
 
-5) Want harder dungeons?
+8) Want harder dungeons?
 * [Darknut's Greater Dwemer Ruins versions 1.1](http://www.nexusmods.com/morrowind/mods/43544/?) - A widely used and recommended overhaul of the Red Mountain citadels. It was mentioned in Knots' guide. It's incompatible with most anything that changes any of the final dunmer strongholds. Unfortunately, most of the compatibility patches for it only work with 1.0, which can be found [here](http://mw.modhistory.com/download-98-11646).
 * [Sotha Sil Expanded](http://www.nexusmods.com/morrowind/mods/42347/?) - Trainwiz's epic mod that completely overhauls the final dungeon of the Tribunal expansion. Conflicts with anything changing Tribunal's final dungeon. Less Generic Tribunal MIGHT be fine, as I can't find anything saying otherwise, but I haven't made it far enough in the Tribunal story to test it with the newest version of LG Tribunal.
 
-6) Want a mod that gives your character needs?
+9) Want a mod that gives your character needs?
 * [Necessities of Morrowind](http://mw.modhistory.com/download-53-12114) - For a long time, NoM was the only needs mod Morrowind had. NoM has several compatibility patches with various mods as a result. Seeing as it actually adds quite a bit to the world with food stalls, restaurants, wells, etc., if you plan to use NoM you should keep compatibility in mind. Alternatively, you could use the new mod The Bare Necessities instead, which strips out a lot of things NoM added (world changes, new items, cooking system) while keeping hunger, thirst and the need for sleep. You can find it [here](http://www.nexusmods.com/morrowind/mods/43365/?).
 
-7) Want kids in your game?
+10) Want kids in your game?
 * [Children of Morrowind](http://lovkullen.net/Emma/kids.htm) - If you want kids, or to play a teenager, in Morrowind, this mod is your only option. Because this mod adds NPCs and items to settlements all over Vvardenfell, you should keep an eye out for any compatibility patches if you use this mod. And one last thing, CoM was designed in a way to keep the children of the mod safe, meaning if you attack them, they'll teleport away before you can hurt them. This was a design decision on Emma's part, so if you don't like invincible kids, don't download the mod.
 
-8) Want mods to add atmosphere or to give you a more immersive experience?
+11) Want mods to add atmosphere or to give you a more immersive experience?
 * [Mountainous Red Mountain](http://www.nexusmods.com/morrowind/mods/42125/?) - Makes Red Mountain much bigger, at the cost of breaking compatibility with any mod centered in and around Red Mountain. It's popular enough that there are compatibility patches for most popular mods. I believe there's a patch for Julan and another patch for Greater Dwemer Ruins 1.0.
 * [Gondoliers](http://www.nexusmods.com/morrowind/mods/43291/?), [Boat](http://www.nexusmods.com/morrowind/mods/42270/?), [Silt Striders](http://www.nexusmods.com/morrowind/mods/42267/?). All by abot. Travel in real time instead of instantaneously!
 * [Where are all birds going](http://www.nexusmods.com/morrowind/mods/43128/?) and [Water Life](http://www.nexusmods.com/morrowind/mods/42417/?), by the same wonderful guy who made the above mods, adds birds and aquatic creatures to Morrowind.
 * [Animated Morrowind](http://abitoftaste.altervista.org/morrowind/index.php?option=downloads&task=info&id=39&Itemid=50) - Adds NPCs to the game with new and unique animations to make the world feel more alive.
 * [Starfire's NPC Additions](http://mw.modhistory.com/download-90-13583) - Adds a ton more generic NPCs to the world to make it feel more lively, with a lot less 'getting destroyed by a high level vampire on the road to Pelagiad in the fucking DAYLIGHT' than Morrowind Comes Alive had. (I'm not bitter or anything.)
 
-9) Are you an aspiring member of House Telvanni? The following mods might interest you, and as a bonus, they can all be used together
+12) Are you an aspiring member of House Telvanni? The following mods might interest you, and as a bonus, they can all be used together
 
 * [Uvirith's Legacy](http://download.fliggerty.com/download-35-884) - A major revamp of Tel Uvirith, your stronghold if you join and advance in House Telvanni. Make sure to use the RoHT addon from the addons folder if you plan to use Rise of House Telvanni (see below).
 
@@ -1073,15 +1072,15 @@ Finally, [IMMERSIVE RUN FIX](https://www.nexusmods.com/morrowind/mods/45947) mak
 
 If you're going to join House Hlaalu... well, unfortunately, at this time, there really is nothing I can recommend. There are a few mods that revamp Rethan Manor, but nothing really spectacular stands out. House Hlaalu is still a very vanilla experience.
 
-11) Annoyed with how quickly vanilla torches go out? While you're at it, want them to put out more light? What about lanterns and candles? Try out [True Skyrimized Torches](http://www.nexusmods.com/morrowind/mods/43192/?).
+13) Annoyed with how quickly vanilla torches go out? While you're at it, want them to put out more light? What about lanterns and candles? Try out [True Skyrimized Torches](http://www.nexusmods.com/morrowind/mods/43192/?).
 
-12) Do you feel like you don't get enough benefits from being in a guild? Do you want more perks from joining the Temple or the Cult? Want to boss around your underlings after you become the Head of a House? You might like [Antares' Big Mod](https://arcimaestroantares.webs.com/antaresbigmod.htm).
+14) Do you feel like you don't get enough benefits from being in a guild? Do you want more perks from joining the Temple or the Cult? Want to boss around your underlings after you become the Head of a House? You might like [Antares' Big Mod](https://arcimaestroantares.webs.com/antaresbigmod.htm).
 
-13) Hate the limited capacity of chests and boxes? Want to get rid of that? [Ta-da](https://www.nexusmods.com/morrowind/mods/45698). Honestly, best mod addition I've added so far. So much hassle and annoyance saved.
+16) Hate the limited capacity of chests and boxes? Want to get rid of that? [Ta-da](https://www.nexusmods.com/morrowind/mods/45698). Honestly, best mod addition I've added so far. So much hassle and annoyance saved.
 
 ## Screenshots
 
-If you would like to see reference images of the finished install, or contribute your own screenshots to that public repository, head to our [Google Drive Gallery](https://drive.google.com/drive/folders/1pusVDmDBMwM1Si28W8wcvVd6aXukEIJr?usp=sharing).
+TBD
 
 ## Contributors
 

@@ -580,10 +580,13 @@ Hopefully this will be slightly less complicated than the nature section. Someth
 * [Bump-mapped AOFs Imperial Housing](http://www.nexusmods.com/morrowind/mods/42407/?) - Install options 1 and 3 in the BAIN installer.
 * [Bump-mapped Imperial Housing Fixed Filter Mode](https://www.dropbox.com/s/sjsxdkuy46d136k/Bump-mapped_AOFs_Imperial_Housing-fixed_Filter_Mode.7z) - Fixes issues with the meshes from the last step. Again, skip this if you don't want bump maps. Only choose the first option in the BAIN installer. (Ignore WinDoors glow option)
 * [Imperial Houses and Forts Retexture](http://www.nexusmods.com/morrowind/mods/43940/?) - This is the actual texture pack we'll be using. HQ is 2k, MQ is 1k. Get the optional Bump Mapped files if you're using those.
-* [Dragon Statue Replacer](http://www.nexusmods.com/morrowind/mods/43218/?) - I used Option 3. Also incorrectly archived, you'll need to download it manually and extract it, then you can use MO2 to install one of the .rar files from there.
 * [Apel's Lighthouse Retexture](http://www.nexusmods.com/morrowind/mods/42532/?) - Get the version you want, bumps or no bumps.
 * [Shacks, Docks and Ships](http://www.nexusmods.com/morrowind/mods/43520/?)
 * [Tydz Small Mods](http://www.nexusmods.com/morrowind/mods/44028/?) - Specifically, the Gnisis Fort Roof file. It's a very small change, so feel free to skip it if you want. Also incorrectly packaged. You'll need to extact it, drop the `x` folder into a `Meshes` folder and then re-pack it.
+
+Choose one of the following two: 
+* [Dragon Statue Replacer](http://www.nexusmods.com/morrowind/mods/43218/?) - I used Option 3. Also incorrectly archived, you'll need to download it manually and extract it, then you can use MO2 to install one of the .rar files from there.
+* [Ebonheart Dragon Statue Retexture](http://mw.modhistory.com/download-56-13799) - more vanilla friendly alternative. 
 
 3. Hlaalu
 

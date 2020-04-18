@@ -418,7 +418,7 @@ Time for rocks. Download the following:
 
 Test each waterfall mod quickly by starting the game, pressing `` ` `` to go into the console, typing `COC "Vivec, Puzzle Canal, Level 1"`, hitting enter, and leaving through the grate ahead of you.
 
-* If you can take the performance hit, install [Enhanced Water Shader for MGE XE](https://www.nexusmods.com/morrowind/mods/45432). It really does make the in-game water look much better.
+* If you can take the performance hit, install [Enhanced Water Shader for MGE XE](https://www.nexusmods.com/morrowind/mods/45432). It really does make the in-game water look much better. Note that this version does not work with the latest MGE XE shaders. If you have any strange issues with boxes in the water, get the newer shader from [here](https://cdn.discordapp.com/attachments/381217735306248192/579434115720413184/Enhanced_Water_Shader_for_MGE_XE_2.1_wip.7z) and over-write the ```xe water.fx``` found in the water shader's mod folder under the ```shaders``` folder.
 
 * [Dongle's Waterpack Bumpmapped](http://www.nexusmods.com/morrowind/mods/42317/?)
 

@@ -789,8 +789,6 @@ Argonians will be in the next step, don't worry.
 2. Body replacers
 * [Robert's bodies](http://www.nexusmods.com/morrowind/mods/43138/?) - Get the main file. Optionally, get Dagoth Ur OR Dagoth Ur (vanilla shaders), and RB Altmer Females, RB Bosmer Females, RB Orcish females. For the last three, you should look at the images section to see what they do; Westly's version is on the top, RB version is in the middle, and vanilla is at the bottom. The Orcish heads in particular are a drastic departure from Westly's heads, but they look more like the vanilla heads.
 
-Robert's bodies is heavily incompatible with other mods, including later mods in this guide. I mention some workarounds, just keep that in mind. 
-
 * OR [Install Better Bodies](https://www.nexusmods.com/morrowind/mods/3880)
 
 Note that at the time this guide is being written, Khajiit meshes are nude. If seeing girl Khajiit nipples bother you, you should consider activating New Beast Bodies Khajit - Clean below, and make sure it overrides Robert's bodies. Also, it seems the nude meshes have been removed.

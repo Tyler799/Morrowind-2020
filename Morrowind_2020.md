@@ -375,23 +375,19 @@ Mods that replace both:
 
 ## Mesh fixes and Improvements
 
-* [Morrowind Optimization Patch](https://www.nexusmods.com/morrowind/mods/45384) - Improves performance by optimizing meshes.
-* [Project Atlas](https://www.nexusmods.com/morrowind/mods/45399) - Improves performance by merging meshes into a single shape, reducing draw calls significantly for the same visual quality. Download all files except ASL Urns. (Dunmeri urns will cover this) 
+* [Morrowind Optimization Patch](https://www.nexusmods.com/morrowind/mods/45384) - Improves performance by optimizing meshes. Choose all options in the BAIN installer except the Weapon Sheathing patch.
+* [Project Atlas](https://www.nexusmods.com/morrowind/mods/45399) - Improves performance by merging meshes into a single shape, reducing draw calls significantly for the same visual quality. In the BAIN installer, choose the ```010 Glow in the Dahrk Patch - Interior Sunrays```, ```20 BC Mushrooms - Smoothed```, ```Redware - Smoothed```, and ```Wood Poles - Hi Res Texture```. 
 * [Better Meshes plus Optimization](http://www.nexusmods.com/morrowind/mods/38170/?)
 * [Dwemer Mesh Improvement](http://www.nexusmods.com/morrowind/mods/43101/?)
 * [Mesh Improvements Optimized](http://download.fliggerty.com/download-56-1088)
-* [RR Mod Series - Better Meshes](http://www.nexusmods.com/morrowind/mods/43266/?) - Get the RR - Better Meshes V1.2 file, `Fix for misc_com_metal_plate_05`, `Fix for artifact_bittercup_01` and `Fix for misc_dwrv_artifact60`. Before installing, disable `meshes/m/misc_com_pillow_01` from the main mod. 
+* [RR Mod Series - Better Meshes](http://www.nexusmods.com/morrowind/mods/43266/?) - Get the ```RR - Better Meshes V1.4``` file. In the BAIN installer, additionally choose options 1, 2, and 4. (Optimized Melichior lanterns, animation fix for DMI, and Skooma Pipe 1)
 * [MOAR Mesh Replacers](http://www.nexusmods.com/morrowind/mods/44057/?)
-
-For the `ATL BC Mushrooms`, make sure to choose just `00 Core - Smoothed Meshes`.
-
-For the Velothi and Imperial mods, you'll need to go into the `Extras` folder, then into the `GITD` folder and copy the meshes folder next to the mods main `Meshes` folder, if you are using the mod Glow in the Dahrk. 
 
 ## Nature Texture & Mesh Replacers
 
 This is by far going to be the most complicated part of the guide so hold on to your butts.
 
-* [Intelligent Textures](https://www.nexusmods.com/morrowind/mods/47469) - This is our new base mod, which replaced Morrowind Visual Pack. It replaces a lot of stuff that still isn't touched by modern mods, mostly because they're not really used often enough to think about replacing. Most of the textures will be overwritten.
+* [Intelligent Textures](https://www.nexusmods.com/morrowind/mods/47469) - This is our new base mod, which replaced Morrowind Visual Pack as a modern, vanilla-friend high-resolution texture mod. Some of the textures will be over-written as we go. Do *not* choose the "Atlas Textures" option in the BAIN installer.
 
 ### Bitter Coast Region
 

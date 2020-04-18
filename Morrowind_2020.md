@@ -256,9 +256,9 @@ MO2 allows you to use the "Download with Manager" option on the nexus pages that
 
 If the version number shows up in red as you begin installing mods, I recommend that you right click them and hit "Ignore Update". This will happen due to some mod authors having poorly laid out versioning for their mods, making a mod show up as "out of date" despite you just installing it. This isn't harmful in any way, but if you do this *now* then when you hit "Check all for updates" in the future you'll actually have a pretty good idea if any of your Nexus mods have updates available. Very useful!
 
-1. You may be familiar with projects like the Unofficial Patches for Oblivion and Skyrim. Morrowind *sort of* has its own versions of these in the form of two options: the Morrowind Patch Project and the Patch for Purists. The MPP makes a lot of balance-related changes some players feel is untrue to the original experience. Thus, currently most players recommend the Patch for Purists which you can get [here](https://www.nexusmods.com/morrowind/mods/45096/)
+1. Install the [Morrowind Patch For Purists](https://www.nexusmods.com/morrowind/mods/45096/). This is a modern community patch, similar to USSEP for Skyrim SE. Note this replaces the older "Morrowind Patch Project".
 
-(Note: Mlox, due to being old and outdated, will complain because you don't have the Patch Project installed. If this bothers you, you can remove this message by going into Mlox_base.txt, and removing the section for the Patch Project. It will not longer message you about it, which is nice.)
+   (Note: Mlox, due to being old and outdated, will complain because you don't have the Patch Project installed. If this bothers you, you can remove this message by going into Mlox_base.txt, and removing the section for the Patch Project. It will not longer message you about it, which is nice.)
 
 2. Go ahead and get the following mods:
 
@@ -268,7 +268,9 @@ If the version number shows up in red as you begin installing mods, I recommend 
 * [Bloated Caves](http://www.nexusmods.com/morrowind/mods/43141/) - Adds bloatspores (a plant) to Morrowind. Bloatspores were included in the game files but not placed in the world.
 
 One of the following:
+
 * [Delayed Dark Brotherhood Attack Add-On 2.0](http://mw.modhistory.com/download-90-7300) - Delays the Tribunal main quest from staring until certain "immersive" requirements are met. Does NOT work with Rebirth! (Note: This guide does **not** use Rebirth)
+
 * [Dark Brotherhood Delay - Player's Choice](https://www.nexusmods.com/morrowind/mods/46533) - Delays the Tribunal main quest from starting until either a level condition is met, or you've completed the main quest depending on what option you choose. Does work with Rebirth. 
 
 ## Official Bethesda Plugins
@@ -379,6 +381,14 @@ This is by far going to be the most complicated part of the guide so hold on to 
 
 * [Intelligent Textures](https://www.nexusmods.com/morrowind/mods/47469) - This is our new base mod, which replaced Morrowind Visual Pack as a modern, vanilla-friend high-resolution texture mod. Some of the textures will be over-written as we go. Do *not* choose the "Atlas Textures" option in the BAIN installer.
 
+Now we need a mod to handle grasses:
+
+* [Aesthesia Groundcover - grass mod](https://www.nexusmods.com/morrowind/mods/46377/) - An excellent looking and performing grass mod to replace "Azura's Coast and Sheogorath - Grassmod" and "Morrowind grass mod combined v1.0"
+
+Alternatively, you could use...
+
+* [Vurt's Groundcover](http://www.nexusmods.com/morrowind/mods/31051/?) - If you want Ashlands grass, you'll need to download this as none was included in the previous download. Use EITHER the previous mod OR this one for the other regions, do NOT use both. Use Reeds and the optional Corals download if you want, they should work with Grass Mod Combined just fine.
+
 ### Bitter Coast Region
 
 * [Connary's Bitter Coast](http://www.fullrest.ru/files/connarysbittercoast)
@@ -407,6 +417,8 @@ Time for rocks. Download the following:
 ### Water and Waterfalls
 
 Test each waterfall mod quickly by starting the game, pressing `` ` `` to go into the console, typing `COC "Vivec, Puzzle Canal, Level 1"`, hitting enter, and leaving through the grate ahead of you.
+
+* If you can take the performance hit, install [Enhanced Water Shader for MGE XE](https://www.nexusmods.com/morrowind/mods/45432). It really does make the in-game water look much better.
 
 * [Dongle's Waterpack Bumpmapped](http://www.nexusmods.com/morrowind/mods/42317/?)
 
@@ -762,20 +774,6 @@ Moving on:
 * [Vivec God Replacement Creature Edition](http://mw.modhistory.com/download-26-10946) - Feel free to look through the `extras` folder at your options.
 * [Voiced Vivec and Yakety Yagrum](http://www.nexusmods.com/morrowind/mods/40994/?) - Not really a replacer, but it does involve 'creatures'.
 
-We'll get a replacer for Dagoth Ur and dremora in the next step.
-
->Q: What about *insert other creature replacer here*?
->
->A: Dwemer will be installed in the next section. Otherwise, I don't know about it, or it didn't suit my taste. Here's a small list of mods I know about that didn't make the cut:
-
-* Connary's other replacers - fullrest.ru
-* Silt Strider Bump Mapped by Lougian - Nexus
-* Psy's Golden Saint Replacer - MMH
-* Divine Dagoth Ur - Nexus
-* Spriggan Bump Mapped by Lougian - Nexus
-* Kwama Forager Bump Mapped by Lougian - Nexus, specifically in his Various Little Mods
-* Tyddy's Cliff Racer Aendemika - Nexus
-
 ## Heads & Bodies
 
 1. Heads
@@ -900,14 +898,7 @@ Do you get any errors while loading? Any errors while moving around? Anything mi
 
 If you have a toaster, you might want to skip most of this section. Run distant land as explained towards the end with default settings and see how the game runs for you first before trying out grass or any of the fancier light settings in the distant land tab. You might also try out shaders.
 
-1. Before we begin, we need to download mod(s) related to grass. 
-* [Aesthesia Groundcover - grass mod](https://www.nexusmods.com/morrowind/mods/46377/) - An excellent looking and performing grass mod to replace "Azura's Coast and Sheogorath - Grassmod" and "Morrowind grass mod combined v1.0"
-
-Alternatively, you could use...
-
-* [Vurt's Groundcover](http://www.nexusmods.com/morrowind/mods/31051/?) - If you want Ashlands grass, you'll need to download this as none was included in the previous download. Use EITHER the previous mod OR this one for the other regions, do NOT use both. Use Reeds and the optional Corals download if you want, they should work with Grass Mod Combined just fine.
-
-2. Some other MGE XE relevant mods
+Some MGE XE relevant mods
 
 * [Distant Mournhold](http://www.nexusmods.com/morrowind/mods/43255/?) - DO activate this .esp in your launcher.
 * [PeterBitt's Small Mods](http://www.nexusmods.com/morrowind/mods/42306/?) - If you have a good computer and plan to use Per Pixel Lighting, get the Negative Lights Remover. Activate in your launcher. If this does not work for you for some reason, there is an alternative you can download [here](https://cdn.discordapp.com/attachments/381217735306248192/510372103460093953/lighting_betav24RC.7z). You only need the ```MWSE``` folder to drop into the ```Data Files``` folder. 
@@ -916,23 +907,21 @@ Alternatively, you could use...
 
 First, make sure all the mods you're using are activated in the launcher (again, don't activate the grass mods in the launcher). Then, run MGEXEgui.
 
->0) Download [this mod](https://www.nexusmods.com/morrowind/mods/45588). It doesn't do anything except supress an annoying warning when generating distant land.
->
->1) Go into your Distant Land tab, and click on Distant land generator.
->
->2) Click 'Use current load order', then go through the list and activate Grass_AC&S, Vurt's Groundcover - The Ashlands (if you're using it), and either Ozzy's Grass packages (there are five total) or Vurt's Groundcover - BC, AI, WG, GL and Vurt's Groundcover - Solstheim. Also, activate the reeds module and the corals module if you're using those. Click continue.
->
->3) On the next few screens, change the settings only if you think it's necessary. If you're running a toaster you might want to turn your settings down. Be very conservative if you try to turn the settings up higher, as it CAN make your game run very slow. That said, re-running the distant land generator isn't too difficult. On the statics screen, make sure to read the tooltips for your options and set them accordingly.
->
->4) When your distant land generation is finally complete, you'll have a lot more options in MGE XE to play with. Most of these are self-explanatory. If you have a toaster, you probably shouldn't mess with the default settings much; instead, launch the game and see how it runs for you with the basic settings, and with shaders, before messing with anything here. If you have a beastly machine, try out Per-pixel lighting (make sure to use Negative Lights Remover.esp in this case), high quality exponential fog, and high quality atmosphere and distance coloring. And, of course, turn up your draw distance. I play with 10 visible cells.
+  0) Download [this mod](https://www.nexusmods.com/morrowind/mods/45588). It doesn't do anything except supress an annoying warning when generating distant land.
+
+  1) Go into your Distant Land tab, and click on Distant land generator.
+
+  2) Click 'Use current load order', then go through the list and activate Grass_AC&S, Vurt's Groundcover - The Ashlands (if you're using it), and either Ozzy's Grass packages (there are five total) or Vurt's Groundcover - BC, AI, WG, GL and Vurt's Groundcover - Solstheim. Also, activate the reeds module and the corals module if you're using those. Click continue.
+
+  3) On the next few screens, change the settings only if you think it's necessary. If you're running a toaster you might want to turn your settings down. Be very conservative if you try to turn the settings up higher, as it CAN make your game run very slow. That said, re-running the distant land generator isn't too difficult. On the statics screen, make sure to read the tooltips for your options and set them accordingly.
+
+  4) When your distant land generation is finally complete, you'll have a lot more options in MGE XE to play with. Most of these are self-explanatory. If you have a toaster, you probably shouldn't mess with the default settings much; instead, launch the game and see how it runs for you with the basic settings, and with shaders, before messing with anything here. If you have a beastly machine, try out Per-pixel lighting (make sure to use Negative Lights Remover.esp in this case), high quality exponential fog, and high quality atmosphere and distance coloring. And, of course, turn up your draw distance. I play with 10 visible cells.
 
 4. Shaders
 
-Click the shader setup screen on the General tab. If you're using the latest MGE XE beta, the shaders screen will be pretty easy for you. Pick your quality preset, adjust it how you want (turning on/off Depth of Field, using lower quality SSAO, etc.), and play. 
+   Click the shader setup screen on the General tab. If you're using the latest MGE XE beta, the shaders screen will be pretty easy for you. Pick your quality preset, adjust it how you want (turning on/off Depth of Field, using lower quality SSAO, etc.), and play. 
 
-If you can take the performance hit of per-pixel lighting, try [this shader](https://cdn.discordapp.com/attachments/381217735306248192/589588302072381468/MGE_XE_0.11.6-PPL-beta.7z) which significantly reduces seams in lighting!
-
-Optionally, you might want to take a look at [this water shader](https://www.nexusmods.com/morrowind/mods/45432).
+* If you can take the performance hit of per-pixel lighting, try [this shader](https://cdn.discordapp.com/attachments/381217735306248192/589588302072381468/MGE_XE_0.11.6-PPL-beta.7z) which significantly reduces seams in lighting!
 
 5. Finally, and only when you're satisfied with your distant land generation, install [Lore-Friendly Ghostfence Texture](http://www.nexusmods.com/morrowind/mods/29206/?). Why is this step last? Because if you generate distant land with these textures in your folder, it makes the ghostfence look like it has holes in it. Stick with the vanilla textures for distant land generation. If you re-run your distant land generation later, try to remove the textures `tx_gg_fence_01` and `tx_gg_fence_02` from your `textures` folder first.
 

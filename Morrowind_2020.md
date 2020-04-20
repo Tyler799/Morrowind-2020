@@ -463,10 +463,9 @@ If you've chosen to go for the Vurt option you'll need to install this fix:
 
 #### Mournhold Trees
 
-The following two are the recommended tree replacers for the Mournhold region. They are well optimized and quite beautiful. I would recommend merging these two mods into one called "Vurt's Mournhold Trees". If you noticed that they contain some duplicate textures that's fine, just overwrite them.
+The following two are the recommended tree replacers for the Mournhold region. They are well optimized and quite beautiful. You should use both. The "Dead Trees" mod will over-ride some of the ones from Vurt's Mournhold Tree's II, that's normal.
 
 * [Vurt's Mournhold Trees II](http://www.nexusmods.com/morrowind/mods/35400/?)
-
 * [Vurt Mournhold Dead Trees](https://www.nexusmods.com/morrowind/mods/45770)
 
 Alternatively you can choose CptJoker's Flora Redux:

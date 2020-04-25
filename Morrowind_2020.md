@@ -367,7 +367,7 @@ Mods that replace both:
 
 ## Mesh fixes and Improvements
 
-* [Morrowind Optimization Patch](https://www.nexusmods.com/morrowind/mods/45384) - Improves performance by optimizing meshes. Choose all options in the BAIN installer except the Weapon Sheathing patch.
+* [Morrowind Optimization Patch](https://www.nexusmods.com/morrowind/mods/45384) - Improves performance by optimizing meshes. In the BAIN installer just choose 00 (core) and 01 (fixed vanilla textures). 
 * [Project Atlas](https://www.nexusmods.com/morrowind/mods/45399) - Improves performance by merging meshes into a single shape, reducing draw calls significantly for the same visual quality. In the BAIN installer, choose the ```010 Glow in the Dahrk Patch - Interior Sunrays```, ```20 BC Mushrooms - Smoothed```, ```Redware - Smoothed```, and ```Wood Poles - Hi Res Texture```. 
 * [Better Meshes plus Optimization](http://www.nexusmods.com/morrowind/mods/38170/?)
 * [Dwemer Mesh Improvement](http://www.nexusmods.com/morrowind/mods/43101/?)

@@ -25,8 +25,7 @@ The [README](https://github.com/Tyler799/Morrowind-2020/blob/master/README.md), 
        * [2.5.1 Dialogue Font](#Dialogue-Font)
        * [2.5.2 HD Video Screen Replacers](#HD-Video-Screen-Replacers)
        * [2.5.3 Splash Screen Replacers](#Splash-Screen-Replacers)
-   * [2.6 Major Mods To Be Aware Of](#major-mods-to-be-aware-of)
-* [3.0 Graphical Mods Begin](#graphical-mods-begin)
+  * [3.0 Graphical Mods Begin](#graphical-mods-begin)
    * [3.1 Mesh fixes and improvements](#mesh-fixes-and-improvements)
    * [3.2 Nature Texture & Mesh Replacers](#nature-texture--mesh-replacers)
        * [3.2.1 Want plants To Not "Bend" Or "Grow" Towards You?](#want-plants-to-not-bend-or-grow-towards-you)
@@ -836,14 +835,12 @@ There are likely a ton of unique/artifact weapon replacers I've missed. I was ne
 * [True Trueflame](http://www.nexusmods.com/morrowind/mods/33432/?)
 * [HopesFire Replacer Morrowind Edition](http://mw.modhistory.com/download-98-12378) - Has an `AltTextures` folder with an alternate texture for Hopesfire. You'll need to move the folder's contents into the `Textures` folder and over-write after installing if you wish to use it. (Or un-pack/repack)
 * [Various little mods](http://www.nexusmods.com/morrowind/mods/43330/?) - Volendrung.
-* [Pherim's Improved Weapon Meshes & Textures WIP](https://www.dropbox.com/sh/l1660o8fg664bii/AAAO3m96a4O4J4JOUOUBmFnFa/Improved%20Weapon%20Meshes%20%26%20Textures%20WIP?dl=0) - Download as .zip.
 * [Spear-Staff Fix](http://www.nexusmods.com/morrowind/mods/43353/?) - An optional fix for the position where spears and staves are held. Use it if you want. If you do, you'll need the Real Reflective Weapons Iron, Improved Weapon Meshes Steel, and Improved Weapon Meshes Ebony files from the `Compatibility` folder, then drag them out and over-write their normal versions from the mod, and then re-pack and install as normal.
 
 ## Armor
 
 * [Darknut's Armor Textures](http://www.nexusmods.com/morrowind/mods/43416/?) - Make sure to get the newest version.
 * [Various little mods](http://www.nexusmods.com/morrowind/mods/43330/?) - Install Colovian helm and Dust adept helm.
-* [Improved Armor Parts](https://www.dropbox.com/sh/l1660o8fg664bii/AAB-OssUyNu03Y5aGCO1Gav0a/Improved%20Armor%20parts?dl=0) - Download as .zip. First, disable the `Bloodmoon` folder; you already have that mesh. If you want a less bulky chitin pauldron, put that in `meshes\a`. Then go ahead and install the `meshes` and `texture` folder.
 * [Various tweaks and fixes](http://www.nexusmods.com/morrowind/mods/43795/?) - Get Lougian's Colovian Helm fix.
 * [HiRez Armors - Native Styles V2](https://www.dropbox.com/s/4g4bmi3cr33g5ms/HiRez%20Armors-%20Native%20Styles%20V2.zip)
 * Native HiRez fix [1](https://modding-openmw.com/mods/hirez-armors-native-styles-v2-fix-1/#download), [2](https://modding-openmw.com/mods/hirez-armors-native-styles-v2-fix-2/), [3](http://www.mediafire.com/file/sj9kg66x5cdq45l/tx_armor_EXC.dds/file) (Fixes missing `tx_armor_exc.dds`, just put it into the `textures` folder of whichever of these fixes mods has a `textures` folder)
@@ -917,7 +914,7 @@ Some MGE XE relevant mods
 
    Click the shader setup screen on the General tab. If you're using the latest MGE XE beta, the shaders screen will be pretty easy for you. Pick your quality preset, adjust it how you want (turning on/off Depth of Field, using lower quality SSAO, etc.), and play. 
 
-* If you can take the performance hit of per-pixel lighting, try [this shader](https://cdn.discordapp.com/attachments/381217735306248192/589588302072381468/MGE_XE_0.11.6-PPL-beta.7z) which significantly reduces seams in lighting!
+* If you can take the performance hit of per-pixel lighting, try [this shader](https://cdn.discordapp.com/attachments/381217735306248192/589588302072381468/MGE_XE_0.11.6-PPL-beta.7z) which significantly reduces seams in lighting! (As of 15th August 2020 this shader does not compile)
 
 5. Finally, and only when you're satisfied with your distant land generation, install [Lore-Friendly Ghostfence Texture](http://www.nexusmods.com/morrowind/mods/29206/?). Why is this step last? Because if you generate distant land with these textures in your folder, it makes the ghostfence look like it has holes in it. Stick with the vanilla textures for distant land generation. If you re-run your distant land generation later, try to remove the textures `tx_gg_fence_01` and `tx_gg_fence_02` from your `textures` folder first.
 

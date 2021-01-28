@@ -852,7 +852,7 @@ There are likely a ton of unique/artifact weapon replacers I've missed. I was ne
 
 1) First, extract the archive. You need to activate the Better Morrowind Armor .esp, and optionally one DeFemm patch of your choice. A removes all female versions of cuirasses (no boob armor for females), O acts like the original game, R gives boob armor only to stretchy armor. 
 
-2) You should use the DeFemm patches from [here](https://mega.nz/#!WgBQ2RRL!5CQU0ZIVvIv1vyUsutAr3gT-qMhRUU6E4KEvoE9AeOs). Just make sure to put it directly after the main mod, and only enable the ESPs you were using from the original mod. (In my case, I use `Better Morrowind Armor.esp` and `Better Morrowind Armor DeFemm(o).ESP`)
+2) You should use the DeFemm patches from [here](https://forums.nexusmods.com/index.php?/topic/990511-better-morrowind-armor/page-7#entry8861911). Just make sure to put it directly after the main mod, and only enable the ESPs you were using from the original mod. (In my case, I use `Better Morrowind Armor.esp` and `Better Morrowind Armor DeFemm(o).ESP`)
 
 3) Install the patch for Hirez Armors - Native Styles V2. (Overwriting the main files in the mod folder)
 

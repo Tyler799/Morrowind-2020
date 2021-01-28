@@ -792,8 +792,8 @@ Argonians will be in the next step, don't worry.
 Note that at the time this guide is being written, Khajiit meshes are nude. If seeing girl Khajiit nipples bother you, you should consider activating New Beast Bodies Khajit - Clean below, and make sure it overrides Robert's bodies. Also, it seems the nude meshes have been removed.
 
 * [Unique Shadow Pack](http://mw.modhistory.com/download-10-6029) - This is a requirement for...
-* [New Beast Bodies - Clean Version](http://mw.modhistory.com/download-10-10928) - You only need the argonian .esp and files. If you want to disable the khajiit meshes and textures, you can, but as long as you don't activate the Khajit bodies .esp, you'll be fine leaving them alone.
-* [Want 'mature' Argonians?](http://mw.modhistory.com/download-10-11364)
+* [New Beast Bodies - Clean Version](https://www.nexusmods.com/morrowind/mods/47678) - You only need the argonian .esp and files. If you want to disable the khajiit meshes and textures, you can, but as long as you don't activate the Khajit bodies .esp, you'll be fine leaving them alone.
+* [Want 'mature' Argonians?](https://www.nexusmods.com/morrowind/mods/47678) Download the "mature" version
 * [Wey's Argonians](http://www.nexusmods.com/morrowind/mods/43766/?) - Get the optional darker mouths file if you wish. I use it.
 
 An newer alternative to Wey's Argonians for those who feel it may stray too far from the vanilla style:
